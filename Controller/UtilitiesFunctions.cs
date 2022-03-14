@@ -8,12 +8,41 @@ using DevExpress.Data.Utils;
 using DevExpress.Utils.Animation;
 using System.Drawing;
 using System.IO;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using DevExpress.XtraBars.Docking2010.Customization;
 
 namespace Umoxi
 {
     class UtilitiesFunctions
     {
 
+        private static bool canCloseFunc(DialogResult parameter)
+        {
+            return parameter != DialogResult.Cancel;
+        }
+        public static void AppClose(Form control, FormClosingEventArgs e)
+        {
+           
+            FlyoutAction action = new FlyoutAction() { Caption = "      Sair do aplicativo?", Description = "Deseja realmente sair da aplicação?" };
+            action.ImageOptions.Image = Properties.Resources.icons8_cancel;
+            Predicate<DialogResult> predicate = canCloseFunc;
+            FlyoutCommand command1 = new FlyoutCommand() { Text = "Sair", Result = DialogResult.Yes };
+            FlyoutCommand command2 = new FlyoutCommand() { Text = "Cancelar", Result = DialogResult.No };
+            action.Commands.Add(command1);
+            action.Commands.Add(command2);
+            FlyoutProperties properties = new FlyoutProperties();
+            properties.ButtonSize = new Size(100, 40);
+            properties.Style = FlyoutStyle.MessageBox;
+            if (FlyoutDialog.Show(control, action, properties, predicate) == DialogResult.Yes)
+            {
+                e.Cancel = false;
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
 
         #region copyImage
         /// <summary>
@@ -68,6 +97,17 @@ namespace Umoxi
         public static object str_repl(string str)
         {
             return str.Replace("'", "").Replace(",", ",").Replace("`", "");
+        }
+
+        /// <summary>
+        /// Usar para tirar formatos de hora e data : / pq o ficheiro n pode conter esses caracters 
+        /// </summary>
+        /// <param name="str">string para ser formatada</param>
+        /// <returns></returns>
+        public static string stringReplaceInvalidSymbols(string str)
+        {   
+            
+            return str.Replace("/", "").Replace(":", "").Replace("`", "");
         }
         #endregion
 

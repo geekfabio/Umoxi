@@ -2214,6 +2214,7 @@
     <None Include="Resources\hospital_fundo2.jpg" />
     <Content Include="Sources files\Connection string.txt" />
     <Content Include="Sources files\dbUmojaSchool.sql" />
+    <Content Include="Sources files\db_hospital.sql" />
     <Content Include="uschool.ico" />
     <Content Include="View\Dashboard\Dashboard.xml" />
     <Content Include="View\ServerSetting\ConnectionString.xml" />

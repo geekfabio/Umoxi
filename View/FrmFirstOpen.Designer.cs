@@ -131,7 +131,7 @@ namespace Umoxi
             this.btnNextF = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtAddress = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblFAX = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbltxtEmailSchool = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbltxtEmailCompany = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtFAX = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lblContactNoSchool = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblAddress = new Bunifu.UI.WinForms.BunifuLabel();
@@ -304,7 +304,7 @@ namespace Umoxi
             this.btnReturn.OnPressedState.IconLeftImage = null;
             this.btnReturn.OnPressedState.IconRightImage = null;
             this.btnReturn.Size = new System.Drawing.Size(97, 32);
-            this.btnReturn.TabIndex = 76;
+            this.btnReturn.TabIndex = 1;
             this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReturn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnReturn.TextMarginLeft = 0;
@@ -397,7 +397,7 @@ namespace Umoxi
             this.btnNext2.OnPressedState.IconLeftImage = null;
             this.btnNext2.OnPressedState.IconRightImage = null;
             this.btnNext2.Size = new System.Drawing.Size(97, 32);
-            this.btnNext2.TabIndex = 75;
+            this.btnNext2.TabIndex = 0;
             this.btnNext2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNext2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNext2.TextMarginLeft = 0;
@@ -534,7 +534,7 @@ namespace Umoxi
             this.stepProgress.Items.Add(this.itemShippingOptions);
             this.stepProgress.Items.Add(this.itemConfirmation);
             this.stepProgress.Items.Add(this.stepProgressBarItem4);
-            this.stepProgress.Location = new System.Drawing.Point(118, 59);
+            this.stepProgress.Location = new System.Drawing.Point(122, 66);
             this.stepProgress.Name = "stepProgress";
             this.stepProgress.SelectedItemIndex = 1;
             this.stepProgress.Size = new System.Drawing.Size(570, 80);
@@ -555,7 +555,6 @@ namespace Umoxi
             this.backcolorTop.Name = "backcolorTop";
             this.backcolorTop.Size = new System.Drawing.Size(793, 83);
             this.backcolorTop.TabIndex = 110;
-            this.backcolorTop.Paint += new System.Windows.Forms.PaintEventHandler(this.backcolorTop_Paint);
             // 
             // pictureBox3
             // 
@@ -567,7 +566,6 @@ namespace Umoxi
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 135;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // transitionManager
             // 
@@ -731,7 +729,7 @@ namespace Umoxi
             this.txtFullName.ShortcutsEnabled = true;
             this.txtFullName.Size = new System.Drawing.Size(277, 35);
             this.txtFullName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtFullName.TabIndex = 66;
+            this.txtFullName.TabIndex = 1;
             this.txtFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtFullName.TextMarginBottom = 0;
             this.txtFullName.TextMarginLeft = 3;
@@ -825,7 +823,7 @@ namespace Umoxi
             this.txtRePassword.ShortcutsEnabled = true;
             this.txtRePassword.Size = new System.Drawing.Size(277, 35);
             this.txtRePassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtRePassword.TabIndex = 70;
+            this.txtRePassword.TabIndex = 5;
             this.txtRePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRePassword.TextMarginBottom = 0;
             this.txtRePassword.TextMarginLeft = 3;
@@ -921,7 +919,7 @@ namespace Umoxi
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(277, 35);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPassword.TabIndex = 69;
+            this.txtPassword.TabIndex = 4;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMarginBottom = 0;
             this.txtPassword.TextMarginLeft = 3;
@@ -1036,7 +1034,7 @@ namespace Umoxi
             this.txtUserName.ShortcutsEnabled = true;
             this.txtUserName.Size = new System.Drawing.Size(277, 35);
             this.txtUserName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUserName.TabIndex = 65;
+            this.txtUserName.TabIndex = 0;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUserName.TextMarginBottom = 0;
             this.txtUserName.TextMarginLeft = 3;
@@ -1130,7 +1128,7 @@ namespace Umoxi
             this.txtContactNo.ShortcutsEnabled = true;
             this.txtContactNo.Size = new System.Drawing.Size(277, 35);
             this.txtContactNo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContactNo.TabIndex = 67;
+            this.txtContactNo.TabIndex = 2;
             this.txtContactNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContactNo.TextMarginBottom = 0;
             this.txtContactNo.TextMarginLeft = 3;
@@ -1223,7 +1221,7 @@ namespace Umoxi
             this.txtEmail.ShortcutsEnabled = true;
             this.txtEmail.Size = new System.Drawing.Size(277, 35);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEmail.TabIndex = 68;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmail.TextMarginBottom = 0;
             this.txtEmail.TextMarginLeft = 3;
@@ -1317,7 +1315,7 @@ namespace Umoxi
             this.btnNext.OnPressedState.IconLeftImage = null;
             this.btnNext.OnPressedState.IconRightImage = null;
             this.btnNext.Size = new System.Drawing.Size(97, 32);
-            this.btnNext.TabIndex = 74;
+            this.btnNext.TabIndex = 6;
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNext.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNext.TextMarginLeft = 0;
@@ -1434,7 +1432,7 @@ namespace Umoxi
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(225, 220);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 83;
+            this.bunifuShadowPanel1.TabIndex = 2;
             // 
             // btnBrowsePhoto
             // 
@@ -1520,7 +1518,7 @@ namespace Umoxi
             this.btnBrowsePhoto.OnPressedState.IconLeftImage = null;
             this.btnBrowsePhoto.OnPressedState.IconRightImage = null;
             this.btnBrowsePhoto.Size = new System.Drawing.Size(142, 37);
-            this.btnBrowsePhoto.TabIndex = 82;
+            this.btnBrowsePhoto.TabIndex = 0;
             this.btnBrowsePhoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowsePhoto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBrowsePhoto.TextMarginLeft = 0;
@@ -1547,7 +1545,7 @@ namespace Umoxi
             this.Page3.Controls.Add(this.btnNextF);
             this.Page3.Controls.Add(this.txtAddress);
             this.Page3.Controls.Add(this.lblFAX);
-            this.Page3.Controls.Add(this.lbltxtEmailSchool);
+            this.Page3.Controls.Add(this.lbltxtEmailCompany);
             this.Page3.Controls.Add(this.txtFAX);
             this.Page3.Controls.Add(this.lblContactNoSchool);
             this.Page3.Controls.Add(this.lblAddress);
@@ -1646,7 +1644,7 @@ namespace Umoxi
             this.btnNextF.OnPressedState.IconLeftImage = null;
             this.btnNextF.OnPressedState.IconRightImage = null;
             this.btnNextF.Size = new System.Drawing.Size(97, 32);
-            this.btnNextF.TabIndex = 129;
+            this.btnNextF.TabIndex = 4;
             this.btnNextF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNextF.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNextF.TextMarginLeft = 0;
@@ -1721,7 +1719,7 @@ namespace Umoxi
             this.txtAddress.ShortcutsEnabled = true;
             this.txtAddress.Size = new System.Drawing.Size(231, 35);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAddress.TabIndex = 118;
+            this.txtAddress.TabIndex = 0;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAddress.TextMarginBottom = 0;
             this.txtAddress.TextMarginLeft = 3;
@@ -1748,24 +1746,24 @@ namespace Umoxi
             this.lblFAX.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblFAX.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbltxtEmailSchool
+            // lbltxtEmailCompany
             // 
-            this.lbltxtEmailSchool.AllowParentOverrides = false;
-            this.lbltxtEmailSchool.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbltxtEmailSchool.AutoEllipsis = false;
-            this.lbltxtEmailSchool.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbltxtEmailSchool.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbltxtEmailSchool.Font = new System.Drawing.Font("Rubik", 9F);
-            this.lbltxtEmailSchool.ForeColor = System.Drawing.Color.Black;
-            this.lbltxtEmailSchool.Location = new System.Drawing.Point(275, 188);
-            this.lbltxtEmailSchool.Name = "lbltxtEmailSchool";
-            this.lbltxtEmailSchool.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbltxtEmailSchool.Size = new System.Drawing.Size(39, 15);
-            this.lbltxtEmailSchool.TabIndex = 126;
-            this.lbltxtEmailSchool.Text = "Email *";
-            this.lbltxtEmailSchool.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbltxtEmailSchool.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lbltxtEmailSchool.Click += new System.EventHandler(this.lbltxtEmailSchool_Click);
+            this.lbltxtEmailCompany.AllowParentOverrides = false;
+            this.lbltxtEmailCompany.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbltxtEmailCompany.AutoEllipsis = false;
+            this.lbltxtEmailCompany.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbltxtEmailCompany.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbltxtEmailCompany.Font = new System.Drawing.Font("Rubik", 9F);
+            this.lbltxtEmailCompany.ForeColor = System.Drawing.Color.Black;
+            this.lbltxtEmailCompany.Location = new System.Drawing.Point(275, 188);
+            this.lbltxtEmailCompany.Name = "lbltxtEmailCompany";
+            this.lbltxtEmailCompany.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbltxtEmailCompany.Size = new System.Drawing.Size(39, 15);
+            this.lbltxtEmailCompany.TabIndex = 126;
+            this.lbltxtEmailCompany.Text = "Email *";
+            this.lbltxtEmailCompany.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbltxtEmailCompany.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbltxtEmailCompany.Click += new System.EventHandler(this.lbltxtEmailSchool_Click);
             // 
             // txtFAX
             // 
@@ -1834,7 +1832,7 @@ namespace Umoxi
             this.txtFAX.ShortcutsEnabled = true;
             this.txtFAX.Size = new System.Drawing.Size(231, 35);
             this.txtFAX.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtFAX.TabIndex = 121;
+            this.txtFAX.TabIndex = 2;
             this.txtFAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtFAX.TextMarginBottom = 0;
             this.txtFAX.TextMarginLeft = 3;
@@ -2040,7 +2038,7 @@ namespace Umoxi
             this.txtContactNoSchool.ShortcutsEnabled = true;
             this.txtContactNoSchool.Size = new System.Drawing.Size(231, 35);
             this.txtContactNoSchool.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContactNoSchool.TabIndex = 119;
+            this.txtContactNoSchool.TabIndex = 1;
             this.txtContactNoSchool.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContactNoSchool.TextMarginBottom = 0;
             this.txtContactNoSchool.TextMarginLeft = 3;
@@ -2116,7 +2114,7 @@ namespace Umoxi
             this.txtHospitalEmail.ShortcutsEnabled = true;
             this.txtHospitalEmail.Size = new System.Drawing.Size(467, 35);
             this.txtHospitalEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtHospitalEmail.TabIndex = 120;
+            this.txtHospitalEmail.TabIndex = 3;
             this.txtHospitalEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHospitalEmail.TextMarginBottom = 0;
             this.txtHospitalEmail.TextMarginLeft = 3;
@@ -2235,7 +2233,7 @@ namespace Umoxi
             this.btnBrowseLogo.OnPressedState.IconLeftImage = null;
             this.btnBrowseLogo.OnPressedState.IconRightImage = null;
             this.btnBrowseLogo.Size = new System.Drawing.Size(142, 37);
-            this.btnBrowseLogo.TabIndex = 82;
+            this.btnBrowseLogo.TabIndex = 0;
             this.btnBrowseLogo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowseLogo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBrowseLogo.TextMarginLeft = 0;
@@ -2301,7 +2299,7 @@ namespace Umoxi
             this.btnSave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.ButtonText = "Finaliza";
+            this.btnSave.ButtonText = "Finalizar configuração";
             this.btnSave.ButtonTextMarginLeft = 0;
             this.btnSave.ColorContrastOnClick = 45;
             this.btnSave.ColorContrastOnHover = 45;
@@ -2336,7 +2334,7 @@ namespace Umoxi
             this.btnSave.IdleIconLeftImage = null;
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(313, 303);
+            this.btnSave.Location = new System.Drawing.Point(298, 303);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 10;
@@ -2370,8 +2368,8 @@ namespace Umoxi
             this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
-            this.btnSave.Size = new System.Drawing.Size(136, 32);
-            this.btnSave.TabIndex = 130;
+            this.btnSave.Size = new System.Drawing.Size(203, 32);
+            this.btnSave.TabIndex = 0;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSave.TextMarginLeft = 0;
@@ -2479,7 +2477,7 @@ namespace Umoxi
             this.chkFinish.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
             this.chkFinish.Size = new System.Drawing.Size(18, 18);
             this.chkFinish.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.chkFinish.TabIndex = 96;
+            this.chkFinish.TabIndex = 1;
             this.chkFinish.ThreeState = false;
             this.chkFinish.ToolTipText = null;
             // 
@@ -2567,7 +2565,7 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBrowsePhoto;
         private Bunifu.UI.WinForms.BunifuTextBox txtAddress;
         private Bunifu.UI.WinForms.BunifuLabel lblFAX;
-        private Bunifu.UI.WinForms.BunifuLabel lbltxtEmailSchool;
+        private Bunifu.UI.WinForms.BunifuLabel lbltxtEmailCompany;
         private Bunifu.UI.WinForms.BunifuTextBox txtFAX;
         private Bunifu.UI.WinForms.BunifuLabel lblContactNoSchool;
         private Bunifu.UI.WinForms.BunifuLabel lblAddress;

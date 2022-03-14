@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Drawing;
-using DevExpress.XtraBars;
-using DevExpress.XtraBars.Docking2010.Customization;
-using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using Microsoft.VisualBasic;
 using Bunifu.UI.WinForms;
 using System.Windows.Forms;
 using PasswordStrengthControlLib;
 using Microsoft.VisualBasic.CompilerServices;
-using DevExpress.XtraEditors.ImageEditor;
+using System.IO;
 
 namespace Umoxi
 {
@@ -16,7 +13,8 @@ namespace Umoxi
     {
         Timer frmOpem = new Timer();
         string chkVAL;
-
+        string userPhoto = "";
+        string companyPhoto = "";
         public FrmFirstOpen()
         {
             InitializeComponent();
@@ -34,14 +32,13 @@ namespace Umoxi
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+          
             TransitionsEffects.ResetColor(txtUserName, lblUserName);
             TransitionsEffects.ResetColor(txtFullName, lblFullName);
             TransitionsEffects.ResetColor(txtContactNo, lblContactNo);
             TransitionsEffects.ResetColor(txtEmail, lblEmail);
             TransitionsEffects.ResetColor(txtPassword, lblPassword);
 
-
-            if (TabContent.SelectedTabPage == Page1) {
                 if (string.IsNullOrWhiteSpace(txtUserName.Text))
                 {
                     Snackbar.Show(this, "Nome do Usuário Obrigatório", BunifuSnackbar.MessageTypes.Error);
@@ -73,10 +70,11 @@ namespace Umoxi
                     {
                         Snackbar.Show(this, "Senha curta, tente outra!", BunifuSnackbar.MessageTypes.Warning);
                     }
-                    else if (passwordStrengthControl1.StrengthText == "Fraca")
-                    {
-                        Snackbar.Show(this, "Senha fraca, tente outra!", BunifuSnackbar.MessageTypes.Warning);
-                    }
+                    //pode aceitar senhas fracas
+                   // else if (passwordStrengthControl1.StrengthText == "Fraca")
+                   // {
+                   //     Snackbar.Show(this, "Senha fraca, tente outra!", BunifuSnackbar.MessageTypes.Warning);
+                   // }
                     else
                     {
                         if (txtPassword.Text == txtRePassword.Text)
@@ -90,11 +88,8 @@ namespace Umoxi
 
                     }
                 }
-            }
-            else if (TabContent.SelectedTabPage == Page3)
-            {
-                
-            }
+            
+          
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -114,10 +109,14 @@ namespace Umoxi
         {
             OpenFileDialog1.Filter = "Imagem (JPEG,GIF,BMP,PNG)|*.jpg;*.jpeg;*.gif;*.bmp;*.png;";
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
+            {
                 PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName);
+                userPhoto = Path.Combine(OpenFileDialog1.FileName);
+            }
+           
         }
 
-        private void btnReturnP_Click(object sender, EventArgs e)
+            private void btnReturnP_Click(object sender, EventArgs e)
         {
             TabContent.SelectedTabPage = Page1;
             stepProgress.SelectedItemIndex = -1;
@@ -161,81 +160,26 @@ namespace Umoxi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            string destFileName = Path.Combine(ConnectionNode.appPathAvatar, "user ", UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()), ".png");
 
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO  Usuarios (usuario, password, nome, email, contacto, ativo) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "')");
-            //get last inserted id
-            ConnectionNode.ExecuteSQLQuery("SELECT User_ID  FROM   Users  ORDER BY User_ID DESC");
-            int SCHOOL_ID = 1;
             //upload image
-            ConnectionNode.UploadUserPhoto(SCHOOL_ID, PictureBox1);
-            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "primeiro utilizador criado # " + txtUserName.Text);
-
-            #region Permissions
-
-            //ConnectionNode.ExecuteSQLQuery("SELECT        User_ID, AccessKey FROM            permission   WHERE        (User_ID = 1) AND (AccessKey = *)");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 101) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 102) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 103) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 104) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 105) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 106) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 107) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 108) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 109) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 110) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 111) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 201) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 202) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 203) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 301) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 302) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 303) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 304) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 305) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 306) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 307) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 308) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 401) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 402) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 403) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 404) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 405) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 406) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 407) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 408) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 501) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 502) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 503) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 504) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 505) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 506) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 601) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 602) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 603) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 604) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 605) ");
-
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 701) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 702) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 703) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 801) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 802) ");
-
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 901) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 902) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 903) ");
-            ConnectionNode.ExecuteSQLQuery(" INSERT INTO permission ( User_ID, AccessKey) VALUES (1, 904) ");
+            try
+            {
+                if (!String.IsNullOrWhiteSpace(userPhoto) && File.Exists(userPhoto))
+                    File.Copy(sourceFileName: userPhoto, destFileName);
+                else
+                    destFileName = "sem_foto";
+            } 
+            finally
+            {
+                ConnectionNode.ExecuteSQLQuery("INSERT INTO  Usuarios (usuario, password, nome, email, contacto, ativo, foto, funcao) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "', '" + destFileName + "', 'Administrador'");
+            }
 
             UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, Conversions.ToString(DateAndTime.TimeOfDay), "Set user permission.");
 
+            #region Permissions
+            //TODO implements permission for user
+           
             #endregion
 
             Snackbar.Show(this, "Concluio as configurações do admin\n Aguarde...!", BunifuSnackbar.MessageTypes.Success);
@@ -271,32 +215,9 @@ namespace Umoxi
                 txtRePassword.UseSystemPasswordChar = true;
         }
 
-        private static bool canCloseFunc(DialogResult parameter)
-        {
-            return parameter != DialogResult.Cancel;
-        }
-
         private void FrmFirstOpen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FlyoutAction action = new FlyoutAction() { Caption = "      Confirmar", Description = "Deseja sair da aplicação?" };
-            action.ImageOptions.Image = Properties.Resources.icons8_cancel;
-            Predicate<DialogResult> predicate = canCloseFunc;
-            FlyoutCommand command1 = new FlyoutCommand() { Text = "Sair", Result = DialogResult.Yes };
-            FlyoutCommand command2 = new FlyoutCommand() { Text = "Cancelar", Result = DialogResult.No };
-            action.Commands.Add(command1);
-            action.Commands.Add(command2);
-            FlyoutProperties properties = new FlyoutProperties();
-            properties.ButtonSize = new Size(100, 40);
-            properties.Style = FlyoutStyle.MessageBox;
-            if (FlyoutDialog.Show(this, action, properties, predicate) == DialogResult.Yes)
-            {
-                e.Cancel = false;
-                Environment.Exit(0);
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            UtilitiesFunctions.AppClose(this, e);
         }
 
         private void txtPassword_OnIconRightClick(object sender, EventArgs e)
@@ -315,7 +236,9 @@ namespace Umoxi
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox2.Image = Image.FromFile(OpenFileDialog1.FileName);
+                companyPhoto = Path.Combine(OpenFileDialog1.FileName);
             }
+
         }
 
         private void btnNextF_Click(object sender, EventArgs e)
@@ -324,23 +247,31 @@ namespace Umoxi
             TransitionsEffects.ResetColor(txtAddress, lblAddress);
             TransitionsEffects.ResetColor(txtContactNoSchool, lblContactNoSchool);
 
+
+            
             if (string.IsNullOrEmpty(txtHospitalName.Text))
             {
-                Snackbar.Show(this, "Nome do Hosital necessario!", BunifuSnackbar.MessageTypes.Error);
+                Snackbar.Show(this, "Nome do Hospital necessario!", BunifuSnackbar.MessageTypes.Error);
                 TransitionsEffects.ShowTransition(txtHospitalName, lblSchoolName);
+            }
+            else if(pictureBox2.Image.Size.Width == 172 && pictureBox2.Image.Size.Height == 173)
+            {
+                Snackbar.Show(this, "O logo do Hospital é necessario \n para continuar o cadastro!", BunifuSnackbar.MessageTypes.Error);
+              
             }
             else if (!UtilitiesFunctions.EmailCheck(txtHospitalEmail.Text.Trim()))
             {
-
+                Snackbar.Show(this, "Email Invalido!", BunifuSnackbar.MessageTypes.Error);
+                TransitionsEffects.ShowTransition(txtHospitalEmail, lbltxtEmailCompany);
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
             {
-                Snackbar.Show(this, "Endereço necessario!", BunifuSnackbar.MessageTypes.Error);
+                Snackbar.Show(this, "Endereço do Hospital é necessario!", BunifuSnackbar.MessageTypes.Error);
                 TransitionsEffects.ShowTransition(txtAddress, lblAddress);
             }
             else if (string.IsNullOrEmpty(txtContactNoSchool.Text))
             {
-                Snackbar.Show(this, "Contacto necessario!", BunifuSnackbar.MessageTypes.Error);
+                Snackbar.Show(this, "Contacto do Hospital é necessario!", BunifuSnackbar.MessageTypes.Error);
                 TransitionsEffects.ShowTransition(txtContactNoSchool, lblContactNoSchool);
             }
             else
@@ -348,13 +279,30 @@ namespace Umoxi
                 if (MessageBox.Show("Deseja confirmar os dados do Hospital " + txtHospitalName.Text + " ? ", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    //Armazena o logotipo na pasta Avatares
-                    ConnectionNode.UploadCompanyLogo(1, PictureBox1);
-                    //Salva os dados na base dados
-                    ConnectionNode.ExecuteSQLQuery(" INSERT INTO hospital (nome, endereco, contactos, nif, Email) VALUES " + (
-                           " ('" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "'"));
-                   
+                    //Armazena o diretorio para o ficheiro removendo carateres invalidos no formato da hora e data para gerar numeros aleatorios
+                    string destFileName = Path.Combine(ConnectionNode.appPathAvatar, "logo "+ UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString())+ ".png");
                     //upload image
+                    try
+                    {
+                        if (!String.IsNullOrWhiteSpace(companyPhoto) && File.Exists(companyPhoto))
+                            File.Copy(sourceFileName: companyPhoto, destFileName);
+                        else
+                        {
+                            MessageBox.Show("Selecione um logo do Hospital valido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }    
+                    }
+                    finally
+                    {   
+                        //Salva os dados na base dados
+                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES " + (
+                 " ('" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "' "));
+                    }
+                 
+
+                    //upload image
+                    // ConnectionNode.UploadCompanyLogo(1, pictureBox2);
+
                     UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "escola adicionada # " + txtHospitalName.Text);
 
                     Snackbar.Show(this, "Hospital registrado com sucesso!", BunifuSnackbar.MessageTypes.Success);

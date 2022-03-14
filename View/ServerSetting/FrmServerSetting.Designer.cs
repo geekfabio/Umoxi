@@ -46,8 +46,11 @@ namespace Umoxi
             this.txtconnString = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolbarFormControl1
@@ -55,7 +58,7 @@ namespace Umoxi
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(403, 24);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(391, 24);
             this.toolbarFormControl1.TabIndex = 29;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -74,15 +77,15 @@ namespace Umoxi
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 24);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(403, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(391, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 261);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 210);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(403, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(391, 0);
             // 
             // barDockControlLeft
             // 
@@ -90,15 +93,15 @@ namespace Umoxi
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 237);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 186);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(403, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(391, 24);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 237);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 186);
             // 
             // txtconnString
             // 
@@ -128,7 +131,7 @@ namespace Umoxi
             this.txtconnString.IconRight = null;
             this.txtconnString.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtconnString.Lines = new string[0];
-            this.txtconnString.Location = new System.Drawing.Point(13, 143);
+            this.txtconnString.Location = new System.Drawing.Point(13, 78);
             this.txtconnString.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtconnString.MaxLength = 32767;
             this.txtconnString.MinimumSize = new System.Drawing.Size(1, 1);
@@ -190,7 +193,7 @@ namespace Umoxi
             this.btnLogin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnLogin.ButtonText = "CONECT";
+            this.btnLogin.ButtonText = "CONECTAR";
             this.btnLogin.ButtonTextMarginLeft = 0;
             this.btnLogin.ColorContrastOnClick = 45;
             this.btnLogin.ColorContrastOnHover = 45;
@@ -225,7 +228,7 @@ namespace Umoxi
             this.btnLogin.IdleIconLeftImage = null;
             this.btnLogin.IdleIconRightImage = null;
             this.btnLogin.IndicateFocus = false;
-            this.btnLogin.Location = new System.Drawing.Point(73, 195);
+            this.btnLogin.Location = new System.Drawing.Point(14, 135);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -284,7 +287,7 @@ namespace Umoxi
             this.btnClose.BackColor1 = System.Drawing.Color.White;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnClose.ButtonText = "Close";
+            this.btnClose.ButtonText = "Sair";
             this.btnClose.ButtonTextMarginLeft = 0;
             this.btnClose.ColorContrastOnClick = 45;
             this.btnClose.ColorContrastOnHover = 45;
@@ -319,7 +322,7 @@ namespace Umoxi
             this.btnClose.IdleIconLeftImage = null;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(234, 195);
+            this.btnClose.Location = new System.Drawing.Point(270, 133);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.OnDisabledState.BorderRadius = 10;
@@ -362,11 +365,41 @@ namespace Umoxi
             this.btnClose.UseDefaultRadiusAndThickness = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(391, 38);
+            this.panel1.TabIndex = 111;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AllowParentOverrides = false;
+            this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUserName.AutoEllipsis = false;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.Font = new System.Drawing.Font("Rubik", 12F);
+            this.lblUserName.ForeColor = System.Drawing.Color.Black;
+            this.lblUserName.Location = new System.Drawing.Point(18, 10);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserName.Size = new System.Drawing.Size(228, 20);
+            this.lblUserName.TabIndex = 113;
+            this.lblUserName.Text = "Conexão com a base de dados";
+            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // FrmServerSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 261);
+            this.ClientSize = new System.Drawing.Size(391, 210);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtconnString);
@@ -386,6 +419,8 @@ namespace Umoxi
             this.Load += new System.EventHandler(this.frmServerSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +437,7 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuTextBox txtconnString;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogin;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClose;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuLabel lblUserName;
     }
 }

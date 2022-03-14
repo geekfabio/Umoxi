@@ -667,27 +667,7 @@ namespace Umoxi
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FlyoutAction action = new FlyoutAction() { Caption = "\t\tConfirmar", Description = "Deseja sair da aplicação?" };
-            action.ImageOptions.Image = Properties.Resources.icons8_cancel;
-            Predicate<DialogResult> predicate = canCloseFunc;
-            FlyoutCommand command1 = new FlyoutCommand() { Text = "Sair", Result = DialogResult.Yes };
-            FlyoutCommand command2 = new FlyoutCommand() { Text = "Cancelar", Result = DialogResult.No };
-            action.Commands.Add(command1);
-            action.Commands.Add(command2);
-            FlyoutProperties properties = new FlyoutProperties();
-            properties.ButtonSize = new Size(100, 40);
-            properties.Style = FlyoutStyle.MessageBox;
-            if (FlyoutDialog.Show(this, action, properties, predicate) == DialogResult.Yes)
-            {
-                e.Cancel = false;
-            }
-            else
-            {
-                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "log out...");
-                this.Close();
-                e.Cancel = true;
-                frmLogIn.Default.Show();
-            }
+      
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)

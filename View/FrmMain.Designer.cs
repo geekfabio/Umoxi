@@ -1834,6 +1834,7 @@ namespace Umoxi
             this.llDailyAttendance,
             this.llFeesCollection,
             this.llPromotion});
+            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_student_male_1;
             this.accordionControlElement6.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement6.Name = "accordionControlElement6";
@@ -2263,7 +2264,7 @@ namespace Umoxi
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(229)))), ((int)(((byte)(197)))));
+            this.panel6.BackColor = System.Drawing.Color.Honeydew;
             this.panel6.Controls.Add(this.bunifuLabel1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 59);

@@ -55,6 +55,7 @@ namespace Umoxi
         public void SavetoXML(object dbconnString)
         {
             XmlDocument doc = new XmlDocument();
+            
             doc.Load("ConnectionString.xml");
             XmlElement root = doc.DocumentElement;
             root.Attributes.Item(0).Value = Convert.ToString(dbconnString);
@@ -68,13 +69,13 @@ namespace Umoxi
         {
             if (string.IsNullOrEmpty(txtconnString.Text))
             {
-                MessageBox.Show("Please enter a connection string..", "Empty line", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor intrduza uma String de conexão valida..", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 SavetoXML(txtconnString.Text);
-                MessageBox.Show("Successfully saved to ConnectionString.xml", "Save record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Environment.Exit(0);
+                MessageBox.Show("O registro foi armazenado com sucesso", "salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Restart();
             }
         }
 
@@ -82,12 +83,18 @@ namespace Umoxi
 
         public void ReadfromXML()
         {
+            try { 
             XmlDocument doc = new XmlDocument();
             doc.Load("ConnectionString.xml");
             XmlElement root = doc.DocumentElement;
             dbconnString = root.Attributes.Item(0).Value;
             txtconnString.Text = dbconnString;
-        }
+            }
+            catch
+            {
+                MessageBox.Show("Nenhuma configuração da base de dados encontrada", "Base de dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         }
 
         public void frmServerSetting_Load(Object sender, System.EventArgs e)
         {
@@ -97,6 +104,11 @@ namespace Umoxi
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
