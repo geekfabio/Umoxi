@@ -29,8 +29,18 @@ namespace Umoxi
         public static int LOGID;
 
         ///Metodo para ver o estado da conexão com a base de dados
+        ///
+
+        public static void CheckPath()
+        {
+            if (!Directory.Exists(appPathAvatar))
+            {
+                Directory.CreateDirectory(appPathAvatar);
+            }
+        }
         public static bool CheckServer()
         {
+            CheckPath();
             return true;
         }
 
@@ -194,6 +204,7 @@ namespace Umoxi
             if (File.Exists(appLogo)) {
                 File.Delete(appLogo);
             }
+           
             pictureLogo.Image.Save(appLogo);  
             cmd.Parameters.Add("@photo", MySqlDbType.String).Value=appLogo;
             cmd.ExecuteNonQuery();
