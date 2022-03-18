@@ -34,6 +34,7 @@ namespace Umoxi
 {
     public partial class FrmMain : ToolbarForm
     {
+        MemoryManagement memory = new MemoryManagement();
         public List<TabOpened> dicFormOpened = new List<TabOpened>();
         public string currentFormOpened = "";
 
@@ -53,8 +54,7 @@ namespace Umoxi
             accordionControlElementAddNewEvent.Expanded=true;
             dateNavigator1.SchedulerControl=usScheduler.Instance.schedulerControl1;
             toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
-            MemoryManagement memory = new MemoryManagement();
-            memory.FlushMemory(); //Limpa os desnecessário da memoria
+            memory.FlushMemory(); //Limpa os dados desnecessário da memoria
 
         }
 
@@ -94,30 +94,19 @@ namespace Umoxi
         private void btnStudent_Click(object sender, EventArgs e)
         {
             filterAllElement = sender as AccordionControlElement;
-            if (sender == llStudentInformation)
+            if (sender == btnPacienteNovo)
             {
                 StudentInformationToolStripMenuItem.PerformClick();
             }
-            else if (sender == this.llMarksEntry)
+            else if (sender == this.btnPacienteAtendimentoDiario)
             {
                 MarksEntryToolStripMenuItem.PerformClick();
             }
-            else if (sender == this.llIdentityCard)
+            else if (sender == this.btnPacienteConsulta)
             {
                 IdentityCardToolStripMenuItem.PerformClick();
             }
-            else if (sender == this.llFeesCollection)
-            {
-                FeesCollectionToolStripMenuItem.PerformClick();
-            }
-            else if (sender == this.llDailyAttendance)
-            {
-                DailyAttendanceToolStripMenuItem.PerformClick();
-            }
-            else if (sender == this.llPromotion)
-            {
-                PromotionImprovementToolStripMenuItem.PerformClick();
-            }
+      
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -192,10 +181,7 @@ namespace Umoxi
             {
                 OpenTab(usUser.Instance);
             }
-            else if (sender == this.llPermission)
-            {
-                OpenTab(usPermission.Instance);
-            }
+           
             else if (sender == this.llUserLog)
             {
                 OpenTab(usUserLog.Instance);
@@ -309,6 +295,7 @@ namespace Umoxi
             //if (_tag == 10)
             //    DrawSeparator(e.Cache, e.ObjectInfo);
 
+            memory.FlushMemory();
         }
 
         AccordionControlElement filterAllElement = null;
@@ -660,14 +647,12 @@ namespace Umoxi
 
         #endregion
 
-        private static bool canCloseFunc(DialogResult parameter)
-        {
-            return parameter != DialogResult.Cancel;
-        }
+        
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-      
+            
+            UtilitiesFunctions.AppClose(this, e);
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -841,6 +826,11 @@ namespace Umoxi
         }
 
         private void bunifuLabel2_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
         {
 
         }

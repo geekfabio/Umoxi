@@ -41,12 +41,12 @@ namespace Umoxi
 
                 if (string.IsNullOrWhiteSpace(txtUserName.Text))
                 {
-                    Snackbar.Show(this, "Nome do Usuário Obrigatório", BunifuSnackbar.MessageTypes.Error);
+                    Snackbar.Show(this, "Usuário é Obrigatório", BunifuSnackbar.MessageTypes.Error);
                     TransitionsEffects.ShowTransition(txtUserName, lblUserName);
                 }
                 else if (string.IsNullOrWhiteSpace(txtFullName.Text))
                 {
-                    Snackbar.Show(this, "Contacto Obrigatório", BunifuSnackbar.MessageTypes.Error);
+                    Snackbar.Show(this, "Nome completo é um campo Obrigatório", BunifuSnackbar.MessageTypes.Error);
                     TransitionsEffects.ShowTransition(txtFullName, lblFullName);
                 }
                 else if (string.IsNullOrWhiteSpace(txtContactNo.Text))
@@ -61,7 +61,7 @@ namespace Umoxi
                 }
                 else if (string.IsNullOrWhiteSpace(txtPassword.Text))
                 {
-                    Snackbar.Show(this, "Senha Obrigatório", BunifuSnackbar.MessageTypes.Error);
+                    Snackbar.Show(this, "Palavra-passe Obrigatório", BunifuSnackbar.MessageTypes.Error);
                     TransitionsEffects.ShowTransition(txtPassword, lblPassword);
                 }
                 else
@@ -128,6 +128,7 @@ namespace Umoxi
             {
                 TabContent.SelectedTabPage = Page3;
                 stepProgress.SelectedItemIndex = 1;
+                txtHospitalName.Focus();
             }
         }
 
@@ -160,7 +161,7 @@ namespace Umoxi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            string destFileName = Path.Combine(ConnectionNode.appPathAvatar, "user ", UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()), ".png");
+            string destFileName = Path.Combine(ConnectionNode.appPathAvatar, "user "+ UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString())+ ".png");
 
             //upload image
             try
@@ -295,16 +296,9 @@ namespace Umoxi
                     finally
                     {   
                         //Salva os dados na base dados
-                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES " + (
-                 " ('" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "' "));
+                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES " + (" ('" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "' "));
                     }
                  
-
-                    //upload image
-                    // ConnectionNode.UploadCompanyLogo(1, pictureBox2);
-
-                    UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "escola adicionada # " + txtHospitalName.Text);
-
                     Snackbar.Show(this, "Hospital registrado com sucesso!", BunifuSnackbar.MessageTypes.Success);
                     stepProgress.SelectedItemIndex = 2;
                     TabContent.SelectedTabPage = Page4;

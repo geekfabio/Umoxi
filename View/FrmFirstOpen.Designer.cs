@@ -1644,7 +1644,7 @@ namespace Umoxi
             this.btnNextF.OnPressedState.IconLeftImage = null;
             this.btnNextF.OnPressedState.IconRightImage = null;
             this.btnNextF.Size = new System.Drawing.Size(97, 32);
-            this.btnNextF.TabIndex = 4;
+            this.btnNextF.TabIndex = 5;
             this.btnNextF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNextF.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNextF.TextMarginLeft = 0;
@@ -1719,7 +1719,7 @@ namespace Umoxi
             this.txtAddress.ShortcutsEnabled = true;
             this.txtAddress.Size = new System.Drawing.Size(231, 35);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAddress.TabIndex = 0;
+            this.txtAddress.TabIndex = 1;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAddress.TextMarginBottom = 0;
             this.txtAddress.TextMarginLeft = 3;
@@ -1832,7 +1832,7 @@ namespace Umoxi
             this.txtFAX.ShortcutsEnabled = true;
             this.txtFAX.Size = new System.Drawing.Size(231, 35);
             this.txtFAX.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtFAX.TabIndex = 2;
+            this.txtFAX.TabIndex = 3;
             this.txtFAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtFAX.TextMarginBottom = 0;
             this.txtFAX.TextMarginLeft = 3;
@@ -1944,7 +1944,7 @@ namespace Umoxi
             this.txtHospitalName.ShortcutsEnabled = true;
             this.txtHospitalName.Size = new System.Drawing.Size(231, 35);
             this.txtHospitalName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtHospitalName.TabIndex = 117;
+            this.txtHospitalName.TabIndex = 0;
             this.txtHospitalName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHospitalName.TextMarginBottom = 0;
             this.txtHospitalName.TextMarginLeft = 3;
@@ -2038,7 +2038,7 @@ namespace Umoxi
             this.txtContactNoSchool.ShortcutsEnabled = true;
             this.txtContactNoSchool.Size = new System.Drawing.Size(231, 35);
             this.txtContactNoSchool.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContactNoSchool.TabIndex = 1;
+            this.txtContactNoSchool.TabIndex = 2;
             this.txtContactNoSchool.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContactNoSchool.TextMarginBottom = 0;
             this.txtContactNoSchool.TextMarginLeft = 3;
@@ -2114,7 +2114,7 @@ namespace Umoxi
             this.txtHospitalEmail.ShortcutsEnabled = true;
             this.txtHospitalEmail.Size = new System.Drawing.Size(467, 35);
             this.txtHospitalEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtHospitalEmail.TabIndex = 3;
+            this.txtHospitalEmail.TabIndex = 4;
             this.txtHospitalEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHospitalEmail.TextMarginBottom = 0;
             this.txtHospitalEmail.TextMarginLeft = 3;

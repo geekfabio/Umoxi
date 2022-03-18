@@ -31,9 +31,9 @@ namespace Umoxi
             {
                 ConnectionNode.ExecuteSQLQuery("SELECT usuario_id FROM usuarios limit 1");
                 if (ConnectionNode.sqlDT.Rows.Count == 1)
-                    Application.Run(new FrmFirstOpen());
+                    Application.Run(new frmLogIn());
                 else
-                    Application.Run(new FrmServerSetting());
+                    Application.Run(new FrmFirstOpen());
             }
         }
     }

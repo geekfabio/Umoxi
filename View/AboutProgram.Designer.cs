@@ -42,6 +42,7 @@
             this.textBoxDescription = new DevExpress.XtraEditors.LabelControl();
             this.Page2 = new DevExpress.XtraTab.XtraTabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TabContent)).BeginInit();
             this.TabContent.SuspendLayout();
             this.Page1.SuspendLayout();
+            this.Page2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +124,7 @@
             this.NavigationBar.AppearanceItem.Normal.Font = new System.Drawing.Font("Rubik", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NavigationBar.AppearanceItem.Normal.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.DisabledText;
             this.NavigationBar.AppearanceItem.Normal.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Normal.Options.UseForeColor = true;
             this.NavigationBar.AppearanceItem.Pressed.Font = new System.Drawing.Font("Rubik", 12F);
             this.NavigationBar.AppearanceItem.Pressed.Options.UseFont = true;
             this.NavigationBar.AppearanceItem.Selected.Font = new System.Drawing.Font("Rubik", 12F);
@@ -208,6 +211,7 @@
             // 
             this.Page2.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.Page2.Appearance.PageClient.Options.UseBackColor = true;
+            this.Page2.Controls.Add(this.labelControl1);
             this.Page2.Name = "Page2";
             this.Page2.Size = new System.Drawing.Size(367, 225);
             this.Page2.Text = "Page2";
@@ -222,6 +226,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 135;
             this.pictureBox2.TabStop = false;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 15);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(177, 26);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Contacto: 929725366/926556677\r\nemail: projetoumoxi@gmail.com\r\n";
             // 
             // AboutProgram
             // 
@@ -252,6 +264,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.TabContent)).EndInit();
             this.TabContent.ResumeLayout(false);
             this.Page1.ResumeLayout(false);
+            this.Page2.ResumeLayout(false);
+            this.Page2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,5 +287,6 @@
         private DevExpress.XtraTab.XtraTabPage Page2;
         private DevExpress.XtraEditors.LabelControl textBoxDescription;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

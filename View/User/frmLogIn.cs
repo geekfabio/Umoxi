@@ -188,10 +188,10 @@ namespace Umoxi
             FrmMain.Default.LogOffToolStripMenuItem.Caption = "Terminar sessão " + ConnectionNode.userName;
             FrmMain.Default.currentUser.Caption = "Bem-vindo(a) " + ConnectionNode.userName;
             FrmMain.Default.toastNotificationsManager1.Notifications[0].Header = "Bem-vindo(a)" + ConnectionNode.userName;
-            FrmMain.Default.toastNotificationsManager1.Notifications[0].Body = "Umoxi - Sistema de gestão hospital" + ConnectionNode.userName;
+            FrmMain.Default.toastNotificationsManager1.Notifications[0].Body = "Umoxi - Sistema de gestão hospital || " + ConnectionNode.userName;
             FrmMain.Default.lblUserName.Text = "@" + ConnectionNode.userName;
             FrmMain.Default.lblFullName.Text = ConnectionNode.fullName;
-            //FrmMain.Default.lblUserEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["e_mail"]);
+            FrmMain.Default.lblUserEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
             FrmMain.Default.lblUser_name.Text = ConnectionNode.userName;
             #endregion
         }
