@@ -63,6 +63,16 @@ namespace Umoxi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22px {
+            get {
+                object obj = ResourceManager.GetObject("22px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _lock {
             get {
                 object obj = ResourceManager.GetObject("lock", resourceCulture);
@@ -426,6 +436,16 @@ namespace Umoxi.Properties {
         internal static System.Drawing.Bitmap exam_pen_32px {
             get {
                 object obj = ResourceManager.GetObject("exam-pen@32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap farmacia_icon {
+            get {
+                object obj = ResourceManager.GetObject("farmacia_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2036,6 +2056,26 @@ namespace Umoxi.Properties {
         internal static System.Drawing.Bitmap no_Images_cn {
             get {
                 object obj = ResourceManager.GetObject("no-Images-cn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pacientes_22px {
+            get {
+                object obj = ResourceManager.GetObject("pacientes_22px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pacients_icon {
+            get {
+                object obj = ResourceManager.GetObject("pacients_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
