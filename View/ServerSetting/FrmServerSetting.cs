@@ -52,43 +52,45 @@ namespace Umoxi
 
         #endregion
 
-        public void SavetoXML(object dbconnString)
+        public void SaveConfig()
         {
-            XmlDocument doc = new XmlDocument();
-            
-            doc.Load("ConnectionString.xml");
-            XmlElement root = doc.DocumentElement;
-            root.Attributes.Item(0).Value = Convert.ToString(dbconnString);
-            XmlTextWriter writer = new XmlTextWriter("ConnectionString.xml", null);
-            writer.Formatting = Formatting.Indented;
-            doc.Save(writer);
-            writer.Close();
+            Properties.Settings.Default.dbUmoxiConnectionString = txtconnString.Text;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("O registro foi armazenado com sucesso", "salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Restart();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
+
             if (string.IsNullOrEmpty(txtconnString.Text))
             {
-                MessageBox.Show("Por favor intrduza uma String de conexão valida..", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
+
+                MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+          
+            }
+            else if (ConnectionNode.CheckServer())
+            {
+                SaveConfig();
+                splashScreenManager1.CloseWaitForm();
+
             }
             else
             {
-                SavetoXML(txtconnString.Text);
-                MessageBox.Show("O registro foi armazenado com sucesso", "salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Restart();
+                splashScreenManager1.CloseWaitForm();
+
+                MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
+          //  splashScreenManager1.CloseWaitForm();
         }
 
-        private string dbconnString;
-
-        public void ReadfromXML()
+        public void ReadConnectionString()
         {
-            try { 
-            XmlDocument doc = new XmlDocument();
-            doc.Load("ConnectionString.xml");
-            XmlElement root = doc.DocumentElement;
-            dbconnString = root.Attributes.Item(0).Value;
-            txtconnString.Text = dbconnString;
+            try {
+               txtconnString.Text = Properties.Settings.Default.dbUmoxiConnectionString;
             }
             catch
             {
@@ -98,7 +100,7 @@ namespace Umoxi
 
         public void frmServerSetting_Load(Object sender, System.EventArgs e)
         {
-            ReadfromXML();
+            ReadConnectionString();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)

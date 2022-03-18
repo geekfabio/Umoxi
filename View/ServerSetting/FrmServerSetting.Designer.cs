@@ -47,10 +47,13 @@ namespace Umoxi
             this.btnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Umoxi.View.ServerSetting.WaitForm2), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolbarFormControl1
@@ -83,7 +86,7 @@ namespace Umoxi
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 210);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 185);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(391, 0);
             // 
@@ -93,7 +96,7 @@ namespace Umoxi
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 186);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 161);
             // 
             // barDockControlRight
             // 
@@ -101,7 +104,7 @@ namespace Umoxi
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(391, 24);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 186);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 161);
             // 
             // txtconnString
             // 
@@ -368,6 +371,7 @@ namespace Umoxi
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -375,6 +379,17 @@ namespace Umoxi
             this.panel1.Size = new System.Drawing.Size(391, 38);
             this.panel1.TabIndex = 111;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::Umoxi.Properties.Resources.logo_255px;
+            this.pictureBox1.Image = global::Umoxi.Properties.Resources.logo_255px;
+            this.pictureBox1.Location = new System.Drawing.Point(331, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 134;
+            this.pictureBox1.TabStop = false;
             // 
             // lblUserName
             // 
@@ -394,11 +409,15 @@ namespace Umoxi
             this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // FrmServerSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 210);
+            this.ClientSize = new System.Drawing.Size(391, 185);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
@@ -421,6 +440,7 @@ namespace Umoxi
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +459,7 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClose;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuLabel lblUserName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
