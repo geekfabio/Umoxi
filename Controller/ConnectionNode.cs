@@ -40,8 +40,22 @@ namespace Umoxi
         }
         public static bool CheckServer()
         {
+            //verifica os diretorios necessário para executar o app
             CheckPath();
-            return true;
+            MySqlConnection sqlCon = new MySqlConnection(connString);
+            try {
+                sqlCon.Open();
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public static DataTable ExecuteSQLQuery(string sqlQuery)
