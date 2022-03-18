@@ -792,6 +792,12 @@
     <Compile Include="View\ServerSetting\FrmServerSetting.Designer.cs">
       <DependentUpon>FrmServerSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ServerSetting\WaitForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServerSetting\WaitForm2.Designer.cs">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Student\frmAddDailyAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1119,6 +1125,9 @@
     <EmbeddedResource Include="View\ServerSetting\FrmServerSetting.resx">
       <DependentUpon>FrmServerSetting.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServerSetting\WaitForm2.resx">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Student\frmAddDailyAttendance.resx">
       <DependentUpon>frmAddDailyAttendance.cs</DependentUpon>
@@ -2212,8 +2221,13 @@
     <Content Include="favicon.ico" />
     <None Include="Resources\logo_255px.png" />
     <None Include="Resources\hospital_fundo2.jpg" />
+    <None Include="Resources\farmacia_icon.png" />
+    <None Include="Resources\22px.png" />
+    <None Include="Resources\pacients_icon.png" />
+    <None Include="Resources\pacientes_22px.png" />
     <Content Include="Sources files\Connection string.txt" />
     <Content Include="Sources files\dbUmojaSchool.sql" />
+    <Content Include="Sources files\db_hospital.sql" />
     <Content Include="uschool.ico" />
     <Content Include="View\Dashboard\Dashboard.xml" />
     <Content Include="View\ServerSetting\ConnectionString.xml" />

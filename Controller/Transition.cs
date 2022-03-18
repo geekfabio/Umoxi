@@ -43,13 +43,14 @@ namespace Umoxi
                 transition.Control = controlToAnimate;
 
                 transitionManager.Transitions.Add(transition);
+              
+
             }
 
             Transitions transitions = Transitions.PushFade;
 
             transitionManager.Transitions[controlToAnimate].TransitionType = GetTransition(transitions);
-          //  transitionManager.Dispose();
-           // controlForUse.Dispose();
+           
         }
 
         //Tipos de animação
@@ -77,18 +78,23 @@ namespace Umoxi
             //--------------Label-------------//
             if (controlToAnimate == null)
             {
+                textBox.BorderColorIdle = Color.FromArgb(222, 53, 11);
+                textBox.BorderColorHover = Color.FromArgb(222, 53, 11);
+                textBox.BorderColorActive = Color.FromArgb(222, 53, 11);
+                labelUsed.ForeColor = Color.Red;
+                textBox.Focus();
                 return;
             }
             transitionManager.StartTransition(controlToAnimate);
-            if (string.IsNullOrWhiteSpace(textBox.Text))
+            if (textBox.BorderColorIdle != Color.FromArgb(222, 53, 11))
             {
                 textBox.BorderColorIdle = Color.FromArgb(222, 53, 11);
                 textBox.BorderColorHover = Color.FromArgb(222, 53, 11);
                 textBox.BorderColorActive = Color.FromArgb(222, 53, 11);
                 labelUsed.ForeColor = Color.Red;
                 textBox.Focus();
-            }
-          transitionManager.EndTransition();
+            }          
+            transitionManager.EndTransition();
           //  transitionManager.Dispose();
         }
 

@@ -172,9 +172,6 @@
   <data name="icons8_identification_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_identification_documents1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="icons8_hierarchy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_hierarchy.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="icons8_document" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_document.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -295,6 +292,9 @@
   <data name="dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="farmacia_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\farmacia_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_mail.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -364,6 +364,9 @@
   <data name="Dark-white-in-Basic7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pacients_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacients_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -420,6 +423,9 @@
   </data>
   <data name="icons8_back_arrow_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_back_arrow_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_chart_bar_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_chart_bar_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -496,20 +502,20 @@
   <data name="Warning_28px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning_28px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_list_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_list_view.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="hospital_fundo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hospital_fundo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_mail_configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_mail_configuration1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="dashboard-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard-check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dark-white-in-Basic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dark-white-in-Basic31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_eye_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_eye_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dark-white-in-Basic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dark-white-in-Basic31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_hierarchy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_hierarchy.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="icons8_invisible_24px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_invisible_24px_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -534,6 +540,9 @@
   </data>
   <data name="people-graduate-man@32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people-graduate-man@32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_list_view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_list_view.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -706,6 +715,9 @@
   <data name="Dark-white-in-Basic12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashboard-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard-check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dark-white-in-Basic11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -793,7 +805,7 @@
   <data name="icons8_time_machine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_time_machine1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="hospital_fundo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hospital_fundo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pacientes_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacientes_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

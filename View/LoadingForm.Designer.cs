@@ -41,7 +41,7 @@ namespace Umoxi.View
             // 
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.MintCream;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
@@ -56,7 +56,7 @@ namespace Umoxi.View
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.Controls.Add(this.bunifuLoader1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 17);
@@ -69,7 +69,7 @@ namespace Umoxi.View
             this.bunifuLoader1.AllowStylePresets = true;
             this.bunifuLoader1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuLoader1.CapStyle = Bunifu.UI.WinForms.BunifuLoader.CapStyles.Round;
-            this.bunifuLoader1.Color = System.Drawing.SystemColors.Window;
+            this.bunifuLoader1.Color = System.Drawing.Color.SeaGreen;
             this.bunifuLoader1.Colors = new Bunifu.UI.WinForms.Bloom[0];
             this.bunifuLoader1.Customization = "";
             this.bunifuLoader1.DashWidth = 0.5F;

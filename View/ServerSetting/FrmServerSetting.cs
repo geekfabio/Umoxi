@@ -52,51 +52,65 @@ namespace Umoxi
 
         #endregion
 
-        public void SavetoXML(object dbconnString)
+        public void SaveConfig()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("ConnectionString.xml");
-            XmlElement root = doc.DocumentElement;
-            root.Attributes.Item(0).Value = Convert.ToString(dbconnString);
-            XmlTextWriter writer = new XmlTextWriter("ConnectionString.xml", null);
-            writer.Formatting = Formatting.Indented;
-            doc.Save(writer);
-            writer.Close();
+            Properties.Settings.Default.dbUmoxiConnectionString = txtconnString.Text;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("O registro foi armazenado com sucesso", "salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Restart();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
+
             if (string.IsNullOrEmpty(txtconnString.Text))
             {
-                MessageBox.Show("Please enter a connection string..", "Empty line", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
+
+                MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+          
+            }
+            else if (ConnectionNode.CheckServer())
+            {
+                SaveConfig();
+                splashScreenManager1.CloseWaitForm();
+
             }
             else
             {
-                SavetoXML(txtconnString.Text);
-                MessageBox.Show("Successfully saved to ConnectionString.xml", "Save record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Environment.Exit(0);
+                splashScreenManager1.CloseWaitForm();
+
+                MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
+          //  splashScreenManager1.CloseWaitForm();
         }
 
-        private string dbconnString;
-
-        public void ReadfromXML()
+        public void ReadConnectionString()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("ConnectionString.xml");
-            XmlElement root = doc.DocumentElement;
-            dbconnString = root.Attributes.Item(0).Value;
-            txtconnString.Text = dbconnString;
-        }
+            try {
+               txtconnString.Text = Properties.Settings.Default.dbUmoxiConnectionString;
+            }
+            catch
+            {
+                MessageBox.Show("Nenhuma configuração da base de dados encontrada", "Base de dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         }
 
         public void frmServerSetting_Load(Object sender, System.EventArgs e)
         {
-            ReadfromXML();
+            ReadConnectionString();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

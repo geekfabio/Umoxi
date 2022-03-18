@@ -77,6 +77,10 @@ namespace Umoxi.Properties {
             get {
                 return ((string)(this["dbUmoxiConnectionString"]));
             }
+            set
+            {
+                this["dbUmoxiConnectionString"] = value;
+            }
         }
     }
 }

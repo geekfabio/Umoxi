@@ -29,9 +29,33 @@ namespace Umoxi
         public static int LOGID;
 
         ///Metodo para ver o estado da conexão com a base de dados
+        ///
+
+        public static void CheckPath()
+        {
+            if (!Directory.Exists(appPathAvatar))
+            {
+                Directory.CreateDirectory(appPathAvatar);
+            }
+        }
         public static bool CheckServer()
         {
-            return true;
+            //verifica os diretorios necessário para executar o app
+            CheckPath();
+            MySqlConnection sqlCon = new MySqlConnection(connString);
+            try {
+                sqlCon.Open();
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public static DataTable ExecuteSQLQuery(string sqlQuery)
@@ -194,6 +218,7 @@ namespace Umoxi
             if (File.Exists(appLogo)) {
                 File.Delete(appLogo);
             }
+           
             pictureLogo.Image.Save(appLogo);  
             cmd.Parameters.Add("@photo", MySqlDbType.String).Value=appLogo;
             cmd.ExecuteNonQuery();

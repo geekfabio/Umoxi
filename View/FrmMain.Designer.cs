@@ -69,9 +69,6 @@ namespace Umoxi
             this.GradingMakingToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
             this.FeesEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
-            this.barHeaderItem3 = new DevExpress.XtraBars.BarHeaderItem();
-            this.NationalityToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
-            this.HolidayDeclarationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.EmployeeToolStripMenuItem = new DevExpress.XtraBars.BarSubItem();
             this.EmployeeInformationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.DepartmentToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
@@ -150,19 +147,20 @@ namespace Umoxi
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.barHeaderItem3 = new DevExpress.XtraBars.BarHeaderItem();
+            this.NationalityToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
+            this.HolidayDeclarationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.StudentToolStripMenuItem = new DevExpress.XtraBars.BarLinkContainerItem();
             this.StudentInformationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             this.IdentityCardToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.DocumentsToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
-            this.barHeaderItem5 = new DevExpress.XtraBars.BarHeaderItem();
-            this.FeesCollectionToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
-            this.WaiverToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem6 = new DevExpress.XtraBars.BarHeaderItem();
             this.DailyAttendanceToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.MarksEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
-            this.PromotionImprovementToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.StudentListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
+            this.barHeaderItem5 = new DevExpress.XtraBars.BarHeaderItem();
+            this.PromotionImprovementToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.EmployeeListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.VoucherEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
@@ -181,12 +179,9 @@ namespace Umoxi
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llStudentInformation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llIdentityCard = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llMarksEntry = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llDailyAttendance = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llFeesCollection = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llPromotion = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPacienteAtendimentoDiario = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPacienteConsulta = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.btnPacienteNovo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement20 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llEmployeeInformation = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llSalaryEntry = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -196,9 +191,16 @@ namespace Umoxi
             this.llAllowances = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement41 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserRegistration = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.llPermission = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement18 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement47 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement51 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement53 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement43 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement44 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement46 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement48 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement49 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.elementSwitchTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement54 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -209,8 +211,12 @@ namespace Umoxi
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementMothView = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.FeesCollectionToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
+            this.WaiverToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.DashboardToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.repositoryItemSearchLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -270,6 +276,23 @@ namespace Umoxi
             this.accordionControlElement28 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement25 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.toastNotificationsManager2 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
+            this.accordionControlElement26 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement27 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement29 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement30 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement31 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement32 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement33 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement34 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement36 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement37 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement38 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement39 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement40 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement42 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement45 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainerUser)).BeginInit();
@@ -282,6 +305,7 @@ namespace Umoxi
             this.accordionContentContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -341,7 +365,6 @@ namespace Umoxi
             this.toolbarFormControl1.TitleItemLinks.Add(this.EmailToolStripMenuItem);
             this.toolbarFormControl1.TitleItemLinks.Add(this.AdministrationToolStripMenuItem);
             this.toolbarFormControl1.TitleItemLinks.Add(this.ReportsToolStripMenuItem);
-            this.toolbarFormControl1.TitleItemLinks.Add(this.barButtonItem1);
             this.toolbarFormControl1.TitleItemLinks.Add(this.HelpMenu);
             this.toolbarFormControl1.ToolbarForm = this;
             this.ToolTipMenu.SetToolTip(this.toolbarFormControl1, "");
@@ -477,8 +500,9 @@ namespace Umoxi
             this.FeesCollectionToolStripMenuItem,
             this.WaiverToolStripMenuItem,
             this.DashboardToolStripMenuItem,
-            this.barButtonItem1});
-            this.toolbarFormManager.MaxItemId = 153;
+            this.barButtonItem1,
+            this.barButtonItem2});
+            this.toolbarFormManager.MaxItemId = 154;
             this.toolbarFormManager.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1,
             this.repositoryItemImageEdit1,
@@ -766,10 +790,7 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.ExaminationToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.GradingMakingToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.FeesEntryToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.NationalityToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.HolidayDeclarationToolStripMenuItem)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.FeesEntryToolStripMenuItem)});
             this.PrimarySetupToolStripMenuItem.Name = "PrimarySetupToolStripMenuItem";
             // 
             // SchoolInformationToolStripMenuItem
@@ -812,7 +833,7 @@ namespace Umoxi
             // 
             // ClassTypeToolStripMenuItem
             // 
-            this.ClassTypeToolStripMenuItem.Caption = "Cycle";
+            this.ClassTypeToolStripMenuItem.Caption = "Departamentos";
             this.ClassTypeToolStripMenuItem.Id = 37;
             this.ClassTypeToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_preschool;
             this.ClassTypeToolStripMenuItem.Name = "ClassTypeToolStripMenuItem";
@@ -836,7 +857,6 @@ namespace Umoxi
             // 
             // GradingMakingToolStripMenuItem
             // 
-            this.GradingMakingToolStripMenuItem.Caption = "Grading Making";
             this.GradingMakingToolStripMenuItem.Id = 40;
             this.GradingMakingToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_exam;
             this.GradingMakingToolStripMenuItem.Name = "GradingMakingToolStripMenuItem";
@@ -850,33 +870,11 @@ namespace Umoxi
             // 
             // FeesEntryToolStripMenuItem
             // 
-            this.FeesEntryToolStripMenuItem.Caption = "Fees Entry";
+            this.FeesEntryToolStripMenuItem.Caption = "Processamento de salário";
             this.FeesEntryToolStripMenuItem.Id = 42;
             this.FeesEntryToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_cash;
             this.FeesEntryToolStripMenuItem.Name = "FeesEntryToolStripMenuItem";
             this.FeesEntryToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FeesEntryToolStripMenuItem_Click);
-            // 
-            // barHeaderItem3
-            // 
-            this.barHeaderItem3.Caption = "Outros";
-            this.barHeaderItem3.Id = 43;
-            this.barHeaderItem3.Name = "barHeaderItem3";
-            // 
-            // NationalityToolStripMenuItem
-            // 
-            this.NationalityToolStripMenuItem.Caption = "Nationality";
-            this.NationalityToolStripMenuItem.Id = 44;
-            this.NationalityToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_globe;
-            this.NationalityToolStripMenuItem.Name = "NationalityToolStripMenuItem";
-            this.NationalityToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NationalityToolStripMenuItem_Click);
-            // 
-            // HolidayDeclarationToolStripMenuItem
-            // 
-            this.HolidayDeclarationToolStripMenuItem.Caption = "Holiday";
-            this.HolidayDeclarationToolStripMenuItem.Id = 45;
-            this.HolidayDeclarationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_planner;
-            this.HolidayDeclarationToolStripMenuItem.Name = "HolidayDeclarationToolStripMenuItem";
-            this.HolidayDeclarationToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HolidayDeclarationToolStripMenuItem_Click);
             // 
             // EmployeeToolStripMenuItem
             // 
@@ -898,7 +896,7 @@ namespace Umoxi
             // 
             // EmployeeInformationToolStripMenuItem
             // 
-            this.EmployeeInformationToolStripMenuItem.Caption = "Employee Information";
+            this.EmployeeInformationToolStripMenuItem.Caption = "Funcionários";
             this.EmployeeInformationToolStripMenuItem.Id = 73;
             this.EmployeeInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_member;
             this.EmployeeInformationToolStripMenuItem.Name = "EmployeeInformationToolStripMenuItem";
@@ -906,7 +904,7 @@ namespace Umoxi
             // 
             // DepartmentToolStripMenuItem
             // 
-            this.DepartmentToolStripMenuItem.Caption = "Department";
+            this.DepartmentToolStripMenuItem.Caption = "Departmentos";
             this.DepartmentToolStripMenuItem.Id = 139;
             this.DepartmentToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_hierarchy;
             this.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem";
@@ -914,7 +912,7 @@ namespace Umoxi
             // 
             // DesignationToolStripMenuItem
             // 
-            this.DesignationToolStripMenuItem.Caption = "Designation";
+            this.DesignationToolStripMenuItem.Caption = "Designação";
             this.DesignationToolStripMenuItem.Id = 140;
             this.DesignationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_permanent_job;
             this.DesignationToolStripMenuItem.Name = "DesignationToolStripMenuItem";
@@ -928,7 +926,7 @@ namespace Umoxi
             // 
             // SalaryEntryToolStripMenuItem
             // 
-            this.SalaryEntryToolStripMenuItem.Caption = "Salary Entry";
+            this.SalaryEntryToolStripMenuItem.Caption = "Procesamento de salário";
             this.SalaryEntryToolStripMenuItem.Id = 76;
             this.SalaryEntryToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_stack_of_coins;
             this.SalaryEntryToolStripMenuItem.Name = "SalaryEntryToolStripMenuItem";
@@ -936,7 +934,7 @@ namespace Umoxi
             // 
             // SalaryPayToolStripMenuItem
             // 
-            this.SalaryPayToolStripMenuItem.Caption = "Salary Pay ";
+            this.SalaryPayToolStripMenuItem.Caption = "Consulta de S. processados";
             this.SalaryPayToolStripMenuItem.Id = 77;
             this.SalaryPayToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_receive_cash;
             this.SalaryPayToolStripMenuItem.Name = "SalaryPayToolStripMenuItem";
@@ -950,7 +948,7 @@ namespace Umoxi
             // 
             // AttendanceToolStripMenuItem
             // 
-            this.AttendanceToolStripMenuItem.Caption = "Attendance";
+            this.AttendanceToolStripMenuItem.Caption = "Marcar presença";
             this.AttendanceToolStripMenuItem.Id = 79;
             this.AttendanceToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_attendance;
             this.AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem";
@@ -964,7 +962,7 @@ namespace Umoxi
             // 
             // AllowancesToolStripMenuItem
             // 
-            this.AllowancesToolStripMenuItem.Caption = "Allowances";
+            this.AllowancesToolStripMenuItem.Caption = "Aumentos [Hora Extra]";
             this.AllowancesToolStripMenuItem.Id = 81;
             this.AllowancesToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_add_dollar;
             this.AllowancesToolStripMenuItem.Name = "AllowancesToolStripMenuItem";
@@ -972,7 +970,7 @@ namespace Umoxi
             // 
             // DeductionsToolStripMenuItem
             // 
-            this.DeductionsToolStripMenuItem.Caption = "Deductions";
+            this.DeductionsToolStripMenuItem.Caption = "Dedução de sálario";
             this.DeductionsToolStripMenuItem.Id = 82;
             this.DeductionsToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_delete_dollar;
             this.DeductionsToolStripMenuItem.Name = "DeductionsToolStripMenuItem";
@@ -1213,7 +1211,7 @@ namespace Umoxi
             // 
             // UserRegistrationToolStripMenuItem
             // 
-            this.UserRegistrationToolStripMenuItem.Caption = "Users";
+            this.UserRegistrationToolStripMenuItem.Caption = "Usúarios";
             this.UserRegistrationToolStripMenuItem.Id = 97;
             this.UserRegistrationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_customer;
             this.UserRegistrationToolStripMenuItem.Name = "UserRegistrationToolStripMenuItem";
@@ -1221,7 +1219,7 @@ namespace Umoxi
             // 
             // PermissionToolStripMenuItem
             // 
-            this.PermissionToolStripMenuItem.Caption = "Permissions";
+            this.PermissionToolStripMenuItem.Caption = "Alterar senha";
             this.PermissionToolStripMenuItem.Id = 99;
             this.PermissionToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_access;
             this.PermissionToolStripMenuItem.Name = "PermissionToolStripMenuItem";
@@ -1229,7 +1227,7 @@ namespace Umoxi
             // 
             // UserLogToolStripMenuItem
             // 
-            this.UserLogToolStripMenuItem.Caption = "Log";
+            this.UserLogToolStripMenuItem.Caption = "Registro de Atividades";
             this.UserLogToolStripMenuItem.Id = 100;
             this.UserLogToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_time_machine;
             this.UserLogToolStripMenuItem.Name = "UserLogToolStripMenuItem";
@@ -1503,6 +1501,28 @@ namespace Umoxi
             this.skinPaletteDropDownButtonItem1.Id = 31;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
+            // barHeaderItem3
+            // 
+            this.barHeaderItem3.Caption = "Outros";
+            this.barHeaderItem3.Id = 43;
+            this.barHeaderItem3.Name = "barHeaderItem3";
+            // 
+            // NationalityToolStripMenuItem
+            // 
+            this.NationalityToolStripMenuItem.Caption = "Nationality";
+            this.NationalityToolStripMenuItem.Id = 44;
+            this.NationalityToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_globe;
+            this.NationalityToolStripMenuItem.Name = "NationalityToolStripMenuItem";
+            this.NationalityToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NationalityToolStripMenuItem_Click);
+            // 
+            // HolidayDeclarationToolStripMenuItem
+            // 
+            this.HolidayDeclarationToolStripMenuItem.Caption = "Holiday";
+            this.HolidayDeclarationToolStripMenuItem.Id = 45;
+            this.HolidayDeclarationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_planner;
+            this.HolidayDeclarationToolStripMenuItem.Name = "HolidayDeclarationToolStripMenuItem";
+            this.HolidayDeclarationToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HolidayDeclarationToolStripMenuItem_Click);
+            // 
             // StudentToolStripMenuItem
             // 
             this.StudentToolStripMenuItem.Caption = "Pacientes";
@@ -1512,20 +1532,16 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.IdentityCardToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.DocumentsToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.FeesCollectionToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.WaiverToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem6),
             new DevExpress.XtraBars.LinkPersistInfo(this.DailyAttendanceToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.MarksEntryToolStripMenuItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.PromotionImprovementToolStripMenuItem)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.MarksEntryToolStripMenuItem)});
             this.StudentToolStripMenuItem.Name = "StudentToolStripMenuItem";
             // 
             // StudentInformationToolStripMenuItem
             // 
-            this.StudentInformationToolStripMenuItem.Caption = "Student Information";
+            this.StudentInformationToolStripMenuItem.Caption = "Informações de pacientes";
             this.StudentInformationToolStripMenuItem.Id = 49;
-            this.StudentInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_student_male_1;
+            this.StudentInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_supplier;
             this.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem";
             this.StudentInformationToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.StudentInformationToolStripMenuItem_Click);
             // 
@@ -1537,7 +1553,7 @@ namespace Umoxi
             // 
             // IdentityCardToolStripMenuItem
             // 
-            this.IdentityCardToolStripMenuItem.Caption = "Identity Card";
+            this.IdentityCardToolStripMenuItem.Caption = "Cartão de Identificação";
             this.IdentityCardToolStripMenuItem.Id = 53;
             this.IdentityCardToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_identification_documents;
             this.IdentityCardToolStripMenuItem.Name = "IdentityCardToolStripMenuItem";
@@ -1545,33 +1561,11 @@ namespace Umoxi
             // 
             // DocumentsToolStripMenuItem
             // 
-            this.DocumentsToolStripMenuItem.Caption = "Document";
+            this.DocumentsToolStripMenuItem.Caption = "Documentos";
             this.DocumentsToolStripMenuItem.Id = 138;
             this.DocumentsToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_document;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
             this.DocumentsToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DocumentsToolStripMenuItem_ItemClick);
-            // 
-            // barHeaderItem5
-            // 
-            this.barHeaderItem5.Caption = "Pagamentos";
-            this.barHeaderItem5.Id = 54;
-            this.barHeaderItem5.Name = "barHeaderItem5";
-            // 
-            // FeesCollectionToolStripMenuItem
-            // 
-            this.FeesCollectionToolStripMenuItem.Caption = "Fees Collection";
-            this.FeesCollectionToolStripMenuItem.Id = 145;
-            this.FeesCollectionToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_cash_in_hand;
-            this.FeesCollectionToolStripMenuItem.Name = "FeesCollectionToolStripMenuItem";
-            this.FeesCollectionToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FeesCollectionToolStripMenuItem_Click);
-            // 
-            // WaiverToolStripMenuItem
-            // 
-            this.WaiverToolStripMenuItem.Caption = "Waiver";
-            this.WaiverToolStripMenuItem.Id = 146;
-            this.WaiverToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_refund;
-            this.WaiverToolStripMenuItem.Name = "WaiverToolStripMenuItem";
-            this.WaiverToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.WaiverToolStripMenuItem_Click);
             // 
             // barHeaderItem6
             // 
@@ -1581,7 +1575,7 @@ namespace Umoxi
             // 
             // DailyAttendanceToolStripMenuItem
             // 
-            this.DailyAttendanceToolStripMenuItem.Caption = "Daily Attendance";
+            this.DailyAttendanceToolStripMenuItem.Caption = "Atendimento diário";
             this.DailyAttendanceToolStripMenuItem.Id = 57;
             this.DailyAttendanceToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_attendance;
             this.DailyAttendanceToolStripMenuItem.Name = "DailyAttendanceToolStripMenuItem";
@@ -1589,11 +1583,23 @@ namespace Umoxi
             // 
             // MarksEntryToolStripMenuItem
             // 
-            this.MarksEntryToolStripMenuItem.Caption = "Marks Entry";
+            this.MarksEntryToolStripMenuItem.Caption = "Consultas agendadas";
             this.MarksEntryToolStripMenuItem.Id = 58;
             this.MarksEntryToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_pass_fail;
             this.MarksEntryToolStripMenuItem.Name = "MarksEntryToolStripMenuItem";
             this.MarksEntryToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MarksEntryToolStripMenuItem_Click);
+            // 
+            // StudentListToolStripMenuItem
+            // 
+            this.StudentListToolStripMenuItem.Caption = "Lista dos Estudantes";
+            this.StudentListToolStripMenuItem.Id = 50;
+            this.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem";
+            // 
+            // barHeaderItem5
+            // 
+            this.barHeaderItem5.Caption = "Pagamentos";
+            this.barHeaderItem5.Id = 54;
+            this.barHeaderItem5.Name = "barHeaderItem5";
             // 
             // PromotionImprovementToolStripMenuItem
             // 
@@ -1602,12 +1608,6 @@ namespace Umoxi
             this.PromotionImprovementToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_class;
             this.PromotionImprovementToolStripMenuItem.Name = "PromotionImprovementToolStripMenuItem";
             this.PromotionImprovementToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PromotionImprovementToolStripMenuItem_Click);
-            // 
-            // StudentListToolStripMenuItem
-            // 
-            this.StudentListToolStripMenuItem.Caption = "Lista dos Estudantes";
-            this.StudentListToolStripMenuItem.Id = 50;
-            this.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem";
             // 
             // BookListToolStripMenuItem
             // 
@@ -1707,7 +1707,7 @@ namespace Umoxi
             this.accdMenu.Appearance.Group.Disabled.Options.UseForeColor = true;
             this.accdMenu.Appearance.Group.Hovered.BackColor = System.Drawing.Color.White;
             this.accdMenu.Appearance.Group.Hovered.Font = new System.Drawing.Font("Rubik", 11.25F);
-            this.accdMenu.Appearance.Group.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.accdMenu.Appearance.Group.Hovered.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.accdMenu.Appearance.Group.Hovered.Options.UseBackColor = true;
             this.accdMenu.Appearance.Group.Hovered.Options.UseFont = true;
             this.accdMenu.Appearance.Group.Hovered.Options.UseForeColor = true;
@@ -1719,7 +1719,7 @@ namespace Umoxi
             this.accdMenu.Appearance.Group.Normal.Options.UseForeColor = true;
             this.accdMenu.Appearance.Group.Pressed.BackColor = System.Drawing.Color.White;
             this.accdMenu.Appearance.Group.Pressed.Font = new System.Drawing.Font("Rubik", 11.25F);
-            this.accdMenu.Appearance.Group.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.accdMenu.Appearance.Group.Pressed.ForeColor = System.Drawing.Color.SeaGreen;
             this.accdMenu.Appearance.Group.Pressed.Options.UseBackColor = true;
             this.accdMenu.Appearance.Group.Pressed.Options.UseFont = true;
             this.accdMenu.Appearance.Group.Pressed.Options.UseForeColor = true;
@@ -1729,9 +1729,9 @@ namespace Umoxi
             this.accdMenu.Appearance.Item.Default.Options.UseForeColor = true;
             this.accdMenu.Appearance.Item.Disabled.Font = new System.Drawing.Font("Rubik", 9.25F);
             this.accdMenu.Appearance.Item.Disabled.Options.UseFont = true;
-            this.accdMenu.Appearance.Item.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.accdMenu.Appearance.Item.Hovered.BackColor = System.Drawing.Color.Honeydew;
             this.accdMenu.Appearance.Item.Hovered.Font = new System.Drawing.Font("Rubik", 9.25F);
-            this.accdMenu.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.accdMenu.Appearance.Item.Hovered.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.accdMenu.Appearance.Item.Hovered.Options.UseBackColor = true;
             this.accdMenu.Appearance.Item.Hovered.Options.UseFont = true;
             this.accdMenu.Appearance.Item.Hovered.Options.UseForeColor = true;
@@ -1741,13 +1741,13 @@ namespace Umoxi
             this.accdMenu.Appearance.Item.Normal.Options.UseBackColor = true;
             this.accdMenu.Appearance.Item.Normal.Options.UseFont = true;
             this.accdMenu.Appearance.Item.Normal.Options.UseForeColor = true;
-            this.accdMenu.Appearance.Item.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.accdMenu.Appearance.Item.Pressed.BackColor = System.Drawing.Color.MintCream;
             this.accdMenu.Appearance.Item.Pressed.Font = new System.Drawing.Font("Rubik", 9.25F);
-            this.accdMenu.Appearance.Item.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.accdMenu.Appearance.Item.Pressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.accdMenu.Appearance.Item.Pressed.Options.UseBackColor = true;
             this.accdMenu.Appearance.Item.Pressed.Options.UseFont = true;
             this.accdMenu.Appearance.Item.Pressed.Options.UseForeColor = true;
-            this.accdMenu.Appearance.ItemWithContainer.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.accdMenu.Appearance.ItemWithContainer.Default.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
             this.accdMenu.Appearance.ItemWithContainer.Default.Options.UseForeColor = true;
             this.accdMenu.Controls.Add(this.accordionContentContainer1);
             this.accdMenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1808,6 +1808,7 @@ namespace Umoxi
             this.accordionControlElement20,
             this.accordionControlElement41,
             this.accordionControlElement18,
+            this.accordionControlElement43,
             this.accordionControlSeparator1,
             this.elementSwitchTab});
             this.accordionControlElement5.Expanded = true;
@@ -1828,64 +1829,39 @@ namespace Umoxi
             // accordionControlElement6
             // 
             this.accordionControlElement6.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.llStudentInformation,
-            this.llIdentityCard,
-            this.llMarksEntry,
-            this.llDailyAttendance,
-            this.llFeesCollection,
-            this.llPromotion});
-            this.accordionControlElement6.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_student_male_1;
+            this.btnPacienteAtendimentoDiario,
+            this.btnPacienteConsulta,
+            this.btnPacienteNovo});
+            this.accordionControlElement6.Expanded = true;
+            this.accordionControlElement6.ImageOptions.Image = global::Umoxi.Properties.Resources.pacientes_22px;
             this.accordionControlElement6.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Text = "Pacientes";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
-            // llStudentInformation
+            // btnPacienteAtendimentoDiario
             // 
-            this.llStudentInformation.Height = 30;
-            this.llStudentInformation.Name = "llStudentInformation";
-            this.llStudentInformation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llStudentInformation.Text = "          Students";
-            this.llStudentInformation.Click += new System.EventHandler(this.btnStudent_Click);
+            this.btnPacienteAtendimentoDiario.Height = 30;
+            this.btnPacienteAtendimentoDiario.Name = "btnPacienteAtendimentoDiario";
+            this.btnPacienteAtendimentoDiario.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPacienteAtendimentoDiario.Text = "          Atendimento Diário";
+            this.btnPacienteAtendimentoDiario.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // llIdentityCard
+            // btnPacienteConsulta
             // 
-            this.llIdentityCard.Height = 30;
-            this.llIdentityCard.Name = "llIdentityCard";
-            this.llIdentityCard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llIdentityCard.Text = "          Identity Card";
-            this.llIdentityCard.Click += new System.EventHandler(this.btnStudent_Click);
+            this.btnPacienteConsulta.Height = 30;
+            this.btnPacienteConsulta.Name = "btnPacienteConsulta";
+            this.btnPacienteConsulta.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPacienteConsulta.Text = "          Consulta";
+            this.btnPacienteConsulta.Click += new System.EventHandler(this.btnStudent_Click);
             // 
-            // llMarksEntry
+            // btnPacienteNovo
             // 
-            this.llMarksEntry.Height = 30;
-            this.llMarksEntry.Name = "llMarksEntry";
-            this.llMarksEntry.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llMarksEntry.Text = "          Marks Entry";
-            this.llMarksEntry.Click += new System.EventHandler(this.btnStudent_Click);
-            // 
-            // llDailyAttendance
-            // 
-            this.llDailyAttendance.Height = 30;
-            this.llDailyAttendance.Name = "llDailyAttendance";
-            this.llDailyAttendance.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llDailyAttendance.Text = "          Daily attendance";
-            this.llDailyAttendance.Click += new System.EventHandler(this.btnStudent_Click);
-            // 
-            // llFeesCollection
-            // 
-            this.llFeesCollection.Height = 30;
-            this.llFeesCollection.Name = "llFeesCollection";
-            this.llFeesCollection.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llFeesCollection.Text = "          Fees collection";
-            this.llFeesCollection.Click += new System.EventHandler(this.btnStudent_Click);
-            // 
-            // llPromotion
-            // 
-            this.llPromotion.Height = 30;
-            this.llPromotion.Name = "llPromotion";
-            this.llPromotion.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llPromotion.Text = "          Promotion";
-            this.llPromotion.Click += new System.EventHandler(this.btnStudent_Click);
+            this.btnPacienteNovo.Height = 30;
+            this.btnPacienteNovo.Name = "btnPacienteNovo";
+            this.btnPacienteNovo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.btnPacienteNovo.Text = "          Cadastro";
+            this.btnPacienteNovo.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // accordionControlElement20
             // 
@@ -1906,7 +1882,7 @@ namespace Umoxi
             this.llEmployeeInformation.Height = 30;
             this.llEmployeeInformation.Name = "llEmployeeInformation";
             this.llEmployeeInformation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llEmployeeInformation.Text = "          Employees";
+            this.llEmployeeInformation.Text = "          Funcionários";
             this.llEmployeeInformation.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // llSalaryEntry
@@ -1914,7 +1890,7 @@ namespace Umoxi
             this.llSalaryEntry.Height = 30;
             this.llSalaryEntry.Name = "llSalaryEntry";
             this.llSalaryEntry.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llSalaryEntry.Text = "          Salary entry";
+            this.llSalaryEntry.Text = "          Processar salário";
             this.llSalaryEntry.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // llSalaryPay
@@ -1922,7 +1898,7 @@ namespace Umoxi
             this.llSalaryPay.Height = 30;
             this.llSalaryPay.Name = "llSalaryPay";
             this.llSalaryPay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llSalaryPay.Text = "          Salary Pay";
+            this.llSalaryPay.Text = "          Pagamento de salário";
             this.llSalaryPay.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // llAttendance
@@ -1930,7 +1906,7 @@ namespace Umoxi
             this.llAttendance.Height = 30;
             this.llAttendance.Name = "llAttendance";
             this.llAttendance.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llAttendance.Text = "          Attendance";
+            this.llAttendance.Text = "          Atendimento";
             this.llAttendance.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // llDeductions
@@ -1938,7 +1914,7 @@ namespace Umoxi
             this.llDeductions.Height = 30;
             this.llDeductions.Name = "llDeductions";
             this.llDeductions.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llDeductions.Text = "          Deductions";
+            this.llDeductions.Text = "          Dedução";
             this.llDeductions.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // llAllowances
@@ -1946,16 +1922,15 @@ namespace Umoxi
             this.llAllowances.Height = 30;
             this.llAllowances.Name = "llAllowances";
             this.llAllowances.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llAllowances.Text = "          Allowances";
+            this.llAllowances.Text = "          Presenças";
             this.llAllowances.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // accordionControlElement41
             // 
             this.accordionControlElement41.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.llUserRegistration,
-            this.llPermission,
             this.llUserLog});
-            this.accordionControlElement41.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_customer;
+            this.accordionControlElement41.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_name_tag;
             this.accordionControlElement41.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement41.Name = "accordionControlElement41";
             this.accordionControlElement41.Tag = "10";
@@ -1967,30 +1942,81 @@ namespace Umoxi
             this.llUserRegistration.Name = "llUserRegistration";
             this.llUserRegistration.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.llUserRegistration.Tag = "2";
-            this.llUserRegistration.Text = "          Users";
+            this.llUserRegistration.Text = "          Usuários";
             this.llUserRegistration.Click += new System.EventHandler(this.btnUser_Click);
-            // 
-            // llPermission
-            // 
-            this.llPermission.Height = 30;
-            this.llPermission.Name = "llPermission";
-            this.llPermission.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llPermission.Text = "          Permissions";
-            this.llPermission.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // llUserLog
             // 
             this.llUserLog.Height = 30;
             this.llUserLog.Name = "llUserLog";
             this.llUserLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llUserLog.Text = "          User log";
+            this.llUserLog.Text = "          Registro de Atividads";
             this.llUserLog.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // accordionControlElement18
             // 
+            this.accordionControlElement18.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement47,
+            this.accordionControlElement51,
+            this.accordionControlElement53});
             this.accordionControlElement18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement18.ImageOptions.Image")));
             this.accordionControlElement18.Name = "accordionControlElement18";
             this.accordionControlElement18.Text = "Urgencia";
+            // 
+            // accordionControlElement47
+            // 
+            this.accordionControlElement47.Name = "accordionControlElement47";
+            this.accordionControlElement47.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement47.Text = "          Atendimento";
+            // 
+            // accordionControlElement51
+            // 
+            this.accordionControlElement51.Name = "accordionControlElement51";
+            this.accordionControlElement51.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement51.Text = "          Registrar nascimento";
+            // 
+            // accordionControlElement53
+            // 
+            this.accordionControlElement53.Name = "accordionControlElement53";
+            this.accordionControlElement53.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement53.Text = "          Registrar morte";
+            // 
+            // accordionControlElement43
+            // 
+            this.accordionControlElement43.Appearance.Pressed.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Information;
+            this.accordionControlElement43.Appearance.Pressed.Options.UseForeColor = true;
+            this.accordionControlElement43.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement44,
+            this.accordionControlElement46,
+            this.accordionControlElement48,
+            this.accordionControlElement49});
+            this.accordionControlElement43.ImageOptions.Image = global::Umoxi.Properties.Resources._22px;
+            this.accordionControlElement43.Name = "accordionControlElement43";
+            this.accordionControlElement43.Text = "Farmacia";
+            // 
+            // accordionControlElement44
+            // 
+            this.accordionControlElement44.Name = "accordionControlElement44";
+            this.accordionControlElement44.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement44.Text = "          Ponto de Atendimento";
+            // 
+            // accordionControlElement46
+            // 
+            this.accordionControlElement46.Name = "accordionControlElement46";
+            this.accordionControlElement46.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement46.Text = "          Produtos";
+            // 
+            // accordionControlElement48
+            // 
+            this.accordionControlElement48.Name = "accordionControlElement48";
+            this.accordionControlElement48.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement48.Text = "          Fornecedores";
+            // 
+            // accordionControlElement49
+            // 
+            this.accordionControlElement49.Name = "accordionControlElement49";
+            this.accordionControlElement49.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement49.Text = "          Relatório";
             // 
             // accordionControlSeparator1
             // 
@@ -2024,7 +2050,6 @@ namespace Umoxi
             this.accordionControlElement4.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElementAddNewEvent,
             this.accordionControlElement7});
-            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_calendar;
             this.accordionControlElement4.ImageOptions.SvgImageSize = new System.Drawing.Size(25, 25);
             this.accordionControlElement4.Name = "accordionControlElement4";
@@ -2081,6 +2106,22 @@ namespace Umoxi
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement8.Text = "          Ano";
             // 
+            // FeesCollectionToolStripMenuItem
+            // 
+            this.FeesCollectionToolStripMenuItem.Caption = "Fees Collection";
+            this.FeesCollectionToolStripMenuItem.Id = 145;
+            this.FeesCollectionToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_cash_in_hand;
+            this.FeesCollectionToolStripMenuItem.Name = "FeesCollectionToolStripMenuItem";
+            this.FeesCollectionToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FeesCollectionToolStripMenuItem_Click);
+            // 
+            // WaiverToolStripMenuItem
+            // 
+            this.WaiverToolStripMenuItem.Caption = "Waiver";
+            this.WaiverToolStripMenuItem.Id = 146;
+            this.WaiverToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_refund;
+            this.WaiverToolStripMenuItem.Name = "WaiverToolStripMenuItem";
+            this.WaiverToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.WaiverToolStripMenuItem_Click);
+            // 
             // DashboardToolStripMenuItem
             // 
             this.DashboardToolStripMenuItem.Caption = "Dashboard";
@@ -2090,10 +2131,23 @@ namespace Umoxi
             // 
             // barButtonItem1
             // 
+            this.barButtonItem1.ActAsDropDown = true;
+            this.barButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.barButtonItem1.Caption = "Minha conta";
+            this.barButtonItem1.DropDownControl = this.popupMenu1;
             this.barButtonItem1.Id = 152;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Manager = this.toolbarFormManager;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Id = 153;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // repositoryItemSearchControl1
             // 
@@ -2263,7 +2317,7 @@ namespace Umoxi
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(229)))), ((int)(((byte)(197)))));
+            this.panel6.BackColor = System.Drawing.Color.Honeydew;
             this.panel6.Controls.Add(this.bunifuLabel1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 59);
@@ -2821,6 +2875,136 @@ namespace Umoxi
             // 
             this.toastNotificationsManager2.ApplicationId = "a0ffff84-6cfe-494d-b3c8-ffc9b101c85d";
             // 
+            // accordionControlElement26
+            // 
+            this.accordionControlElement26.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement27,
+            this.accordionControlElement29,
+            this.accordionControlElement30,
+            this.accordionControlElement31,
+            this.accordionControlElement32,
+            this.accordionControlElement33});
+            this.accordionControlElement26.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_member;
+            this.accordionControlElement26.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
+            this.accordionControlElement26.Name = "accordionControlElement26";
+            this.accordionControlElement26.Text = "Funcionários";
+            // 
+            // accordionControlElement27
+            // 
+            this.accordionControlElement27.Height = 30;
+            this.accordionControlElement27.Name = "accordionControlElement27";
+            this.accordionControlElement27.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement27.Text = "          Funcionários";
+            // 
+            // accordionControlElement29
+            // 
+            this.accordionControlElement29.Height = 30;
+            this.accordionControlElement29.Name = "accordionControlElement29";
+            this.accordionControlElement29.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement29.Text = "          Processar salário";
+            // 
+            // accordionControlElement30
+            // 
+            this.accordionControlElement30.Height = 30;
+            this.accordionControlElement30.Name = "accordionControlElement30";
+            this.accordionControlElement30.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement30.Text = "          Pagamento de salário";
+            // 
+            // accordionControlElement31
+            // 
+            this.accordionControlElement31.Height = 30;
+            this.accordionControlElement31.Name = "accordionControlElement31";
+            this.accordionControlElement31.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement31.Text = "          Atendimento";
+            // 
+            // accordionControlElement32
+            // 
+            this.accordionControlElement32.Height = 30;
+            this.accordionControlElement32.Name = "accordionControlElement32";
+            this.accordionControlElement32.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement32.Text = "          Dedução";
+            // 
+            // accordionControlElement33
+            // 
+            this.accordionControlElement33.Height = 30;
+            this.accordionControlElement33.Name = "accordionControlElement33";
+            this.accordionControlElement33.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement33.Text = "          Presenças";
+            // 
+            // accordionControlElement34
+            // 
+            this.accordionControlElement34.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement36,
+            this.accordionControlElement37,
+            this.accordionControlElement38,
+            this.accordionControlElement39,
+            this.accordionControlElement40,
+            this.accordionControlElement42});
+            this.accordionControlElement34.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_member;
+            this.accordionControlElement34.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
+            this.accordionControlElement34.Name = "accordionControlElement34";
+            this.accordionControlElement34.Text = "Funcionários";
+            // 
+            // accordionControlElement36
+            // 
+            this.accordionControlElement36.Height = 30;
+            this.accordionControlElement36.Name = "accordionControlElement36";
+            this.accordionControlElement36.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement36.Text = "          Funcionários";
+            // 
+            // accordionControlElement37
+            // 
+            this.accordionControlElement37.Height = 30;
+            this.accordionControlElement37.Name = "accordionControlElement37";
+            this.accordionControlElement37.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement37.Text = "          Processar salário";
+            // 
+            // accordionControlElement38
+            // 
+            this.accordionControlElement38.Height = 30;
+            this.accordionControlElement38.Name = "accordionControlElement38";
+            this.accordionControlElement38.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement38.Text = "          Pagamento de salário";
+            // 
+            // accordionControlElement39
+            // 
+            this.accordionControlElement39.Height = 30;
+            this.accordionControlElement39.Name = "accordionControlElement39";
+            this.accordionControlElement39.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement39.Text = "          Atendimento";
+            // 
+            // accordionControlElement40
+            // 
+            this.accordionControlElement40.Height = 30;
+            this.accordionControlElement40.Name = "accordionControlElement40";
+            this.accordionControlElement40.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement40.Text = "          Dedução";
+            // 
+            // accordionControlElement42
+            // 
+            this.accordionControlElement42.Height = 30;
+            this.accordionControlElement42.Name = "accordionControlElement42";
+            this.accordionControlElement42.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement42.Text = "          Presenças";
+            // 
+            // accordionControlElement45
+            // 
+            this.accordionControlElement45.Name = "accordionControlElement45";
+            this.accordionControlElement45.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement45.Text = "          Ponto de Atendimento";
+            // 
+            // accordionControlElement50
+            // 
+            this.accordionControlElement50.Name = "accordionControlElement50";
+            this.accordionControlElement50.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement50.Text = "          Relatório";
+            // 
+            // accordionControlElement52
+            // 
+            this.accordionControlElement52.Name = "accordionControlElement52";
+            this.accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement52.Text = "          Registrar nascimento";
+            // 
             // FrmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -2860,6 +3044,7 @@ namespace Umoxi
             this.accordionContentContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -3083,12 +3268,9 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llStudentInformation;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llIdentityCard;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llMarksEntry;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llDailyAttendance;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llFeesCollection;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llPromotion;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPacienteNovo;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPacienteConsulta;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPacienteAtendimentoDiario;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement20;
         private DevExpress.XtraBars.Navigation.AccordionControlElement llEmployeeInformation;
         private DevExpress.XtraBars.Navigation.AccordionControlElement llSalaryEntry;
@@ -3098,7 +3280,6 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement llAllowances;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement41;
         private DevExpress.XtraBars.Navigation.AccordionControlElement llUserRegistration;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement llPermission;
         private DevExpress.XtraBars.Navigation.AccordionControlElement llUserLog;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement18;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
@@ -3126,5 +3307,32 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement28;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement25;
         private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement43;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement26;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement27;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement29;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement30;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement31;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement32;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement33;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement34;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement36;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement37;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement38;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement39;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement40;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement42;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement47;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement51;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement53;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement44;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement46;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement48;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement49;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement45;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement50;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement52;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
