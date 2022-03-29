@@ -122,7 +122,7 @@ namespace Umoxi
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnNext = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.txtUserID = new Bunifu.UI.WinForms.BunifuTextBox();
+           
             this.Page2 = new DevExpress.XtraTab.XtraTabPage();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnBrowsePhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -639,7 +639,7 @@ namespace Umoxi
             this.Page1.Controls.Add(this.bunifuLabel1);
             this.Page1.Controls.Add(this.txtEmail);
             this.Page1.Controls.Add(this.btnNext);
-            this.Page1.Controls.Add(this.txtUserID);
+          
             this.Page1.Name = "Page1";
             this.Page1.Size = new System.Drawing.Size(793, 364);
             this.Page1.Text = "Page1";
@@ -1323,80 +1323,7 @@ namespace Umoxi
             this.btnNext.UseDefaultRadiusAndThickness = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // txtUserID
-            // 
-            this.txtUserID.AcceptsReturn = false;
-            this.txtUserID.AcceptsTab = false;
-            this.txtUserID.AnimationSpeed = 200;
-            this.txtUserID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtUserID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtUserID.AutoSizeHeight = true;
-            this.txtUserID.BackColor = System.Drawing.Color.White;
-            this.txtUserID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUserID.BackgroundImage")));
-            this.txtUserID.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtUserID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtUserID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtUserID.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUserID.BorderRadius = 10;
-            this.txtUserID.BorderThickness = 1;
-            this.txtUserID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtUserID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserID.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.txtUserID.DefaultText = "";
-            this.txtUserID.FillColor = System.Drawing.Color.White;
-            this.txtUserID.HideSelection = true;
-            this.txtUserID.IconLeft = null;
-            this.txtUserID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserID.IconPadding = 10;
-            this.txtUserID.IconRight = null;
-            this.txtUserID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserID.Lines = new string[0];
-            this.txtUserID.Location = new System.Drawing.Point(35, 49);
-            this.txtUserID.MaxLength = 32767;
-            this.txtUserID.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtUserID.Modified = false;
-            this.txtUserID.Multiline = false;
-            this.txtUserID.Name = "txtUserID";
-            stateProperties73.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties73.FillColor = System.Drawing.Color.Empty;
-            stateProperties73.ForeColor = System.Drawing.Color.Empty;
-            stateProperties73.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUserID.OnActiveState = stateProperties73;
-            stateProperties74.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties74.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties74.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtUserID.OnDisabledState = stateProperties74;
-            stateProperties75.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties75.FillColor = System.Drawing.Color.Empty;
-            stateProperties75.ForeColor = System.Drawing.Color.Empty;
-            stateProperties75.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUserID.OnHoverState = stateProperties75;
-            stateProperties76.BorderColor = System.Drawing.Color.Silver;
-            stateProperties76.FillColor = System.Drawing.Color.White;
-            stateProperties76.ForeColor = System.Drawing.Color.Empty;
-            stateProperties76.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUserID.OnIdleState = stateProperties76;
-            this.txtUserID.Padding = new System.Windows.Forms.Padding(3);
-            this.txtUserID.PasswordChar = '\0';
-            this.txtUserID.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtUserID.PlaceholderText = "ID";
-            this.txtUserID.ReadOnly = false;
-            this.txtUserID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtUserID.SelectedText = "";
-            this.txtUserID.SelectionLength = 0;
-            this.txtUserID.SelectionStart = 0;
-            this.txtUserID.ShortcutsEnabled = true;
-            this.txtUserID.Size = new System.Drawing.Size(38, 34);
-            this.txtUserID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUserID.TabIndex = 73;
-            this.txtUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUserID.TextMarginBottom = 0;
-            this.txtUserID.TextMarginLeft = 3;
-            this.txtUserID.TextMarginTop = 0;
-            this.txtUserID.TextPlaceholder = "ID";
-            this.txtUserID.UseSystemPasswordChar = false;
-            this.txtUserID.WordWrap = true;
+            
             // 
             // Page2
             // 

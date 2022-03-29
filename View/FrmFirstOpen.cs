@@ -12,7 +12,7 @@ namespace Umoxi
     public partial class FrmFirstOpen : Form
     {
         readonly Timer tickToAppRestart = new Timer();
-        string chkVAL;
+        string chkVAL = "";
         string userPhoto = "";
         string companyPhoto = "";
         public FrmFirstOpen()
@@ -26,15 +26,8 @@ namespace Umoxi
         {
             stepProgress.SelectedItemIndex = -1;
             txtPass_TextChanged(null, null);
-            txtUserID.Visible = false;
+          
 
-            txtAddress.Text = "Luanda";
-            txtContactNo.Text = "000";
-            txtUserName.Text = "adb";
-            txtEmail.Text = "luanda@gmail.com";
-            txtPassword.Text = "000123";
-            txtRePassword.Text = "000123";
-            txtuserFullName.Text = "ADR MMU T";
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -100,13 +93,14 @@ namespace Umoxi
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        {
-            TabContent.SelectedTabPage = Page1;
-            stepProgress.SelectedItemIndex = 0;
+        { 
+                TabContent.SelectedTabPage = Page1;
+                stepProgress.SelectedItemIndex = 0;
+               
         }
 
 
-        private void btnNext2_Click(object sender, EventArgs e)
+            private void btnNext2_Click(object sender, EventArgs e)
         {
             TabContent.SelectedTabPage = Page3;
             stepProgress.SelectedItemIndex = 2;
@@ -310,9 +304,8 @@ namespace Umoxi
                     finally
                     {   
                         //Salva os dados do hospital na base dados
-                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES( '" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "')");
-                  
-
+                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES( '" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + @destFileName + "')");
+                
                     }
                  
                     Snackbar.Show(this, "Hospital registrado com sucesso!", BunifuSnackbar.MessageTypes.Success);
@@ -367,7 +360,7 @@ namespace Umoxi
                     + UtilitiesFunctions.str_repl(txtuserFullName.Text) 
                     + "','" + UtilitiesFunctions.CreateMD5(txtPassword.Text)
                     + "','" + txtEmail.Text
-                    + "','" + destFileName
+                    + "','" + @destFileName
                     + "','Administrador','"
                     + UtilitiesFunctions.str_repl(txtContactNo.Text)
                     + "','" + UtilitiesFunctions.str_repl(txtAddress.Text)
