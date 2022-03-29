@@ -99,7 +99,11 @@ namespace Umoxi
         {
             return str.Replace("'", "").Replace(",", ",").Replace("`", "");
         }
+        public static string stringReplacePath(string str)
+        {
 
+            return str.Replace(@"\", "/");
+         }
         /// <summary>
         /// Usar para tirar formatos de hora e data : / pq o ficheiro n pode conter esses caracters 
         /// </summary>
