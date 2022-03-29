@@ -91,7 +91,7 @@ namespace Umoxi
             if (MessageBox.Show("Are you sure you want to void voucher # " + txtVoucherNO.Text + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ConnectionNode.ExecuteSQLQuery(" UPDATE    Voucher SET Approval='C'  WHERE        (VOUCHER_ID = " + txtVoucherNO.Text + " )");
-                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Voucher Approved. " + txtVoucherNO.Text);
+                UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Voucher Approved. " + txtVoucherNO.Text);
                 btnSearch.PerformClick();
                 Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);
             }

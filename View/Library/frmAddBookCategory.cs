@@ -55,14 +55,14 @@ namespace Umoxi
                 {
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO BookCategory (Category_Name) VALUES ('" + UtilitiesFunctions.str_repl(txtCategoryName.Text) + "')  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add category of book # " + txtCategoryName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add category of book # " + txtCategoryName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         break;
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE BookCategory SET Category_Name= '" + UtilitiesFunctions.str_repl(txtCategoryName.Text) + "' WHERE  BOOK_CAT_ID=" + txtCatID.Text + "  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated category of book # " + txtCategoryName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated category of book # " + txtCategoryName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

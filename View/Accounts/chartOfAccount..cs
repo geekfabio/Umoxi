@@ -14,7 +14,7 @@ namespace Umoxi
 {
     public partial class chartOfAccount : Form
     {
-        usAccounts accounts = new usAccounts();
+        readonly usAccounts accounts = new usAccounts();
         public chartOfAccount()
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace Umoxi
                         //Create new ledger for transaction
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO ChartOfAccount (AC_ID, LedgerName, LedgerDate, OpeningBalance, Status) VALUES " +
                             " (" + cmbAccount.Text.Split(" # ".ToCharArray()[0])[0] + (", '" + UtilitiesFunctions.str_repl(txtLedgerName.Text) + "', '") + Strings.Format(dtpOpeningDate.DateTime.Date, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(txtOpeningBalance.Text) + "', '" + cmbStatus.Text + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "Add a new a/c head");
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateAndTime.TimeOfDay.ToString(), "Add a new a/c head");
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -85,7 +85,7 @@ namespace Umoxi
                         //Update ledger details
                         ConnectionNode.ExecuteSQLQuery(" UPDATE ChartOfAccount SET  AC_ID=" + cmbAccount.Text.Split(" # ".ToCharArray()[0])[0] + (", LedgerName='" + UtilitiesFunctions.str_repl(txtLedgerName.Text) + "', LedgerDate='") + Strings.Format(dtpOpeningDate.DateTime.Date, "MM/dd/yyyy") + ("', OpeningBalance='" + UtilitiesFunctions.str_repl(txtOpeningBalance.Text) + "', Status='" + cmbStatus.Text + "' ") +
                             " WHERE AC_LEDGER_ID=" + txtACLedgerId.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "Update a/c head");
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateAndTime.TimeOfDay.ToString(), "Update a/c head");
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

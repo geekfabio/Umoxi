@@ -139,7 +139,7 @@ namespace Umoxi
             else
             {
                 ConnectionNode.ExecuteSQLQuery("UPDATE Accounts SET AC_Name='" + UtilitiesFunctions.str_repl(txtAcName.Text) + "' WHERE AC_ID=" + txtAcId.Text + " ");
-                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Update A/c name " + txtAcName.Text);
+                UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Update A/c name " + txtAcName.Text);
 
                 this.Close();
                 Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

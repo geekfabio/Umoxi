@@ -81,12 +81,12 @@ namespace Umoxi
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
                             ConnectionNode.ExecuteSQLQuery(" INSERT INTO DailyAttendance (SCHOOL_ID, BATCH_ID, CLASS_ID, EmployeeID, SUBJECT_ID, EntryDate, EntryTime, STUDENT_ID, User_ID, Status) VALUES " +
-                                " (" + school.Text.Split(" # ".ToCharArray()[0])[0] + ", " + session.Text.Split(" # ".ToCharArray()[0])[0] + ", " + classe.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbTeacher.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbSubject.Text.Split(" # ".ToCharArray()[0])[0] + ", '" + Strings.Format(dtpEntryDate.EditValue, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToShortTimeString() + "', ") + Convert.ToString(STUDENT_ID) + ", " + Convert.ToString(ConnectionNode.xUser_ID) + ", 'Present') ");
+                                " (" + school.Text.Split(" # ".ToCharArray()[0])[0] + ", " + session.Text.Split(" # ".ToCharArray()[0])[0] + ", " + classe.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbTeacher.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbSubject.Text.Split(" # ".ToCharArray()[0])[0] + ", '" + Strings.Format(dtpEntryDate.EditValue, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToShortTimeString() + "', ") + Convert.ToString(STUDENT_ID) + ", " + Convert.ToString(ConnectionNode.userID) + ", 'Present') ");
                         }
                         else
                         {
                             ConnectionNode.ExecuteSQLQuery(" INSERT INTO DailyAttendance (SCHOOL_ID, BATCH_ID, CLASS_ID, EmployeeID, SUBJECT_ID, EntryDate, EntryTime, STUDENT_ID, User_ID, Status) VALUES " +
-                            " (" + school.Text.Split(" # ".ToCharArray()[0])[0] + ", " + session.Text.Split(" # ".ToCharArray()[0])[0] + ", " + classe.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbTeacher.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbSubject.Text.Split(" # ".ToCharArray()[0])[0] + ", '" + Strings.Format(dtpEntryDate.EditValue, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToShortTimeString() + "', ") + Convert.ToString(STUDENT_ID) + ", " + Convert.ToString(ConnectionNode.xUser_ID) + ", 'Absent') ");
+                            " (" + school.Text.Split(" # ".ToCharArray()[0])[0] + ", " + session.Text.Split(" # ".ToCharArray()[0])[0] + ", " + classe.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbTeacher.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbSubject.Text.Split(" # ".ToCharArray()[0])[0] + ", '" + Strings.Format(dtpEntryDate.EditValue, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToShortTimeString() + "', ") + Convert.ToString(STUDENT_ID) + ", " + Convert.ToString(ConnectionNode.userID) + ", 'Absent') ");
                         }
                     }
                 }

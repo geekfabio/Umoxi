@@ -39,12 +39,12 @@ namespace Umoxi
 
         private void LoadData()
         {
-            ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+            ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                 " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
                 " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                 "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID ";
-            ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+            ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
             if (ConnectionNode.sqlDT.Rows.Count > 0)
             {
                 lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -77,12 +77,12 @@ namespace Umoxi
                 {
                     case "ID":
                         //search by book id
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                             " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear" +
                             " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                             "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE        (BookInfo.BOOK_ID = " + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + ")";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -95,12 +95,12 @@ namespace Umoxi
                     //----------------
                     case "Name":
                         //search by book name
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                             " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
                             " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                             "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE  (BookInfo.BookName LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -113,12 +113,12 @@ namespace Umoxi
                     //----------------
                     case "Supplier":
                         //search by supplier name
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                             " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
                             " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                             "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE  (BookSupplier.Supplier_Name LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -131,12 +131,12 @@ namespace Umoxi
                     //----------------
                     case "Author":
                         //search by author name
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                             " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
                             " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                             "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE  (BookInfo.Author LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -151,12 +151,12 @@ namespace Umoxi
                     /*
                     case "ISBN":
 						//search by isbn
-						ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+						ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
 							" BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
 							" FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
 							"  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE  (BookInfo.ISBN LIKE '%" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-						ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-						ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+						ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+						ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
 						if (ConnectionNode.sqlDT.Rows.Count > 0)
 						{
 							lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -171,12 +171,12 @@ namespace Umoxi
                     //----------------
                     case "Barcode":
                         //search by barcode
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, " +
                             " BookCategory.Category_Name, BookInfo.Barcode, BookInfo.PubYear " +
                             " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                             "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID  WHERE  (BookInfo.Barcode LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblTotalBooks.Text = "Total " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + " book(s) found.";
@@ -212,13 +212,13 @@ namespace Umoxi
                     #region edit
                     if (MessageBox.Show("Are you sure you want to edit " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, BookClassification.Book_Classf_Type,  " +
+                        ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, BookClassification.Book_Classf_Type,  " +
                         " BookCategory.Category_Name, BookInfo.ISBN, BookInfo.Barcode, BookInfo.Edition, BookInfo.Volume, BookInfo.Publisher, BookInfo.PubYear, BookInfo.NoOfPages,     BookInfo.BookLocation, BookInfo.CoverType, BookInfo.Price , BookInfo.QtyAvailable " +
                         " , BookInfo.BOOK_CLASSF_ID, BookInfo.BOOK_CAT_ID, BookInfo.BOOK_SUPP_ID,  BookInfo.CoverPhoto " +
                         " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                         "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID WHERE        (BookInfo.BOOK_ID = " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ) ";
 
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             frmAddBooks books = new frmAddBooks();
@@ -281,13 +281,13 @@ namespace Umoxi
                     break;
                 default:
                     #region view
-                    ConnectionNode.sqlSTR = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, BookClassification.Book_Classf_Type,  " +
+                    ConnectionNode.sqlString = " SELECT        BookInfo.BOOK_ID, BookInfo.BookName, BookSupplier.Supplier_Name, BookInfo.EntryDate, BookInfo.Author, BookClassification.Book_Classf_Type,  " +
                         " BookCategory.Category_Name, BookInfo.ISBN, BookInfo.Barcode, BookInfo.Edition, BookInfo.Volume, BookInfo.Publisher, BookInfo.PubYear, BookInfo.NoOfPages,     BookInfo.BookLocation, BookInfo.CoverType, BookInfo.Price , BookInfo.QtyAvailable " +
                         " , BookInfo.BOOK_CLASSF_ID, BookInfo.BOOK_CAT_ID, BookInfo.BOOK_SUPP_ID,  BookInfo.CoverPhoto " +
                         " FROM            BookInfo INNER JOIN  BookSupplier ON BookInfo.BOOK_SUPP_ID = BookSupplier.BOOK_SUPP_ID INNER JOIN BookClassification ON BookInfo.BOOK_CLASSF_ID = BookClassification.BOOK_CLASSF_ID INNER JOIN " +
                         "  BookCategory ON BookInfo.BOOK_CAT_ID = BookCategory.BOOK_CAT_ID WHERE        (BookInfo.BOOK_ID = " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ) ";
 
-                    ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                    ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                     if (ConnectionNode.sqlDT.Rows.Count > 0)
                     {
                         txtBookName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["BookName"]);

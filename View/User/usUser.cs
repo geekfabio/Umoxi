@@ -65,7 +65,7 @@ namespace Umoxi
                             frmAddUser frm = new frmAddUser();
                             frm.txtUserID.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["User_ID"]);
                             frm.txtUserName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["user_name"]);
-                            frm.txtFullName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["full_name"]);
+                            frm.txtuserFullName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["full_name"]);
                             frm.txtEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["e_mail"]);
                             frm.txtContactNo.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["contact_no"]);
                             //txtPassword.Text = System.Convert.ToString(ConnectionNode.sqlDT.Rows[0]["password"]);

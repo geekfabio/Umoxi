@@ -417,7 +417,7 @@ namespace Umoxi
                 double xAmount = Convert.ToDouble(ConnectionNode.sqlDT.Rows[0]["Amount"]);
 
                 ConnectionNode.ExecuteSQLQuery(" INSERT INTO StudentLedger (STUDENT_ID, FEES_ID, EntryDate, EntryTime, User_ID, Debit, Credit, Narration, Month) VALUES  " +
-                    " (" + txtStudentID.Text + ", " + cmbFees.Text.Split(" # ".ToCharArray()[0])[0] + ",  '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateAndTime.TimeOfDay + "', ") + System.Convert.ToString(ConnectionNode.xUser_ID) + ", " + System.Convert.ToString(xAmount) + (", 0, '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', '") + xMonth + "' ) ");
+                    " (" + txtStudentID.Text + ", " + cmbFees.Text.Split(" # ".ToCharArray()[0])[0] + ",  '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateAndTime.TimeOfDay + "', ") + System.Convert.ToString(ConnectionNode.userID) + ", " + System.Convert.ToString(xAmount) + (", 0, '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', '") + xMonth + "' ) ");
 
                 LoadStudentFees();
                 UtilitiesFunctions.StudentBanalce(double.Parse(txtStudentID.Text), txtBalance);

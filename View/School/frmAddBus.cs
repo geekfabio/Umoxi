@@ -63,7 +63,7 @@ namespace Umoxi
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO SchoolBus (Bus_no, Driver_Name, Driver_Contact, Supervisor, SupervisorContact) VALUES " + (
                         " ( '" + UtilitiesFunctions.str_repl(txtBusNO.Text) + "', '" + UtilitiesFunctions.str_repl(txtDriverName.Text) + "', '" + UtilitiesFunctions.str_repl(txtDriverContact.Text) + "', '" + UtilitiesFunctions.str_repl(txtSupervisorName.Text) + "', '" + UtilitiesFunctions.str_repl(txtSupervisorContact.Text) + "' ) "));
                         
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Transporte adicionado # " + txtBusNO.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Transporte adicionado # " + txtBusNO.Text);
                         
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -73,7 +73,7 @@ namespace Umoxi
                             #region update
                         ConnectionNode.ExecuteSQLQuery(" UPDATE  SchoolBus  SET Bus_no='" + UtilitiesFunctions.str_repl(txtBusNO.Text) + "', Driver_Name='" + UtilitiesFunctions.str_repl(txtDriverName.Text) + "', Driver_Contact='" + UtilitiesFunctions.str_repl(txtDriverContact.Text) + "', Supervisor='" + UtilitiesFunctions.str_repl(txtSupervisorName.Text) + "', SupervisorContact ='" + UtilitiesFunctions.str_repl(txtSupervisorContact.Text) + "' " +
                         " WHERE BUS_ID=" + txtBusID.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Transporte atualizado # " + txtBusNO.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Transporte atualizado # " + txtBusNO.Text);
                         
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

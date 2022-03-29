@@ -11,7 +11,7 @@ namespace Umoxi
 {
     public partial class FrmFirstOpen : Form
     {
-        Timer frmOpem = new Timer();
+        readonly Timer tickToAppRestart = new Timer();
         string chkVAL;
         string userPhoto = "";
         string companyPhoto = "";
@@ -28,13 +28,20 @@ namespace Umoxi
             txtPass_TextChanged(null, null);
             txtUserID.Visible = false;
 
+            txtAddress.Text = "Luanda";
+            txtContactNo.Text = "000";
+            txtUserName.Text = "adb";
+            txtEmail.Text = "luanda@gmail.com";
+            txtPassword.Text = "000123";
+            txtRePassword.Text = "000123";
+            txtuserFullName.Text = "ADR MMU T";
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
           
             TransitionsEffects.ResetColor(txtUserName, lblUserName);
-            TransitionsEffects.ResetColor(txtFullName, lblFullName);
+            TransitionsEffects.ResetColor(txtuserFullName, lbluserFullName);
             TransitionsEffects.ResetColor(txtContactNo, lblContactNo);
             TransitionsEffects.ResetColor(txtEmail, lblEmail);
             TransitionsEffects.ResetColor(txtPassword, lblPassword);
@@ -44,10 +51,10 @@ namespace Umoxi
                     Snackbar.Show(this, "Usuário é Obrigatório", BunifuSnackbar.MessageTypes.Error);
                     TransitionsEffects.ShowTransition(txtUserName, lblUserName);
                 }
-                else if (string.IsNullOrWhiteSpace(txtFullName.Text))
+                else if (string.IsNullOrWhiteSpace(txtuserFullName.Text))
                 {
                     Snackbar.Show(this, "Nome completo é um campo Obrigatório", BunifuSnackbar.MessageTypes.Error);
-                    TransitionsEffects.ShowTransition(txtFullName, lblFullName);
+                    TransitionsEffects.ShowTransition(txtuserFullName, lbluserFullName);
                 }
                 else if (string.IsNullOrWhiteSpace(txtContactNo.Text))
                 {
@@ -173,10 +180,19 @@ namespace Umoxi
             } 
             finally
             {
-                ConnectionNode.ExecuteSQLQuery("INSERT INTO  Usuarios (usuario, password, nome, email, contacto, ativo, foto, funcao) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "', '" + destFileName + "', 'Administrador'");
+                ConnectionNode.ExecuteCommad("INSERT INTO `usuarios`(`usuario`, `nome`, `password`, `email`, `foto`, `funcao`, `contacto`,`endereco`) VALUES ('"
+                     + UtilitiesFunctions.str_repl(txtUserName.Text) + "','"
+                     + UtilitiesFunctions.str_repl(txtuserFullName.Text)
+                     + "','" + UtilitiesFunctions.CreateMD5(txtPassword.Text)
+                     + "','" + txtEmail.Text
+                     + "','" + destFileName
+                     + "','Administrador','"
+                     + UtilitiesFunctions.str_repl(txtContactNo.Text)
+                     + "','" + UtilitiesFunctions.str_repl(txtAddress.Text)
+                     + "')");
             }
 
-            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, Conversions.ToString(DateAndTime.TimeOfDay), "Set user permission.");
+           // UtilitiesFunctions.Logger(1, Conversions.ToString(DateAndTime.TimeOfDay), "Dados do Hospital Cadastrado com sucesso");
 
             #region Permissions
             //TODO implements permission for user
@@ -185,18 +201,16 @@ namespace Umoxi
 
             Snackbar.Show(this, "Concluio as configurações do admin\n Aguarde...!", BunifuSnackbar.MessageTypes.Success);
 
-            frmOpem.Interval = 5000; //cinco segundos
-            frmOpem.Tick += new EventHandler(frmOpem_Tick);
-            frmOpem.Start();
+            tickToAppRestart.Interval = 5000; //cinco segundos
+            tickToAppRestart.Tick += new EventHandler(appRestart_Tick);
+            tickToAppRestart.Start();
 
         }
 
-        void frmOpem_Tick(object sender, EventArgs e)
+        void appRestart_Tick(object sender, EventArgs e)
         {
-            frmOpem.Stop();
-            frmOpem.Tick -= new EventHandler(frmOpem_Tick);
-            frmLogIn.Default.Show();
-            this.Close();
+            Application.Restart();
+          
 
         }
 
@@ -218,7 +232,7 @@ namespace Umoxi
 
         private void FrmFirstOpen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            UtilitiesFunctions.AppClose(this, e);
+            UtilitiesFunctions.AppClose(this, e, true);
         }
 
         private void txtPassword_OnIconRightClick(object sender, EventArgs e)
@@ -296,7 +310,9 @@ namespace Umoxi
                     finally
                     {   
                         //Salva os dados na base dados
-                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES " + (" ('" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "' "));
+                        ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES( '" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "')");
+                  
+
                     }
                  
                     Snackbar.Show(this, "Hospital registrado com sucesso!", BunifuSnackbar.MessageTypes.Success);
@@ -330,6 +346,33 @@ namespace Umoxi
         private void lbltxtEmailSchool_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            string destFileName = Path.Combine(ConnectionNode.appPathAvatar, "user " + UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()) + ".png");
+
+            //upload image
+            try
+            {
+                if (!String.IsNullOrWhiteSpace(userPhoto) && File.Exists(userPhoto))
+                    File.Copy(sourceFileName: userPhoto, destFileName);
+                else
+                    destFileName = "sem_foto";
+            }
+            finally
+            {
+                ConnectionNode.ExecuteCommad("INSERT INTO `usuarios`(`usuario`, `nome`, `password`, `email`, `foto`, `funcao`, `contacto`,`endereco`) VALUES ('"
+                    + UtilitiesFunctions.str_repl(txtUserName.Text)+ "','"
+                    + UtilitiesFunctions.str_repl(txtuserFullName.Text) 
+                    + "','" + UtilitiesFunctions.CreateMD5(txtPassword.Text)
+                    + "','" + txtEmail.Text
+                    + "','" + destFileName
+                    + "','Administrador','"
+                    + UtilitiesFunctions.str_repl(txtContactNo.Text)
+                    + "','" + UtilitiesFunctions.str_repl(txtAddress.Text)
+                    + "')");
+            }
         }
 
         //private void btnEditImage_Click(object sender, EventArgs e)

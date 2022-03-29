@@ -33,7 +33,7 @@ namespace Umoxi
         }
         #endregion
 
-        private double ITEM_COST;
+        readonly private double ITEM_COST;
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -90,7 +90,7 @@ namespace Umoxi
             if (MessageBox.Show("Are you sure you want to approve voucher # " + txtVoucherNO.Text + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ConnectionNode.ExecuteSQLQuery(" UPDATE    Voucher SET Approval='Y'  WHERE        (VOUCHER_ID = " + txtVoucherNO.Text + " )");
-                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Voucher Approved. " + txtVoucherNO.Text);
+                UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Voucher Approved. " + txtVoucherNO.Text);
                 btnSearch.PerformClick();
                 Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);
             }

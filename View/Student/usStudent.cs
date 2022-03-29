@@ -39,12 +39,12 @@ namespace Umoxi
 
         private void LoadData()
         {
-            ConnectionNode.sqlSTR = " SELECT StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+            ConnectionNode.sqlString = " SELECT StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                 "ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                 " StudentInformation.Status FROM StudentInformation INNER JOIN " +
                 " SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID ";
-            ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+            ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
             if (ConnectionNode.sqlDT.Rows.Count > 0)
             {
                 lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";
@@ -74,13 +74,13 @@ namespace Umoxi
                         }
                         else
                         {
-                            ConnectionNode.sqlSTR = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+                            ConnectionNode.sqlString = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                                 " ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                                 " StudentInformation.Status FROM            StudentInformation INNER JOIN " +
                                 "  SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID " +
                                 " WHERE        (StudentInformation.STUDENT_ID = " + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + ") ";
-                            ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                            ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                             if (ConnectionNode.sqlDT.Rows.Count > 0)
                             {
                                 lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";
@@ -95,13 +95,13 @@ namespace Umoxi
                     case "Admission":
                         #region No Add
                         //search by admission no
-                        ConnectionNode.sqlSTR = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+                        ConnectionNode.sqlString = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                             " ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                             " StudentInformation.Status FROM            StudentInformation INNER JOIN " +
                             "  SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID " +
                             "  WHERE  (StudentInformation.AdmissionNo LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";
@@ -115,13 +115,13 @@ namespace Umoxi
                     case "Name":
                         #region name
                         //search by student name
-                        ConnectionNode.sqlSTR = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+                        ConnectionNode.sqlString = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                             " ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                             " StudentInformation.Status FROM            StudentInformation INNER JOIN " +
                             "  SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID " +
                             "  WHERE  (StudentInformation.StudentName LIKE '%" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";
@@ -135,13 +135,13 @@ namespace Umoxi
                     case "Number":
                         #region Contact
                         //search by contact no
-                        ConnectionNode.sqlSTR = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+                        ConnectionNode.sqlString = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                             " ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                             " StudentInformation.Status FROM            StudentInformation INNER JOIN " +
                             " SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID " +
                             " WHERE  (StudentInformation.ContactNO LIKE '%" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";
@@ -155,13 +155,13 @@ namespace Umoxi
                     case "Email":
                         #region Mail
                         //search by email
-                        ConnectionNode.sqlSTR = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
+                        ConnectionNode.sqlString = " SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.StudentName,  " +
                             " ClassName.Class_name, Batch.BatchName, StudentInformation.Gender, " +
                             " StudentInformation.Status FROM            StudentInformation INNER JOIN " +
                             " SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID INNER JOIN  Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID " +
                             " WHERE  (StudentInformation.Email LIKE '%" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + "%') ";
-                        ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+                        ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+                        ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  estudante(s).";

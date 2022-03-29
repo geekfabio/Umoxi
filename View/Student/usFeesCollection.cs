@@ -73,7 +73,7 @@ namespace Umoxi
                     if (MessageBox.Show("Are you sure you want to edit " + Convert.ToString(DataGridView1.CurrentRow.Cells[6].Value) + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ConnectionNode.ExecuteSQLQuery(" DELETE FROM  StudentLedger WHERE  STU_LED_ID=" + Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value) + "  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateAndTime.TimeOfDay.ToString(), "Payment deleted # " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value));
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateAndTime.TimeOfDay.ToString(), "Payment deleted # " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value));
                         LoadData();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Delete"), BunifuSnackbar.MessageTypes.Success);
                     }

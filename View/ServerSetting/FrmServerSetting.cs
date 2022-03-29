@@ -56,6 +56,7 @@ namespace Umoxi
         {
             Properties.Settings.Default.dbUmoxiConnectionString = txtconnString.Text;
             Properties.Settings.Default.Save();
+            splashScreenManager1.CloseWaitForm();
             MessageBox.Show("O registro foi armazenado com sucesso", "salvo com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Restart();
         }
@@ -71,16 +72,13 @@ namespace Umoxi
                 MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
           
             }
-            else if (ConnectionNode.CheckServer())
+            else if (ConnectionNode.CheckServer(txtconnString.Text))
             {
                 SaveConfig();
-                splashScreenManager1.CloseWaitForm();
-
             }
             else
             {
                 splashScreenManager1.CloseWaitForm();
-
                 MessageBox.Show("Por favor introduza uma String de conexão valida...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }

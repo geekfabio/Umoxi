@@ -54,14 +54,14 @@ namespace Umoxi
                 {
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Nationality (Nationality) VALUES ('" + UtilitiesFunctions.str_repl(txtNationality.Text) + "')  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add nationality # " + txtNationality.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add nationality # " + txtNationality.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         break;
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE Nationality SET Nationality= '" + UtilitiesFunctions.str_repl(txtNationality.Text) + "' WHERE  NATION_ID=" + txtNationID.Text + "  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated nationality # " + txtNationality.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated nationality # " + txtNationality.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

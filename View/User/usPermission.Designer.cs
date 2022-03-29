@@ -33,6 +33,9 @@ namespace Umoxi
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usPermission));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.usPermissionlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.Snackbar = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
@@ -40,14 +43,11 @@ namespace Umoxi
             this.cmbUser = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.Snackbar = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usPermissionlayoutControl1ConvertedLayout)).BeginInit();
             this.usPermissionlayoutControl1ConvertedLayout.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPanel1item)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +63,120 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.usPermissionlayoutControl1ConvertedLayout, "");
             this.ToolTipGeneral.SetToolTipIcon(this.usPermissionlayoutControl1ConvertedLayout, null);
             this.ToolTipGeneral.SetToolTipTitle(this.usPermissionlayoutControl1ConvertedLayout, "");
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.bunifuPanel1item});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(614, 659);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // ToolTipGeneral
+            // 
+            this.ToolTipGeneral.Active = true;
+            this.ToolTipGeneral.AlignTextWithTitle = false;
+            this.ToolTipGeneral.AllowAutoClose = false;
+            this.ToolTipGeneral.AllowFading = true;
+            this.ToolTipGeneral.AutoCloseDuration = 5000;
+            this.ToolTipGeneral.BackColor = System.Drawing.SystemColors.Control;
+            this.ToolTipGeneral.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ToolTipGeneral.ClickToShowDisplayControl = false;
+            this.ToolTipGeneral.ConvertNewlinesToBreakTags = true;
+            this.ToolTipGeneral.DisplayControl = null;
+            this.ToolTipGeneral.EntryAnimationSpeed = 350;
+            this.ToolTipGeneral.ExitAnimationSpeed = 200;
+            this.ToolTipGeneral.GenerateAutoCloseDuration = false;
+            this.ToolTipGeneral.IconMargin = 6;
+            this.ToolTipGeneral.InitialDelay = 0;
+            this.ToolTipGeneral.Name = "ToolTipGeneral";
+            this.ToolTipGeneral.Opacity = 1D;
+            this.ToolTipGeneral.OverrideToolTipTitles = false;
+            this.ToolTipGeneral.Padding = new System.Windows.Forms.Padding(10);
+            this.ToolTipGeneral.ReshowDelay = 100;
+            this.ToolTipGeneral.ShowAlways = true;
+            this.ToolTipGeneral.ShowBorders = false;
+            this.ToolTipGeneral.ShowIcons = true;
+            this.ToolTipGeneral.ShowShadows = true;
+            this.ToolTipGeneral.Tag = null;
+            this.ToolTipGeneral.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToolTipGeneral.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ToolTipGeneral.TextMargin = 2;
+            this.ToolTipGeneral.TitleFont = new System.Drawing.Font("Rubik", 9F, System.Drawing.FontStyle.Bold);
+            this.ToolTipGeneral.TitleForeColor = System.Drawing.Color.Black;
+            this.ToolTipGeneral.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.ToolTipGeneral.ToolTipTitle = null;
+            // 
+            // Snackbar
+            // 
+            this.Snackbar.AllowDragging = false;
+            this.Snackbar.AllowMultipleViews = true;
+            this.Snackbar.ClickToClose = true;
+            this.Snackbar.DoubleClickToClose = true;
+            this.Snackbar.DurationAfterIdle = 3000;
+            this.Snackbar.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Snackbar.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(74)))), ((int)(((byte)(76)))));
+            this.Snackbar.ErrorOptions.ActionBorderRadius = 1;
+            this.Snackbar.ErrorOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Snackbar.ErrorOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(74)))), ((int)(((byte)(76)))));
+            this.Snackbar.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.Snackbar.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.Snackbar.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.Snackbar.ErrorOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Snackbar.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.Snackbar.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.Snackbar.ErrorOptions.IconLeftMargin = 12;
+            this.Snackbar.FadeCloseIcon = false;
+            this.Snackbar.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.Snackbar.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Snackbar.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
+            this.Snackbar.InformationOptions.ActionBorderRadius = 1;
+            this.Snackbar.InformationOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Snackbar.InformationOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
+            this.Snackbar.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.Snackbar.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.Snackbar.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.Snackbar.InformationOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Snackbar.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.Snackbar.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.Snackbar.InformationOptions.IconLeftMargin = 12;
+            this.Snackbar.Margin = 10;
+            this.Snackbar.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Snackbar.MaximumViews = 7;
+            this.Snackbar.MessageRightMargin = 15;
+            this.Snackbar.MinimumSize = new System.Drawing.Size(0, 0);
+            this.Snackbar.ShowBorders = false;
+            this.Snackbar.ShowCloseIcon = true;
+            this.Snackbar.ShowIcon = true;
+            this.Snackbar.ShowShadows = true;
+            this.Snackbar.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Snackbar.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(196)))), ((int)(((byte)(26)))));
+            this.Snackbar.SuccessOptions.ActionBorderRadius = 1;
+            this.Snackbar.SuccessOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Snackbar.SuccessOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(196)))), ((int)(((byte)(26)))));
+            this.Snackbar.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.Snackbar.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.Snackbar.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.Snackbar.SuccessOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Snackbar.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.Snackbar.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.Snackbar.SuccessOptions.IconLeftMargin = 12;
+            this.Snackbar.ViewsMargin = 7;
+            this.Snackbar.WarningOptions.ActionBackColor = System.Drawing.Color.White;
+            this.Snackbar.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(173)))), ((int)(((byte)(20)))));
+            this.Snackbar.WarningOptions.ActionBorderRadius = 5;
+            this.Snackbar.WarningOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Snackbar.WarningOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(173)))), ((int)(((byte)(20)))));
+            this.Snackbar.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.Snackbar.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.Snackbar.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.Snackbar.WarningOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Snackbar.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.Snackbar.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.Snackbar.WarningOptions.IconLeftMargin = 12;
+            this.Snackbar.ZoomCloseIcon = true;
             // 
             // bunifuPanel1
             // 
@@ -337,16 +451,6 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel14, null);
             this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel14, "");
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.bunifuPanel1item});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(614, 659);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
             // bunifuPanel1item
             // 
             this.bunifuPanel1item.Control = this.bunifuPanel1;
@@ -355,110 +459,6 @@ namespace Umoxi
             this.bunifuPanel1item.Size = new System.Drawing.Size(594, 639);
             this.bunifuPanel1item.TextSize = new System.Drawing.Size(0, 0);
             this.bunifuPanel1item.TextVisible = false;
-            // 
-            // ToolTipGeneral
-            // 
-            this.ToolTipGeneral.Active = true;
-            this.ToolTipGeneral.AlignTextWithTitle = false;
-            this.ToolTipGeneral.AllowAutoClose = false;
-            this.ToolTipGeneral.AllowFading = true;
-            this.ToolTipGeneral.AutoCloseDuration = 5000;
-            this.ToolTipGeneral.BackColor = System.Drawing.SystemColors.Control;
-            this.ToolTipGeneral.BorderColor = System.Drawing.Color.Gainsboro;
-            this.ToolTipGeneral.ClickToShowDisplayControl = false;
-            this.ToolTipGeneral.ConvertNewlinesToBreakTags = true;
-            this.ToolTipGeneral.DisplayControl = null;
-            this.ToolTipGeneral.EntryAnimationSpeed = 350;
-            this.ToolTipGeneral.ExitAnimationSpeed = 200;
-            this.ToolTipGeneral.GenerateAutoCloseDuration = false;
-            this.ToolTipGeneral.IconMargin = 6;
-            this.ToolTipGeneral.InitialDelay = 0;
-            this.ToolTipGeneral.Name = "ToolTipGeneral";
-            this.ToolTipGeneral.Opacity = 1D;
-            this.ToolTipGeneral.OverrideToolTipTitles = false;
-            this.ToolTipGeneral.Padding = new System.Windows.Forms.Padding(10);
-            this.ToolTipGeneral.ReshowDelay = 100;
-            this.ToolTipGeneral.ShowAlways = true;
-            this.ToolTipGeneral.ShowBorders = false;
-            this.ToolTipGeneral.ShowIcons = true;
-            this.ToolTipGeneral.ShowShadows = true;
-            this.ToolTipGeneral.Tag = null;
-            this.ToolTipGeneral.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.ToolTipGeneral.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ToolTipGeneral.TextMargin = 2;
-            this.ToolTipGeneral.TitleFont = new System.Drawing.Font("Rubik", 9F, System.Drawing.FontStyle.Bold);
-            this.ToolTipGeneral.TitleForeColor = System.Drawing.Color.Black;
-            this.ToolTipGeneral.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.ToolTipGeneral.ToolTipTitle = null;
-            // 
-            // Snackbar
-            // 
-            this.Snackbar.AllowDragging = false;
-            this.Snackbar.AllowMultipleViews = true;
-            this.Snackbar.ClickToClose = true;
-            this.Snackbar.DoubleClickToClose = true;
-            this.Snackbar.DurationAfterIdle = 3000;
-            this.Snackbar.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Snackbar.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(74)))), ((int)(((byte)(76)))));
-            this.Snackbar.ErrorOptions.ActionBorderRadius = 1;
-            this.Snackbar.ErrorOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Snackbar.ErrorOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(74)))), ((int)(((byte)(76)))));
-            this.Snackbar.ErrorOptions.BackColor = System.Drawing.Color.White;
-            this.Snackbar.ErrorOptions.BorderColor = System.Drawing.Color.White;
-            this.Snackbar.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
-            this.Snackbar.ErrorOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Snackbar.ErrorOptions.ForeColor = System.Drawing.Color.Black;
-            this.Snackbar.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
-            this.Snackbar.ErrorOptions.IconLeftMargin = 12;
-            this.Snackbar.FadeCloseIcon = false;
-            this.Snackbar.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
-            this.Snackbar.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Snackbar.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
-            this.Snackbar.InformationOptions.ActionBorderRadius = 1;
-            this.Snackbar.InformationOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Snackbar.InformationOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(149)))), ((int)(((byte)(242)))));
-            this.Snackbar.InformationOptions.BackColor = System.Drawing.Color.White;
-            this.Snackbar.InformationOptions.BorderColor = System.Drawing.Color.White;
-            this.Snackbar.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.Snackbar.InformationOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Snackbar.InformationOptions.ForeColor = System.Drawing.Color.Black;
-            this.Snackbar.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
-            this.Snackbar.InformationOptions.IconLeftMargin = 12;
-            this.Snackbar.Margin = 10;
-            this.Snackbar.MaximumSize = new System.Drawing.Size(0, 0);
-            this.Snackbar.MaximumViews = 7;
-            this.Snackbar.MessageRightMargin = 15;
-            this.Snackbar.MinimumSize = new System.Drawing.Size(0, 0);
-            this.Snackbar.ShowBorders = false;
-            this.Snackbar.ShowCloseIcon = true;
-            this.Snackbar.ShowIcon = true;
-            this.Snackbar.ShowShadows = true;
-            this.Snackbar.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Snackbar.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(196)))), ((int)(((byte)(26)))));
-            this.Snackbar.SuccessOptions.ActionBorderRadius = 1;
-            this.Snackbar.SuccessOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Snackbar.SuccessOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(196)))), ((int)(((byte)(26)))));
-            this.Snackbar.SuccessOptions.BackColor = System.Drawing.Color.White;
-            this.Snackbar.SuccessOptions.BorderColor = System.Drawing.Color.White;
-            this.Snackbar.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
-            this.Snackbar.SuccessOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Snackbar.SuccessOptions.ForeColor = System.Drawing.Color.Black;
-            this.Snackbar.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
-            this.Snackbar.SuccessOptions.IconLeftMargin = 12;
-            this.Snackbar.ViewsMargin = 7;
-            this.Snackbar.WarningOptions.ActionBackColor = System.Drawing.Color.White;
-            this.Snackbar.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(173)))), ((int)(((byte)(20)))));
-            this.Snackbar.WarningOptions.ActionBorderRadius = 5;
-            this.Snackbar.WarningOptions.ActionFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Snackbar.WarningOptions.ActionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(173)))), ((int)(((byte)(20)))));
-            this.Snackbar.WarningOptions.BackColor = System.Drawing.Color.White;
-            this.Snackbar.WarningOptions.BorderColor = System.Drawing.Color.White;
-            this.Snackbar.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
-            this.Snackbar.WarningOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Snackbar.WarningOptions.ForeColor = System.Drawing.Color.Black;
-            this.Snackbar.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
-            this.Snackbar.WarningOptions.IconLeftMargin = 12;
-            this.Snackbar.ZoomCloseIcon = true;
             // 
             // usPermission
             // 
@@ -474,9 +474,9 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipTitle(this, "");
             ((System.ComponentModel.ISupportInitialize)(this.usPermissionlayoutControl1ConvertedLayout)).EndInit();
             this.usPermissionlayoutControl1ConvertedLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPanel1item)).EndInit();
             this.ResumeLayout(false);
 

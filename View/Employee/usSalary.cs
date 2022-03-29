@@ -94,10 +94,10 @@ namespace Umoxi
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
                             ConnectionNode.ExecuteSQLQuery(" INSERT INTO    EmployeeLedger (EmployeeID, User_ID, EntryDate, Month, PostingType, Debit, Credit, Narration) VALUES " +
-                                " (" + Convert.ToString(EmployeeID) + ", " + Convert.ToString(ConnectionNode.xUser_ID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + cmbMonth.Text + "', 'SalaryEntry', 0, '" + UtilitiesFunctions.str_repl(txtAmount.Text) + "', 'Salary Entry') "));
+                                " (" + Convert.ToString(EmployeeID) + ", " + Convert.ToString(ConnectionNode.userID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + cmbMonth.Text + "', 'SalaryEntry', 0, '" + UtilitiesFunctions.str_repl(txtAmount.Text) + "', 'Salary Entry') "));
                         }
                     }
-                    UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Salary add # " + txtAmount.Text);
+                    UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Salary add # " + txtAmount.Text);
                     LoadData();
                     Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                 }

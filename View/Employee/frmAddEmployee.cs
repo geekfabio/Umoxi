@@ -123,7 +123,7 @@ namespace Umoxi
                         var EmployeeID = ConnectionNode.sqlDT.Rows[0]["EmployeeID"];
                         ConnectionNode.UploadEmployeePhoto(Convert.ToDouble(EmployeeID), PictureBox1);
 
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -135,7 +135,7 @@ namespace Umoxi
                             " , Address= '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', ContactNo= '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', Email= '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', JoiningDate= '") + Strings.Format(dtpJoiningDate.EditValue, "MM/dd/yyyy") + ("', Status= '" + ChekValues + "', SCHOOL_ID= ") + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ", DEPARTMENT_ID= " + cmbDepartment.Text.Split(" # ".ToCharArray()[0])[0] + ", DESIGNATION_ID= " + cmbDesignation.Text.Split(" # ".ToCharArray()[0])[0] + "   WHERE EmployeeID=" + txtEmployeeID.Text + "   ");
                         ConnectionNode.UploadEmployeePhoto(double.Parse(txtEmployeeID.Text), PictureBox1);
 
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

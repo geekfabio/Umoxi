@@ -114,30 +114,31 @@ namespace Umoxi
         {
             Waiting.ShowWaitForm();
             ///MD5 PASSWORD ENCRYPT
-            //            ConnectionNode.sqlSTR = "SELECT * FROM usuarios WHERE usuario='" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "' AND password ='" + Convert.ToString(UtilitiesFunctions.CreateMD5(txtPassword.Text)) + "' AND (ativo = 'Y')";
+            //            ConnectionNode.sqlString = "SELECT * FROM usuarios WHERE usuario='" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "' AND password ='" + Convert.ToString(UtilitiesFunctions.CreateMD5(txtPassword.Text)) + "' AND (ativo = 'Y')";
 
-            ConnectionNode.sqlSTR = "SELECT * FROM usuarios WHERE usuario='" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "' AND password ='" +txtPassword.Text + "' AND (ativo = 'Y')";
+            ConnectionNode.sqlString = "SELECT * FROM usuarios WHERE usuario='" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "' AND password ='" + Convert.ToString(UtilitiesFunctions.CreateMD5(txtPassword.Text)) + "' AND (ativo = 'Y')";
 
-            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
             if (ConnectionNode.sqlDT.Rows.Count > 0)
             {
-                _salvarDadosUsuario();
+
+                salvarDadosUsuario();
                 #region Logger e LoadUserPermission
               
-                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, Convert.ToString(DateTime.Now.ToLongTimeString()), "Usuario: " + txtUserName.Text + " iniciou sessão no sistema ");
-                UserPermission.LoadUserPermission();
+                UtilitiesFunctions.Logger(ConnectionNode.userID, Convert.ToString(DateTime.Now.ToLongTimeString()), "Usuario: " + txtUserName.Text + ", iniciou sessão no sistema ");
+               
 
                 if (chkRememberMe.Checked)
                 {
+                    
                     Properties.Settings.Default.App_UserName = txtUserName.Text;
-                    Properties.Settings.Default.App_UserPassword = txtPassword.Text;
                 }
                 else
                 {
                     Properties.Settings.Default.App_UserName = null;
                     Properties.Settings.Default.App_UserPassword = null;
                 }
-                Properties.Settings.Default.App_UserRemember = chkRememberMe.Checked;
+               Properties.Settings.Default.App_UserRemember = chkRememberMe.Checked;
                 Properties.Settings.Default.Save();
 
                 FrmMain.Default.Show();
@@ -160,15 +161,19 @@ namespace Umoxi
 
         }
 
-        private void _salvarDadosUsuario()
+        private void salvarDadosUsuario()
         {
             ConnectionNode.userName = txtUserName.Text;
-            ConnectionNode.fullName = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nome"]);
-            ConnectionNode.xUser_ID = Convert.ToInt32(ConnectionNode.sqlDT.Rows[0]["usuario_id"]);
+            ConnectionNode.userFullName = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nome"]);
+            ConnectionNode.userFuncao = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["funcao"]) ?? "Usúario";
+            ConnectionNode.userEmail = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
+            ConnectionNode.userID = Convert.ToInt32(ConnectionNode.sqlDT.Rows[0]["usuario_id"]);
+            UserPermission.LoadUserPermission();
+           
             string photoUser = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]);
             if(photoUser == "sem_foto" || photoUser == ""){
-                FrmMain.Default.UserPictureBox.Image = Properties.Resources.user;
-                FrmMain.Default.PictureBox1.Image = Properties.Resources.user; 
+                FrmMain.Default.UserPictureBox.Image = Properties.Resources.icons8_user_name_240px;
+                FrmMain.Default.PictureBox1.Image = Umoxi.Properties.Resources.icons8_user_name_240px; 
                 //TODO implemet this
                 //    FrmMain.Default.currentUser.ImageOptions.Image = Properties.Resources.user.SetPixel(20, 20);
             }
@@ -189,9 +194,15 @@ namespace Umoxi
             FrmMain.Default.currentUser.Caption = "Bem-vindo(a) " + ConnectionNode.userName;
             FrmMain.Default.toastNotificationsManager1.Notifications[0].Header = "Bem-vindo(a)" + ConnectionNode.userName;
             FrmMain.Default.toastNotificationsManager1.Notifications[0].Body = "Umoxi - Sistema de gestão hospital || " + ConnectionNode.userName;
-            FrmMain.Default.lblUserName.Text = "@" + ConnectionNode.userName;
-            FrmMain.Default.lblFullName.Text = ConnectionNode.fullName;
-            FrmMain.Default.lblUserEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
+
+            this.notifyUmoxi.BalloonTipText = "Bem-vindo(a)" + ConnectionNode.userFullName;
+            this.notifyUmoxi.BalloonTipTitle = "Umoxi - Gestão hospital || " + ConnectionNode.userName; ;
+            this.notifyUmoxi.BalloonTipIcon = ToolTipIcon.Info;
+            this.notifyUmoxi.ShowBalloonTip(5000);
+
+            FrmMain.Default.lblUserName.Text = ConnectionNode.userEmail;
+            FrmMain.Default.lbluserFullName.Text = ConnectionNode.userFullName;
+            FrmMain.Default.lblUserEmail.Text = ConnectionNode.userEmail;
             FrmMain.Default.lblUser_name.Text = ConnectionNode.userName;
             #endregion
         }

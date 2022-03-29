@@ -58,14 +58,14 @@ namespace Umoxi
                 {
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Holiday (Description, HolidayDate) VALUES ('" + UtilitiesFunctions.str_repl(txtHoliday.Text) + "', '" + String.Format(dtpHolidayDate.DateTime.ToShortDateString(), "MM/dd/yyyy") + "')  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add holiday # " + txtHoliday.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add holiday # " + txtHoliday.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         break;
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE Holiday SET Description= '" + UtilitiesFunctions.str_repl(txtHoliday.Text) + "', HolidayDate= '" + String.Format(dtpHolidayDate.DateTime.ToShortDateString(), "MM/dd/yyyy") + "' WHERE  HOLIDAY_ID=" + txtHolidayID.Text + "  ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated holiday # " + txtHoliday.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated holiday # " + txtHoliday.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

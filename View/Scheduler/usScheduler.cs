@@ -35,5 +35,10 @@ namespace Umoxi
         {
            
         }
+
+        private void schedulerControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
