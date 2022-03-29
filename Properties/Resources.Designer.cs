@@ -1983,6 +1983,26 @@ namespace Umoxi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap laboratorio {
+            get {
+                object obj = ResourceManager.GetObject("laboratorio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laboratorio_22 {
+            get {
+                object obj = ResourceManager.GetObject("laboratorio_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_255px {
             get {
                 object obj = ResourceManager.GetObject("logo_255px", resourceCulture);

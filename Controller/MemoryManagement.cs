@@ -23,10 +23,16 @@ namespace Umoxi.Controller
         /// </summary>
         public void FlushMemory()
         {
+            
             GC.Collect();
             GC.WaitForPendingFinalizers();
             if (Environment.OSVersion.Platform == PlatformID.Win32NT)
                 SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1);
+        }
+
+        public void Dispose()
+        {
+            this.Dispose();
         }
     }
 

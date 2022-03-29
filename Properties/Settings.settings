@@ -11,20 +11,8 @@
     <Setting Name="App_UserRemember" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UmojaSchoolConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="dbUmoxiConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True</Value>
+    <Setting Name="dbUmoxiConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=localhost;uid=root; database=db_hospital;uid=root;pwd=</Value>
     </Setting>
   </Settings>
 </SettingsFile>

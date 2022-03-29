@@ -202,9 +202,6 @@
   <data name="icons8_send_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_send_mail.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="icons8_sms_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_sms_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_bus1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -223,9 +220,6 @@
   <data name="icons8_attendance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_attendance.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="icons8_administrator_male_24px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_administrator_male_24px_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_add_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_add_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -240,6 +234,9 @@
   </data>
   <data name="icons8_paper_plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_paper_plane.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="icons8_classroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_classroom1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="icons8_fax" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_fax.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -337,6 +334,9 @@
   <data name="icons8_student_male_24px_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_student_male_24px_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="laboratorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laboratorio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="book-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book-check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -352,6 +352,9 @@
   <data name="icons8_card_wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_card_wallet.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="icons8_cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_cash1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="database-server@80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-server@80px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -364,9 +367,6 @@
   <data name="Dark-white-in-Basic7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pacients_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pacients_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -376,8 +376,8 @@
   <data name="icons8_return_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_return_48px_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money-bag@32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-bag@32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_exam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_exam1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -430,8 +430,8 @@
   <data name="icons8_chart_bar_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_chart_bar_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Icon.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="pacients_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacients_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_ask_question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_ask_question1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -526,6 +526,9 @@
   <data name="employee-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_book1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="icons8_user_male_24px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_user_male_24px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -580,8 +583,8 @@
   <data name="admin-check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin-check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_trash_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_trash_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_sms_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_sms_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Info_28px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info_28px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -589,8 +592,8 @@
   <data name="Dark-white-in-Basic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_classroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_classroom1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="Logo Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Icon.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="people-employees@32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people-employees@32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -616,8 +619,8 @@
   <data name="Multiply_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Multiply_18px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money-bag@32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money-bag@32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_teacher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_teacher.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -691,6 +694,9 @@
   <data name="icons8_windows_calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_windows_calendar.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="check1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_book_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_book_96px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -700,8 +706,8 @@
   <data name="student" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_book1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="pacientes_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacientes_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_bank_cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_bank_cards.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -754,8 +760,8 @@
   <data name="icons8_customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_customer.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8_trash_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_trash_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email@32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email@32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -796,8 +802,8 @@
   <data name="icons8_image_document_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_image_document_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8_cash1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="icons8_administrator_male_24px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_administrator_male_24px_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dark-white-in-Basic5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark-white-in-Basic51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -805,7 +811,7 @@
   <data name="icons8_time_machine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_time_machine1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="pacientes_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pacientes_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="laboratorio_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laboratorio_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
