@@ -474,18 +474,6 @@
     <Compile Include="View\Controls and Components\PasswordStrengthControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Dashboard\DashboardDesign.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Dashboard\DashboardDesign.Designer.cs">
-      <DependentUpon>DashboardDesign.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Dashboard\usDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Dashboard\usDashboard.Designer.cs">
-      <DependentUpon>usDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Employee\frmAddDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -959,12 +947,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls and Components\ChangeUser.resx">
       <DependentUpon>ChangeUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Dashboard\DashboardDesign.resx">
-      <DependentUpon>DashboardDesign.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Dashboard\usDashboard.resx">
-      <DependentUpon>usDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Employee\frmAddDepartment.resx">
       <DependentUpon>frmAddDepartment.cs</DependentUpon>
@@ -2225,11 +2207,12 @@
     <None Include="Resources\22px.png" />
     <None Include="Resources\pacients_icon.png" />
     <None Include="Resources\pacientes_22px.png" />
+    <None Include="Resources\laboratorio.png" />
+    <None Include="Resources\laboratorio_22.png" />
     <Content Include="Sources files\Connection string.txt" />
     <Content Include="Sources files\dbUmojaSchool.sql" />
     <Content Include="Sources files\db_hospital.sql" />
     <Content Include="uschool.ico" />
-    <Content Include="View\Dashboard\Dashboard.xml" />
     <Content Include="View\ServerSetting\ConnectionString.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -2246,6 +2229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="View\Dashboard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
