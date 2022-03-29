@@ -309,14 +309,14 @@ namespace Umoxi
                     }
                     finally
                     {   
-                        //Salva os dados na base dados
+                        //Salva os dados do hospital na base dados
                         ConnectionNode.ExecuteSQLQuery("INSERT INTO hospital (nome, endereco, contactos, nif, Email, logo) VALUES( '" + UtilitiesFunctions.str_repl(txtHospitalName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNoSchool.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + destFileName + "')");
                   
 
                     }
                  
                     Snackbar.Show(this, "Hospital registrado com sucesso!", BunifuSnackbar.MessageTypes.Success);
-                    stepProgress.SelectedItemIndex = 2;
+                    stepProgress.SelectedItemIndex = 4;
                     TabContent.SelectedTabPage = Page4;
                 }
 
@@ -373,6 +373,11 @@ namespace Umoxi
                     + "','" + UtilitiesFunctions.str_repl(txtAddress.Text)
                     + "')");
             }
+        }
+
+        private void lblFinish_Click(object sender, EventArgs e)
+        {
+            new frmTermos().ShowDialog();
         }
 
         //private void btnEditImage_Click(object sender, EventArgs e)
