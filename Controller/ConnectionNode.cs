@@ -160,12 +160,12 @@ namespace Umoxi
         //Priencher as datagridview com os dados da db
         public static void FillDataGrid(string sql, DataGridView dgv)
         {
-            var conn = new SqlConnection(connString);
+            var conn = new MySqlConnection(connString);
             try
             {
                 conn.Open();
-                var cmd = new SqlCommand(sql, conn);
-                var adp = new SqlDataAdapter();
+                var cmd = new MySqlCommand(sql, conn);
+                var adp = new MySqlDataAdapter();
                 var dt = new DataTable();
                 adp.SelectCommand = cmd;
                 adp.Fill(dt);
