@@ -241,9 +241,9 @@ namespace Umoxi
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.lbluserFullName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -299,6 +299,7 @@ namespace Umoxi
             this.accordionControlElement45 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.timerToMemoryClean = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainerUser)).BeginInit();
@@ -1957,7 +1958,7 @@ namespace Umoxi
             this.llUserLog.Height = 30;
             this.llUserLog.Name = "llUserLog";
             this.llUserLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llUserLog.Text = "          Registro de Atividads";
+            this.llUserLog.Text = "          Registro de Atividades";
             this.llUserLog.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // accordionControlElement18
@@ -2406,9 +2407,9 @@ namespace Umoxi
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 20;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lblUserName);
             this.bunifuPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuPanel1.Controls.Add(this.lbluserFullName);
-            this.bunifuPanel1.Controls.Add(this.lblUserName);
             this.bunifuPanel1.Controls.Add(this.PictureBox1);
             this.bunifuPanel1.Location = new System.Drawing.Point(11, 59);
             this.bunifuPanel1.Name = "bunifuPanel1";
@@ -2418,6 +2419,28 @@ namespace Umoxi
             this.ToolTipMenu.SetToolTip(this.bunifuPanel1, "");
             this.ToolTipMenu.SetToolTipIcon(this.bunifuPanel1, null);
             this.ToolTipMenu.SetToolTipTitle(this.bunifuPanel1, "");
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lblUserName.AllowParentOverrides = false;
+            this.lblUserName.AutoEllipsis = false;
+            this.lblUserName.AutoSize = false;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.Font = new System.Drawing.Font("Rubik", 9F);
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblUserName.Location = new System.Drawing.Point(68, 38);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserName.Size = new System.Drawing.Size(168, 15);
+            this.lblUserName.TabIndex = 82;
+            this.lblUserName.Text = "@user";
+            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipMenu.SetToolTip(this.lblUserName, "");
+            this.ToolTipMenu.SetToolTipIcon(this.lblUserName, null);
+            this.ToolTipMenu.SetToolTipTitle(this.lblUserName, "");
             // 
             // bunifuImageButton1
             // 
@@ -2467,40 +2490,18 @@ namespace Umoxi
             this.lbluserFullName.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbluserFullName.Font = new System.Drawing.Font("Rubik", 12F);
             this.lbluserFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
-            this.lbluserFullName.Location = new System.Drawing.Point(68, 13);
+            this.lbluserFullName.Location = new System.Drawing.Point(69, 14);
             this.lbluserFullName.Name = "lbluserFullName";
             this.lbluserFullName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbluserFullName.Size = new System.Drawing.Size(168, 25);
             this.lbluserFullName.TabIndex = 83;
             this.lbluserFullName.Text = "Usúario";
-            this.lbluserFullName.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.lbluserFullName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbluserFullName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipMenu.SetToolTip(this.lbluserFullName, "");
             this.ToolTipMenu.SetToolTipIcon(this.lbluserFullName, null);
             this.ToolTipMenu.SetToolTipTitle(this.lbluserFullName, "");
             this.lbluserFullName.Click += new System.EventHandler(this.lbluserFullName_Click);
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblUserName.AllowParentOverrides = false;
-            this.lblUserName.AutoEllipsis = false;
-            this.lblUserName.AutoSize = false;
-            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.Font = new System.Drawing.Font("Rubik", 9F);
-            this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblUserName.Location = new System.Drawing.Point(68, 38);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserName.Size = new System.Drawing.Size(168, 15);
-            this.lblUserName.TabIndex = 82;
-            this.lblUserName.Text = "@user";
-            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipMenu.SetToolTip(this.lblUserName, "");
-            this.ToolTipMenu.SetToolTipIcon(this.lblUserName, null);
-            this.ToolTipMenu.SetToolTipTitle(this.lblUserName, "");
             // 
             // PictureBox1
             // 
@@ -3057,6 +3058,11 @@ namespace Umoxi
             this.accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement52.Text = "          Registrar nascimento";
             // 
+            // timerToMemoryClean
+            // 
+            this.timerToMemoryClean.Interval = 60000;
+            this.timerToMemoryClean.Tick += new System.EventHandler(this.timerToMemoryClean_Tick);
+            // 
             // FrmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -3391,5 +3397,6 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement59;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement58;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement60;
+        private System.Windows.Forms.Timer timerToMemoryClean;
     }
 }

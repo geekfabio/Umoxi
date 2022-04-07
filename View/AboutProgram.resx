@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxDescription.Text" xml:space="preserve">
+    <value>Gestão hospitalar integrada e mais assertiva
+A Umoxi reúne um conjunto de soluções que otimizam
+o fluxo de dados entre os setores e integram os
+processos hospitalares.
+
+Automatiza processos, garantindo maior eficiência
+na gestão do fluxo de trabalho e na administração
+dos recursos.
+
+Central de Agendamento Reduz as taxas de
+absenteísmo em consultas e exames ao proporcionar
+otimização no fluxo de agendamento.
+
+Copyrights © 2022 Grupo nº 4 inc</value>
+  </data>
 </root>

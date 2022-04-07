@@ -48,6 +48,7 @@ namespace Umoxi
         private void FrmMain_Load(object sender, EventArgs e)
         {
             this.UseWaitCursor = true;
+           
             #region Dashboard
             //    contentControl.Controls.Add(usDashboard.Instance);
            // contentControl.Controls[0].Dock = DockStyle.Fill;
@@ -63,6 +64,7 @@ namespace Umoxi
             this.WindowState = FormWindowState.Maximized;
 
             this.UseWaitCursor = false;
+            
         }
 
         #region Default Instance
@@ -850,6 +852,12 @@ namespace Umoxi
         private void accordionControlElement60_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerToMemoryClean_Tick(object sender, EventArgs e)
+        {
+            //colect all unecessary resources and clean
+            memory.FlushMemory();
         }
     }
 }

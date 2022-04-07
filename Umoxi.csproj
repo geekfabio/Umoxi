@@ -864,11 +864,11 @@
     <Compile Include="View\Student\usPromotion.Designer.cs">
       <DependentUpon>usPromotion.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usStudent.cs">
+    <Compile Include="View\Student\usPaciente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usStudent.Designer.cs">
-      <DependentUpon>usStudent.cs</DependentUpon>
+    <Compile Include="View\Student\usPaciente.Designer.cs">
+      <DependentUpon>usPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Student\usWaiver.cs">
       <SubType>UserControl</SubType>
@@ -1156,8 +1156,8 @@
     <EmbeddedResource Include="View\Student\usPromotion.resx">
       <DependentUpon>usPromotion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usStudent.resx">
-      <DependentUpon>usStudent.cs</DependentUpon>
+    <EmbeddedResource Include="View\Student\usPaciente.resx">
+      <DependentUpon>usPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Student\usWaiver.resx">
       <DependentUpon>usWaiver.cs</DependentUpon>

@@ -119,7 +119,7 @@
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>APRESENTAÇÃO
-A Umoxi possui sistemas de gestão em saúde com soluções para Hospitais Públicos.
+A Umoxi é uim sistema de gestão em saúde com soluções para Hospitais Públicos.
 
 Nós, da Umoxi, desejamos esclarecer, por meio desta Política de Privacidade e Proteção de Dados (“Política”), como tratamos os seus dados pessoais.
 Sua privacidade é importante, tanto para você, quanto para nós. Por isso, um de nossos princípios é construir relações confiáveis e duradouras, de tal modo que faremos o possível para garantir que os dados que você nos permite processar sejam tratados de forma segura, íntegra e transparente.
@@ -127,7 +127,6 @@ Sua privacidade é importante, tanto para você, quanto para nós. Por isso, um 
 A redação desta política foi elaborada de forma simples e acessível, para que você possa compreender facilmente a maneira como tratamos os dados pessoais, proporcionando assim uma experiência de transparência e segurança sobre as condutas da Umoxi.
 
 Quaisquer dúvidas relacionadas ao tratamento de seus dados pela Umoxi, pedimos que entre em contato através do nosso email: umoxigestao@gmail.com
-
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

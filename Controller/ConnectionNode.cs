@@ -166,18 +166,21 @@ namespace Umoxi
             try
             {
                 conn.Open();
-                var cmd = new MySqlCommand(sql, conn);
-                var adp = new MySqlDataAdapter();
-                var dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter();
+                DataTable dt = new DataTable();
                 adp.SelectCommand = cmd;
                 adp.Fill(dt);
                 dgv.DataSource = dt;
+
                 adp.Dispose();
                 cmd.Dispose();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro:" + ex.ToString());
+            #if DEBUG
+                MessageBox.Show("Erro:" + ex.Message);
+            #endif
             }
             finally
             {
@@ -258,6 +261,9 @@ namespace Umoxi
             cmd.Dispose();
             con.Close();
         }
+        //Atualizar paciente para eliminado 
+     
+
 
         //Carregar a photo do usuario
         public static void UploadUserPhoto(double userID, String imagePath)
