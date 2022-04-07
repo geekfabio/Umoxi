@@ -44,7 +44,7 @@ namespace Umoxi
 
         public void LoadData()
         {
-            ConnectionNode.FillDataGrid("SELECT User_ID, user_name,full_name, e_mail, contact_no, status  FROM Users", DataGridView1);
+            ConnectionNode.FillDataGrid("SELECT usuario_id, usuario, nome, email, contacto, ativo FROM usuarios", DataGridView1);
         }
         
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -57,26 +57,27 @@ namespace Umoxi
             switch (e.ColumnIndex)
             {
                 case 0:
-                    if (MessageBox.Show("Deseja editar os dados do usuario " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ? ", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Deseja atualizar os dados do usuario " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ? ", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        ConnectionNode.ExecuteSQLQuery("SELECT *  FROM Users WHERE User_ID=" + Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value) + " ");
+                        ConnectionNode.ExecuteSQLQuery("SELECT *  FROM usuarios WHERE usuario_id =" + Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value) + " limit 1");
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
                             frmAddUser frm = new frmAddUser();
-                            frm.txtUserID.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["User_ID"]);
-                            frm.txtUserName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["user_name"]);
-                            frm.txtuserFullName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["full_name"]);
-                            frm.txtEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["e_mail"]);
-                            frm.txtContactNo.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["contact_no"]);
+                            frm.txtUserID.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["usuario_id"]);
+                            frm.txtUserName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["usuario"]);
+                            frm.txtuserFullName.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nome"]);
+                            frm.txtEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
+                            frm.txtContactNo.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["contacto"]);
+
                             //txtPassword.Text = System.Convert.ToString(ConnectionNode.sqlDT.Rows[0]["password"]);
-                            byte[] bytBLOBData = (byte[])(ConnectionNode.sqlDT.Rows[0]["UserPicture"]);
-                            MemoryStream stmBLOBData = new MemoryStream(bytBLOBData);
-                            frm.PictureBox1.Image = Image.FromStream(stmBLOBData);
+                            if (File.Exists(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]))) {
+                                frm.PictureBox1.Image = Image.FromFile(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]));
+                            }                            
                             frm.txtUserName.Enabled = false;
-                            frm.btnSave.Text = "Update";
+                            frm.btnSave.Text = "Atualizar";
 
                             #region Check
-                            if ((string)ConnectionNode.sqlDT.Rows[0]["status"] == "Y")
+                            if ((string)ConnectionNode.sqlDT.Rows[0]["ativo"] == "Y")
                             {
                                 frm.chkActive.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
                             }
@@ -101,6 +102,11 @@ namespace Umoxi
                     break;
 
             }
+
+        }
+
+        private void DataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
 
         }
     }

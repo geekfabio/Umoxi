@@ -304,7 +304,7 @@ namespace Umoxi
             this.txtEmail.ShortcutsEnabled = true;
             this.txtEmail.Size = new System.Drawing.Size(313, 35);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEmail.TabIndex = 119;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmail.TextMarginBottom = 0;
             this.txtEmail.TextMarginLeft = 3;
@@ -379,7 +379,7 @@ namespace Umoxi
             this.txtContactNo.ShortcutsEnabled = true;
             this.txtContactNo.Size = new System.Drawing.Size(313, 35);
             this.txtContactNo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContactNo.TabIndex = 117;
+            this.txtContactNo.TabIndex = 2;
             this.txtContactNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContactNo.TextMarginBottom = 0;
             this.txtContactNo.TextMarginLeft = 3;
@@ -454,7 +454,7 @@ namespace Umoxi
             this.txtuserFullName.ShortcutsEnabled = true;
             this.txtuserFullName.Size = new System.Drawing.Size(313, 35);
             this.txtuserFullName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtuserFullName.TabIndex = 115;
+            this.txtuserFullName.TabIndex = 1;
             this.txtuserFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtuserFullName.TextMarginBottom = 0;
             this.txtuserFullName.TextMarginLeft = 3;
@@ -578,7 +578,7 @@ namespace Umoxi
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
             this.btnSave.Size = new System.Drawing.Size(93, 32);
-            this.btnSave.TabIndex = 144;
+            this.btnSave.TabIndex = 0;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSave.TextMarginLeft = 0;
@@ -652,7 +652,7 @@ namespace Umoxi
             this.txtUserName.ShortcutsEnabled = true;
             this.txtUserName.Size = new System.Drawing.Size(313, 35);
             this.txtUserName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUserName.TabIndex = 112;
+            this.txtUserName.TabIndex = 0;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUserName.TextMarginBottom = 0;
             this.txtUserName.TextMarginLeft = 3;
@@ -732,7 +732,7 @@ namespace Umoxi
             this.NavigationBar.Name = "NavigationBar";
             this.NavigationBar.SelectedItem = this.tabUser;
             this.NavigationBar.Size = new System.Drawing.Size(374, 30);
-            this.NavigationBar.TabIndex = 48;
+            this.NavigationBar.TabIndex = 1;
             this.NavigationBar.Text = "NavigationBar1";
             this.NavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
             this.NavigationBar.SelectedItemChanged += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.NavigationBar_SelectedItemChanged);
@@ -1053,7 +1053,7 @@ namespace Umoxi
             this.btnBrowsePhoto.OnPressedState.IconLeftImage = null;
             this.btnBrowsePhoto.OnPressedState.IconRightImage = null;
             this.btnBrowsePhoto.Size = new System.Drawing.Size(163, 37);
-            this.btnBrowsePhoto.TabIndex = 82;
+            this.btnBrowsePhoto.TabIndex = 0;
             this.btnBrowsePhoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBrowsePhoto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBrowsePhoto.TextMarginLeft = 0;
@@ -1117,9 +1117,9 @@ namespace Umoxi
             this.lblRePassword.Location = new System.Drawing.Point(35, 88);
             this.lblRePassword.Name = "lblRePassword";
             this.lblRePassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblRePassword.Size = new System.Drawing.Size(107, 15);
+            this.lblRePassword.Size = new System.Drawing.Size(108, 15);
             this.lblRePassword.TabIndex = 122;
-            this.lblRePassword.Text = "Repeat password *";
+            this.lblRePassword.Text = "Repetir password *";
             this.lblRePassword.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblRePassword.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1208,7 +1208,7 @@ namespace Umoxi
             this.txtRePassword.ShortcutsEnabled = true;
             this.txtRePassword.Size = new System.Drawing.Size(311, 35);
             this.txtRePassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtRePassword.TabIndex = 119;
+            this.txtRePassword.TabIndex = 1;
             this.txtRePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRePassword.TextMarginBottom = 0;
             this.txtRePassword.TextMarginLeft = 3;
@@ -1286,7 +1286,7 @@ namespace Umoxi
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(311, 35);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPassword.TabIndex = 118;
+            this.txtPassword.TabIndex = 0;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMarginBottom = 0;
             this.txtPassword.TextMarginLeft = 3;
@@ -1326,9 +1326,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(30, 166);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(49, 15);
+            this.bunifuLabel1.Size = new System.Drawing.Size(33, 15);
             this.bunifuLabel1.TabIndex = 120;
-            this.bunifuLabel1.Text = "strength";
+            this.bunifuLabel1.Text = "Força";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1450,6 +1450,7 @@ namespace Umoxi
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddUser_FormClosed);
+            this.Load += new System.EventHandler(this.frmAddUser_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).EndInit();
             this.Page1.ResumeLayout(false);

@@ -31,17 +31,8 @@ namespace Umoxi
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPermission));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.NavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
-            this.tabSchool = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabStudent = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabEmployee = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabLibrary = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabAccount = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabSMS = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabEmail = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabUser = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -157,7 +148,15 @@ namespace Umoxi
             this.lbl901 = new Bunifu.UI.WinForms.BunifuLabel();
             this.toggleSwitchUser = new DevExpress.XtraEditors.ToggleSwitch();
             this.Snackbar = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).BeginInit();
+            this.tabUser = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabEmail = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabSMS = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabAccount = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabLibrary = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabEmployee = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabStudent = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabSchool = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.NavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabContent)).BeginInit();
             this.TabContent.SuspendLayout();
@@ -177,87 +176,8 @@ namespace Umoxi
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitchEmail.Properties)).BeginInit();
             this.Page8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitchUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // NavigationBar
-            // 
-            this.NavigationBar.AppearanceItem.Disabled.Font = new System.Drawing.Font("Rubik", 11F);
-            this.NavigationBar.AppearanceItem.Disabled.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Hovered.Font = new System.Drawing.Font("Rubik", 11F);
-            this.NavigationBar.AppearanceItem.Hovered.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Normal.Font = new System.Drawing.Font("Rubik", 11F);
-            this.NavigationBar.AppearanceItem.Normal.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Pressed.Font = new System.Drawing.Font("Rubik", 11F);
-            this.NavigationBar.AppearanceItem.Pressed.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Selected.Font = new System.Drawing.Font("Rubik", 11F);
-            this.NavigationBar.AppearanceItem.Selected.Options.UseFont = true;
-            this.NavigationBar.AutoSize = false;
-            this.NavigationBar.BackColor = System.Drawing.Color.Transparent;
-            this.NavigationBar.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden;
-            this.NavigationBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavigationBar.Font = new System.Drawing.Font("Rubik", 5.25F);
-            this.NavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
-            this.tabSchool,
-            this.tabStudent,
-            this.tabEmployee,
-            this.tabLibrary,
-            this.tabAccount,
-            this.tabSMS,
-            this.tabEmail,
-            this.tabUser});
-            this.NavigationBar.Location = new System.Drawing.Point(0, 0);
-            this.NavigationBar.LookAndFeel.SkinName = "Office 2019 White";
-            this.NavigationBar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.NavigationBar.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.NavigationBar.Name = "NavigationBar";
-            this.NavigationBar.OptionsPeekFormButtonPanel.AppearanceButton.Normal.Font = new System.Drawing.Font("Rubik", 5.25F);
-            this.NavigationBar.OptionsPeekFormButtonPanel.AppearanceButton.Normal.Options.UseFont = true;
-            this.NavigationBar.SelectedItem = this.tabSchool;
-            this.NavigationBar.Size = new System.Drawing.Size(608, 30);
-            this.NavigationBar.TabIndex = 49;
-            this.NavigationBar.Text = "NavigationBar1";
-            this.NavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
-            this.NavigationBar.SelectedItemChanged += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.NavigationBar_SelectedItemChanged);
-            // 
-            // tabSchool
-            // 
-            this.tabSchool.Name = "tabSchool";
-            this.tabSchool.Text = "School";
-            // 
-            // tabStudent
-            // 
-            this.tabStudent.Name = "tabStudent";
-            this.tabStudent.Text = "Student";
-            // 
-            // tabEmployee
-            // 
-            this.tabEmployee.Name = "tabEmployee";
-            this.tabEmployee.Text = "Employee";
-            // 
-            // tabLibrary
-            // 
-            this.tabLibrary.Name = "tabLibrary";
-            this.tabLibrary.Text = "Library";
-            // 
-            // tabAccount
-            // 
-            this.tabAccount.Name = "tabAccount";
-            this.tabAccount.Text = "Accounts";
-            // 
-            // tabSMS
-            // 
-            this.tabSMS.Name = "tabSMS";
-            this.tabSMS.Text = "SMS";
-            // 
-            // tabEmail
-            // 
-            this.tabEmail.Name = "tabEmail";
-            this.tabEmail.Text = "Email";
-            // 
-            // tabUser
-            // 
-            this.tabUser.Name = "tabUser";
-            this.tabUser.Text = "User";
             // 
             // bunifuSeparator1
             // 
@@ -305,11 +225,11 @@ namespace Umoxi
             this.btnSave.ColorContrastOnClick = 45;
             this.btnSave.ColorContrastOnHover = 45;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnSave.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnSave.CustomizableEdges = borderEdges1;
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSave.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -398,11 +318,11 @@ namespace Umoxi
             this.btnClose.ColorContrastOnClick = 45;
             this.btnClose.ColorContrastOnHover = 45;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnClose.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges2;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -4143,6 +4063,86 @@ namespace Umoxi
             this.Snackbar.WarningOptions.IconLeftMargin = 12;
             this.Snackbar.ZoomCloseIcon = true;
             // 
+            // tabUser
+            // 
+            this.tabUser.Name = "tabUser";
+            this.tabUser.Text = "User";
+            // 
+            // tabEmail
+            // 
+            this.tabEmail.Name = "tabEmail";
+            this.tabEmail.Text = "Email";
+            // 
+            // tabSMS
+            // 
+            this.tabSMS.Name = "tabSMS";
+            this.tabSMS.Text = "SMS";
+            // 
+            // tabAccount
+            // 
+            this.tabAccount.Name = "tabAccount";
+            this.tabAccount.Text = "Accounts";
+            // 
+            // tabLibrary
+            // 
+            this.tabLibrary.Name = "tabLibrary";
+            this.tabLibrary.Text = "Library";
+            // 
+            // tabEmployee
+            // 
+            this.tabEmployee.Name = "tabEmployee";
+            this.tabEmployee.Text = "Employee";
+            // 
+            // tabStudent
+            // 
+            this.tabStudent.Name = "tabStudent";
+            this.tabStudent.Text = "Student";
+            // 
+            // tabSchool
+            // 
+            this.tabSchool.Name = "tabSchool";
+            this.tabSchool.Text = "School";
+            // 
+            // NavigationBar
+            // 
+            this.NavigationBar.AppearanceItem.Disabled.Font = new System.Drawing.Font("Rubik", 11F);
+            this.NavigationBar.AppearanceItem.Disabled.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Hovered.Font = new System.Drawing.Font("Rubik", 11F);
+            this.NavigationBar.AppearanceItem.Hovered.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Normal.Font = new System.Drawing.Font("Rubik", 11F);
+            this.NavigationBar.AppearanceItem.Normal.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Pressed.Font = new System.Drawing.Font("Rubik", 11F);
+            this.NavigationBar.AppearanceItem.Pressed.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Selected.Font = new System.Drawing.Font("Rubik", 11F);
+            this.NavigationBar.AppearanceItem.Selected.Options.UseFont = true;
+            this.NavigationBar.AutoSize = false;
+            this.NavigationBar.BackColor = System.Drawing.Color.Transparent;
+            this.NavigationBar.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden;
+            this.NavigationBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavigationBar.Font = new System.Drawing.Font("Rubik", 5.25F);
+            this.NavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.tabSchool,
+            this.tabStudent,
+            this.tabEmployee,
+            this.tabLibrary,
+            this.tabAccount,
+            this.tabSMS,
+            this.tabEmail,
+            this.tabUser});
+            this.NavigationBar.Location = new System.Drawing.Point(0, 0);
+            this.NavigationBar.LookAndFeel.SkinName = "Office 2019 White";
+            this.NavigationBar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.NavigationBar.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.NavigationBar.Name = "NavigationBar";
+            this.NavigationBar.OptionsPeekFormButtonPanel.AppearanceButton.Normal.Font = new System.Drawing.Font("Rubik", 5.25F);
+            this.NavigationBar.OptionsPeekFormButtonPanel.AppearanceButton.Normal.Options.UseFont = true;
+            this.NavigationBar.SelectedItem = this.tabSchool;
+            this.NavigationBar.Size = new System.Drawing.Size(608, 30);
+            this.NavigationBar.TabIndex = 49;
+            this.NavigationBar.Text = "NavigationBar1";
+            this.NavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
+            this.NavigationBar.SelectedItemChanged += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.NavigationBar_SelectedItemChanged);
+            // 
             // frmAddPermission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4162,7 +4162,6 @@ namespace Umoxi
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddPermission_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabContent)).EndInit();
             this.TabContent.ResumeLayout(false);
@@ -4190,21 +4189,12 @@ namespace Umoxi
             this.Page8.ResumeLayout(false);
             this.Page8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitchUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Navigation.OfficeNavigationBar NavigationBar;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabSchool;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabStudent;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabEmployee;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabLibrary;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabAccount;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabSMS;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabEmail;
-        private DevExpress.XtraBars.Navigation.NavigationBarItem tabUser;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Panel panel1;
         internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
@@ -4320,5 +4310,14 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuLabel lbl901;
         private DevExpress.XtraEditors.ToggleSwitch toggleSwitchUser;
         private Bunifu.UI.WinForms.BunifuSnackbar Snackbar;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabUser;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabEmail;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabSMS;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabAccount;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabLibrary;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabEmployee;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabStudent;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem tabSchool;
+        private DevExpress.XtraBars.Navigation.OfficeNavigationBar NavigationBar;
     }
 }

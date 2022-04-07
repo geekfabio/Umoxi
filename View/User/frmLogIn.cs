@@ -62,9 +62,10 @@ namespace Umoxi
             if (Properties.Settings.Default.App_UserRemember)
             {
                 txtUserName.Text = Properties.Settings.Default.App_UserName;
+                txtPassword.Text = Properties.Settings.Default.App_UserPassword;
                 chkRememberMe.Checked = Properties.Settings.Default.App_UserRemember;
+               
             }
-
             
         }
 
@@ -126,11 +127,8 @@ namespace Umoxi
                 #region Logger e LoadUserPermission
               
                 UtilitiesFunctions.Logger(ConnectionNode.userID, Convert.ToString(DateTime.Now.ToLongTimeString()), "Usuario: " + txtUserName.Text + ", iniciou sessão no sistema ");
-               
-
                 if (chkRememberMe.Checked)
-                {
-                    
+                {                    
                     Properties.Settings.Default.App_UserName = txtUserName.Text;
                 }
                 else
@@ -138,7 +136,7 @@ namespace Umoxi
                     Properties.Settings.Default.App_UserName = null;
                     Properties.Settings.Default.App_UserPassword = null;
                 }
-               Properties.Settings.Default.App_UserRemember = chkRememberMe.Checked;
+                Properties.Settings.Default.App_UserRemember = chkRememberMe.Checked;
                 Properties.Settings.Default.Save();
 
                 FrmMain.Default.Show();
@@ -174,15 +172,15 @@ namespace Umoxi
             if(photoUser == "sem_foto" || photoUser == ""){
                 FrmMain.Default.UserPictureBox.Image = Properties.Resources.icons8_user_name_240px;
                 FrmMain.Default.PictureBox1.Image = Umoxi.Properties.Resources.icons8_user_name_240px; 
-                //TODO implemet this
-                //    FrmMain.Default.currentUser.ImageOptions.Image = Properties.Resources.user.SetPixel(20, 20);
+             //   FrmMain.Default.currentUser.ImageOptions.Image = Properties.Resources.icons8_user_name_240px;
             }
             else
             {
-                if (File.Exists(ConnectionNode.appPathAvatar + photoUser))
+                if (File.Exists(photoUser))
                 {
-                    FrmMain.Default.UserPictureBox.Image = Image.FromFile(ConnectionNode.appPathAvatar + photoUser);
-                    FrmMain.Default.PictureBox1.Image = Image.FromFile(ConnectionNode.appPathAvatar + photoUser);
+                    FrmMain.Default.UserPictureBox.Image = Image.FromFile(photoUser);
+                    FrmMain.Default.PictureBox1.Image = Image.FromFile(photoUser);
+                   // FrmMain.Default.currentUser.ImageOptions.Image = Image.FromFile(photoUser);
 
                 }
             }
@@ -218,6 +216,32 @@ namespace Umoxi
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) txtPassword.Focus();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+         
+            if (e.KeyCode == Keys.Enter) {
+
+                if (String.IsNullOrWhiteSpace(txtUserName.Text))
+                {
+                    txtUserName.Focus();
+                }
+                else if (String.IsNullOrWhiteSpace(txtPassword.Text))
+                {
+                    txtPassword.Focus();
+                }
+                else
+                {
+                    bunifuButton1_Click(sender, e);
+
+                }
+            }
         }
     }
 }
