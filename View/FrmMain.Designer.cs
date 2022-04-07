@@ -201,6 +201,12 @@ namespace Umoxi
             this.accordionControlElement46 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement48 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement49 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement55 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement56 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement57 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement59 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement58 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement60 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.elementSwitchTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement54 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -235,9 +241,9 @@ namespace Umoxi
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.lblFullName = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.lbluserFullName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -293,6 +299,7 @@ namespace Umoxi
             this.accordionControlElement45 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.timerToMemoryClean = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainerUser)).BeginInit();
@@ -1809,6 +1816,7 @@ namespace Umoxi
             this.accordionControlElement41,
             this.accordionControlElement18,
             this.accordionControlElement43,
+            this.accordionControlElement55,
             this.accordionControlSeparator1,
             this.elementSwitchTab});
             this.accordionControlElement5.Expanded = true;
@@ -1832,7 +1840,6 @@ namespace Umoxi
             this.btnPacienteAtendimentoDiario,
             this.btnPacienteConsulta,
             this.btnPacienteNovo});
-            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.Image = global::Umoxi.Properties.Resources.pacientes_22px;
             this.accordionControlElement6.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement6.Name = "accordionControlElement6";
@@ -1930,6 +1937,7 @@ namespace Umoxi
             this.accordionControlElement41.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.llUserRegistration,
             this.llUserLog});
+            this.accordionControlElement41.Expanded = true;
             this.accordionControlElement41.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_name_tag;
             this.accordionControlElement41.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement41.Name = "accordionControlElement41";
@@ -1950,7 +1958,7 @@ namespace Umoxi
             this.llUserLog.Height = 30;
             this.llUserLog.Name = "llUserLog";
             this.llUserLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.llUserLog.Text = "          Registro de Atividads";
+            this.llUserLog.Text = "          Registro de Atividades";
             this.llUserLog.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // accordionControlElement18
@@ -2017,6 +2025,49 @@ namespace Umoxi
             this.accordionControlElement49.Name = "accordionControlElement49";
             this.accordionControlElement49.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement49.Text = "          Relatório";
+            // 
+            // accordionControlElement55
+            // 
+            this.accordionControlElement55.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement56,
+            this.accordionControlElement60});
+            this.accordionControlElement55.ImageOptions.Image = global::Umoxi.Properties.Resources.laboratorio_22;
+            this.accordionControlElement55.Name = "accordionControlElement55";
+            this.accordionControlElement55.Text = "Labóratorio";
+            // 
+            // accordionControlElement56
+            // 
+            this.accordionControlElement56.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement57,
+            this.accordionControlElement59,
+            this.accordionControlElement58});
+            this.accordionControlElement56.Name = "accordionControlElement56";
+            this.accordionControlElement56.Text = "Exames";
+            // 
+            // accordionControlElement57
+            // 
+            this.accordionControlElement57.Name = "accordionControlElement57";
+            this.accordionControlElement57.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement57.Text = "Novo Exame";
+            // 
+            // accordionControlElement59
+            // 
+            this.accordionControlElement59.Name = "accordionControlElement59";
+            this.accordionControlElement59.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement59.Text = "Consultar Exames";
+            // 
+            // accordionControlElement58
+            // 
+            this.accordionControlElement58.Name = "accordionControlElement58";
+            this.accordionControlElement58.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement58.Text = "Cadastrar tipo de exame";
+            // 
+            // accordionControlElement60
+            // 
+            this.accordionControlElement60.Name = "accordionControlElement60";
+            this.accordionControlElement60.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement60.Text = "         Testes";
+            this.accordionControlElement60.Click += new System.EventHandler(this.accordionControlElement60_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -2356,9 +2407,9 @@ namespace Umoxi
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 20;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuImageButton1);
-            this.bunifuPanel1.Controls.Add(this.lblFullName);
             this.bunifuPanel1.Controls.Add(this.lblUserName);
+            this.bunifuPanel1.Controls.Add(this.bunifuImageButton1);
+            this.bunifuPanel1.Controls.Add(this.lbluserFullName);
             this.bunifuPanel1.Controls.Add(this.PictureBox1);
             this.bunifuPanel1.Location = new System.Drawing.Point(11, 59);
             this.bunifuPanel1.Name = "bunifuPanel1";
@@ -2368,6 +2419,28 @@ namespace Umoxi
             this.ToolTipMenu.SetToolTip(this.bunifuPanel1, "");
             this.ToolTipMenu.SetToolTipIcon(this.bunifuPanel1, null);
             this.ToolTipMenu.SetToolTipTitle(this.bunifuPanel1, "");
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lblUserName.AllowParentOverrides = false;
+            this.lblUserName.AutoEllipsis = false;
+            this.lblUserName.AutoSize = false;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.Font = new System.Drawing.Font("Rubik", 9F);
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblUserName.Location = new System.Drawing.Point(68, 38);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserName.Size = new System.Drawing.Size(168, 15);
+            this.lblUserName.TabIndex = 82;
+            this.lblUserName.Text = "@user";
+            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipMenu.SetToolTip(this.lblUserName, "");
+            this.ToolTipMenu.SetToolTipIcon(this.lblUserName, null);
+            this.ToolTipMenu.SetToolTipTitle(this.lblUserName, "");
             // 
             // bunifuImageButton1
             // 
@@ -2407,48 +2480,28 @@ namespace Umoxi
             this.bunifuImageButton1.ZoomSpeed = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // lblFullName
+            // lbluserFullName
             // 
-            this.lblFullName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblFullName.AllowParentOverrides = false;
-            this.lblFullName.AutoEllipsis = false;
-            this.lblFullName.AutoSize = false;
-            this.lblFullName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblFullName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblFullName.Font = new System.Drawing.Font("Rubik", 12F);
-            this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
-            this.lblFullName.Location = new System.Drawing.Point(68, 13);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFullName.Size = new System.Drawing.Size(168, 25);
-            this.lblFullName.TabIndex = 83;
-            this.lblFullName.Text = "Usúario";
-            this.lblFullName.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblFullName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipMenu.SetToolTip(this.lblFullName, "");
-            this.ToolTipMenu.SetToolTipIcon(this.lblFullName, null);
-            this.ToolTipMenu.SetToolTipTitle(this.lblFullName, "");
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblUserName.AllowParentOverrides = false;
-            this.lblUserName.AutoEllipsis = false;
-            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.Font = new System.Drawing.Font("Rubik", 9F);
-            this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblUserName.Location = new System.Drawing.Point(68, 38);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserName.Size = new System.Drawing.Size(35, 15);
-            this.lblUserName.TabIndex = 82;
-            this.lblUserName.Text = "@user";
-            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipMenu.SetToolTip(this.lblUserName, "");
-            this.ToolTipMenu.SetToolTipIcon(this.lblUserName, null);
-            this.ToolTipMenu.SetToolTipTitle(this.lblUserName, "");
+            this.lbluserFullName.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lbluserFullName.AllowParentOverrides = false;
+            this.lbluserFullName.AutoEllipsis = false;
+            this.lbluserFullName.AutoSize = false;
+            this.lbluserFullName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbluserFullName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbluserFullName.Font = new System.Drawing.Font("Rubik", 12F);
+            this.lbluserFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
+            this.lbluserFullName.Location = new System.Drawing.Point(69, 14);
+            this.lbluserFullName.Name = "lbluserFullName";
+            this.lbluserFullName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbluserFullName.Size = new System.Drawing.Size(168, 25);
+            this.lbluserFullName.TabIndex = 83;
+            this.lbluserFullName.Text = "Usúario";
+            this.lbluserFullName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbluserFullName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipMenu.SetToolTip(this.lbluserFullName, "");
+            this.ToolTipMenu.SetToolTipIcon(this.lbluserFullName, null);
+            this.ToolTipMenu.SetToolTipTitle(this.lbluserFullName, "");
+            this.lbluserFullName.Click += new System.EventHandler(this.lbluserFullName_Click);
             // 
             // PictureBox1
             // 
@@ -3005,6 +3058,11 @@ namespace Umoxi
             this.accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement52.Text = "          Registrar nascimento";
             // 
+            // timerToMemoryClean
+            // 
+            this.timerToMemoryClean.Interval = 60000;
+            this.timerToMemoryClean.Tick += new System.EventHandler(this.timerToMemoryClean_Tick);
+            // 
             // FrmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -3025,9 +3083,9 @@ namespace Umoxi
             this.IconOptions.Image = global::Umoxi.Properties.Resources.logo_255px;
             this.Name = "FrmMain";
             this.ShowText = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " Umoja School";
+            this.Text = "Umoxi || Gestão Hospital || Versão 1.0.0 ";
             this.ToolbarFormControl = this.toolbarFormControl1;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
@@ -3060,7 +3118,6 @@ namespace Umoxi
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -3227,7 +3284,7 @@ namespace Umoxi
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         internal DevExpress.XtraEditors.PictureEdit PictureBox1;
-        internal Bunifu.UI.WinForms.BunifuLabel lblFullName;
+        internal Bunifu.UI.WinForms.BunifuLabel lbluserFullName;
         internal Bunifu.UI.WinForms.BunifuLabel lblUserName;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
@@ -3334,5 +3391,12 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement52;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement55;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement56;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement57;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement59;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement58;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement60;
+        private System.Windows.Forms.Timer timerToMemoryClean;
     }
 }

@@ -79,7 +79,7 @@ namespace Umoxi
                         //update image
                         ConnectionNode.UploadBookCoverPhoto(BOOK_ID, PictureBox1);
 
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Livro adicionado # " + txtBookName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Livro adicionado # " + txtBookName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -93,7 +93,7 @@ namespace Umoxi
 
                         ConnectionNode.UploadBookCoverPhoto(double.Parse(txtBookId.Text), PictureBox1);
 
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Livro atualizado # " + txtBookName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Livro atualizado # " + txtBookName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

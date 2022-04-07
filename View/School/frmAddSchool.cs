@@ -80,7 +80,7 @@ namespace Umoxi
                         double SCHOOL_ID = Convert.ToDouble(ConnectionNode.sqlDT.Rows[0]["SCHOOL_ID"]);
                         //upload image
                         ConnectionNode.UploadCompanyLogo(SCHOOL_ID, PictureBox1);
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "escola adicionada # " + txtSchoolName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "escola adicionada # " + txtSchoolName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -93,7 +93,7 @@ namespace Umoxi
 
                         //update image
                         ConnectionNode.UploadCompanyLogo(double.Parse(txtSchoolID.Text), PictureBox1);
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Escola Atualizada  # " + txtSchoolName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Escola Atualizada  # " + txtSchoolName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

@@ -68,6 +68,7 @@ namespace Umoxi
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.notifyUmoxi = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
@@ -492,6 +493,7 @@ namespace Umoxi
             this.txtUserName.TextPlaceholder = "";
             this.txtUserName.UseSystemPasswordChar = false;
             this.txtUserName.WordWrap = true;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // txtPassword
             // 
@@ -571,6 +573,7 @@ namespace Umoxi
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WordWrap = true;
             this.txtPassword.OnIconRightClick += new System.EventHandler(this.txtPassword_OnIconRightClick);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // toolbarFormControl1
             // 
@@ -858,6 +861,12 @@ namespace Umoxi
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
+            // notifyUmoxi
+            // 
+            this.notifyUmoxi.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyUmoxi.Icon")));
+            this.notifyUmoxi.Text = "Umoxi - Gestão Hospitalar";
+            this.notifyUmoxi.Visible = true;
+            // 
             // frmLogIn
             // 
             this.ActiveGlowColor = System.Drawing.Color.Silver;
@@ -938,5 +947,6 @@ namespace Umoxi
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
+        public System.Windows.Forms.NotifyIcon notifyUmoxi;
     }
 }

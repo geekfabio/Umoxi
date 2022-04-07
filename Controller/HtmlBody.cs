@@ -9,7 +9,7 @@ namespace Umoxi
     class HtmlBody
     {
         public static string UserName;
-        public static string FullName;
+        public static string userFullName;
         public static string CodeConfirm;
 
         public static string Body(string MessageHtml)
@@ -214,7 +214,7 @@ namespace Umoxi
                                                                                                        <td bgcolor =""#ffffff"" align= ""left"" style=""padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"">
 
 
-                                                                                                                <p style=""margin: 0;""> Caro " +FullName+@", <br>
+                                                                                                                <p style=""margin: 0;""> Caro " +userFullName+@", <br>
                                                                                                                          Aqui está o código de verificação que você precisa para fazer a redefiniçao da senha para acessar sua conta: "+UserName+@" 
                             </p>
                         </td>

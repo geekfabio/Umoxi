@@ -37,7 +37,6 @@
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerDataStorage1 = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
             this.appointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-        
             this.schoolInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.noDocumentsView1 = new DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -47,7 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsBindingSource)).BeginInit();
-           ((System.ComponentModel.ISupportInitialize)(this.schoolInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolInformationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noDocumentsView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -74,6 +73,7 @@
             this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
             this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
             this.schedulerControl1.Views.YearView.UseOptimizedScrolling = false;
+            this.schedulerControl1.Click += new System.EventHandler(this.schedulerControl1_Click);
             // 
             // schedulerDataStorage1
             // 
@@ -118,6 +118,7 @@
             this.schedulerDataStorage1.Resources.Mappings.Caption = "School_Name";
             this.schedulerDataStorage1.Resources.Mappings.Id = "SCHOOL_ID";
             this.schedulerDataStorage1.Resources.Mappings.Image = "SCH_LOGO";
+            this.schedulerDataStorage1.TimeZoneId = "W. Central Africa Standard Time";
             this.schedulerDataStorage1.AppointmentsInserted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
             this.schedulerDataStorage1.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
             this.schedulerDataStorage1.AppointmentsDeleted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage1_AppointmentsChanged);
@@ -125,14 +126,7 @@
             // appointmentsBindingSource
             // 
             this.appointmentsBindingSource.DataMember = "Appointments";
-        
             // 
-            // UmoxiDataSet
-            // 
-               // 
-            // schoolInformationBindingSource
-            // 
-           // 
             // dockManager1
             // 
             this.dockManager1.Form = this;
@@ -155,12 +149,6 @@
             // 
             this.schedulerBarController1.Control = this.schedulerControl1;
             // 
-            // appointmentsTableAdapter
-            // 
-           // 
-            // schoolInformationTableAdapter
-            // 
-           // 
             // usScheduler
             // 
             resources.ApplyResources(this, "$this");

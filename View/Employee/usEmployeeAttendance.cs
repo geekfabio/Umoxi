@@ -77,7 +77,7 @@ namespace Umoxi
                             if (!(ConnectionNode.sqlDT.Rows.Count > 0))
                             {
                                 ConnectionNode.ExecuteSQLQuery(" INSERT INTO DailyAttendanceEmployee (EmployeeID, EntryDate, EntryTime, User_ID, Status) VALUES " +
-                                    " (" + Convert.ToString(EmployeeID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToLongTimeString() + "', ") + Convert.ToString(ConnectionNode.xUser_ID) + ", 'Present') ");
+                                    " (" + Convert.ToString(EmployeeID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToLongTimeString() + "', ") + Convert.ToString(ConnectionNode.userID) + ", 'Present') ");
                             }
                         }
                         else
@@ -86,7 +86,7 @@ namespace Umoxi
                             if (!(ConnectionNode.sqlDT.Rows.Count > 0))
                             {
                                 ConnectionNode.ExecuteSQLQuery(" INSERT INTO DailyAttendanceEmployee (EmployeeID, EntryDate, EntryTime, User_ID, Status) VALUES " +
-                                    " (" + Convert.ToString(EmployeeID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToLongTimeString() + "', ") + Convert.ToString(ConnectionNode.xUser_ID) + ", 'Absent') ");
+                                    " (" + Convert.ToString(EmployeeID) + ", '" + Strings.Format(dtpEntryDate.DateTime, "MM/dd/yyyy") + ("', '" + DateTime.Now.ToLongTimeString() + "', ") + Convert.ToString(ConnectionNode.userID) + ", 'Absent') ");
                             }
 
                         }

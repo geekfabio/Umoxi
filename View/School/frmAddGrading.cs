@@ -80,7 +80,7 @@ namespace Umoxi
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO GradingLevel  (Grade, MarkFrom, MarkTo, GPA, Status) VALUES  " + (
                          " ('" + UtilitiesFunctions.str_repl(txtGradeName.Text) + "', '" + UtilitiesFunctions.str_repl(txtFrom.Text) + "', '" + UtilitiesFunctions.str_repl(txtTo.Text) + "', '" + UtilitiesFunctions.str_repl(txtGPA.Text) + "', '" + UtilitiesFunctions.str_repl(txtStatus.Text) + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add grading # " + txtGradeName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add grading # " + txtGradeName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -88,7 +88,7 @@ namespace Umoxi
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE  GradingLevel SET  Grade='" + UtilitiesFunctions.str_repl(txtGradeName.Text) + "', MarkFrom='" + UtilitiesFunctions.str_repl(txtFrom.Text) + "', MarkTo='" + UtilitiesFunctions.str_repl(txtTo.Text) + "', GPA='" + UtilitiesFunctions.str_repl(txtGPA.Text) + "', Status= '" + UtilitiesFunctions.str_repl(txtStatus.Text) + "' " +
                         " WHERE GRADE_ID=" + txtGradeID.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated grading # " + txtGradeName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated grading # " + txtGradeName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

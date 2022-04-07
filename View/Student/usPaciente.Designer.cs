@@ -41,31 +41,23 @@ namespace Umoxi
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.usSchoollayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnExport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lblCount = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmbSearchBy = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnAddStudent = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
             this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.txtWeight = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmbBloodGroup = new Bunifu.UI.WinForms.BunifuLabel();
@@ -85,8 +77,15 @@ namespace Umoxi
             this.txtContactNo = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtEmail = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtStudentName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblCount = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
+            this.paciente_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parente_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.usSchoollayoutControl1ConvertedLayout)).BeginInit();
             this.usSchoollayoutControl1ConvertedLayout.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -126,11 +125,11 @@ namespace Umoxi
             this.bunifuPanel1.BorderRadius = 10;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.btnExport);
+            this.bunifuPanel1.Controls.Add(this.lblCount);
             this.bunifuPanel1.Controls.Add(this.cmbSearchBy);
             this.bunifuPanel1.Controls.Add(this.txtSearch);
             this.bunifuPanel1.Controls.Add(this.btnUpdate);
             this.bunifuPanel1.Controls.Add(this.btnAddStudent);
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
             this.bunifuPanel1.Controls.Add(this.DataGridView1);
             this.bunifuPanel1.Location = new System.Drawing.Point(12, 12);
@@ -238,6 +237,28 @@ namespace Umoxi
             this.btnExport.UseDefaultRadiusAndThickness = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // lblCount
+            // 
+            this.lblCount.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lblCount.AllowParentOverrides = false;
+            this.lblCount.AutoEllipsis = false;
+            this.lblCount.AutoSize = false;
+            this.lblCount.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblCount.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblCount.Font = new System.Drawing.Font("Rubik Light", 10F);
+            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
+            this.lblCount.Location = new System.Drawing.Point(23, 56);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCount.Size = new System.Drawing.Size(172, 18);
+            this.lblCount.TabIndex = 94;
+            this.lblCount.Text = "Total de Pacientes";
+            this.lblCount.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipGeneral.SetToolTip(this.lblCount, "");
+            this.ToolTipGeneral.SetToolTipIcon(this.lblCount, null);
+            this.ToolTipGeneral.SetToolTipTitle(this.lblCount, "");
+            // 
             // cmbSearchBy
             // 
             this.cmbSearchBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -276,10 +297,9 @@ namespace Umoxi
             this.cmbSearchBy.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbSearchBy.Items.AddRange(new object[] {
             "ID",
-            "Admission",
-            "Name",
-            "Number",
-            "Email"});
+            "Nome",
+            "Data",
+            "Parente"});
             this.cmbSearchBy.ItemTopMargin = 3;
             this.cmbSearchBy.Location = new System.Drawing.Point(602, 88);
             this.cmbSearchBy.Name = "cmbSearchBy";
@@ -351,7 +371,7 @@ namespace Umoxi
             this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.PlaceholderText = "Search by ID, name, admission, mumber...";
+            this.txtSearch.PlaceholderText = "Procurar por Id, Nome, Data, Parente";
             this.txtSearch.ReadOnly = false;
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
@@ -365,7 +385,7 @@ namespace Umoxi
             this.txtSearch.TextMarginBottom = 0;
             this.txtSearch.TextMarginLeft = 7;
             this.txtSearch.TextMarginTop = 0;
-            this.txtSearch.TextPlaceholder = "Search by ID, name, admission, mumber...";
+            this.txtSearch.TextPlaceholder = "Procurar por Id, Nome, Data, Parente";
             this.ToolTipGeneral.SetToolTip(this.txtSearch, "");
             this.ToolTipGeneral.SetToolTipIcon(this.txtSearch, null);
             this.ToolTipGeneral.SetToolTipTitle(this.txtSearch, "");
@@ -427,7 +447,7 @@ namespace Umoxi
             this.btnAddStudent.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnAddStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddStudent.BackgroundImage")));
             this.btnAddStudent.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddStudent.ButtonText = "Add";
+            this.btnAddStudent.ButtonText = "Cadastrar Paciente";
             this.btnAddStudent.ButtonTextMarginLeft = 0;
             this.btnAddStudent.ColorContrastOnClick = 45;
             this.btnAddStudent.ColorContrastOnHover = 45;
@@ -508,27 +528,6 @@ namespace Umoxi
             this.btnAddStudent.UseDefaultRadiusAndThickness = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddSchool_Click);
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Rubik Light", 10F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(70, 16);
-            this.bunifuLabel1.TabIndex = 85;
-            this.bunifuLabel1.Text = "All students";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipGeneral.SetToolTip(this.bunifuLabel1, "");
-            this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel1, null);
-            this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel1, "");
-            // 
             // bunifuLabel3
             // 
             this.bunifuLabel3.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
@@ -541,9 +540,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(87, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(137, 20);
             this.bunifuLabel3.TabIndex = 84;
-            this.bunifuLabel3.Text = "Student list";
+            this.bunifuLabel3.Text = "Lista de Pacientes";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel3, "");
@@ -576,15 +575,13 @@ namespace Umoxi
             this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView1.ColumnHeadersHeight = 40;
             this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
+            this.paciente_id,
+            this.nome,
+            this.contactos,
+            this.genero,
+            this.data_cadastro,
+            this.data_nascimento,
+            this.parente_nome,
             this.Column10});
             this.DataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.DataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Rubik", 9.75F);
@@ -630,84 +627,6 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.DataGridView1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DataGridView1, "");
             this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "STUDENT_ID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "AdmissionNo";
-            this.Column2.HeaderText = "Admission No";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "AdmisionDate";
-            this.Column3.HeaderText = "Admission date";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "StudentName";
-            this.Column4.HeaderText = "Name";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Class_name";
-            this.Column5.HeaderText = "Class";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "BatchName";
-            this.Column6.HeaderText = "Session";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Gender";
-            this.Column7.HeaderText = "Gender";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Status";
-            this.Column8.HeaderText = "Status";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column9.Text = "credit-card";
-            this.Column9.UseColumnTextForButtonValue = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column10.Text = "edit";
-            this.Column10.UseColumnTextForButtonValue = true;
             // 
             // layoutControlGroup1
             // 
@@ -776,8 +695,8 @@ namespace Umoxi
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.btnDelete);
             this.bunifuPanel2.Controls.Add(this.tablePanel1);
-            this.bunifuPanel2.Controls.Add(this.lblCount);
             this.bunifuPanel2.Controls.Add(this.PictureBox1);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuPanel2.Location = new System.Drawing.Point(743, 0);
@@ -788,6 +707,102 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.bunifuPanel2, "");
             this.ToolTipGeneral.SetToolTipIcon(this.bunifuPanel2, null);
             this.ToolTipGeneral.SetToolTipTitle(this.bunifuPanel2, "");
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AllowAnimations = true;
+            this.btnDelete.AllowMouseEffects = true;
+            this.btnDelete.AllowToggling = false;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AnimationSpeed = 200;
+            this.btnDelete.AutoGenerateColors = false;
+            this.btnDelete.AutoRoundBorders = false;
+            this.btnDelete.AutoSizeLeftIcon = true;
+            this.btnDelete.AutoSizeRightIcon = true;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackColor1 = System.Drawing.Color.White;
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+            this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.ButtonText = "      Eliminar";
+            this.btnDelete.ButtonTextMarginLeft = 0;
+            this.btnDelete.ColorContrastOnClick = 45;
+            this.btnDelete.ColorContrastOnHover = 45;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnDelete.CustomizableEdges = borderEdges3;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDelete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDelete.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDelete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDelete.Font = new System.Drawing.Font("Rubik", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.Gray;
+            this.btnDelete.IconLeft = global::Umoxi.Properties.Resources.icons8_trash_24px;
+            this.btnDelete.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnDelete.IconMarginLeft = 11;
+            this.btnDelete.IconPadding = 7;
+            this.btnDelete.IconRight = null;
+            this.btnDelete.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnDelete.IconSize = 20;
+            this.btnDelete.IdleBorderColor = System.Drawing.Color.Silver;
+            this.btnDelete.IdleBorderRadius = 10;
+            this.btnDelete.IdleBorderThickness = 1;
+            this.btnDelete.IdleFillColor = System.Drawing.Color.White;
+            this.btnDelete.IdleIconLeftImage = global::Umoxi.Properties.Resources.icons8_trash_24px;
+            this.btnDelete.IdleIconRightImage = null;
+            this.btnDelete.IndicateFocus = false;
+            this.btnDelete.Location = new System.Drawing.Point(9, 543);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDelete.OnDisabledState.BorderRadius = 10;
+            this.btnDelete.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnDisabledState.BorderThickness = 1;
+            this.btnDelete.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDelete.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDelete.OnDisabledState.IconLeftImage = null;
+            this.btnDelete.OnDisabledState.IconRightImage = null;
+            this.btnDelete.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(120)))));
+            this.btnDelete.onHoverState.BorderRadius = 10;
+            this.btnDelete.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.onHoverState.BorderThickness = 1;
+            this.btnDelete.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(120)))));
+            this.btnDelete.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.onHoverState.IconLeftImage = global::Umoxi.Properties.Resources.icons8_trash_24px_1;
+            this.btnDelete.onHoverState.IconRightImage = null;
+            this.btnDelete.OnIdleState.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelete.OnIdleState.BorderRadius = 10;
+            this.btnDelete.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnIdleState.BorderThickness = 1;
+            this.btnDelete.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btnDelete.OnIdleState.ForeColor = System.Drawing.Color.Gray;
+            this.btnDelete.OnIdleState.IconLeftImage = global::Umoxi.Properties.Resources.icons8_trash_24px;
+            this.btnDelete.OnIdleState.IconRightImage = null;
+            this.btnDelete.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(29)))), ((int)(((byte)(6)))));
+            this.btnDelete.OnPressedState.BorderRadius = 10;
+            this.btnDelete.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnPressedState.BorderThickness = 1;
+            this.btnDelete.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(29)))), ((int)(((byte)(6)))));
+            this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnPressedState.IconLeftImage = null;
+            this.btnDelete.OnPressedState.IconRightImage = null;
+            this.btnDelete.Size = new System.Drawing.Size(197, 32);
+            this.btnDelete.TabIndex = 159;
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.TextMarginLeft = 0;
+            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ToolTipGeneral.SetToolTip(this.btnDelete, "");
+            this.ToolTipGeneral.SetToolTipIcon(this.btnDelete, null);
+            this.ToolTipGeneral.SetToolTipTitle(this.btnDelete, "");
+            this.btnDelete.UseDefaultRadiusAndThickness = true;
             // 
             // tablePanel1
             // 
@@ -1035,7 +1050,7 @@ namespace Umoxi
             this.bunifuLabel13.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel13.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel13.Font = new System.Drawing.Font("Rubik", 12F);
-            this.bunifuLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.bunifuLabel13.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuLabel13.Location = new System.Drawing.Point(3, 235);
             this.bunifuLabel13.Name = "bunifuLabel13";
             this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1110,7 +1125,7 @@ namespace Umoxi
             this.txtAdmissionNO.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdmissionNO.Size = new System.Drawing.Size(190, 20);
             this.txtAdmissionNO.TabIndex = 101;
-            this.txtAdmissionNO.Text = "Admission No:";
+            this.txtAdmissionNO.Text = "Tipo Sanguino:";
             this.txtAdmissionNO.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.txtAdmissionNO.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.txtAdmissionNO, "");
@@ -1133,7 +1148,7 @@ namespace Umoxi
             this.cmbSchool.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cmbSchool.Size = new System.Drawing.Size(190, 21);
             this.cmbSchool.TabIndex = 100;
-            this.cmbSchool.Text = "School: ";
+            this.cmbSchool.Text = "Hospital: ";
             this.cmbSchool.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.cmbSchool.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.cmbSchool, "");
@@ -1169,13 +1184,13 @@ namespace Umoxi
             this.bunifuLabel10.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuLabel10.Font = new System.Drawing.Font("Rubik", 12F);
-            this.bunifuLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.bunifuLabel10.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuLabel10.Location = new System.Drawing.Point(3, 98);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel10.Size = new System.Drawing.Size(190, 18);
             this.bunifuLabel10.TabIndex = 98;
-            this.bunifuLabel10.Text = "Info. academic";
+            this.bunifuLabel10.Text = "Info.  Medicas";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel10, "");
@@ -1198,7 +1213,7 @@ namespace Umoxi
             this.txtContactNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtContactNo.Size = new System.Drawing.Size(190, 22);
             this.txtContactNo.TabIndex = 97;
-            this.txtContactNo.Text = "Number";
+            this.txtContactNo.Text = "Contacto";
             this.txtContactNo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtContactNo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.txtContactNo, "");
@@ -1221,7 +1236,7 @@ namespace Umoxi
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtEmail.Size = new System.Drawing.Size(190, 17);
             this.txtEmail.TabIndex = 96;
-            this.txtEmail.Text = "Email";
+            this.txtEmail.Text = "Nome";
             this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtEmail.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.txtEmail, "");
@@ -1238,42 +1253,18 @@ namespace Umoxi
             this.txtStudentName.CursorType = System.Windows.Forms.Cursors.Default;
             this.txtStudentName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtStudentName.Font = new System.Drawing.Font("Rubik", 12F);
-            this.txtStudentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            this.txtStudentName.ForeColor = System.Drawing.Color.SeaGreen;
             this.txtStudentName.Location = new System.Drawing.Point(3, 3);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtStudentName.Size = new System.Drawing.Size(190, 38);
             this.txtStudentName.TabIndex = 86;
-            this.txtStudentName.Text = "Student name";
+            this.txtStudentName.Text = "Nome do Paciente";
             this.txtStudentName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtStudentName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.txtStudentName, "");
             this.ToolTipGeneral.SetToolTipIcon(this.txtStudentName, null);
             this.ToolTipGeneral.SetToolTipTitle(this.txtStudentName, "");
-            // 
-            // lblCount
-            // 
-            this.lblCount.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lblCount.AllowParentOverrides = false;
-            this.lblCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCount.AutoEllipsis = false;
-            this.lblCount.AutoSize = false;
-            this.lblCount.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblCount.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblCount.Font = new System.Drawing.Font("Rubik Light", 10F);
-            this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
-            this.lblCount.Location = new System.Drawing.Point(24, 548);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCount.Size = new System.Drawing.Size(172, 18);
-            this.lblCount.TabIndex = 94;
-            this.lblCount.Text = "Total de alunos";
-            this.lblCount.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lblCount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipGeneral.SetToolTip(this.lblCount, "");
-            this.ToolTipGeneral.SetToolTipIcon(this.lblCount, null);
-            this.ToolTipGeneral.SetToolTipTitle(this.lblCount, "");
             // 
             // PictureBox1
             // 
@@ -1290,6 +1281,67 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.PictureBox1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.PictureBox1, "");
             // 
+            // paciente_id
+            // 
+            this.paciente_id.DataPropertyName = "paciente_id";
+            this.paciente_id.HeaderText = "ID";
+            this.paciente_id.Name = "paciente_id";
+            this.paciente_id.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // contactos
+            // 
+            this.contactos.DataPropertyName = "contactos";
+            this.contactos.HeaderText = "Contactos";
+            this.contactos.Name = "contactos";
+            this.contactos.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.DataPropertyName = "genero";
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            // 
+            // data_cadastro
+            // 
+            this.data_cadastro.DataPropertyName = "data_cadastro";
+            this.data_cadastro.HeaderText = "Cadastrado";
+            this.data_cadastro.Name = "data_cadastro";
+            this.data_cadastro.ReadOnly = true;
+            // 
+            // data_nascimento
+            // 
+            this.data_nascimento.DataPropertyName = "data_nascimento";
+            this.data_nascimento.HeaderText = "Nascimento";
+            this.data_nascimento.Name = "data_nascimento";
+            this.data_nascimento.ReadOnly = true;
+            // 
+            // parente_nome
+            // 
+            this.parente_nome.DataPropertyName = "parente_nome";
+            this.parente_nome.HeaderText = "Parente";
+            this.parente_nome.Name = "parente_nome";
+            this.parente_nome.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 98.83249F;
+            this.Column10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Column10.HeaderText = "";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column10.Text = "Editar";
+            this.Column10.UseColumnTextForButtonValue = true;
+            // 
             // usStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1303,6 +1355,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this, "");
             this.ToolTipGeneral.SetToolTipIcon(this, null);
             this.ToolTipGeneral.SetToolTipTitle(this, "");
+            this.Load += new System.EventHandler(this.usStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usSchoollayoutControl1ConvertedLayout)).EndInit();
             this.usSchoollayoutControl1ConvertedLayout.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
@@ -1323,7 +1376,6 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuImageButton btnUpdate;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddStudent;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuDataGridView DataGridView1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
@@ -1337,16 +1389,6 @@ namespace Umoxi
         internal Bunifu.UI.WinForms.BunifuDropdown cmbSearchBy;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExport;
         private Bunifu.UI.WinForms.BunifuLabel lblCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewButtonColumn Column9;
-        private System.Windows.Forms.DataGridViewButtonColumn Column10;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private Bunifu.UI.WinForms.BunifuLabel cmbBloodGroup;
         private Bunifu.UI.WinForms.BunifuLabel txtPresentAddress;
@@ -1366,5 +1408,14 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuLabel txtEmail;
         private Bunifu.UI.WinForms.BunifuLabel txtStudentName;
         private Bunifu.UI.WinForms.BunifuLabel txtWeight;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paciente_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_cadastro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_nascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parente_nome;
+        private System.Windows.Forms.DataGridViewButtonColumn Column10;
     }
 }

@@ -63,14 +63,14 @@ namespace Umoxi
                 {
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO ClassName (CLASS_TYPE_ID, Class_name) VALUES (" + cmbClassName.Text.Split(" # ".ToCharArray()[0])[0] + (" , '" + UtilitiesFunctions.str_repl(txtClassName.Text) + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add class # " + txtClassName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add class # " + txtClassName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         break;
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE  ClassName SET  CLASS_TYPE_ID=" + cmbClassName.Text.Split(" # ".ToCharArray()[0])[0] + (" , Class_name= '" + UtilitiesFunctions.str_repl(txtClassName.Text) + "' WHERE      CLASS_ID =  ") + txtClassID.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated class # " + txtClassName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated class # " + txtClassName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

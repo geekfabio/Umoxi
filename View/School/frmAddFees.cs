@@ -80,7 +80,7 @@ namespace Umoxi
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO SchoolFees ( Fee_Type, SCHOOL_ID, CLASS_ID, Month, Amount) VALUES  " + (
                         " ( '" + UtilitiesFunctions.str_repl(txtFeeType.Text) + "', ") + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbClass.Text.Split(" # ".ToCharArray()[0])[0] + (", '" + cmbMonth.Text + "' , '" + UtilitiesFunctions.str_repl(txtFees.Text) + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToShortTimeString(), "Add fee # " + txtFees.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToShortTimeString(), "Add fee # " + txtFees.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -88,7 +88,7 @@ namespace Umoxi
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE SchoolFees SET  Fee_Type='" + UtilitiesFunctions.str_repl(txtFeeType.Text) + "', SCHOOL_ID=" + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ", CLASS_ID=" + cmbClass.Text.Split(" # ".ToCharArray()[0])[0] + (", Month='" + cmbMonth.Text + "', Amount= '" + UtilitiesFunctions.str_repl(txtFees.Text) + "'  ") +
                         " WHERE FEES_ID=" + txtFeeID.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToShortTimeString(), "Updated fee # " + txtFees.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToShortTimeString(), "Updated fee # " + txtFees.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

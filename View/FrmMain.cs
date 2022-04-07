@@ -34,7 +34,7 @@ namespace Umoxi
 {
     public partial class FrmMain : ToolbarForm
     {
-        MemoryManagement memory = new MemoryManagement();
+        readonly MemoryManagement memory = new MemoryManagement();
         public List<TabOpened> dicFormOpened = new List<TabOpened>();
         public string currentFormOpened = "";
 
@@ -47,15 +47,24 @@ namespace Umoxi
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            this.UseWaitCursor = true;
+           
             #region Dashboard
-        //    contentControl.Controls.Add(usDashboard.Instance);
+            //    contentControl.Controls.Add(usDashboard.Instance);
            // contentControl.Controls[0].Dock = DockStyle.Fill;
             #endregion
             accordionControlElementAddNewEvent.Expanded=true;
             dateNavigator1.SchedulerControl=usScheduler.Instance.schedulerControl1;
             toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
             memory.FlushMemory(); //Limpa os dados desnecessário da memoria
+            
+            //Os controles estão a demorar para aparecer 
+            
+            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Maximized;
 
+            this.UseWaitCursor = false;
+            
         }
 
         #region Default Instance
@@ -295,7 +304,7 @@ namespace Umoxi
             //if (_tag == 10)
             //    DrawSeparator(e.Cache, e.ObjectInfo);
 
-            memory.FlushMemory();
+         
         }
 
         AccordionControlElement filterAllElement = null;
@@ -400,7 +409,7 @@ namespace Umoxi
 
         private void DashboardToolStripMenuItem_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usDashboard.Instance);
+           // OpenTab(usDashboard.Instance);
         }
 
         #region User
@@ -833,6 +842,22 @@ namespace Umoxi
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbluserFullName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerToMemoryClean_Tick(object sender, EventArgs e)
+        {
+            //colect all unecessary resources and clean
+            memory.FlushMemory();
         }
     }
 }

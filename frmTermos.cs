@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Umoxi
 {
-    public partial class DashboardDesign : Form
+    public partial class frmTermos : Form
     {
-        public DashboardDesign()
+        public frmTermos()
         {
             InitializeComponent();
         }

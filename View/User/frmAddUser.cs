@@ -2,7 +2,7 @@
 using PasswordStrengthControlLib;
 using System;
 using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Umoxi
@@ -10,7 +10,7 @@ namespace Umoxi
     public partial class frmAddUser : Form
     {
         string chkVAL;
-
+        string userPhoto;
         public frmAddUser()
         {
             InitializeComponent();
@@ -75,18 +75,35 @@ namespace Umoxi
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtPassword.Text))
-                txtPassword.UseSystemPasswordChar = false;
-            else
-                txtPassword.UseSystemPasswordChar = true;
+
+            switch (txtPassword.UseSystemPasswordChar)
+            {
+                case true:
+                    txtPassword.UseSystemPasswordChar = false;
+                    txtPassword.IconRight = Properties.Resources.icons8_invisible_24px_1;
+                    break;
+                case false:
+                    txtPassword.UseSystemPasswordChar = true;
+                    txtPassword.IconRight = Properties.Resources.icons8_eye_24px_1;
+                    break;
+            }
         }
 
         private void txtRePassword_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtRePassword.Text))
-                txtRePassword.UseSystemPasswordChar = false;
-            else
-                txtRePassword.UseSystemPasswordChar = true;
+
+            switch (txtRePassword.UseSystemPasswordChar)
+            {
+                case true:
+                    txtRePassword.UseSystemPasswordChar = false;
+                    txtRePassword.IconRight = Properties.Resources.icons8_invisible_24px_1;
+                    break;
+                case false:
+                    txtRePassword.UseSystemPasswordChar = true;
+                    txtRePassword.IconRight = Properties.Resources.icons8_eye_24px_1;
+                    break;
+            }
+
         }
 
         private void txtPassword_OnIconRightClick(object sender, EventArgs e)
@@ -115,13 +132,13 @@ namespace Umoxi
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void chkActive_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
         {
             if (chkActive.Checked == false)
-                Snackbar.Show(this, "User desactive", BunifuSnackbar.MessageTypes.Information, 5000, "Active").Then((result) =>
+                Snackbar.Show(this, "Usuário desativado", BunifuSnackbar.MessageTypes.Information, 5000, "Active").Then((result) =>
                 {
                     if (result == BunifuSnackbar.SnackbarResult.ActionClicked)
                         chkActive.Checked = true;
@@ -131,9 +148,14 @@ namespace Umoxi
 
         private void btnBrowsePhoto_Click(object sender, EventArgs e)
         {
-            OpenFileDialog1.Filter = "Imagens (JPEG,GIF,BMP,PNG)|*.jpg;*.jpeg;*.gif;*.bmp;*.png;";
+        
+            OpenFileDialog1.Filter = "Imagem (JPEG,GIF,BMP,PNG)|*.jpg;*.jpeg;*.gif;*.bmp;*.png;";
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
+            {
                 PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName);
+                userPhoto = Path.Combine(OpenFileDialog1.FileName);
+            }
+
         }
 
         private void frmAddUser_FormClosed(object sender, FormClosedEventArgs e)
@@ -149,13 +171,13 @@ namespace Umoxi
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             TransitionsEffects.ResetColor(txtUserName, lblUserName);
-            TransitionsEffects.ResetColor(txtFullName, lblFullName);
+            TransitionsEffects.ResetColor(txtuserFullName, lbluserFullName);
             TransitionsEffects.ResetColor(txtContactNo, lblContactNo);
             TransitionsEffects.ResetColor(txtEmail, lblEmail);
 
             switch (btnSave.Text)
             {
-                case "Save":
+                case "Salvar":
                     #region Salvar                    
                     if (string.IsNullOrWhiteSpace(txtUserName.Text))
                     {
@@ -164,12 +186,12 @@ namespace Umoxi
                         Snackbar.Show(this, "Por favor preencha o campo Usúario", BunifuSnackbar.MessageTypes.Error);
                         txtUserName.Focus();
                     }
-                    else if (string.IsNullOrWhiteSpace(txtFullName.Text))
+                    else if (string.IsNullOrWhiteSpace(txtuserFullName.Text))
                     {
                         TabSelect("User");
-                        TransitionsEffects.ShowTransition(txtFullName, lblFullName);
+                        TransitionsEffects.ShowTransition(txtuserFullName, lbluserFullName);
                         Snackbar.Show(this, "Por favor preencha o campo nome completo", BunifuSnackbar.MessageTypes.Error);
-                        txtFullName.Focus();
+                        txtuserFullName.Focus();
                     }
                     else if (string.IsNullOrWhiteSpace(txtContactNo.Text))
                     {
@@ -178,13 +200,13 @@ namespace Umoxi
                         Snackbar.Show(this, "O campo Contacto é necessário", BunifuSnackbar.MessageTypes.Error);
                         txtContactNo.Focus();
                     }
-                    //else if (!UtilitiesFunctions.EmailCheck(txtEmail.Text.Trim()))
-                    //{
-                    //    TabSelect("User");
-                    //    lblEmail.ForeColor = Color.Red;
-                    //    TransitionsEffects.ShowTransition(txtEmail, lblEmail);
-                    //    Snackbar.Show(this, "Email Incorreto", BunifuSnackbar.MessageTypes.Error);
-                    //}
+                    else if (!UtilitiesFunctions.EmailCheck(txtEmail.Text.Trim()))
+                    {
+                        TabSelect("User");
+                        lblEmail.ForeColor = Color.Red;
+                        TransitionsEffects.ShowTransition(txtEmail, lblEmail);
+                        Snackbar.Show(this, "Email Incorreto", BunifuSnackbar.MessageTypes.Error);
+                    }
                     else if (string.IsNullOrWhiteSpace(txtPassword.Text))
                     {
                         TabSelect("Pass");
@@ -197,7 +219,7 @@ namespace Umoxi
                         if (chkActive.Checked == false)
                         {
                             chkVAL = "N";
-                            Snackbar.Show(this, "The user isn't active", BunifuSnackbar.MessageTypes.Information, 5000, "Ativar").Then((result) =>
+                            Snackbar.Show(this, "Usuário desativado", BunifuSnackbar.MessageTypes.Information, 5000, "Ativar").Then((result) =>
                             {
                                 if (result == BunifuSnackbar.SnackbarResult.ActionClicked)
                                     chkActive.Checked = true;
@@ -205,29 +227,29 @@ namespace Umoxi
                             });
                         }
 
-                        ConnectionNode.ExecuteSQLQuery("SELECT  *  FROM            Users  WHERE   (user_name = '" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "')");
+                        ConnectionNode.ExecuteSQLQuery("SELECT usuario  FROM Usuarios WHERE (usuario = '" + Convert.ToString(UtilitiesFunctions.str_repl(txtUserName.Text)) + "')");
                         if (ConnectionNode.sqlDT.Rows.Count > 0)
                         {
-                            Snackbar.Show(this, "User already exist", BunifuSnackbar.MessageTypes.Warning);
+                            Snackbar.Show(this, "Este usúario já existe!!!", BunifuSnackbar.MessageTypes.Warning);
                         }
                         else
                         {
                             if (txtPassword.Text == txtRePassword.Text)
                             {
-                                ConnectionNode.ExecuteSQLQuery(" INSERT INTO  Users (user_name, password, full_name, e_mail, contact_no, status) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "')");
+                                ConnectionNode.ExecuteSQLQuery("INSERT INTO  usuarios (usuario, password, nome, email, contacto, ativo) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "')");
                                 //get last inserted id
-                                ConnectionNode.ExecuteSQLQuery("SELECT   User_ID  FROM   Users  ORDER BY User_ID DESC");
-                                double SCHOOL_ID = Convert.ToDouble(ConnectionNode.sqlDT.Rows[0]["User_ID"]);
+                                ConnectionNode.ExecuteSQLQuery("SELECT usuario_id  FROM   usuarios  ORDER BY usuario_id DESC");
+                                double user_ID = Convert.ToDouble(ConnectionNode.sqlDT.Rows[0]["usuario_id"]);
                                 //upload image
-                                ConnectionNode.UploadUserPhoto(SCHOOL_ID, PictureBox1);
+                                ConnectionNode.UploadUserPhoto(user_ID, userPhoto);
 
-                                UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "novo usuário adicionado # " + txtUserName.Text);
+                                UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Usuario: " + txtUserName.Text + " adicionado por " + ConnectionNode.userName);
                                 this.Close();
-                                Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
+                                Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Usuário cadastrado com sucesso"), BunifuSnackbar.MessageTypes.Success);
 
                             }
                             else
-                                Snackbar.Show(this, "Password do not match!", BunifuSnackbar.MessageTypes.Error);
+                                Snackbar.Show(this, "Password não coincidem!", BunifuSnackbar.MessageTypes.Error);
 
 
                         }
@@ -235,19 +257,19 @@ namespace Umoxi
                     }
                     #endregion
                     break;
-                case "Update":
+                case "Atualizar":
                     #region Atualizar
                     #region check
                     if (string.IsNullOrWhiteSpace(txtUserName.Text))
                     {
                         TabSelect("User");
                         TransitionsEffects.ShowTransition(txtUserName, lblUserName);
-                        Snackbar.Show(this, "Nome do Usuário Obrigatoria", BunifuSnackbar.MessageTypes.Error);
+                        Snackbar.Show(this, "Nome do Usuário Obrigatorio", BunifuSnackbar.MessageTypes.Error);
                     }
-                    else if (string.IsNullOrWhiteSpace(txtFullName.Text))
+                    else if (string.IsNullOrWhiteSpace(txtuserFullName.Text))
                     {
                         TabSelect("User");
-                        TransitionsEffects.ShowTransition(txtFullName, lblFullName);
+                        TransitionsEffects.ShowTransition(txtuserFullName, lbluserFullName);
                         Snackbar.Show(this, "Contacto Obrigatoria", BunifuSnackbar.MessageTypes.Error);
                     }
                     else if (string.IsNullOrWhiteSpace(txtContactNo.Text))
@@ -266,11 +288,12 @@ namespace Umoxi
                     #endregion
                     if (string.IsNullOrWhiteSpace(this.txtPassword.Text))
                     {
-                        ConnectionNode.ExecuteSQLQuery(" UPDATE  Users SET  full_name='" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', e_mail='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contact_no='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', status='" + chkVAL + "' WHERE  User_ID=" + txtUserID.Text + " ");
-                        //update image
-                        ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), PictureBox1);
+                        ConnectionNode.ExecuteSQLQuery(" UPDATE  usuarios SET  nome='" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', email='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contacto='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', ativo='" + chkVAL + "' WHERE  usuario_id=" + txtUserID.Text + " ");
+                        //Atualiza a foto de perfil se o ficheiro existe                                
+                        if(File.Exists(userPhoto))
+                            ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), userPhoto);
 
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "User updated # " + txtUserName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "User updated # " + txtUserName.Text);
                         btnSave.Text = "Salvar";
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);
@@ -279,17 +302,18 @@ namespace Umoxi
                     {
                         if (txtPassword.Text == txtRePassword.Text)
                         {
-                            ConnectionNode.ExecuteSQLQuery(" UPDATE  Users SET  password='" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', full_name='" + UtilitiesFunctions.str_repl(txtFullName.Text) + "', e_mail='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contact_no='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', status='" + chkVAL + "' WHERE  User_ID=" + txtUserID.Text + " ");
-                            //update image
-                            ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), PictureBox1);
+                            ConnectionNode.ExecuteSQLQuery(" UPDATE  usuarios SET  password='" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', nome='" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', email='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contacto='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', ativo='" + chkVAL + "' WHERE  usuario_id=" + txtUserID.Text + " ");
+                            //Atualiza a foto de perfil se o ficheiro existe                                
+                            if (File.Exists(userPhoto))
+                                ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), userPhoto);
 
-                            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "User updated # " + txtUserName.Text);
+                            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "User updated # " + txtUserName.Text);
                             this.Close();
                             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);
                         }
                         else
                         {
-                            Snackbar.Show(this, "Password do not match!", BunifuSnackbar.MessageTypes.Error);
+                            Snackbar.Show(this, "A senhas não coincidem!", BunifuSnackbar.MessageTypes.Error);
                         }
 
                     }
@@ -298,6 +322,11 @@ namespace Umoxi
                 default:
                     break;
             }
+
+        }
+
+        private void frmAddUser_Load(object sender, EventArgs e)
+        {
 
         }
     }

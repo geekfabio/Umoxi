@@ -143,6 +143,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.DataGridView1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DataGridView1, "");
             this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.DataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DataGridView1_RowsAdded);
             // 
             // usUserlayoutControl1ConvertedLayout
             // 
@@ -233,7 +234,7 @@ namespace Umoxi
             this.btnAddUser.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnAddUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddUser.BackgroundImage")));
             this.btnAddUser.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddUser.ButtonText = "Add";
+            this.btnAddUser.ButtonText = "Novo usúario";
             this.btnAddUser.ButtonTextMarginLeft = 0;
             this.btnAddUser.ColorContrastOnClick = 45;
             this.btnAddUser.ColorContrastOnHover = 45;
@@ -326,9 +327,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(43, 16);
+            this.bunifuLabel1.Size = new System.Drawing.Size(104, 16);
             this.bunifuLabel1.TabIndex = 85;
-            this.bunifuLabel1.Text = "All user";
+            this.bunifuLabel1.Text = "Todos os usúarios";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel1, "");
@@ -347,9 +348,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(60, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(120, 20);
             this.bunifuLabel3.TabIndex = 84;
-            this.bunifuLabel3.Text = "User list";
+            this.bunifuLabel3.Text = "Lista de Usúario";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel3, "");
@@ -412,7 +413,7 @@ namespace Umoxi
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "User_ID";
+            this.Column1.DataPropertyName = "usuario_id";
             this.Column1.HeaderText = "User_ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -420,47 +421,49 @@ namespace Umoxi
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "user_name";
-            this.Column2.HeaderText = "User";
+            this.Column2.DataPropertyName = "usuario";
+            this.Column2.HeaderText = "Usúario";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "full_name";
-            this.Column3.HeaderText = "Full name";
+            this.Column3.DataPropertyName = "nome";
+            this.Column3.HeaderText = "Nome";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "e_mail";
+            this.Column4.DataPropertyName = "email";
             this.Column4.HeaderText = "Email";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "contact_no";
-            this.Column5.HeaderText = "Contact";
+            this.Column5.DataPropertyName = "contacto";
+            this.Column5.HeaderText = "Contactos";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "status";
-            this.Column6.HeaderText = "Status";
+            this.Column6.DataPropertyName = "ativo";
+            this.Column6.HeaderText = "Ativo";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Column7
             // 
+            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column7.HeaderText = "";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column7.Text = "user-edit";
+            this.Column7.Text = "Editar";
+            this.Column7.ToolTipText = "Editar usuario";
             this.Column7.UseColumnTextForButtonValue = true;
             // 
             // usUser

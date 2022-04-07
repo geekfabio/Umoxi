@@ -81,7 +81,7 @@ namespace Umoxi
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Subject (SubjectCode, SubjectName, CLASS_ID, BATCH_ID, SCHOOL_ID) VALUES " + (
                         " ('" + UtilitiesFunctions.str_repl(txtSubjectCode.Text) + "', '" + UtilitiesFunctions.str_repl(txtSubjectName.Text) + "', ") + cmbClass.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbBatch.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ") ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Add subject # " + txtSubjectName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add subject # " + txtSubjectName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -89,7 +89,7 @@ namespace Umoxi
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE Subject SET SubjectCode='" + UtilitiesFunctions.str_repl(txtSubjectCode.Text) + "', SubjectName='" + UtilitiesFunctions.str_repl(txtSubjectName.Text) + "', CLASS_ID=" + cmbClass.Text.Split(" # ".ToCharArray()[0])[0] + ", BATCH_ID=" + cmbBatch.Text.Split(" # ".ToCharArray()[0])[0] + ", SCHOOL_ID= " + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + " " +
                         " WHERE SUBJECT_ID=" + txtSubjectID.Text + "   ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "Updated subject atualizada # " + txtSubjectName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated subject atualizada # " + txtSubjectName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

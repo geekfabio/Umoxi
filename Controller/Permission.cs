@@ -11,7 +11,32 @@ namespace Umoxi
         #region Start code
         public static void LoadUserPermission()
         {
-                FrmMain.Default.ChangePasswordToolStripMenuItem.Enabled = true;
+            
+            if(ConnectionNode.userFuncao == "Admin")
+            {
+
+            }
+            else if (ConnectionNode.userFuncao == "Medico")
+            {
+
+            }
+            else if (ConnectionNode.userFuncao == "Laboratório")
+            {
+
+            }
+            else if (ConnectionNode.userFuncao  == "Infermeiro")
+            {
+
+            }
+            else if (ConnectionNode.userFuncao  == "Farmaceutico")
+            {
+
+            }
+            else
+            {
+
+            }
+            FrmMain.Default.ChangePasswordToolStripMenuItem.Enabled = true;
                 //FrmMain.Default.llChangePassword.Enabled = true;
         }
         #endregion

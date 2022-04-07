@@ -60,7 +60,7 @@ namespace Umoxi
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Examination (ExaminationName, HeldDate, ResultPublishDate, StartTime, EndTime, SuperName, Status) VALUES  " + (
                         " ('" + UtilitiesFunctions.str_repl(txtExamName.Text) + "', '") + Strings.Format(dtpHeldDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpPublishDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpStartTime.DateTime, "MM/dd/yyyy H:mm:ss tt") + "', '" + Strings.Format(dtpEndTime.DateTime, "MM/dd/yyyy H:mm:ss tt") + ("', '" + UtilitiesFunctions.str_repl(txtSuperName.Text) + "', '" + UtilitiesFunctions.str_repl(cmbStatus.Text) + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "add  examination # " + txtExamName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "add  examination # " + txtExamName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -68,7 +68,7 @@ namespace Umoxi
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE Examination SET ExaminationName='" + UtilitiesFunctions.str_repl(txtExamName.Text) + "', HeldDate='" + Strings.Format(dtpHeldDate.DateTime, "MM/dd/yyyy") + "', ResultPublishDate='" + Strings.Format(dtpPublishDate.DateTime, "MM/dd/yyyy") + "', " +
                         " StartTime='" + Strings.Format(dtpStartTime.DateTime, "MM/dd/yyyy H:mm:ss tt") + "',EndTime= '" + Strings.Format(dtpEndTime.DateTime, "MM/dd/yyyy H:mm:ss tt") + ("', SuperName='" + UtilitiesFunctions.str_repl(txtSuperName.Text) + "', Status='" + UtilitiesFunctions.str_repl(cmbStatus.Text) + "'   WHERE EXAM_ID = ") + txtExamID.Text + "");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "update  examination # " + txtExamName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "update  examination # " + txtExamName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

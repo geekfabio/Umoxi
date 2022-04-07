@@ -65,7 +65,7 @@ namespace Umoxi
                     case "Save":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO BookSupplier (Supplier_Name, Address, Contact_No, FAX, Email) VALUES " + (
                             " ('" + UtilitiesFunctions.str_repl(txtSupplierName.Text) + "', '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "') "));
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToShortTimeString(), "fornecedor adicionado # " + txtSupplierName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToShortTimeString(), "fornecedor adicionado # " + txtSupplierName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -73,7 +73,7 @@ namespace Umoxi
                     case "Update":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE BookSupplier  SET  Supplier_Name='" + UtilitiesFunctions.str_repl(txtSupplierName.Text) + "', Address='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', Contact_No='" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', FAX='" + UtilitiesFunctions.str_repl(txtFAX.Text) + "', Email='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "' " +
                             " WHERE BOOK_SUPP_ID=" + txtSupplierID.Text + " ");
-                        UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToShortTimeString(), "fornecedor atualizado # " + txtSupplierName.Text);
+                        UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToShortTimeString(), "fornecedor atualizado # " + txtSupplierName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);

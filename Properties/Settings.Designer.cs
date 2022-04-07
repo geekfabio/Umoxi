@@ -59,26 +59,14 @@ namespace Umoxi.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True")]
-        public string UmojaSchoolConnectionString {
-            get {
-                return ((string)(this["UmojaSchoolConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=9s;Initial Catalog=UmojaSchool;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;uid=root; database=db_hospital;uid=root;pwd=")]
         public string dbUmoxiConnectionString {
             get {
                 return ((string)(this["dbUmoxiConnectionString"]));
             }
-            set
-            {
+            set {
                 this["dbUmoxiConnectionString"] = value;
             }
         }

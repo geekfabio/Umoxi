@@ -50,6 +50,11 @@ namespace Umoxi
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
             this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -57,11 +62,6 @@ namespace Umoxi
             this.ElipseDateTimePicker2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Snackbar = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.usUserLoglayoutControl1ConvertedLayout)).BeginInit();
             this.usUserLoglayoutControl1ConvertedLayout.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -130,7 +130,7 @@ namespace Umoxi
             this.btnCleanLog.BackColor1 = System.Drawing.Color.White;
             this.btnCleanLog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCleanLog.BackgroundImage")));
             this.btnCleanLog.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCleanLog.ButtonText = "    Delete";
+            this.btnCleanLog.ButtonText = "      Eliminar";
             this.btnCleanLog.ButtonTextMarginLeft = 0;
             this.btnCleanLog.ColorContrastOnClick = 45;
             this.btnCleanLog.ColorContrastOnHover = 45;
@@ -165,7 +165,7 @@ namespace Umoxi
             this.btnCleanLog.IdleIconLeftImage = global::Umoxi.Properties.Resources.icons8_trash_24px;
             this.btnCleanLog.IdleIconRightImage = null;
             this.btnCleanLog.IndicateFocus = false;
-            this.btnCleanLog.Location = new System.Drawing.Point(550, 166);
+            this.btnCleanLog.Location = new System.Drawing.Point(546, 114);
             this.btnCleanLog.Name = "btnCleanLog";
             this.btnCleanLog.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCleanLog.OnDisabledState.BorderRadius = 10;
@@ -219,7 +219,7 @@ namespace Umoxi
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Rubik", 9F);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(26, 146);
+            this.bunifuLabel4.Location = new System.Drawing.Point(323, 74);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(38, 15);
@@ -230,11 +230,12 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel4, "");
             this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel4, null);
             this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel4, "");
+            this.bunifuLabel4.Visible = false;
             // 
             // DateTimePicker2
             // 
             this.DateTimePicker2.EditValue = new System.DateTime(2021, 8, 24, 19, 53, 19, 0);
-            this.DateTimePicker2.Location = new System.Drawing.Point(20, 166);
+            this.DateTimePicker2.Location = new System.Drawing.Point(353, 23);
             this.DateTimePicker2.Name = "DateTimePicker2";
             this.DateTimePicker2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.DateTimePicker2.Properties.Appearance.Font = new System.Drawing.Font("Rubik Light", 10F);
@@ -253,6 +254,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.DateTimePicker2, "");
             this.ToolTipGeneral.SetToolTipIcon(this.DateTimePicker2, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DateTimePicker2, "");
+            this.DateTimePicker2.Visible = false;
             // 
             // bunifuLabel2
             // 
@@ -262,7 +264,7 @@ namespace Umoxi
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Rubik", 9F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(202, 146);
+            this.bunifuLabel2.Location = new System.Drawing.Point(499, 74);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(22, 15);
@@ -273,11 +275,12 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel2, "");
             this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel2, null);
             this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel2, "");
+            this.bunifuLabel2.Visible = false;
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.EditValue = new System.DateTime(2021, 8, 24, 0, 0, 0, 0);
-            this.DateTimePicker1.Location = new System.Drawing.Point(196, 166);
+            this.DateTimePicker1.EditValue = new System.DateTime(2022, 12, 12, 0, 0, 0, 0);
+            this.DateTimePicker1.Location = new System.Drawing.Point(517, 23);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.DateTimePicker1.Properties.Appearance.Font = new System.Drawing.Font("Rubik Light", 10F);
@@ -296,6 +299,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.DateTimePicker1, "");
             this.ToolTipGeneral.SetToolTipIcon(this.DateTimePicker1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DateTimePicker1, "");
+            this.DateTimePicker1.Visible = false;
             // 
             // lblUserName
             // 
@@ -305,12 +309,12 @@ namespace Umoxi
             this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblUserName.Font = new System.Drawing.Font("Rubik", 9F);
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.lblUserName.Location = new System.Drawing.Point(26, 83);
+            this.lblUserName.Location = new System.Drawing.Point(23, 90);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserName.Size = new System.Drawing.Size(34, 15);
+            this.lblUserName.Size = new System.Drawing.Size(43, 15);
             this.lblUserName.TabIndex = 115;
-            this.lblUserName.Text = "User *";
+            this.lblUserName.Text = "Usúario";
             this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.lblUserName, "");
@@ -353,7 +357,7 @@ namespace Umoxi
             this.cmbUserName.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbUserName.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbUserName.ItemTopMargin = 3;
-            this.cmbUserName.Location = new System.Drawing.Point(20, 102);
+            this.cmbUserName.Location = new System.Drawing.Point(20, 111);
             this.cmbUserName.Name = "cmbUserName";
             this.cmbUserName.Size = new System.Drawing.Size(238, 32);
             this.cmbUserName.TabIndex = 114;
@@ -384,7 +388,7 @@ namespace Umoxi
             this.btnUpdate.ImageSize = new System.Drawing.Size(21, 25);
             this.btnUpdate.ImageZoomSize = new System.Drawing.Size(26, 30);
             this.btnUpdate.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.InitialImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(372, 167);
+            this.btnUpdate.Location = new System.Drawing.Point(383, 116);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Rotation = 0;
             this.btnUpdate.ShowActiveImage = true;
@@ -416,7 +420,7 @@ namespace Umoxi
             this.btnSubmit.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
             this.btnSubmit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSubmit.ButtonText = "    Search";
+            this.btnSubmit.ButtonText = "    Procurar";
             this.btnSubmit.ButtonTextMarginLeft = 0;
             this.btnSubmit.ColorContrastOnClick = 45;
             this.btnSubmit.ColorContrastOnHover = 45;
@@ -451,7 +455,7 @@ namespace Umoxi
             this.btnSubmit.IdleIconLeftImage = global::Umoxi.Properties.Resources.icons8_timesearch_24px;
             this.btnSubmit.IdleIconRightImage = null;
             this.btnSubmit.IndicateFocus = false;
-            this.btnSubmit.Location = new System.Drawing.Point(410, 166);
+            this.btnSubmit.Location = new System.Drawing.Point(415, 114);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSubmit.OnDisabledState.BorderRadius = 10;
@@ -509,9 +513,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(35, 16);
+            this.bunifuLabel1.Size = new System.Drawing.Size(100, 16);
             this.bunifuLabel1.TabIndex = 85;
-            this.bunifuLabel1.Text = "All log";
+            this.bunifuLabel1.Text = "Todas Atividades";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel1, "");
@@ -530,9 +534,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(61, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(164, 20);
             this.bunifuLabel3.TabIndex = 84;
-            this.bunifuLabel3.Text = "User log";
+            this.bunifuLabel3.Text = "Atividade de Usúarios";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel3, "");
@@ -601,18 +605,58 @@ namespace Umoxi
             this.DataGridView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.DataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.DataGridView1.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.DataGridView1.Location = new System.Drawing.Point(20, 216);
+            this.DataGridView1.Location = new System.Drawing.Point(20, 168);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.RowTemplate.Height = 40;
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView1.Size = new System.Drawing.Size(636, 233);
+            this.DataGridView1.Size = new System.Drawing.Size(636, 281);
             this.DataGridView1.TabIndex = 0;
             this.DataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.ToolTipGeneral.SetToolTip(this.DataGridView1, "");
             this.ToolTipGeneral.SetToolTipIcon(this.DataGridView1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DataGridView1, "");
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Action";
+            this.Column2.HeaderText = "Action";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Date";
+            this.Column1.HeaderText = "Date";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Timex";
+            this.Column3.HeaderText = "Time";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Log_In";
+            this.Column4.HeaderText = "Log In";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Log_Out";
+            this.Column5.HeaderText = "Log Out";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
             // 
             // layoutControlGroup1
             // 
@@ -752,41 +796,6 @@ namespace Umoxi
             this.ToolTipGeneral.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.ToolTipGeneral.ToolTipTitle = null;
             // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Action";
-            this.Column2.HeaderText = "Action";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Date";
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Timex";
-            this.Column3.HeaderText = "Time";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Log_In";
-            this.Column4.HeaderText = "Log In";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Log_Out";
-            this.Column5.HeaderText = "Log Out";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // usUserLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,6 +808,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this, "");
             this.ToolTipGeneral.SetToolTipIcon(this, null);
             this.ToolTipGeneral.SetToolTipTitle(this, "");
+            this.Load += new System.EventHandler(this.usUserLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usUserLoglayoutControl1ConvertedLayout)).EndInit();
             this.usUserLoglayoutControl1ConvertedLayout.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
@@ -827,16 +837,16 @@ namespace Umoxi
         private DevExpress.XtraLayout.LayoutControlItem bunifuPanel1item;
         private Bunifu.UI.WinForms.BunifuLabel lblUserName;
         internal Bunifu.UI.WinForms.BunifuDropdown cmbUserName;
-        private DevExpress.XtraEditors.DateEdit DateTimePicker1;
         private Bunifu.Framework.UI.BunifuElipse Elipsedgv;
         private Bunifu.Framework.UI.BunifuElipse ElipseDateTimePicker1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
-        private DevExpress.XtraEditors.DateEdit DateTimePicker2;
         private Bunifu.Framework.UI.BunifuElipse ElipseDateTimePicker2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCleanLog;
         private Bunifu.UI.WinForms.BunifuSnackbar Snackbar;
         private Bunifu.UI.WinForms.BunifuToolTip ToolTipGeneral;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private DevExpress.XtraEditors.DateEdit DateTimePicker2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private DevExpress.XtraEditors.DateEdit DateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

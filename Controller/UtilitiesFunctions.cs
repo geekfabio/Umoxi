@@ -20,8 +20,9 @@ namespace Umoxi
         {
             return parameter != DialogResult.Cancel;
         }
-        public static void AppClose(Form control, FormClosingEventArgs e)
+        public static void AppClose(Form control, FormClosingEventArgs e, bool exit = false)
         {
+            if(exit) { Environment.Exit(0); return; }
            
             FlyoutAction action = new FlyoutAction() { Caption = "      Sair do aplicativo?", Description = "Deseja realmente sair da aplicação?" };
             action.ImageOptions.Image = Properties.Resources.icons8_cancel;
@@ -98,7 +99,11 @@ namespace Umoxi
         {
             return str.Replace("'", "").Replace(",", ",").Replace("`", "");
         }
+        public static string stringReplacePath(string str)
+        {
 
+            return str.Replace(@"\", "/");
+         }
         /// <summary>
         /// Usar para tirar formatos de hora e data : / pq o ficheiro n pode conter esses caracters 
         /// </summary>
@@ -189,17 +194,12 @@ namespace Umoxi
         /// <summary>
         /// Registra ação de um usúario no sistema
         /// </summary>
-        /// <param name="user_ID"></param>
-        /// <param name="xtime"></param>
-        /// <param name="xAction"></param>
-        public static void Logger(int user_ID, string xtime, string actionUser)
+        /// <param name="user_ID">ID do usúario logado no sistema</param>
+        public static void Logger(int user_ID, string xtime = "", string actionUser = "")
         {
-            ConnectionNode.sqlSTR = "INSERT INTO UserLog (usuario_id, action, date) " +
-                "VALUES (" + System.Convert.ToInt32(user_ID) + ", "
-                + "'" + actionUser + "', "
-                + "'" + Strings.Format(DateTime.Now, "MM/dd/yyyy") + "'";
-            
-            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+          
+            ConnectionNode.sqlString = "INSERT INTO `usuario_log`(`usuario_id`, `action`, `date`) VALUES ('" + Convert.ToInt32(user_ID) + "','" + actionUser + "','" + DateTime.Now + "')";
+            ConnectionNode.ExecuteCommad(ConnectionNode.sqlString);
         }
 
 
@@ -209,7 +209,7 @@ namespace Umoxi
         public static void Logger(string action) {
 
             //se o user_id for nullo então registra o usúario como desconhecido
-            ConnectionNode.ExecuteSQLQuery("INSERT INTO UserLog (usuario_id, Action, Date) VALUES (" + ConnectionNode.xUser_ID ?? 0 + ", '"+ action + "','" + DateTime.Now.ToLongTimeString() + "')");
+            ConnectionNode.ExecuteCommad("INSERT INTO UserLog (usuario_id, Action, Date) VALUES (" + ConnectionNode.userID ?? 0 + ", '"+ action + "','" + DateTime.Now.ToLongTimeString() + "')");
         
         }
         #endregion

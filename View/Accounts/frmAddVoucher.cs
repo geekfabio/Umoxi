@@ -254,8 +254,8 @@ namespace Umoxi
                         if (cmbVoucherType.Text == "Payment")
                         {
                             ConnectionNode.ExecuteSQLQuery(" INSERT INTO Voucher (User_ID, Voucher_Type, Voucher_Date, Rec_Paid_ID, CashBank_ID, ReceiptChqNo, ChequeDate, PayAmount, RecAmount, Narration,  BankReconciliation, Approval) VALUES " +
-                                " (" + Convert.ToString(ConnectionNode.xUser_ID) + ", '" + cmbVoucherType.Text + "', '" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', " + txtRecPayID.Text + ", " + txtCashBankID.Text + (", '" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "', '") + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', " + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", 0, '" + UtilitiesFunctions.str_repl(txtNarration.Text) + "', '" + BankReconciliation + "', 'N') "));
-                            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), " Add a new voucher.");
+                                " (" + Convert.ToString(ConnectionNode.userID) + ", '" + cmbVoucherType.Text + "', '" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', " + txtRecPayID.Text + ", " + txtCashBankID.Text + (", '" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "', '") + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', " + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", 0, '" + UtilitiesFunctions.str_repl(txtNarration.Text) + "', '" + BankReconciliation + "', 'N') "));
+                            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), " Add a new voucher.");
 
                             this.Close();
                             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -263,8 +263,8 @@ namespace Umoxi
                         else if (cmbVoucherType.Text == "Receive")
                         {
                             ConnectionNode.ExecuteSQLQuery(" INSERT INTO Voucher (User_ID, Voucher_Type, Voucher_Date, Rec_Paid_ID, CashBank_ID, ReceiptChqNo, ChequeDate, PayAmount, RecAmount, Narration,  BankReconciliation, Approval) VALUES " +
-                                " (" + Convert.ToString(ConnectionNode.xUser_ID) + ", '" + cmbVoucherType.Text + "', '" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', " + txtRecPayID.Text + ", " + txtCashBankID.Text + (", '" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "', '") + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', 0, " + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", '" + UtilitiesFunctions.str_repl(txtNarration.Text) + "', '" + BankReconciliation + "', 'N') "));
-                            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), " Add a new voucher.");
+                                " (" + Convert.ToString(ConnectionNode.userID) + ", '" + cmbVoucherType.Text + "', '" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', " + txtRecPayID.Text + ", " + txtCashBankID.Text + (", '" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "', '") + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', 0, " + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", '" + UtilitiesFunctions.str_repl(txtNarration.Text) + "', '" + BankReconciliation + "', 'N') "));
+                            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), " Add a new voucher.");
 
                             this.Close();
                             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -278,18 +278,18 @@ namespace Umoxi
                         //Voucher upadte statement
                         if (cmbVoucherType.Text == "Payment")
                         {
-                            ConnectionNode.ExecuteSQLQuery(" UPDATE Voucher SET User_ID=" + Convert.ToString(ConnectionNode.xUser_ID) + ", Voucher_Type='" + cmbVoucherType.Text + "', Voucher_Date='" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', Rec_Paid_ID=" + txtRecPayID.Text + ", CashBank_ID= " + txtCashBankID.Text + (", ReceiptChqNo='" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "',  ") +
+                            ConnectionNode.ExecuteSQLQuery(" UPDATE Voucher SET User_ID=" + Convert.ToString(ConnectionNode.userID) + ", Voucher_Type='" + cmbVoucherType.Text + "', Voucher_Date='" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', Rec_Paid_ID=" + txtRecPayID.Text + ", CashBank_ID= " + txtCashBankID.Text + (", ReceiptChqNo='" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "',  ") +
                                 " ChequeDate='" + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', PayAmount=" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", RecAmount=0, Narration='" + UtilitiesFunctions.str_repl(txtNarration.Text) + "',  BankReconciliation='" + BankReconciliation + "', Approval ='N'  WHERE        (VOUCHER_ID = ") + txtVoucherNO.Text + ") ");
-                            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), " update voucher." + txtVoucherNO.Text);
+                            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), " update voucher." + txtVoucherNO.Text);
 
                             this.Close();
                             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         }
                         else if (cmbVoucherType.Text == "Receive")
                         {
-                            ConnectionNode.ExecuteSQLQuery(" UPDATE Voucher SET User_ID=" + Convert.ToString(ConnectionNode.xUser_ID) + ", Voucher_Type='" + cmbVoucherType.Text + "', Voucher_Date='" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', Rec_Paid_ID=" + txtRecPayID.Text + ", CashBank_ID= " + txtCashBankID.Text + (", ReceiptChqNo='" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "',  ") +
+                            ConnectionNode.ExecuteSQLQuery(" UPDATE Voucher SET User_ID=" + Convert.ToString(ConnectionNode.userID) + ", Voucher_Type='" + cmbVoucherType.Text + "', Voucher_Date='" + Strings.Format(dtpVocuherDate.DateTime.Date, "MM/dd/yyyy") + "', Rec_Paid_ID=" + txtRecPayID.Text + ", CashBank_ID= " + txtCashBankID.Text + (", ReceiptChqNo='" + UtilitiesFunctions.str_repl(txtReciptNO.Text) + "',  ") +
                                 " ChequeDate='" + Strings.Format(dtpChequeDate.DateTime.Date, "MM/dd/yyyy") + "', PayAmount=0, RecAmount=" + System.Convert.ToString(UtilitiesFunctions.str_repl(txtAmount.Text)) + (", Narration='" + UtilitiesFunctions.str_repl(txtNarration.Text) + "',  BankReconciliation='" + BankReconciliation + "', Approval ='N'  WHERE        (VOUCHER_ID = ") + txtVoucherNO.Text + ") ");
-                            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), " update voucher." + txtVoucherNO.Text);
+                            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), " update voucher." + txtVoucherNO.Text);
 
                             this.Close();
                             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);

@@ -1408,7 +1408,7 @@ namespace Umoxi
                 }
             }
 
-            UtilitiesFunctions.Logger(ConnectionNode.xUser_ID, DateTime.Now.ToLongTimeString(), "user permission modified " + permission.Text + ".");
+            UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "user permission modified " + permission.Text + ".");
 
             this.Close();
             Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);

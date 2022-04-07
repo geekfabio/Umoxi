@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutProgram));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelCopyright = new DevExpress.XtraEditors.LabelControl();
             this.labelCompanyName = new DevExpress.XtraEditors.LabelControl();
@@ -41,8 +42,8 @@
             this.Page1 = new DevExpress.XtraTab.XtraTabPage();
             this.textBoxDescription = new DevExpress.XtraEditors.LabelControl();
             this.Page2 = new DevExpress.XtraTab.XtraTabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
@@ -205,7 +206,7 @@
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(367, 225);
             this.textBoxDescription.TabIndex = 121;
-            this.textBoxDescription.Text = "Copyrights © 2022 Grupo nº 4 inc";
+            this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
             // 
             // Page2
             // 
@@ -215,6 +216,14 @@
             this.Page2.Name = "Page2";
             this.Page2.Size = new System.Drawing.Size(367, 225);
             this.Page2.Text = "Page2";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 15);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(177, 26);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Contacto: 929725366/926556677\r\nemail: projetoumoxi@gmail.com\r\n";
             // 
             // pictureBox2
             // 
@@ -226,14 +235,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 135;
             this.pictureBox2.TabStop = false;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 15);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(177, 26);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Contacto: 929725366/926556677\r\nemail: projetoumoxi@gmail.com\r\n";
             // 
             // AboutProgram
             // 

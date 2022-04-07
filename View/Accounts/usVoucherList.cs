@@ -33,11 +33,11 @@ namespace Umoxi
 
         private void LoadData()
         {
-            ConnectionNode.sqlSTR = " SELECT        Voucher.VOUCHER_ID, Voucher.Voucher_Type, Voucher.Voucher_Date, ChartOfAccount.LedgerName, ChartOfAccount_1.LedgerName AS Expr1, Voucher.PayAmount,   Voucher.RecAmount FROM            Voucher INNER JOIN " +
+            ConnectionNode.sqlString = " SELECT        Voucher.VOUCHER_ID, Voucher.Voucher_Type, Voucher.Voucher_Date, ChartOfAccount.LedgerName, ChartOfAccount_1.LedgerName AS Expr1, Voucher.PayAmount,   Voucher.RecAmount FROM            Voucher INNER JOIN " +
                 " ChartOfAccount ON Voucher.Rec_Paid_ID = ChartOfAccount.AC_LEDGER_ID INNER JOIN  ChartOfAccount AS ChartOfAccount_1 ON Voucher.CashBank_ID = ChartOfAccount_1.AC_LEDGER_ID " +
                 " WHERE        (Voucher.Voucher_Date >= '" + Strings.Format(dtpFrom.DateTime.Date, "MM/dd/yyyy") + "' AND Voucher.Voucher_Date <= '" + Strings.Format(dtpTo.DateTime.Date, "MM/dd/yyyy") + "') ";
-            ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
-            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlSTR);
+            ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
+            ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
             if (ConnectionNode.sqlDT.Rows.Count > 0)
             {
                 lblCount.Text = ConnectionNode.sqlDT.Rows.Count + " Voucher(s).";
@@ -74,10 +74,10 @@ namespace Umoxi
             }
             else
             {
-                ConnectionNode.sqlSTR = " SELECT        Voucher.VOUCHER_ID, Voucher.Voucher_Type, Voucher.Voucher_Date, ChartOfAccount.LedgerName, ChartOfAccount_1.LedgerName AS Expr1, Voucher.PayAmount,   Voucher.RecAmount FROM            Voucher INNER JOIN " +
+                ConnectionNode.sqlString = " SELECT        Voucher.VOUCHER_ID, Voucher.Voucher_Type, Voucher.Voucher_Date, ChartOfAccount.LedgerName, ChartOfAccount_1.LedgerName AS Expr1, Voucher.PayAmount,   Voucher.RecAmount FROM            Voucher INNER JOIN " +
                     " ChartOfAccount ON Voucher.Rec_Paid_ID = ChartOfAccount.AC_LEDGER_ID INNER JOIN  ChartOfAccount AS ChartOfAccount_1 ON Voucher.CashBank_ID = ChartOfAccount_1.AC_LEDGER_ID " +
                     " WHERE  Voucher.VOUCHER_ID=" + btnSearch.Text + "   ";
-                ConnectionNode.FillDataGrid(ConnectionNode.sqlSTR, DataGridView1);
+                ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
             }
         }
 

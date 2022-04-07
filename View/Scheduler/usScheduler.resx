@@ -126,9 +126,6 @@
   <metadata name="appointmentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>843, 17</value>
   </metadata>
-  <metadata name="UmoxiDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>673, 17</value>
-  </metadata>
   <metadata name="schoolInformationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -195,12 +192,6 @@
   <data name="&gt;&gt;appointmentsBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UmoxiDataSet.Name" xml:space="preserve">
-    <value>UmoxiDataSet</value>
-  </data>
-  <data name="&gt;&gt;UmoxiDataSet.Type" xml:space="preserve">
-    <value>Umoxi.Model.UmoxiDataSet, Model.UmojaSchoolDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;schoolInformationBindingSource.Name" xml:space="preserve">
     <value>schoolInformationBindingSource</value>
   </data>
@@ -231,18 +222,6 @@
   <data name="&gt;&gt;schedulerBarController1.Type" xml:space="preserve">
     <value>DevExpress.XtraScheduler.UI.SchedulerBarController, DevExpress.XtraScheduler.v21.2.Extensions, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;appointmentsTableAdapter.Name" xml:space="preserve">
-    <value>appointmentsTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;appointmentsTableAdapter.Type" xml:space="preserve">
-    <value>Umoxi.Model.UmoxiDataSetTableAdapters.AppointmentsTableAdapter, Model.UmojaSchoolDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;schoolInformationTableAdapter.Name" xml:space="preserve">
-    <value>schoolInformationTableAdapter</value>
-  </data>
-  <data name="&gt;&gt;schoolInformationTableAdapter.Type" xml:space="preserve">
-    <value>Umoxi.Model.UmoxiDataSetTableAdapters.SchoolInformationTableAdapter, Model.UmojaSchoolDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>usScheduler</value>
   </data>
@@ -251,11 +230,5 @@
   </data>
   <metadata name="schedulerBarController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>490, 17</value>
-  </metadata>
-  <metadata name="appointmentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1049, 17</value>
-  </metadata>
-  <metadata name="schoolInformationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>247, 56</value>
   </metadata>
 </root>

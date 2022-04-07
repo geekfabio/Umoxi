@@ -3,10 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
-using Bunifu.UI.WinForms;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
-using System.Xml;
 using MySql.Data.MySqlClient;
 
 namespace Umoxi
@@ -18,13 +15,14 @@ namespace Umoxi
         public static DataTable sqlDT = new DataTable();
 
         public static string appPathAvatar = Application.StartupPath + @"\avatar\";
-        public static string connString = "server=localhost;uid=root; database=db_hospital;uid=root;pwd=";
-        public static string sqlSTR;
+        public static string connString = Properties.Settings.Default.dbUmoxiConnectionString;
+        public static string sqlString;
         public static string tmpStr;
         public static string xUserPassword;
-        public static int xUser_ID;
+        public static int userID;
         public static string userName;
-        public static string fullName;
+        public static string userFullName;
+        public static string userFuncao;
         public static string userEmail;
         public static int LOGID;
 
@@ -38,11 +36,21 @@ namespace Umoxi
                 Directory.CreateDirectory(appPathAvatar);
             }
         }
-        public static bool CheckServer()
+        /// <summary>
+        /// ConnDB é um valor que recebe quando vai alterar o servidor
+        /// assim verifica se a conexão existe ou não
+        /// </summary>
+        /// <param name="connDb"></param>
+        /// <returns></returns>
+        public static bool CheckServer(String connDb = "")
         {
             //verifica os diretorios necessário para executar o app
             CheckPath();
             MySqlConnection sqlCon = new MySqlConnection(connString);
+            if (connDb == "")
+                sqlCon = new MySqlConnection(connString);
+            else
+                sqlCon = new MySqlConnection(connDb);
             try {
                 sqlCon.Open();
                 if (sqlCon.State == ConnectionState.Open)
@@ -57,6 +65,28 @@ namespace Umoxi
                 return false;
             }
         }
+
+
+        public static void ExecuteCommad(string sqlQuery)
+        {
+            try
+            {
+                MySqlConnection sqlCon = new MySqlConnection(connString);
+                sqlCon.Open();
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, sqlCon);
+                cmd.ExecuteNonQuery();
+                sqlCon.Dispose();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+            #if DEBUG
+                MessageBox.Show("Erro : " + ex.Message, "Erro!!! Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            #endif
+            }         
+
+        }
+      
 
         public static DataTable ExecuteSQLQuery(string sqlQuery)
         {
@@ -79,23 +109,25 @@ namespace Umoxi
             return sqlDT;
         }
 
-        //Priencher as comboBox com os dados da db
+        //Preenche as comboBox com os dados da db
         public static void FILLComboBox(string sql, System.Windows.Forms.ComboBox cb)
         {
-            var conn = new SqlConnection(connString);
+            MySqlConnection conn = new MySqlConnection(connString);
             cb.Items.Clear();
             try
             {
                 conn.Open();
-                var cmd = new SqlCommand(sql, conn);
-                var rdr = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                     cb.Items.Add(rdr[0].ToString() + " # " + rdr[1].ToString());
                 rdr.Close();
             }
             catch (Exception ex)
             {
+            #if DEBUG
                 MessageBox.Show("Erro:" + ex.ToString());
+            #endif
             }
             finally
             {
@@ -130,22 +162,25 @@ namespace Umoxi
         //Priencher as datagridview com os dados da db
         public static void FillDataGrid(string sql, DataGridView dgv)
         {
-            var conn = new SqlConnection(connString);
+            var conn = new MySqlConnection(connString);
             try
             {
                 conn.Open();
-                var cmd = new SqlCommand(sql, conn);
-                var adp = new SqlDataAdapter();
-                var dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter();
+                DataTable dt = new DataTable();
                 adp.SelectCommand = cmd;
                 adp.Fill(dt);
                 dgv.DataSource = dt;
+
                 adp.Dispose();
                 cmd.Dispose();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro:" + ex.ToString());
+            #if DEBUG
+                MessageBox.Show("Erro:" + ex.Message);
+            #endif
             }
             finally
             {
@@ -219,42 +254,56 @@ namespace Umoxi
                 File.Delete(appLogo);
             }
            
-            pictureLogo.Image.Save(appLogo);  
+            pictureLogo.Image.Save(appLogo); 
+            
             cmd.Parameters.Add("@photo", MySqlDbType.String).Value=appLogo;
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
         }
+        //Atualizar paciente para eliminado 
+     
+
 
         //Carregar a photo do usuario
-        public static void UploadUserPhoto(double USER_ID, PictureEdit PB1)
+        public static void UploadUserPhoto(double userID, String imagePath)
         {
-            var con = new SqlConnection(connString);
-            con.Open();
-            string sql = "UPDATE  Users SET  UserPicture=@photo WHERE User_ID=" + USER_ID + " ";
-            var cmd = new SqlCommand(sql, con);
-            var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
-            var data = ms.GetBuffer();
-            var p = new SqlParameter("@photo", SqlDbType.Image)
+            string destFileName = Path.Combine(appPathAvatar, "user " + UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()) + ".png");
+            //upload image
+            try
             {
-                Value = data
-            };
-            cmd.Parameters.Add(p);
+                if (!String.IsNullOrWhiteSpace(imagePath) && File.Exists(imagePath)) {
+                    File.Copy(sourceFileName: imagePath, destFileName);
+                }
+                else
+                    destFileName = "sem_foto";
+            }
+            finally { 
+            var con = new MySqlConnection(connString);
+            con.Open();
+            string sql = "UPDATE usuarios SET foto=@photo WHERE usuario_id=" + userID + " ";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+               cmd.Parameters.Add(new MySqlParameter
+                {
+                    ParameterName = "@photo",
+                    MySqlDbType = MySqlDbType.Text,
+                    Value = destFileName
+                });
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
+            }
         }
 
         //Carregar a imagem do livro
-        public static void UploadBookCoverPhoto(double BOOK_ID, PictureEdit PB1)
+        public static void UploadBookCoverPhoto(double BOOK_ID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  BookInfo SET  CoverPhoto=@photo WHERE BOOK_ID=" + BOOK_ID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {
@@ -267,14 +316,14 @@ namespace Umoxi
         }
 
         //Carregar a imagem do estudante
-        public static void UploadStudentPhoto(double STUDENT_ID, PictureEdit PB1)
+        public static void UploadStudentPhoto(double STUDENT_ID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  StudentInformation SET  StudentPicture=@photo WHERE STUDENT_ID=" + STUDENT_ID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {
@@ -287,14 +336,14 @@ namespace Umoxi
         }
 
         //Carregar a imagem do funcionario
-        public static void UploadEmployeePhoto(double EmployeeID, PictureEdit PB1)
+        public static void UploadEmployeePhoto(double EmployeeID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  Employee  SET  EmployeePicture=@photo WHERE EmployeeID=" + EmployeeID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {
@@ -310,5 +359,7 @@ namespace Umoxi
 
 
         #endregion
+
+       
     }
 }

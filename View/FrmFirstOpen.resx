@@ -274,7 +274,19 @@
   <metadata name="ElipsePassword.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>282, 19</value>
   </metadata>
-  <data name="txtFullName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAYkAAAAgCAYAAADnuYQvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVHhe7doxSh1RFAbgU1q6BEvLrMTaJaSRub4NuISA
+        a3ALgTgzOqVLsLYQISKioIGkSO7xGYhwVpD5DnzM47932vdzYOLDHM+HsZkuo833/fdvAFYi//fbfBVt
+        /PzeCP/MsOxuD+en8mUA1qHNL91174W994bokwVRXQZgrW7iZNnpBTEd9ZJ4Li4AsFZt/NGfp7YIAGpt
+        vs1N4rU8BIAyBIBUhgCQyhAAUhkCQCpDAEhlCACpDAEglSEApDIEgFSGAJDKEABSGQJAKkMASGUIAKkM
+        ASCVIQCkMgSAVIYAkMoQAFIZAkCKNv0qDwAg2nxdHgCwbm166iVx8SWG0TYBwEdt+hpxsuz0beKuvADA
+        Wj3GsOzF2wznn3pRfI82/iwuArAmbX6IzXiwLYi/Myy7cXxx1teL1/IlAP5v+SHTZrqMzbf9bTFE/AE0
+        DIklompCoAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="txtuserFullName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARUAAAAjCAYAAAC6up7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVHhe7d2xjhJRFIDhKbfcR7C09EmsfQQbn8XEZ/AV

@@ -237,7 +237,7 @@ namespace Umoxi
                             {
                                 //---------------------------------------------------------
                                 ConnectionNode.ExecuteSQLQuery(" INSERT INTO  BookIssue (BOOK_ID, IssuDate, ExpectedRtnDate, Remarks, STUDENT_ID, EmployeeID, Status, Qty, User_ID) DateTimeS  " +
-                                    " ( " + txtBookID.Text + ", '" + Strings.Format(dtpIssueDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpReturnDate.DateTime, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', ") + cmbStudent.Text.Split(" # ".ToCharArray()[0])[0] + ", 0, 'Issued', 1 , '" + Convert.ToString(ConnectionNode.xUser_ID) + "') ");
+                                    " ( " + txtBookID.Text + ", '" + Strings.Format(dtpIssueDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpReturnDate.DateTime, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', ") + cmbStudent.Text.Split(" # ".ToCharArray()[0])[0] + ", 0, 'Issued', 1 , '" + Convert.ToString(ConnectionNode.userID) + "') ");
                                 ConnectionNode.ExecuteSQLQuery(" UPDATE  BookInfo SET QtyAvailable=QtyAvailable-1  WHERE        (BOOK_ID = " + txtBookID.Text + ")");
                                 this.Close();
                                 Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
@@ -262,7 +262,7 @@ namespace Umoxi
                             {
                                 //---------------------------------------------------------
                                 ConnectionNode.ExecuteSQLQuery(" INSERT INTO  BookIssue (BOOK_ID, IssuDate, ExpectedRtnDate, Remarks, STUDENT_ID, EmployeeID, Status, Qty, User_ID) VALUES  " +
-                                    " ( " + txtBookID.Text + ", '" + Strings.Format(dtpIssueDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpReturnDate.DateTime, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', 0, ") + txtEmployeeID.Text + ", 'Issued', 1 , '" + Convert.ToString(ConnectionNode.xUser_ID) + "') ");
+                                    " ( " + txtBookID.Text + ", '" + Strings.Format(dtpIssueDate.DateTime, "MM/dd/yyyy") + "', '" + Strings.Format(dtpReturnDate.DateTime, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(txtRemarks.Text) + "', 0, ") + txtEmployeeID.Text + ", 'Issued', 1 , '" + Convert.ToString(ConnectionNode.userID) + "') ");
                                 ConnectionNode.ExecuteSQLQuery(" UPDATE  BookInfo SET QtyAvailable=QtyAvailable-1  WHERE        (BOOK_ID = " + txtBookID.Text + ")");
                                 this.Close();
                                 Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);

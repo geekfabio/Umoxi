@@ -3,11 +3,14 @@ using DevExpress.UserSkins;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.Controls;
 using System.Windows.Forms;
+using Umoxi.Controller;
 
 namespace Umoxi
 {
     static class Program
     {
+        static readonly MemoryManagement memory = new MemoryManagement();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
