@@ -112,20 +112,22 @@ namespace Umoxi
         //Preenche as comboBox com os dados da db
         public static void FILLComboBox(string sql, System.Windows.Forms.ComboBox cb)
         {
-            var conn = new SqlConnection(connString);
+            MySqlConnection conn = new MySqlConnection(connString);
             cb.Items.Clear();
             try
             {
                 conn.Open();
-                var cmd = new SqlCommand(sql, conn);
-                var rdr = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                     cb.Items.Add(rdr[0].ToString() + " # " + rdr[1].ToString());
                 rdr.Close();
             }
             catch (Exception ex)
             {
+            #if DEBUG
                 MessageBox.Show("Erro:" + ex.ToString());
+            #endif
             }
             finally
             {
@@ -249,7 +251,8 @@ namespace Umoxi
                 File.Delete(appLogo);
             }
            
-            pictureLogo.Image.Save(appLogo);  
+            pictureLogo.Image.Save(appLogo); 
+            
             cmd.Parameters.Add("@photo", MySqlDbType.String).Value=appLogo;
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -257,34 +260,44 @@ namespace Umoxi
         }
 
         //Carregar a photo do usuario
-        public static void UploadUserPhoto(double USER_ID, PictureEdit PB1)
+        public static void UploadUserPhoto(double userID, String imagePath)
         {
-            var con = new SqlConnection(connString);
-            con.Open();
-            string sql = "UPDATE  Users SET  UserPicture=@photo WHERE User_ID=" + USER_ID + " ";
-            var cmd = new SqlCommand(sql, con);
-            var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
-            var data = ms.GetBuffer();
-            var p = new SqlParameter("@photo", SqlDbType.Image)
+            string destFileName = Path.Combine(appPathAvatar, "user " + UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()) + ".png");
+            //upload image
+            try
             {
-                Value = data
-            };
-            cmd.Parameters.Add(p);
+                if (!String.IsNullOrWhiteSpace(imagePath) && File.Exists(imagePath)) {
+                    File.Copy(sourceFileName: imagePath, destFileName);
+                }
+                else
+                    destFileName = "sem_foto";
+            }
+            finally { 
+            var con = new MySqlConnection(connString);
+            con.Open();
+            string sql = "UPDATE usuarios SET foto=@photo WHERE usuario_id=" + userID + " ";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+               cmd.Parameters.Add(new MySqlParameter
+                {
+                    ParameterName = "@photo",
+                    MySqlDbType = MySqlDbType.Text,
+                    Value = destFileName
+                });
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
+            }
         }
 
         //Carregar a imagem do livro
-        public static void UploadBookCoverPhoto(double BOOK_ID, PictureEdit PB1)
+        public static void UploadBookCoverPhoto(double BOOK_ID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  BookInfo SET  CoverPhoto=@photo WHERE BOOK_ID=" + BOOK_ID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {
@@ -297,14 +310,14 @@ namespace Umoxi
         }
 
         //Carregar a imagem do estudante
-        public static void UploadStudentPhoto(double STUDENT_ID, PictureEdit PB1)
+        public static void UploadStudentPhoto(double STUDENT_ID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  StudentInformation SET  StudentPicture=@photo WHERE STUDENT_ID=" + STUDENT_ID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {
@@ -317,14 +330,14 @@ namespace Umoxi
         }
 
         //Carregar a imagem do funcionario
-        public static void UploadEmployeePhoto(double EmployeeID, PictureEdit PB1)
+        public static void UploadEmployeePhoto(double EmployeeID, PictureEdit imageBitmap)
         {
             var con = new SqlConnection(connString);
             con.Open();
             string sql = "UPDATE  Employee  SET  EmployeePicture=@photo WHERE EmployeeID=" + EmployeeID + " ";
             var cmd = new SqlCommand(sql, con);
             var ms = new MemoryStream();
-            PB1.Image.Save(ms, PB1.Image.RawFormat);
+            imageBitmap.Image.Save(ms, imageBitmap.Image.RawFormat);
             var data = ms.GetBuffer();
             var p = new SqlParameter("@photo", SqlDbType.Image)
             {

@@ -30,10 +30,7 @@ namespace Umoxi.Controller
                 SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1);
         }
 
-        public void Dispose()
-        {
-            this.Dispose();
-        }
+        
     }
 
 }
