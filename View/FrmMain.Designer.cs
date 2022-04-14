@@ -88,7 +88,6 @@ namespace Umoxi
             this.BookCategoryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookClassificationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem9 = new DevExpress.XtraBars.BarHeaderItem();
-            this.BookIssueToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookReturnToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem10 = new DevExpress.XtraBars.BarHeaderItem();
             this.BarcodePrintToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
@@ -162,6 +161,7 @@ namespace Umoxi
             this.barHeaderItem5 = new DevExpress.XtraBars.BarHeaderItem();
             this.PromotionImprovementToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
+            this.BookIssueToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.EmployeeListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.VoucherEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem18 = new DevExpress.XtraBars.BarHeaderItem();
@@ -994,7 +994,6 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.BookCategoryToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.BookClassificationToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.BookIssueToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.BookReturnToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.BarcodePrintToolStripMenuItem)});
@@ -1002,7 +1001,7 @@ namespace Umoxi
             // 
             // SupplierInformationToolStripMenuItem
             // 
-            this.SupplierInformationToolStripMenuItem.Caption = "Supplier Information";
+            this.SupplierInformationToolStripMenuItem.Caption = "Ponto de Serviço";
             this.SupplierInformationToolStripMenuItem.Id = 63;
             this.SupplierInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_supplier;
             this.SupplierInformationToolStripMenuItem.Name = "SupplierInformationToolStripMenuItem";
@@ -1010,13 +1009,13 @@ namespace Umoxi
             // 
             // barHeaderItem8
             // 
-            this.barHeaderItem8.Caption = "Livro";
+            this.barHeaderItem8.Caption = "Produtos e Medicamentos";
             this.barHeaderItem8.Id = 64;
             this.barHeaderItem8.Name = "barHeaderItem8";
             // 
             // BookInformationToolStripMenuItem
             // 
-            this.BookInformationToolStripMenuItem.Caption = "Book Information";
+            this.BookInformationToolStripMenuItem.Caption = "Produtos e Medicamentos";
             this.BookInformationToolStripMenuItem.Id = 65;
             this.BookInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_book;
             this.BookInformationToolStripMenuItem.Name = "BookInformationToolStripMenuItem";
@@ -1024,7 +1023,7 @@ namespace Umoxi
             // 
             // BookCategoryToolStripMenuItem
             // 
-            this.BookCategoryToolStripMenuItem.Caption = "Category";
+            this.BookCategoryToolStripMenuItem.Caption = "Categoria de Produtos";
             this.BookCategoryToolStripMenuItem.Id = 141;
             this.BookCategoryToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_bookmark;
             this.BookCategoryToolStripMenuItem.Name = "BookCategoryToolStripMenuItem";
@@ -1032,7 +1031,7 @@ namespace Umoxi
             // 
             // BookClassificationToolStripMenuItem
             // 
-            this.BookClassificationToolStripMenuItem.Caption = "Classification";
+            this.BookClassificationToolStripMenuItem.Caption = "Cadastrar Produto";
             this.BookClassificationToolStripMenuItem.Id = 144;
             this.BookClassificationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_course;
             this.BookClassificationToolStripMenuItem.Name = "BookClassificationToolStripMenuItem";
@@ -1040,21 +1039,13 @@ namespace Umoxi
             // 
             // barHeaderItem9
             // 
-            this.barHeaderItem9.Caption = "Questão";
+            this.barHeaderItem9.Caption = "Medicamento";
             this.barHeaderItem9.Id = 67;
             this.barHeaderItem9.Name = "barHeaderItem9";
             // 
-            // BookIssueToolStripMenuItem
-            // 
-            this.BookIssueToolStripMenuItem.Caption = "Book Issue";
-            this.BookIssueToolStripMenuItem.Id = 68;
-            this.BookIssueToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_ask_question;
-            this.BookIssueToolStripMenuItem.Name = "BookIssueToolStripMenuItem";
-            this.BookIssueToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BookIssueToolStripMenuItem_Click);
-            // 
             // BookReturnToolStripMenuItem
             // 
-            this.BookReturnToolStripMenuItem.Caption = "Book Return";
+            this.BookReturnToolStripMenuItem.Caption = "Retornar Medicamento";
             this.BookReturnToolStripMenuItem.Id = 69;
             this.BookReturnToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_return;
             this.BookReturnToolStripMenuItem.Name = "BookReturnToolStripMenuItem";
@@ -1142,7 +1133,7 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.DraftsToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.NewSMSToolStripMenuItem)});
             this.SMSToolStripMenuItem.Name = "SMSToolStripMenuItem";
-            this.SMSToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.SMSToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInCustomizing;
             // 
             // SettingsToolStripMenuItem
             // 
@@ -1183,7 +1174,7 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem17),
             new DevExpress.XtraBars.LinkPersistInfo(this.EmailSentToolStripMenuItem)});
             this.EmailToolStripMenuItem.Name = "EmailToolStripMenuItem";
-            this.EmailToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.EmailToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInCustomizing;
             // 
             // SettingsToolStripMenuItem1
             // 
@@ -1621,6 +1612,14 @@ namespace Umoxi
             this.BookListToolStripMenuItem.Caption = "Lista dos Livros";
             this.BookListToolStripMenuItem.Id = 66;
             this.BookListToolStripMenuItem.Name = "BookListToolStripMenuItem";
+            // 
+            // BookIssueToolStripMenuItem
+            // 
+            this.BookIssueToolStripMenuItem.Caption = "Book Issue";
+            this.BookIssueToolStripMenuItem.Id = 68;
+            this.BookIssueToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_ask_question;
+            this.BookIssueToolStripMenuItem.Name = "BookIssueToolStripMenuItem";
+            this.BookIssueToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BookIssueToolStripMenuItem_Click);
             // 
             // EmployeeListToolStripMenuItem
             // 

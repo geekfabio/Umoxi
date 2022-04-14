@@ -394,7 +394,9 @@ namespace Umoxi
 
         private void AboutToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
+            OverlayFormShow.Instance.ShowFormOverlay(this);
             AboutProgram.Instance.ShowDialog();
+            OverlayFormShow.Instance.CloseProgressPanel();
         }
 
         private void LogOffToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
@@ -490,7 +492,7 @@ namespace Umoxi
 
         private void StudentInformationToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usStudent.Instance);
+            OpenTab(usPaciente.Instance);
         }
 
         private void IdentityCardToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
@@ -505,7 +507,7 @@ namespace Umoxi
 
         private void WaiverToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usWaiver.Instance);
+            //OpenTab(usWaiver.Instance);
         }
 
         private void DocumentsToolStripMenuItem_ItemClick(object sender, ItemClickEventArgs e)
@@ -525,7 +527,7 @@ namespace Umoxi
 
         private void PromotionImprovementToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usPromotion.Instance);
+            OpenTab(usPaciente.Instance);
         }
         #endregion
 

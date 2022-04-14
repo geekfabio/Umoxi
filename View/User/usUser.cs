@@ -70,9 +70,12 @@ namespace Umoxi
                             frm.txtContactNo.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["contacto"]);
 
                             //txtPassword.Text = System.Convert.ToString(ConnectionNode.sqlDT.Rows[0]["password"]);
-                            if (File.Exists(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]))) {
+                            if (File.Exists(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"])))
+                            {
                                 frm.PictureBox1.Image = Image.FromFile(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]));
-                            }                            
+                                frm.userPhoto = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]);
+                            }
+                            else frm.userPhoto = "sem_foto";
                             frm.txtUserName.Enabled = false;
                             frm.btnSave.Text = "Atualizar";
 

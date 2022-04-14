@@ -53,7 +53,7 @@ namespace Umoxi
             txtSchoolName.Text = null;
             txtSession.Text = null;
             txtClass.Text = null;
-            StatusStudent(txtRegistrationStatus, 3);
+            StatusPaciente(txtRegistrationStatus, 3);
             // crate blank grid
             ConnectionNode.FillDataGrid(" SELECT        Subject.SUBJECT_ID, Subject.SubjectCode, Subject.SubjectName  FROM            Subject INNER JOIN " + " StudentInformation ON Subject.SCHOOL_ID = StudentInformation.SCHOOL_ID AND Subject.CLASS_ID = StudentInformation.CLASS_ID AND  " + " Subject.BATCH_ID = StudentInformation.BATCH_ID  WHERE        (StudentInformation.STUDENT_ID = 000) ", DataGridView1);
 
@@ -116,9 +116,9 @@ namespace Umoxi
                             txtSession.Text = ConnectionNode.sqlDT.Rows[0]["BATCH_ID"] + " # " + ConnectionNode.sqlDT.Rows[0]["BatchName"];
                             txtClass.Text = ConnectionNode.sqlDT.Rows[0]["CLASS_ID"] + " # " + ConnectionNode.sqlDT.Rows[0]["Class_name"];
                             if ((string)ConnectionNode.sqlDT.Rows[0]["Status"] == "Y")
-                                StatusStudent(txtRegistrationStatus, 1);
+                                StatusPaciente(txtRegistrationStatus, 1);
                             else if ((string)ConnectionNode.sqlDT.Rows[0]["Status"] == "BY")
-                                StatusStudent(txtRegistrationStatus, 2);
+                                StatusPaciente(txtRegistrationStatus, 2);
                             // fill grid using subject code
                             ConnectionNode.FillDataGrid(" SELECT        Subject.SUBJECT_ID, Subject.SubjectCode, Subject.SubjectName  FROM            Subject INNER JOIN " + " StudentInformation ON Subject.SCHOOL_ID = StudentInformation.SCHOOL_ID AND Subject.CLASS_ID = StudentInformation.CLASS_ID AND  " + " Subject.BATCH_ID = StudentInformation.BATCH_ID  WHERE        (StudentInformation.STUDENT_ID = " + txtStuID.Text + ") ", DataGridView1);
 
@@ -146,9 +146,9 @@ namespace Umoxi
                             txtSession.Text = ConnectionNode.sqlDT.Rows[0]["BATCH_ID"] + " # " + ConnectionNode.sqlDT.Rows[0]["BatchName"];
                             txtClass.Text = ConnectionNode.sqlDT.Rows[0]["CLASS_ID"] + " # " + ConnectionNode.sqlDT.Rows[0]["Class_name"];
                             if ((string)ConnectionNode.sqlDT.Rows[0]["Status"] == "Y")
-                                StatusStudent(txtRegistrationStatus, 1);
+                                StatusPaciente(txtRegistrationStatus, 1);
                             else if ((string)ConnectionNode.sqlDT.Rows[0]["Status"] == "BY")
-                                StatusStudent(txtRegistrationStatus, 2);
+                                StatusPaciente(txtRegistrationStatus, 2);
                         }
                         else
                         {
@@ -160,7 +160,7 @@ namespace Umoxi
             }
         }
 
-        private void StatusStudent(BunifuTextBox textBox, int status)
+        private void StatusPaciente(BunifuTextBox textBox, int status)
         {
             #region code
             switch (status)

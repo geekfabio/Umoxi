@@ -10,7 +10,7 @@ namespace Umoxi
     public partial class frmAddUser : Form
     {
         string chkVAL;
-        string userPhoto;
+        public string userPhoto = "";
         public frmAddUser()
         {
             InitializeComponent();
@@ -276,7 +276,7 @@ namespace Umoxi
                     {
                         TabSelect("User");
                         TransitionsEffects.ShowTransition(txtContactNo, lblContactNo);
-                        Snackbar.Show(this, "Contacto Obrigatoria", BunifuSnackbar.MessageTypes.Error);
+                        Snackbar.Show(this, "Contacto Obrigatorio", BunifuSnackbar.MessageTypes.Error);
                     }
                     //else if (!UtilitiesFunctions.EmailCheck(txtEmail.Text.Trim()))
                     //{
@@ -294,7 +294,7 @@ namespace Umoxi
                             ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), userPhoto);
 
                         UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "User updated # " + txtUserName.Text);
-                        btnSave.Text = "Salvar";
+                       
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Update"), BunifuSnackbar.MessageTypes.Success);
                     }

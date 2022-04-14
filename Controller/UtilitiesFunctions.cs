@@ -15,6 +15,47 @@ namespace Umoxi
 {
     class UtilitiesFunctions
     {
+        public static bool IsNumeric(object Expression)
+        {
+            int retNum;
+
+            bool isNum = int.TryParse(Convert.ToString(Expression), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum);
+            return isNum;
+        }
+        public static void ResetAllTexts(Form form)
+        {
+            int i = 0;
+            foreach (Control control in form.Controls)
+            {
+                i++; Console.WriteLine(i.ToString());
+                if (control is BunifuTextBox)
+                {
+                    Console.WriteLine("*////");
+                    BunifuTextBox textBox = (BunifuTextBox)control;
+                    textBox.Text = string.Empty;
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = 0;
+                }
+
+                if (control is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)control;
+                    checkBox.Checked = false;
+                }
+
+                if (control is ListBox)
+                {
+                    ListBox listBox = (ListBox)control;
+                    listBox.ClearSelected();
+                }
+            }
+        }
+
 
         private static bool canCloseFunc(DialogResult parameter)
         {

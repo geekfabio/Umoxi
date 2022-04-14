@@ -13,6 +13,7 @@ namespace Umoxi
         #region Start code
 
         public static DataTable sqlDT = new DataTable();
+        public static string appPathPaciente = Application.StartupPath + @"\paciente\";
 
         public static string appPathAvatar = Application.StartupPath + @"\avatar\";
         public static string connString = Properties.Settings.Default.dbUmoxiConnectionString;
@@ -34,6 +35,11 @@ namespace Umoxi
             if (!Directory.Exists(appPathAvatar))
             {
                 Directory.CreateDirectory(appPathAvatar);
+            }
+
+            if (!Directory.Exists(appPathPaciente))
+            {
+                Directory.CreateDirectory(appPathPaciente);
             }
         }
         /// <summary>
@@ -262,10 +268,10 @@ namespace Umoxi
             con.Close();
         }
         //Atualizar paciente para eliminado 
-     
 
 
-        //Carregar a photo do usuario
+
+        //Move a imagem do usuario para a pasta raiz do app
         public static void UploadUserPhoto(double userID, String imagePath)
         {
             string destFileName = Path.Combine(appPathAvatar, "user " + UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()) + ".png");
@@ -292,6 +298,38 @@ namespace Umoxi
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
+            }
+        }
+        //Move a imagem do paciente para a pasta do App
+
+        public static void UploadPacientePhoto(double pacienteID, String imagePath)
+        {
+            string destFileName = Path.Combine(appPathPaciente, "paciente " + UtilitiesFunctions.stringReplaceInvalidSymbols(DateTime.Now.ToString()) + ".png");
+            //upload image
+            try
+            {
+                if (File.Exists(imagePath))
+                {
+                    File.Copy(sourceFileName: imagePath, destFileName);
+                }
+                else
+                    destFileName = "sem_foto";
+            }
+            finally
+            {
+                var con = new MySqlConnection(connString);
+                con.Open();
+                string sql = "UPDATE pacientes SET foto=@photo WHERE paciente_id=" + pacienteID + " ";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.Add(new MySqlParameter
+                {
+                    ParameterName = "@photo",
+                    MySqlDbType = MySqlDbType.Text,
+                    Value = destFileName
+                });
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                con.Close();
             }
         }
 

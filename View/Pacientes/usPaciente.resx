@@ -750,6 +750,12 @@
         LuVwuBqD+CFh6OTxB50YqJcNFiuEpX80yb6fy/6/OJbg3Dds14i0oOnJkwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="bunifuLabel13.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(46, 139, 87); text-align: center; }</value>
+  </data>
+  <data name="txtNotas.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
+  </data>
   <data name="txtWeight.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
   </data>
@@ -778,19 +784,13 @@
         AS5TAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="bunifuLabel13.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(46, 139, 87); text-align: center; }</value>
-  </data>
-  <data name="cmbSession.BaseStylesheet" xml:space="preserve">
+  <data name="txtEnderecoParente2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
   </data>
-  <data name="cmbClass.BaseStylesheet" xml:space="preserve">
+  <data name="txtParenteContacto.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
   </data>
-  <data name="txtAdmissionNO.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
-  </data>
-  <data name="cmbSchool.BaseStylesheet" xml:space="preserve">
+  <data name="txtParente.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: left; }</value>
   </data>
   <data name="bunifuSeparator3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -809,10 +809,10 @@
   <data name="txtEmail.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'Rubik Light'; font-size: 10pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(52, 51, 91); text-align: center; }</value>
   </data>
-  <data name="txtStudentName.BaseStylesheet" xml:space="preserve">
+  <data name="txtPacienteNome.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 9px;font-family: 'Rubik'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(46, 139, 87); text-align: center; }</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>55</value>
+    <value>25</value>
   </metadata>
 </root>
