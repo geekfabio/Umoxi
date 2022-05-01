@@ -50,8 +50,8 @@ namespace Umoxi
             this.UseWaitCursor = true;
            
             #region Dashboard
-            //    contentControl.Controls.Add(usDashboard.Instance);
-           // contentControl.Controls[0].Dock = DockStyle.Fill;
+            contentControl.Controls.Add(new usDashboard());
+            contentControl.Controls[0].Dock = DockStyle.Fill;
             #endregion
             accordionControlElementAddNewEvent.Expanded=true;
             dateNavigator1.SchedulerControl=usScheduler.Instance.schedulerControl1;
@@ -105,7 +105,7 @@ namespace Umoxi
             filterAllElement = sender as AccordionControlElement;
             if (sender == btnPacienteNovo)
             {
-                StudentInformationToolStripMenuItem.PerformClick();
+                cadastrarPaciente.PerformClick();
             }
             else if (sender == this.btnPacienteAtendimentoDiario)
             {
@@ -113,7 +113,7 @@ namespace Umoxi
             }
             else if (sender == this.btnPacienteConsulta)
             {
-                IdentityCardToolStripMenuItem.PerformClick();
+                ConsultarPacienteInfo.PerformClick();
             }
       
         }
@@ -490,7 +490,7 @@ namespace Umoxi
 
         #region Student
 
-        private void StudentInformationToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
+        private void consultarPaciente(object sender, ItemClickEventArgs e)
         {
             OpenTab(usPaciente.Instance);
         }
@@ -653,7 +653,7 @@ namespace Umoxi
         }
         private void ToolStripButtonStudent_Click(object sender, EventArgs e)
         {
-            StudentInformationToolStripMenuItem.PerformClick();
+            ConsultarPacienteInfo.PerformClick();
         }
 
         #endregion
@@ -860,6 +860,16 @@ namespace Umoxi
         {
             //colect all unecessary resources and clean
             memory.FlushMemory();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UtilitiesFunctions.OpenForm(this, new frmAddPaciente());
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            contentControl.Controls.Add(new usDashboard());
         }
     }
 }

@@ -223,18 +223,6 @@
         cZIkDTZ5Jsp90IBj9A3HOz6UqYM/CKxbY/2JqH4bojf77zG89IWy7QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="chkActive.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVDhPY6AJMD1ZImF8utjB+GxpAyFseLbEQ/98uQJU
-        KwIADTEwOlv6HKjoP7HY6GzJd6MzJQlQIyAuAQq+wKYYJz4HoYEG/QA5AmyQ8ZnSAGRJkvGZkgqIQRB/
-        Y1dEHG4YNYggHjWIMIYadLo0A4skKRhq0JkiDSyShPGZ0n8gGlQSgA0CAVB+wVBIDD5Tuh1qBAKATAZK
-        gsKLKGxyqjgCopOBAQA/CIfwGXLMPwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="lbl_chkActive.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(61, 61, 61); text-align: left; }</value>
-  </data>
   <data name="btnBrowsePhoto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKMAAAAlCAYAAAAuhVlFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -250,6 +238,18 @@
   </data>
   <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: center; }</value>
+  </data>
+  <data name="chkActive.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVDhPY6AJMD1ZImF8utjB+GxpAyFseLbEQ/98uQJU
+        KwIADTEwOlv6HKjoP7HY6GzJd6MzJQlQIyAuAQq+wKYYJz4HoYEG/QA5AmyQ8ZnSAGRJkvGZkgqIQRB/
+        Y1dEHG4YNYggHjWIMIYadLo0A4skKRhq0JkiDSyShPGZ0n8gGlQSgA0CAVB+wVBIDD5Tuh1qBAKATAZK
+        gsKLKGxyqjgCopOBAQA/CIfwGXLMPwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="lbl_chkActive.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(61, 61, 61); text-align: left; }</value>
   </data>
   <data name="lblRePassword.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Rubik'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(61, 61, 61); text-align: left; }</value>

@@ -223,5 +223,11 @@ namespace Umoxi
           
         
         }
+
+        private void timerToFocusTextBox_Tick(object sender, EventArgs e)
+        {
+            txtPaciente.Focus();
+            timerToFocusTextBox.Dispose();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Umoxi
 {
     public partial class usPaciente : UserControl
     {
+        string pacienteID = string.Empty;
         public usPaciente()
         {
             InitializeComponent();
@@ -38,12 +39,12 @@ namespace Umoxi
         {
             //Estado = Internado, Atendido, Recuperado, Cadastrado
             try { 
-                ConnectionNode.sqlString = "SELECT `paciente_id`, `nome`, `contactos`, `genero`,  `data_cadastro`, `data_nascimento`, `parente_nome` FROM `pacientes` WHERE estado_eliminado = 'Não'";
+                ConnectionNode.sqlString = "SELECT `paciente_id`, `nome`, `contactos`, `genero`,  `data_cadastro`, `data_nascimento`, `parente_nome` FROM `pacientes` WHERE estado_eliminado = '0'";
                 ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
             }
             finally { 
-                if (ConnectionNode.sqlDT.Rows.Count > 0)
-                    lblCount.Text = "Total : " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  Paciente(s).";
+                if (DataGridView1.RowCount > 0)
+                    lblCount.Text = "Total : " + DataGridView1.RowCount + "  Paciente(s).";
                 else
                     lblCount.Text = "Nenhum Paciente encontrado.";
             }
@@ -58,12 +59,12 @@ namespace Umoxi
             else
             {
                 string searchTxt = UtilitiesFunctions.str_repl(txtSearch.Text).ToString();
-                ConnectionNode.sqlString = "SELECT `paciente_id`, `nome`, `contactos`, `genero`,  `data_cadastro`, `data_nascimento`, `parente_nome`, FROM `pacientes` WHERE Nome LIKE \'%" + searchTxt + "%\' OR parente_nome LIKE \'%" + searchTxt + "%\'  OR data_cadastro LIKE \'%" + searchTxt + "%\' OR  data_nascimento LIKE \'%" + searchTxt + "%\' AND estado_internado = 'Não'  ";
+                ConnectionNode.sqlString = "SELECT `paciente_id`, `nome`, `contactos`, `genero`,  `data_cadastro`, `data_nascimento`, `parente_nome` FROM `pacientes` WHERE estado_eliminado ='0' AND Nome LIKE \'%" + searchTxt + "%\' OR parente_nome LIKE \'%" + searchTxt + "%\'  OR data_cadastro LIKE \'%" + searchTxt + "%\' OR  data_nascimento LIKE \'%" + searchTxt + "%\'";
                 ConnectionNode.FillDataGrid(ConnectionNode.sqlString, DataGridView1);
-                ConnectionNode.ExecuteSQLQuery(ConnectionNode.sqlString);
-                if (ConnectionNode.sqlDT.Rows.Count > 0)
+           
+                if (DataGridView1.RowCount > 0)
                 {
-                    lblCount.Text = "Total: " + Convert.ToString(ConnectionNode.sqlDT.Rows.Count) + "  Paciente(s).";
+                    lblCount.Text = "Total: " + DataGridView1.RowCount + "  Paciente(s).";
                 }
                 else
                 {
@@ -94,32 +95,36 @@ namespace Umoxi
 
         void GetInfo()
         {
-            ConnectionNode.ExecuteSQLQuery("SELECT `paciente_id`, `nome`, `data_nascimento`, `foto`, `contactos`, `email`, `genero`, `nacionalidade`, `grupo_sangue`, `endereco`, `parente_nome`, `parente_contacto`, `parente_endereco`, `alergias_conhecidas`, `data_cadastro`, `nota`, `estado_internado`, `estado_eliminado` FROM `pacientes` WHERE estado_eliminado = 'Não' AND paciente_id ='"+ Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value) + "'");
-            if (ConnectionNode.sqlDT.Rows.Count > 0)
-            {
-                txtPacienteNome.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nome"]);
-                cmbGender.Text = "Gênero: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["genero"]);
-                dtpDateOfBirth.Text = "Nascimento: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["data_nascimento"]);
-                txtPresentAddress.Text = "Morada: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["endereco"]);
-                cmbNationality.Text = "Nacionalidade: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nacionalidade"]);
-                txtContactNo.Text = "Contacto: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["Contactos"]);
-                txtEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
-                cmbBloodGroup.Text = "Tipo sanguíneo: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["grupo_sangue"]);
-                txtHeight.Text = "Altura: 1.78m";
-                txtWeight.Text = "Peso: 50kg";
-                if (File.Exists(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"])))
+            if(DataGridView1.RowCount > 0)
+            {    
+                ConnectionNode.ExecuteSQLQuery("SELECT `paciente_id`, `nome`, `data_nascimento`, `foto`, `contactos`, `email`, `genero`, `nacionalidade`, `grupo_sangue`, `endereco`, `parente_nome`, `parente_contacto`, `parente_endereco`, `alergias_conhecidas`, `data_cadastro`, `nota`, `estado_internado`, `estado_eliminado` FROM `pacientes` WHERE estado_eliminado = '0' AND paciente_id ='"+ Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value) + "'");
+                if (ConnectionNode.sqlDT.Rows.Count > 0)
                 {
-                    PictureBox1.Image = Image.FromFile(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]));
-                }
-                else
-                {
-                    PictureBox1.Image = Umoxi.Properties.Resources.icons8_image_240;
+                    pacienteID = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["paciente_id"]);
+                    txtPacienteNome.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nome"]);
+                    cmbGender.Text = "Gênero: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["genero"]);
+                    dtpDateOfBirth.Text = "Nascimento: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["data_nascimento"]);
+                    txtPresentAddress.Text = "Morada: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["endereco"]);
+                    cmbNationality.Text = "Nacionalidade: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["nacionalidade"]);
+                    txtContactNo.Text = "Contacto: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["Contactos"]);
+                    txtEmail.Text = Convert.ToString(ConnectionNode.sqlDT.Rows[0]["email"]);
+                    cmbBloodGroup.Text = "Tipo sanguíneo: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["grupo_sangue"]);
+                    txtHeight.Text = "Altura: 1.78m";
+                    txtWeight.Text = "Peso: 50kg";
+                    if (File.Exists(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"])))
+                    {
+                        PictureBox1.Image = Image.FromFile(Convert.ToString(ConnectionNode.sqlDT.Rows[0]["foto"]));
+                    }
+                    else
+                    {
+                        PictureBox1.Image = Umoxi.Properties.Resources.icons8_image_240;
                   
-                }
-                txtParente.Text = "Parente: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_nome"]); ;
-                txtParenteContacto.Text = "Contacto: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_contacto"]); ; ;
-                txtEnderecoParente2.Text = "Endereco: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_endereco"]);
+                    }
+                    txtParente.Text = "Parente: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_nome"]); ;
+                    txtParenteContacto.Text = "Contacto: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_contacto"]); ; ;
+                    txtEnderecoParente2.Text = "Endereco: " + Convert.ToString(ConnectionNode.sqlDT.Rows[0]["parente_endereco"]);
 
+                }
             }
         }
         private void btnExport_Click(object sender, EventArgs e)
@@ -185,14 +190,6 @@ namespace Umoxi
                     break;
                 default:
                     #region View
-                    //ConnectionNode.ExecuteSQLQuery(" SELECT        StudentInformation.STUDENT_ID, StudentInformation.AdmissionNo, StudentInformation.AdmisionDate, StudentInformation.SCHOOL_ID, " +
-                    //    " SchoolInformation.School_Name, StudentInformation.BATCH_ID, Batch.BatchName, StudentInformation.CLASS_ID, ClassName.Class_name, " +
-                    //    " StudentInformation.StudentName, StudentInformation.Gender, StudentInformation.DateOfBirth, StudentInformation.PresentAddress, " +
-                    //    " StudentInformation.PermanentAddress, StudentInformation.Nationality, StudentInformation.ContactNO, StudentInformation.Email, StudentInformation.Religion, " +
-                    //    " StudentInformation.BloodGroup, StudentInformation.Height, StudentInformation.Weight, StudentInformation.SpecialNote, StudentInformation.ReferenceName, " +
-                    //    " StudentInformation.ReferenceContactNo, StudentInformation.Status, StudentInformation.StudentPicture FROM            StudentInformation INNER JOIN " +
-                    //    " SchoolInformation ON StudentInformation.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN Batch ON StudentInformation.BATCH_ID = Batch.BATCH_ID INNER JOIN " +
-                    //    "  ClassName ON StudentInformation.CLASS_ID = ClassName.CLASS_ID WHERE        (StudentInformation.STUDENT_ID = " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + ") ");
                     GetInfo();
                     #endregion
                     break;
@@ -209,15 +206,30 @@ namespace Umoxi
             LoadData();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void DataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
             GetInfo();
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            //TODO IMPLEMENT GENERO FOR PACIENTE
+            if (MessageBox.Show("Dejesa realmente eliminar o paciente?", "Paciente", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                ConnectionNode.ExecuteCommad("UPDATE `pacientes` SET `estado_eliminado`='1' WHERE paciente_id = '" + pacienteID + "'");
+                LoadData();
+            }
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            OverlayFormShow.Instance.ShowFormOverlay(FrmMain.Default);
+            using (frmViewPhoto frmPhoto = new frmViewPhoto()) {
+                frmPhoto.bunifuPictureBox1.Image = PictureBox1.Image;
+                frmPhoto.ShowDialog(); }       
+           
         }
     }
 }

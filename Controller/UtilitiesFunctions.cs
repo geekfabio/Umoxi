@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Docking2010.Customization;
+using Umoxi.Controller;
 
 namespace Umoxi
 {
@@ -55,7 +56,6 @@ namespace Umoxi
                 }
             }
         }
-
 
         private static bool canCloseFunc(DialogResult parameter)
         {
@@ -193,6 +193,8 @@ namespace Umoxi
         #region ExportToExcel
         public static void ExportDataToExcelSheet(DataGridView dgv)
         {
+            //VERIFY Rows
+            if(dgv.RowCount > 0) { 
             dynamic Exp_Xls = default(dynamic);
             int lig_cpt = 0;
             int Col_cpt = 0;
@@ -226,7 +228,7 @@ namespace Umoxi
             {
                 MessageBox.Show("Error : " + ex.Message);
             }
-
+            }
         }
         #endregion
 
@@ -255,20 +257,19 @@ namespace Umoxi
         }
         #endregion
 
-        #region name
-        public static void StudentBanalce(double STUDENT_ID, BunifuTextBox Amount)
+        #region Open Form
+       
+        public static void OpenForm(Control control, Form form)
         {
-            ConnectionNode.ExecuteSQLQuery(" SELECT        Debit, Credit  FROM            StudentLedger  WHERE        (STUDENT_ID = " + System.Convert.ToString(STUDENT_ID) + ") ");
-            if (ConnectionNode.sqlDT.Rows.Count > 0)
+            MemoryManagement memoryManagement = new MemoryManagement();
+            OverlayFormShow.Instance.ShowFormOverlay(control);
+            using (form)
             {
-                ConnectionNode.ExecuteSQLQuery(" SELECT  SUM(Debit - Credit) AS Exp1  FROM   StudentLedger  WHERE        (STUDENT_ID = " + System.Convert.ToString(STUDENT_ID) + ") ");
-                Amount.Text = "balanço: " + ConnectionNode.sqlDT.Rows[0]["Exp1"];
+                form.ShowDialog();
             }
-            else
-            {
-                Amount.Text = "balanço: 0";
-            }
-        }
+            OverlayFormShow.Instance.CloseProgressPanel();
+            memoryManagement.FlushMemory();
+        } 
         #endregion
 
     }

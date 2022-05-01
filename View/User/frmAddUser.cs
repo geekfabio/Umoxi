@@ -212,7 +212,7 @@ namespace Umoxi
                         TabSelect("Pass");
                         lblEmail.ForeColor = Color.Red;
                         TransitionsEffects.ShowTransition(txtEmail, lblEmail);
-                        Snackbar.Show(this, "Required: Password", BunifuSnackbar.MessageTypes.Error);
+                        Snackbar.Show(this, "Necessário: Password", BunifuSnackbar.MessageTypes.Error);
                     }
                     else
                     {
@@ -236,7 +236,7 @@ namespace Umoxi
                         {
                             if (txtPassword.Text == txtRePassword.Text)
                             {
-                                ConnectionNode.ExecuteSQLQuery("INSERT INTO  usuarios (usuario, password, nome, email, contacto, ativo) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "')");
+                                ConnectionNode.ExecuteSQLQuery("INSERT INTO  usuarios (usuario, password, nome, email, contacto, ativo, funcao) VALUES ('" + UtilitiesFunctions.str_repl(txtUserName.Text) + "', '" + UtilitiesFunctions.CreateMD5(txtPassword.Text) + "', '" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + chkVAL + "',  '" + txtFuncao.Text + "')");
                                 //get last inserted id
                                 ConnectionNode.ExecuteSQLQuery("SELECT usuario_id  FROM   usuarios  ORDER BY usuario_id DESC");
                                 double user_ID = Convert.ToDouble(ConnectionNode.sqlDT.Rows[0]["usuario_id"]);
@@ -288,7 +288,7 @@ namespace Umoxi
                     #endregion
                     if (string.IsNullOrWhiteSpace(this.txtPassword.Text))
                     {
-                        ConnectionNode.ExecuteSQLQuery(" UPDATE  usuarios SET  nome='" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', email='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contacto='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', ativo='" + chkVAL + "' WHERE  usuario_id=" + txtUserID.Text + " ");
+                        ConnectionNode.ExecuteSQLQuery(" UPDATE  usuarios SET  nome='" + UtilitiesFunctions.str_repl(txtuserFullName.Text) + "', email='" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', contacto='" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', ativo='" + chkVAL + "', funcao='" + txtFuncao.Text + "' WHERE  usuario_id=" + txtUserID.Text + " ");
                         //Atualiza a foto de perfil se o ficheiro existe                                
                         if(File.Exists(userPhoto))
                             ConnectionNode.UploadUserPhoto(double.Parse(txtUserID.Text), userPhoto);

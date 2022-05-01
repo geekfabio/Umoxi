@@ -32,21 +32,23 @@ namespace Umoxi
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager Waiting = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, false, typeof(System.Windows.Forms.UserControl));
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usPaciente));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.usSchoollayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnExport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblCount = new Bunifu.UI.WinForms.BunifuLabel();
-            this.cmbSearchBy = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnAddStudent = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -60,13 +62,12 @@ namespace Umoxi
             this.data_nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parente_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txtNotas = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtWeight = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmbBloodGroup = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtPresentAddress = new Bunifu.UI.WinForms.BunifuLabel();
@@ -84,13 +85,11 @@ namespace Umoxi
             this.txtEmail = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtPacienteNome = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
-            this.bunifuLabel13 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txtNotas = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.usSchoollayoutControl1ConvertedLayout)).BeginInit();
             this.usSchoollayoutControl1ConvertedLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPanel1item)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -116,6 +115,56 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.usSchoollayoutControl1ConvertedLayout, null);
             this.ToolTipGeneral.SetToolTipTitle(this.usSchoollayoutControl1ConvertedLayout, "");
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.bunifuPanel1item});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(743, 578);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // Elipsedgv
+            // 
+            this.Elipsedgv.ElipseRadius = 10;
+            this.Elipsedgv.TargetControl = this.DataGridView1;
+            // 
+            // ToolTipGeneral
+            // 
+            this.ToolTipGeneral.Active = true;
+            this.ToolTipGeneral.AlignTextWithTitle = false;
+            this.ToolTipGeneral.AllowAutoClose = false;
+            this.ToolTipGeneral.AllowFading = true;
+            this.ToolTipGeneral.AutoCloseDuration = 5000;
+            this.ToolTipGeneral.BackColor = System.Drawing.SystemColors.Control;
+            this.ToolTipGeneral.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ToolTipGeneral.ClickToShowDisplayControl = false;
+            this.ToolTipGeneral.ConvertNewlinesToBreakTags = true;
+            this.ToolTipGeneral.DisplayControl = null;
+            this.ToolTipGeneral.EntryAnimationSpeed = 350;
+            this.ToolTipGeneral.ExitAnimationSpeed = 200;
+            this.ToolTipGeneral.GenerateAutoCloseDuration = false;
+            this.ToolTipGeneral.IconMargin = 6;
+            this.ToolTipGeneral.InitialDelay = 0;
+            this.ToolTipGeneral.Name = "ToolTipGeneral";
+            this.ToolTipGeneral.Opacity = 1D;
+            this.ToolTipGeneral.OverrideToolTipTitles = false;
+            this.ToolTipGeneral.Padding = new System.Windows.Forms.Padding(10);
+            this.ToolTipGeneral.ReshowDelay = 100;
+            this.ToolTipGeneral.ShowAlways = true;
+            this.ToolTipGeneral.ShowBorders = false;
+            this.ToolTipGeneral.ShowIcons = true;
+            this.ToolTipGeneral.ShowShadows = true;
+            this.ToolTipGeneral.Tag = null;
+            this.ToolTipGeneral.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToolTipGeneral.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ToolTipGeneral.TextMargin = 2;
+            this.ToolTipGeneral.TitleFont = new System.Drawing.Font("Rubik", 9F, System.Drawing.FontStyle.Bold);
+            this.ToolTipGeneral.TitleForeColor = System.Drawing.Color.Black;
+            this.ToolTipGeneral.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.ToolTipGeneral.ToolTipTitle = null;
+            // 
             // bunifuPanel1
             // 
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
@@ -126,7 +175,6 @@ namespace Umoxi
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.btnExport);
             this.bunifuPanel1.Controls.Add(this.lblCount);
-            this.bunifuPanel1.Controls.Add(this.cmbSearchBy);
             this.bunifuPanel1.Controls.Add(this.txtSearch);
             this.bunifuPanel1.Controls.Add(this.btnUpdate);
             this.bunifuPanel1.Controls.Add(this.btnAddStudent);
@@ -161,11 +209,11 @@ namespace Umoxi
             this.btnExport.ColorContrastOnClick = 45;
             this.btnExport.ColorContrastOnHover = 45;
             this.btnExport.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnExport.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnExport.CustomizableEdges = borderEdges1;
             this.btnExport.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnExport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExport.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -259,59 +307,6 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.lblCount, null);
             this.ToolTipGeneral.SetToolTipTitle(this.lblCount, "");
             // 
-            // cmbSearchBy
-            // 
-            this.cmbSearchBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSearchBy.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSearchBy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.cmbSearchBy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.cmbSearchBy.BorderRadius = 5;
-            this.cmbSearchBy.Color = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.cmbSearchBy.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cmbSearchBy.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbSearchBy.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbSearchBy.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbSearchBy.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cmbSearchBy.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSearchBy.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSearchBy.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbSearchBy.FillDropDown = true;
-            this.cmbSearchBy.FillIndicator = false;
-            this.cmbSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSearchBy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbSearchBy.ForeColor = System.Drawing.Color.Gray;
-            this.cmbSearchBy.FormattingEnabled = true;
-            this.cmbSearchBy.Icon = null;
-            this.cmbSearchBy.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbSearchBy.IndicatorColor = System.Drawing.Color.Gray;
-            this.cmbSearchBy.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbSearchBy.IndicatorThickness = 2;
-            this.cmbSearchBy.IsDropdownOpened = false;
-            this.cmbSearchBy.ItemBackColor = System.Drawing.Color.White;
-            this.cmbSearchBy.ItemBorderColor = System.Drawing.Color.White;
-            this.cmbSearchBy.ItemForeColor = System.Drawing.Color.Black;
-            this.cmbSearchBy.ItemHeight = 26;
-            this.cmbSearchBy.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cmbSearchBy.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cmbSearchBy.Items.AddRange(new object[] {
-            "ID",
-            "Nome",
-            "Data",
-            "Parente"});
-            this.cmbSearchBy.ItemTopMargin = 3;
-            this.cmbSearchBy.Location = new System.Drawing.Point(602, 88);
-            this.cmbSearchBy.Name = "cmbSearchBy";
-            this.cmbSearchBy.Size = new System.Drawing.Size(98, 32);
-            this.cmbSearchBy.TabIndex = 156;
-            this.cmbSearchBy.Text = null;
-            this.cmbSearchBy.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbSearchBy.TextLeftMargin = 5;
-            this.ToolTipGeneral.SetToolTip(this.cmbSearchBy, "");
-            this.ToolTipGeneral.SetToolTipIcon(this.cmbSearchBy, null);
-            this.ToolTipGeneral.SetToolTipTitle(this.cmbSearchBy, "");
-            // 
             // txtSearch
             // 
             this.txtSearch.AcceptsReturn = false;
@@ -348,26 +343,26 @@ namespace Umoxi
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSearch.OnIdleState = stateProperties4;
             this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -378,7 +373,7 @@ namespace Umoxi
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(573, 35);
+            this.txtSearch.Size = new System.Drawing.Size(677, 35);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 153;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -452,11 +447,11 @@ namespace Umoxi
             this.btnAddStudent.ColorContrastOnClick = 45;
             this.btnAddStudent.ColorContrastOnHover = 45;
             this.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnAddStudent.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnAddStudent.CustomizableEdges = borderEdges2;
             this.btnAddStudent.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAddStudent.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddStudent.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -554,9 +549,9 @@ namespace Umoxi
             this.DataGridView1.AllowCustomTheming = true;
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -565,14 +560,14 @@ namespace Umoxi
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Rubik", 10.75F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rubik", 10.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView1.ColumnHeadersHeight = 40;
             this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paciente_id,
@@ -601,14 +596,14 @@ namespace Umoxi
             this.DataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.DataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.DataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Rubik", 9.75F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rubik", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView1.EnableHeadersVisualStyles = false;
             this.DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.DataGridView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
@@ -690,16 +685,6 @@ namespace Umoxi
             this.Column10.Text = "Editar";
             this.Column10.UseColumnTextForButtonValue = true;
             // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.bunifuPanel1item});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(743, 578);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
             // bunifuPanel1item
             // 
             this.bunifuPanel1item.Control = this.bunifuPanel1;
@@ -708,46 +693,6 @@ namespace Umoxi
             this.bunifuPanel1item.Size = new System.Drawing.Size(723, 558);
             this.bunifuPanel1item.TextSize = new System.Drawing.Size(0, 0);
             this.bunifuPanel1item.TextVisible = false;
-            // 
-            // Elipsedgv
-            // 
-            this.Elipsedgv.ElipseRadius = 10;
-            this.Elipsedgv.TargetControl = this.DataGridView1;
-            // 
-            // ToolTipGeneral
-            // 
-            this.ToolTipGeneral.Active = true;
-            this.ToolTipGeneral.AlignTextWithTitle = false;
-            this.ToolTipGeneral.AllowAutoClose = false;
-            this.ToolTipGeneral.AllowFading = true;
-            this.ToolTipGeneral.AutoCloseDuration = 5000;
-            this.ToolTipGeneral.BackColor = System.Drawing.SystemColors.Control;
-            this.ToolTipGeneral.BorderColor = System.Drawing.Color.Gainsboro;
-            this.ToolTipGeneral.ClickToShowDisplayControl = false;
-            this.ToolTipGeneral.ConvertNewlinesToBreakTags = true;
-            this.ToolTipGeneral.DisplayControl = null;
-            this.ToolTipGeneral.EntryAnimationSpeed = 350;
-            this.ToolTipGeneral.ExitAnimationSpeed = 200;
-            this.ToolTipGeneral.GenerateAutoCloseDuration = false;
-            this.ToolTipGeneral.IconMargin = 6;
-            this.ToolTipGeneral.InitialDelay = 0;
-            this.ToolTipGeneral.Name = "ToolTipGeneral";
-            this.ToolTipGeneral.Opacity = 1D;
-            this.ToolTipGeneral.OverrideToolTipTitles = false;
-            this.ToolTipGeneral.Padding = new System.Windows.Forms.Padding(10);
-            this.ToolTipGeneral.ReshowDelay = 100;
-            this.ToolTipGeneral.ShowAlways = true;
-            this.ToolTipGeneral.ShowBorders = false;
-            this.ToolTipGeneral.ShowIcons = true;
-            this.ToolTipGeneral.ShowShadows = true;
-            this.ToolTipGeneral.Tag = null;
-            this.ToolTipGeneral.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.ToolTipGeneral.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ToolTipGeneral.TextMargin = 2;
-            this.ToolTipGeneral.TitleFont = new System.Drawing.Font("Rubik", 9F, System.Drawing.FontStyle.Bold);
-            this.ToolTipGeneral.TitleForeColor = System.Drawing.Color.Black;
-            this.ToolTipGeneral.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.ToolTipGeneral.ToolTipTitle = null;
             // 
             // bunifuPanel2
             // 
@@ -791,11 +736,11 @@ namespace Umoxi
             this.btnDelete.ColorContrastOnClick = 45;
             this.btnDelete.ColorContrastOnHover = 45;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnDelete.CustomizableEdges = borderEdges9;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnDelete.CustomizableEdges = borderEdges3;
             this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -865,6 +810,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.btnDelete, null);
             this.ToolTipGeneral.SetToolTipTitle(this.btnDelete, "");
             this.btnDelete.UseDefaultRadiusAndThickness = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // tablePanel1
             // 
@@ -873,7 +819,6 @@ namespace Umoxi
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablePanel1.Appearance.BackColor = System.Drawing.Color.White;
             this.tablePanel1.Appearance.Options.UseBackColor = true;
-            this.tablePanel1.AutoScroll = true;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
             this.tablePanel1.Controls.Add(this.bunifuLabel13);
@@ -906,20 +851,67 @@ namespace Umoxi
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 8F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 32F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 28F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 8F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 20F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 22F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 23F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 23F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 55F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 28F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(196, 432);
+            this.tablePanel1.Size = new System.Drawing.Size(196, 398);
             this.tablePanel1.TabIndex = 158;
             this.ToolTipGeneral.SetToolTip(this.tablePanel1, "");
             this.ToolTipGeneral.SetToolTipIcon(this.tablePanel1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.tablePanel1, "");
+            // 
+            // bunifuLabel13
+            // 
+            this.bunifuLabel13.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.bunifuLabel13.AllowParentOverrides = false;
+            this.bunifuLabel13.AutoEllipsis = false;
+            this.bunifuLabel13.AutoSize = false;
+            this.bunifuLabel13.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel13.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel13.Font = new System.Drawing.Font("Rubik", 12F);
+            this.bunifuLabel13.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuLabel13.Location = new System.Drawing.Point(3, 220);
+            this.bunifuLabel13.Name = "bunifuLabel13";
+            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel13.Size = new System.Drawing.Size(223, 20);
+            this.bunifuLabel13.TabIndex = 116;
+            this.bunifuLabel13.Text = "Info. Pessoal";
+            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipGeneral.SetToolTip(this.bunifuLabel13, "");
+            this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel13, null);
+            this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel13, "");
+            // 
+            // txtNotas
+            // 
+            this.txtNotas.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.txtNotas.AllowParentOverrides = false;
+            this.txtNotas.AutoEllipsis = false;
+            this.txtNotas.AutoSize = false;
+            this.tablePanel1.SetColumn(this.txtNotas, 0);
+            this.txtNotas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtNotas.CursorType = System.Windows.Forms.Cursors.Default;
+            this.txtNotas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtNotas.Font = new System.Drawing.Font("Rubik Light", 10F);
+            this.txtNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
+            this.txtNotas.Location = new System.Drawing.Point(3, 369);
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tablePanel1.SetRow(this.txtNotas, 16);
+            this.txtNotas.Size = new System.Drawing.Size(190, 20);
+            this.txtNotas.TabIndex = 115;
+            this.txtNotas.Text = "Notas:";
+            this.txtNotas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.txtNotas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipGeneral.SetToolTip(this.txtNotas, "");
+            this.ToolTipGeneral.SetToolTipIcon(this.txtNotas, null);
+            this.ToolTipGeneral.SetToolTipTitle(this.txtNotas, "");
             // 
             // txtWeight
             // 
@@ -1292,53 +1284,7 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTip(this.PictureBox1, "");
             this.ToolTipGeneral.SetToolTipIcon(this.PictureBox1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.PictureBox1, "");
-            // 
-            // bunifuLabel13
-            // 
-            this.bunifuLabel13.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.bunifuLabel13.AllowParentOverrides = false;
-            this.bunifuLabel13.AutoEllipsis = false;
-            this.bunifuLabel13.AutoSize = false;
-            this.bunifuLabel13.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel13.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel13.Font = new System.Drawing.Font("Rubik", 12F);
-            this.bunifuLabel13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuLabel13.Location = new System.Drawing.Point(3, 220);
-            this.bunifuLabel13.Name = "bunifuLabel13";
-            this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel13.Size = new System.Drawing.Size(223, 20);
-            this.bunifuLabel13.TabIndex = 116;
-            this.bunifuLabel13.Text = "Info. Pessoal";
-            this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel13.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipGeneral.SetToolTip(this.bunifuLabel13, "");
-            this.ToolTipGeneral.SetToolTipIcon(this.bunifuLabel13, null);
-            this.ToolTipGeneral.SetToolTipTitle(this.bunifuLabel13, "");
-            // 
-            // txtNotas
-            // 
-            this.txtNotas.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.txtNotas.AllowParentOverrides = false;
-            this.txtNotas.AutoEllipsis = false;
-            this.txtNotas.AutoSize = false;
-            this.tablePanel1.SetColumn(this.txtNotas, 0);
-            this.txtNotas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtNotas.CursorType = System.Windows.Forms.Cursors.Default;
-            this.txtNotas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtNotas.Font = new System.Drawing.Font("Rubik Light", 10F);
-            this.txtNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(91)))));
-            this.txtNotas.Location = new System.Drawing.Point(3, 400);
-            this.txtNotas.Name = "txtNotas";
-            this.txtNotas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tablePanel1.SetRow(this.txtNotas, 16);
-            this.txtNotas.Size = new System.Drawing.Size(190, 20);
-            this.txtNotas.TabIndex = 115;
-            this.txtNotas.Text = "Notas:";
-            this.txtNotas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.txtNotas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipGeneral.SetToolTip(this.txtNotas, "");
-            this.ToolTipGeneral.SetToolTipIcon(this.txtNotas, null);
-            this.ToolTipGeneral.SetToolTipTitle(this.txtNotas, "");
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // usPaciente
             // 
@@ -1356,10 +1302,10 @@ namespace Umoxi
             this.Load += new System.EventHandler(this.usPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usSchoollayoutControl1ConvertedLayout)).EndInit();
             this.usSchoollayoutControl1ConvertedLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPanel1item)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
@@ -1385,7 +1331,6 @@ namespace Umoxi
         private Bunifu.Framework.UI.BunifuElipse Elipsedgv;
         private Bunifu.UI.WinForms.BunifuToolTip ToolTipGeneral;
         internal Bunifu.UI.WinForms.BunifuTextBox txtSearch;
-        internal Bunifu.UI.WinForms.BunifuDropdown cmbSearchBy;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExport;
         private Bunifu.UI.WinForms.BunifuLabel lblCount;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;

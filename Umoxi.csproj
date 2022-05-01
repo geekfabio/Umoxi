@@ -415,18 +415,30 @@
     <Compile Include="Controller\Transition.cs" />
     <Compile Include="Controller\TransitionBase.cs" />
     <Compile Include="Controller\UtilitiesFunctions.cs" />
-    <Compile Include="frmTermos.cs">
+    <Compile Include="usDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usDashboard.Designer.cs">
+      <DependentUpon>usDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sistema\frmTermos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTermos.Designer.cs">
+    <Compile Include="View\Sistema\frmTermos.Designer.cs">
       <DependentUpon>frmTermos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sistema\frmViewPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sistema\frmViewPhoto.Designer.cs">
+      <DependentUpon>frmViewPhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AboutProgram.cs">
+    <Compile Include="View\Sistema\AboutProgram.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AboutProgram.Designer.cs">
+    <Compile Include="View\Sistema\AboutProgram.Designer.cs">
       <DependentUpon>AboutProgram.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Accounts\chartOfAccount..cs">
@@ -546,10 +558,10 @@
     <Compile Include="View\Funcionarios\usSalaryPay.Designer.cs">
       <DependentUpon>usSalaryPay.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmFirstOpen.cs">
+    <Compile Include="View\Sistema\FrmFirstOpen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmFirstOpen.Designer.cs">
+    <Compile Include="View\Sistema\FrmFirstOpen.Designer.cs">
       <DependentUpon>FrmFirstOpen.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmMain.cs">
@@ -630,16 +642,16 @@
     <Compile Include="View\Farmacia\usBookSupplier.Designer.cs">
       <DependentUpon>usBookSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoadingForm.cs">
+    <Compile Include="View\Sistema\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoadingForm.Designer.cs">
+    <Compile Include="View\Sistema\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoadingScreen.cs">
+    <Compile Include="View\Sistema\LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoadingScreen.Designer.cs">
+    <Compile Include="View\Sistema\LoadingScreen.Designer.cs">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Agenda\usScheduler.cs">
@@ -904,8 +916,14 @@
     <Compile Include="View\User\usUserLog.Designer.cs">
       <DependentUpon>usUserLog.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmTermos.resx">
+    <EmbeddedResource Include="usDashboard.resx">
+      <DependentUpon>usDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sistema\frmTermos.resx">
       <DependentUpon>frmTermos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sistema\frmViewPhoto.resx">
+      <DependentUpon>frmViewPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -918,7 +936,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\AboutProgram.resx">
+    <EmbeddedResource Include="View\Sistema\AboutProgram.resx">
       <DependentUpon>AboutProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Accounts\chartOfAccount..resx">
@@ -978,7 +996,7 @@
     <EmbeddedResource Include="View\Funcionarios\usSalaryPay.resx">
       <DependentUpon>usSalaryPay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmFirstOpen.resx">
+    <EmbeddedResource Include="View\Sistema\FrmFirstOpen.resx">
       <DependentUpon>FrmFirstOpen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMain.resx">
@@ -1020,10 +1038,10 @@
     <EmbeddedResource Include="View\Farmacia\usBookSupplier.resx">
       <DependentUpon>usBookSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoadingForm.resx">
+    <EmbeddedResource Include="View\Sistema\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoadingScreen.resx">
+    <EmbeddedResource Include="View\Sistema\LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Agenda\usScheduler.ja-JP.resx">
