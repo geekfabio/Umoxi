@@ -15,12 +15,32 @@ namespace Umoxi
         public usDashboard()
         {
             InitializeComponent();
-            LoadDashboard();
+          
         }
+        void loadTotalEmployees()
+        {
+            ConnectionNode.ExecuteSQLQuery("SELECT EmployeeID FROM `Employee`");
+            labelDoutores.Text = ConnectionNode.sqlDT.Rows.Count.ToString();
 
+        }
         void LoadDashboard()
         {
+            try
+            {
+                ConnectionNode.ExecuteSQLQuery("SELECT paciente_id FROM `pacientes`Where estado_eliminado = '0'");
+                labelConsultas.Text = ConnectionNode.sqlDT.Rows.Count.ToString();
+            }
+            finally
+            {
+                loadTotalEmployees();
+               
+            }
+           
+        }
 
+        private void usDashboard_Load(object sender, EventArgs e)
+        {
+            LoadDashboard();
         }
     }
 }

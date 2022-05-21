@@ -135,7 +135,7 @@ namespace Umoxi
                 switch (btnSave.Text)
                 {
                     case "Adicionar":
-                        MessageBox.Show(userPhoto);
+                        
                         ConnectionNode.ExecuteCommad("INSERT INTO " +
                             "`pacientes`(`nome`, `data_nascimento`," +
                             " `foto`, `contactos`, `email`," +

@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Umoxi
 {
     public partial class usDesignation : UserControl
     {
+        string designacaoID = "";
         public usDesignation()
         {
             InitializeComponent();
@@ -62,12 +57,12 @@ namespace Umoxi
             switch (e.ColumnIndex)
             {
                 case 0:
-                    if (MessageBox.Show("Are you sure you want to edit " + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Tem certeza de que deseja editar" + Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value) + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         frmAddDesignation designation = new frmAddDesignation();
                         designation.txtDegID.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value);
                         designation.txtDesignationName.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value);
-                        designation.btnSave.Text = "Update";
+                        designation.btnSave.Text = "Atualizar";
 
                         OverlayFormShow.Instance.ShowFormOverlay(FrmMain.Default);
                         using (designation)
@@ -77,6 +72,23 @@ namespace Umoxi
                         loadData();
                     }
                     break;
+            }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(""))
+            {
+                if (MessageBox.Show("Dejesa realmente eliminar o departamento?", "Paciente", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                {
+                    ConnectionNode.ExecuteCommad("DELETE FROM `designation` WHERE DESIGNATION_ID = '" + designacaoID + "'");
+                   // LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione o departamento para eliminar", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

@@ -42,13 +42,6 @@ namespace Umoxi
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.usEmployeelayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -82,6 +75,13 @@ namespace Umoxi
             this.txtEmail = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtEmployeeName = new Bunifu.UI.WinForms.BunifuLabel();
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usEmployeelayoutControl1ConvertedLayout)).BeginInit();
             this.usEmployeelayoutControl1ConvertedLayout.SuspendLayout();
@@ -181,59 +181,6 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.DataGridView1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.DataGridView1, "");
             this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "EmployeeID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "EmployeeName";
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Department_Name";
-            this.Column3.HeaderText = "Department";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Designation_Name";
-            this.Column4.HeaderText = "Designation";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "JoiningDate";
-            this.Column5.HeaderText = "Join date";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Gender";
-            this.Column6.HeaderText = "Gender";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column7.Text = "edit";
-            this.Column7.UseColumnTextForButtonValue = true;
             // 
             // ToolTipGeneral
             // 
@@ -361,9 +308,10 @@ namespace Umoxi
             this.cmbSearchBy.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbSearchBy.Items.AddRange(new object[] {
             "ID",
-            "Name",
-            "Number",
-            "Dad"});
+            "Nome",
+            "Contacto",
+            "Parente",
+            "Tipo Sanguine"});
             this.cmbSearchBy.ItemTopMargin = 3;
             this.cmbSearchBy.Location = new System.Drawing.Point(602, 88);
             this.cmbSearchBy.Name = "cmbSearchBy";
@@ -435,7 +383,7 @@ namespace Umoxi
             this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.PlaceholderText = "Search by name, number, dad others...";
+            this.txtSearch.PlaceholderText = "Procurar por nome, número, pai e outros...";
             this.txtSearch.ReadOnly = false;
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
@@ -449,7 +397,7 @@ namespace Umoxi
             this.txtSearch.TextMarginBottom = 0;
             this.txtSearch.TextMarginLeft = 7;
             this.txtSearch.TextMarginTop = 0;
-            this.txtSearch.TextPlaceholder = "Search by name, number, dad others...";
+            this.txtSearch.TextPlaceholder = "Procurar por nome, número, pai e outros...";
             this.ToolTipGeneral.SetToolTip(this.txtSearch, "");
             this.ToolTipGeneral.SetToolTipIcon(this.txtSearch, null);
             this.ToolTipGeneral.SetToolTipTitle(this.txtSearch, "");
@@ -603,9 +551,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(80, 16);
+            this.bunifuLabel1.Size = new System.Drawing.Size(130, 16);
             this.bunifuLabel1.TabIndex = 85;
-            this.bunifuLabel1.Text = "All employees";
+            this.bunifuLabel1.Text = "Todos os Funcionários";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel1, "");
@@ -624,9 +572,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(108, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(160, 20);
             this.bunifuLabel3.TabIndex = 84;
-            this.bunifuLabel3.Text = "Employees list";
+            this.bunifuLabel3.Text = "Lista de Funcionários";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel3, "");
@@ -1183,6 +1131,60 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipIcon(this.PictureBox1, null);
             this.ToolTipGeneral.SetToolTipTitle(this.PictureBox1, "");
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "EmployeeID";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "EmployeeName";
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Department_Name";
+            this.Column3.HeaderText = "Departmento";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Designation_Name";
+            this.Column4.HeaderText = "Designação";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "JoiningDate";
+            this.Column5.HeaderText = "Cadastrado";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Gender";
+            this.Column6.HeaderText = "Genero";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column7
+            // 
+            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column7.HeaderText = "";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column7.Text = "Editar";
+            this.Column7.UseColumnTextForButtonValue = true;
+            // 
             // usEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1230,13 +1232,6 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         internal DevExpress.XtraEditors.PictureEdit PictureBox1;
         private DevExpress.XtraEditors.ToggleSwitch toggleSwitch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
         private Bunifu.UI.WinForms.BunifuLabel cmbBloodGroup;
         private Bunifu.UI.WinForms.BunifuLabel txtMothersName;
@@ -1256,5 +1251,12 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuLabel txtContactNo;
         private Bunifu.UI.WinForms.BunifuLabel txtEmail;
         private Bunifu.UI.WinForms.BunifuLabel txtEmployeeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Column7;
     }
 }

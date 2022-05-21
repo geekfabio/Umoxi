@@ -37,10 +37,11 @@ namespace Umoxi
 
         private void LoadData()
 		{
-			ConnectionNode.FILLComboBox("SELECT        SCHOOL_ID, School_Name  FROM            SchoolInformation", cmbSchool);
-			ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Designation.Designation_Name, Department.Department_Name  FROM            Employee INNER JOIN " +
+            ConnectionNode.FILLComboBox("SELECT departamento_id, descricao FROM departamentos", txtDepartamento);
+
+            ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Designation.Designation_Name, Department.Department_Name  FROM            Employee INNER JOIN " +
 				" Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN  Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " +
-				" WHERE        (Employee.Status = 'Y') AND (Employee.SCHOOL_ID = 0) ", DataGridView1);
+				" WHERE        (Employee.Status = 'Y')  ", DataGridView1);
 			txtAmount.Text = null;
 			txtAllowances.Text = null;
 			dtpEntryDate.DateTime = DateTime.Now;
@@ -60,12 +61,12 @@ namespace Umoxi
 
         private void btnFindSearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cmbSchool.Text))
-                Snackbar.Show(FrmMain.Default, "Required: School", BunifuSnackbar.MessageTypes.Success);
+            if (string.IsNullOrEmpty(txtDepartamento.Text))
+                Snackbar.Show(FrmMain.Default, "Por favor selecione o departamento", BunifuSnackbar.MessageTypes.Success);
             else
                 ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Designation.Designation_Name, Department.Department_Name  FROM            Employee INNER JOIN " +
                 " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN  Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " +
-                " WHERE        (Employee.Status = 'Y') AND (Employee.SCHOOL_ID = " + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ") ", DataGridView1);
+                " WHERE        (Employee.Status = 'Y') AND (Employee.SCHOOL_ID = " + txtDepartamento.Text.Split(" # ".ToCharArray()[0])[0] + ") ", DataGridView1);
 
         }
 
@@ -76,14 +77,14 @@ namespace Umoxi
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cmbSchool.Text))
-                Snackbar.Show(FrmMain.Default, "Required: School", BunifuSnackbar.MessageTypes.Success);
+            if (string.IsNullOrEmpty(txtDepartamento.Text))
+                Snackbar.Show(FrmMain.Default, "Por favor selecione o departamento", BunifuSnackbar.MessageTypes.Success);
             else if (string.IsNullOrEmpty(txtAllowances.Text))
-                Snackbar.Show(FrmMain.Default, "Required: Allowance", BunifuSnackbar.MessageTypes.Success);
+                Snackbar.Show(FrmMain.Default, "Obrigatório: Subsídio", BunifuSnackbar.MessageTypes.Success);
             else if (!Information.IsNumeric(txtAmount.Text))
-                Snackbar.Show(FrmMain.Default, "Required: Amount", BunifuSnackbar.MessageTypes.Success);
+                Snackbar.Show(FrmMain.Default, "Obrigatório: Quantia", BunifuSnackbar.MessageTypes.Success);
             else if (Conversion.Val(txtAmount.Text) <= 0d)
-                Snackbar.Show(FrmMain.Default, "Required: Amount", BunifuSnackbar.MessageTypes.Success);
+                Snackbar.Show(FrmMain.Default, "Obrigatório: Quantia", BunifuSnackbar.MessageTypes.Success);
             else
             {
                 if (DataGridView1.RowCount > 0)
@@ -104,7 +105,7 @@ namespace Umoxi
                 }
                 else
                 {
-                    Snackbar.Show(FrmMain.Default, "No employee(s) were found.", BunifuSnackbar.MessageTypes.Information);
+                    Snackbar.Show(FrmMain.Default, "Nenhum funcionário foi encontrado.", BunifuSnackbar.MessageTypes.Information);
                 }
             }
         }
@@ -122,7 +123,7 @@ namespace Umoxi
             switch (e.ColumnIndex)
             {
                 case 0:
-                    if (MessageBox.Show("Are you sure you want to delete " + Convert.ToString(DataGridView2.CurrentRow.Cells[3].Value) + " ? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Tem certeza de que deseja excluir " + Convert.ToString(DataGridView2.CurrentRow.Cells[3].Value) + " ? ", "Confirme", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ConnectionNode.ExecuteSQLQuery(" DELETE FROM EmployeeLedger WHERE (EMP_LED_ID = " + Convert.ToString(DataGridView2.CurrentRow.Cells[1].Value) + ") ");
                         btnFindData.PerformClick();

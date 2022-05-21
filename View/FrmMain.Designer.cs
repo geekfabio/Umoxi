@@ -190,6 +190,8 @@ namespace Umoxi
             this.llAttendance = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llDeductions = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llAllowances = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement61 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement62 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement41 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserRegistration = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -1852,7 +1854,6 @@ namespace Umoxi
             this.btnPacienteAtendimentoDiario,
             this.btnPacienteConsulta,
             this.btnPacienteNovo});
-            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.ImageOptions.Image = global::Umoxi.Properties.Resources.pacientes_22px;
             this.accordionControlElement6.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement6.Name = "accordionControlElement6";
@@ -1891,11 +1892,14 @@ namespace Umoxi
             this.llSalaryPay,
             this.llAttendance,
             this.llDeductions,
-            this.llAllowances});
+            this.llAllowances,
+            this.accordionControlElement61,
+            this.accordionControlElement62});
+            this.accordionControlElement20.Expanded = true;
             this.accordionControlElement20.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_member;
             this.accordionControlElement20.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement20.Name = "accordionControlElement20";
-            this.accordionControlElement20.Text = "Funcionários";
+            this.accordionControlElement20.Text = "Recursos Humanos";
             // 
             // llEmployeeInformation
             // 
@@ -1944,6 +1948,20 @@ namespace Umoxi
             this.llAllowances.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.llAllowances.Text = "          Presenças";
             this.llAllowances.Click += new System.EventHandler(this.btnEmployee_Click);
+            // 
+            // accordionControlElement61
+            // 
+            this.accordionControlElement61.Name = "accordionControlElement61";
+            this.accordionControlElement61.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement61.Text = "          Departamentos";
+            this.accordionControlElement61.Click += new System.EventHandler(this.accordionControlElement61_Click);
+            // 
+            // accordionControlElement62
+            // 
+            this.accordionControlElement62.Name = "accordionControlElement62";
+            this.accordionControlElement62.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement62.Text = "          Designação";
+            this.accordionControlElement62.Click += new System.EventHandler(this.accordionControlElement62_Click);
             // 
             // accordionControlElement41
             // 
@@ -2402,9 +2420,9 @@ namespace Umoxi
             this.lblTitle.Location = new System.Drawing.Point(17, 5);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTitle.Size = new System.Drawing.Size(92, 20);
+            this.lblTitle.Size = new System.Drawing.Size(82, 20);
             this.lblTitle.TabIndex = 111;
-            this.lblTitle.Text = "Selecionado";
+            this.lblTitle.Text = "Dashboard";
             this.lblTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipMenu.SetToolTip(this.lblTitle, "");
@@ -3419,5 +3437,7 @@ namespace Umoxi
         private System.Windows.Forms.Timer timerToMemoryClean;
         private DevExpress.XtraBars.BarButtonItem cadastrarPaciente;
         internal DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement61;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement62;
     }
 }

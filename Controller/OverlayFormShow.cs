@@ -53,5 +53,8 @@ namespace Umoxi
             if (handle != null)
                 SplashScreenManager.CloseOverlayForm(this.handle);
         }
+        public void Dispose() {
+            this.Dispose();
+        }
     }
 }

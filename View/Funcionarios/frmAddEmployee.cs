@@ -19,7 +19,7 @@ namespace Umoxi
         public frmAddEmployee()
         {
             InitializeComponent();
-            LoadData();
+           
             this.transitionManager.CustomTransition += TransitionsEffects.TransitionEffect;
             TransitionsEffects.transitionManager = transitionManager;
         }
@@ -45,8 +45,7 @@ namespace Umoxi
 
         private void LoadData()
         {
-            ConnectionNode.FILLComboBox("SELECT        SCHOOL_ID, School_Name  FROM            SchoolInformation", cmbSchool);
-            ConnectionNode.FILLComboBox("SELECT DEPARTMENT_ID, Department_Name FROM Department", cmbDepartment);
+            ConnectionNode.FILLComboBox("SELECT departamento_id, descricao FROM departamentos", cmbDepartment);
             ConnectionNode.FILLComboBox("SELECT DESIGNATION_ID, Designation_Name FROM Designation", cmbDesignation);
             ConnectionNode.FILLComboBox2("SELECT Nationality FROM  Nationality", cmbNationality);
         }
@@ -114,14 +113,14 @@ namespace Umoxi
             {
                 switch (btnSave.Text)
                 {
-                    case "Save":
+                    case "Salvar":
                         #region save
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Employee (AC_ID, EmployeeName, FathersName, MothersName, Gender, BloodGroup, DateOfBirth, Nationality, Address, ContactNo, Email, JoiningDate, Status,  SCHOOL_ID, DEPARTMENT_ID, DESIGNATION_ID) VALUES " + (
                         " ( 6000, '" + UtilitiesFunctions.str_repl(txtEmployeeName.Text) + "', '" + UtilitiesFunctions.str_repl(txtFathersName.Text) + "', '" + UtilitiesFunctions.str_repl(txtMothersName.Text) + "', '" + UtilitiesFunctions.str_repl(cmbGender.Text) + "', '" + UtilitiesFunctions.str_repl(cmbBloodGroup.Text) + "', '") + Strings.Format(dtpDateOfBirth.EditValue, "MM/dd/yyyy") + ("', '" + UtilitiesFunctions.str_repl(cmbNationality.Text) + "' ") + (
                         " , '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', '") + Strings.Format(dtpJoiningDate.EditValue, "MM/dd/yyyy") + ("', '" + ChekValues + "', ") + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbDepartment.Text.Split(" # ".ToCharArray()[0])[0] + ", " + cmbDesignation.Text.Split(" # ".ToCharArray()[0])[0] + " )");
                         ConnectionNode.ExecuteSQLQuery("SELECT  EmployeeID  FROM    Employee  ORDER BY EmployeeID DESC");
                         var EmployeeID = ConnectionNode.sqlDT.Rows[0]["EmployeeID"];
-                        ConnectionNode.UploadEmployeePhoto(Convert.ToDouble(EmployeeID), PictureBox1);
+                       // ConnectionNode.UploadEmployeePhoto(Convert.ToDouble(EmployeeID), PictureBox1);
 
                         UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
 
@@ -129,11 +128,11 @@ namespace Umoxi
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         #endregion
                         break;
-                    case "Update":
+                    case "Atualizar":
                         #region update
                         ConnectionNode.ExecuteSQLQuery(" UPDATE  Employee SET EmployeeName= '" + UtilitiesFunctions.str_repl(txtEmployeeName.Text) + "', FathersName='" + UtilitiesFunctions.str_repl(txtFathersName.Text) + "', MothersName= '" + UtilitiesFunctions.str_repl(txtMothersName.Text) + "', Gender= '" + UtilitiesFunctions.str_repl(cmbGender.Text) + "', BloodGroup='" + UtilitiesFunctions.str_repl(cmbBloodGroup.Text) + "', DateOfBirth= '" + Strings.Format(dtpDateOfBirth.EditValue, "MM/dd/yyyy") + ("', Nationality= '" + UtilitiesFunctions.str_repl(cmbNationality.Text) + "' ") + (
                             " , Address= '" + UtilitiesFunctions.str_repl(txtAddress.Text) + "', ContactNo= '" + UtilitiesFunctions.str_repl(txtContactNo.Text) + "', Email= '" + UtilitiesFunctions.str_repl(txtEmail.Text) + "', JoiningDate= '") + Strings.Format(dtpJoiningDate.EditValue, "MM/dd/yyyy") + ("', Status= '" + ChekValues + "', SCHOOL_ID= ") + cmbSchool.Text.Split(" # ".ToCharArray()[0])[0] + ", DEPARTMENT_ID= " + cmbDepartment.Text.Split(" # ".ToCharArray()[0])[0] + ", DESIGNATION_ID= " + cmbDesignation.Text.Split(" # ".ToCharArray()[0])[0] + "   WHERE EmployeeID=" + txtEmployeeID.Text + "   ");
-                        ConnectionNode.UploadEmployeePhoto(double.Parse(txtEmployeeID.Text), PictureBox1);
+                       // ConnectionNode.UploadEmployeePhoto(double.Parse(txtEmployeeID.Text), PictureBox1);
 
                         UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Funcionario adicionado # " + txtEmployeeName.Text);
 
@@ -165,6 +164,23 @@ namespace Umoxi
             {
                 TabContent.SelectedTabPage = Page2;
             }
+            else if (NavigationBar.SelectedItem == tabBarSalario)
+            {
+                TabContent.SelectedTabPage = xtraTabPage1;
+            }
+        }
+
+        private void frmAddEmployee_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+           OverlayFormShow.Instance.ShowFormOverlay(this);
+           new frmAddDepartment().ShowDialog();
+           OverlayFormShow.Instance.CloseProgressPanel();
+
         }
     }
 }

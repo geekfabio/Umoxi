@@ -2218,6 +2218,16 @@
     <None Include="Resources\pacientes_22px.png" />
     <None Include="Resources\laboratorio.png" />
     <None Include="Resources\laboratorio_22.png" />
+    <None Include="Resources\dollar.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\medical-history.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\healthcare.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\arrows.png" />
+    <None Include="Resources\stethoscope.png" />
+    <None Include="Resources\medical-symbol.png" />
+    <None Include="Resources\doctor.png" />
     <Content Include="Sources files\Connection string.txt" />
     <Content Include="Sources files\dbUmojaSchool.sql" />
     <Content Include="Sources files\db_hospital.sql" />

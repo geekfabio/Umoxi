@@ -871,5 +871,15 @@ namespace Umoxi
         {
             contentControl.Controls.Add(new usDashboard());
         }
+
+        private void accordionControlElement61_Click(object sender, EventArgs e)
+        {
+            OpenTab(usDepartment.Instance);
+        }
+
+        private void accordionControlElement62_Click(object sender, EventArgs e)
+        {
+            OpenTab(usDesignation.Instance);
+        }
     }
 }

@@ -71,7 +71,7 @@ namespace Umoxi
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel21 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnFindSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.cmbSchool = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.txtDepartamento = new Bunifu.UI.WinForms.BunifuDropdown();
             this.Page2 = new DevExpress.XtraTab.XtraTabPage();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -81,18 +81,6 @@ namespace Umoxi
             this.bunifuLabel16 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnFindData = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DataGridView2 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.NavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
-            this.tabInfo = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.tabList = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.usDeductionslayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,6 +90,18 @@ namespace Umoxi
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.NavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.tabInfo = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.tabList = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.usDeductionslayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -259,6 +259,7 @@ namespace Umoxi
             this.DataGridView1.EnableHeadersVisualStyles = false;
             this.DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.DataGridView1.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
+            this.DataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.DataGridView1.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.DataGridView1.Location = new System.Drawing.Point(289, 18);
             this.DataGridView1.Name = "DataGridView1";
@@ -429,9 +430,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(82, 16);
+            this.bunifuLabel1.Size = new System.Drawing.Size(111, 16);
             this.bunifuLabel1.TabIndex = 87;
-            this.bunifuLabel1.Text = "All allowances";
+            this.bunifuLabel1.Text = "Todos os Subsídios";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -447,9 +448,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(86, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(73, 20);
             this.bunifuLabel3.TabIndex = 86;
-            this.bunifuLabel3.Text = "Allowances";
+            this.bunifuLabel3.Text = "Subsídios";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -616,9 +617,9 @@ namespace Umoxi
             this.bunifuLabel6.Location = new System.Drawing.Point(25, 38);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(73, 15);
+            this.bunifuLabel6.Size = new System.Drawing.Size(56, 15);
             this.bunifuLabel6.TabIndex = 186;
-            this.bunifuLabel6.Text = "Allowances *";
+            this.bunifuLabel6.Text = "Subsídios:";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -708,9 +709,9 @@ namespace Umoxi
             this.lblContactNo.Location = new System.Drawing.Point(140, 107);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblContactNo.Size = new System.Drawing.Size(53, 15);
+            this.lblContactNo.Size = new System.Drawing.Size(55, 15);
             this.lblContactNo.TabIndex = 184;
-            this.lblContactNo.Text = "Amount *";
+            this.lblContactNo.Text = "Quantia: *";
             this.lblContactNo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblContactNo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -725,9 +726,9 @@ namespace Umoxi
             this.bunifuLabel5.Location = new System.Drawing.Point(27, 107);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(35, 15);
+            this.bunifuLabel5.Size = new System.Drawing.Size(38, 15);
             this.bunifuLabel5.TabIndex = 182;
-            this.bunifuLabel5.Text = "Date *";
+            this.bunifuLabel5.Text = "Data: *";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -763,9 +764,9 @@ namespace Umoxi
             this.bunifuLabel4.Location = new System.Drawing.Point(21, 14);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(67, 15);
+            this.bunifuLabel4.Size = new System.Drawing.Size(69, 15);
             this.bunifuLabel4.TabIndex = 179;
-            this.bunifuLabel4.Text = "Information";
+            this.bunifuLabel4.Text = "Informação:";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -778,7 +779,7 @@ namespace Umoxi
             this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel2);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuLabel21);
             this.bunifuShadowPanel1.Controls.Add(this.btnFindSearch);
-            this.bunifuShadowPanel1.Controls.Add(this.cmbSchool);
+            this.bunifuShadowPanel1.Controls.Add(this.txtDepartamento);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(20, 15);
@@ -823,9 +824,9 @@ namespace Umoxi
             this.bunifuLabel21.Location = new System.Drawing.Point(29, 41);
             this.bunifuLabel21.Name = "bunifuLabel21";
             this.bunifuLabel21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel21.Size = new System.Drawing.Size(46, 15);
+            this.bunifuLabel21.Size = new System.Drawing.Size(94, 15);
             this.bunifuLabel21.TabIndex = 176;
-            this.bunifuLabel21.Text = "School *";
+            this.bunifuLabel21.Text = "Departamento: *";
             this.bunifuLabel21.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel21.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -843,7 +844,7 @@ namespace Umoxi
             this.btnFindSearch.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnFindSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFindSearch.BackgroundImage")));
             this.btnFindSearch.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnFindSearch.ButtonText = "Search";
+            this.btnFindSearch.ButtonText = "Procurar";
             this.btnFindSearch.ButtonTextMarginLeft = 0;
             this.btnFindSearch.ColorContrastOnClick = 45;
             this.btnFindSearch.ColorContrastOnHover = 45;
@@ -921,49 +922,49 @@ namespace Umoxi
             this.btnFindSearch.UseDefaultRadiusAndThickness = true;
             this.btnFindSearch.Click += new System.EventHandler(this.btnFindSearch_Click);
             // 
-            // cmbSchool
+            // txtDepartamento
             // 
-            this.cmbSchool.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSchool.BackgroundColor = System.Drawing.Color.White;
-            this.cmbSchool.BorderColor = System.Drawing.Color.Silver;
-            this.cmbSchool.BorderRadius = 5;
-            this.cmbSchool.Color = System.Drawing.Color.Silver;
-            this.cmbSchool.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cmbSchool.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbSchool.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbSchool.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbSchool.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cmbSchool.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbSchool.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSchool.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cmbSchool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSchool.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbSchool.FillDropDown = true;
-            this.cmbSchool.FillIndicator = false;
-            this.cmbSchool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSchool.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbSchool.ForeColor = System.Drawing.Color.Black;
-            this.cmbSchool.FormattingEnabled = true;
-            this.cmbSchool.Icon = null;
-            this.cmbSchool.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbSchool.IndicatorColor = System.Drawing.Color.Gray;
-            this.cmbSchool.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbSchool.IndicatorThickness = 2;
-            this.cmbSchool.IsDropdownOpened = false;
-            this.cmbSchool.ItemBackColor = System.Drawing.Color.White;
-            this.cmbSchool.ItemBorderColor = System.Drawing.Color.White;
-            this.cmbSchool.ItemForeColor = System.Drawing.Color.Black;
-            this.cmbSchool.ItemHeight = 26;
-            this.cmbSchool.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cmbSchool.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cmbSchool.ItemTopMargin = 3;
-            this.cmbSchool.Location = new System.Drawing.Point(21, 60);
-            this.cmbSchool.Name = "cmbSchool";
-            this.cmbSchool.Size = new System.Drawing.Size(217, 32);
-            this.cmbSchool.TabIndex = 168;
-            this.cmbSchool.Text = null;
-            this.cmbSchool.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbSchool.TextLeftMargin = 5;
+            this.txtDepartamento.BackColor = System.Drawing.Color.Transparent;
+            this.txtDepartamento.BackgroundColor = System.Drawing.Color.White;
+            this.txtDepartamento.BorderColor = System.Drawing.Color.Silver;
+            this.txtDepartamento.BorderRadius = 5;
+            this.txtDepartamento.Color = System.Drawing.Color.Silver;
+            this.txtDepartamento.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.txtDepartamento.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtDepartamento.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDepartamento.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtDepartamento.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDepartamento.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.txtDepartamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtDepartamento.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.txtDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtDepartamento.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.txtDepartamento.FillDropDown = true;
+            this.txtDepartamento.FillIndicator = false;
+            this.txtDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtDepartamento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDepartamento.ForeColor = System.Drawing.Color.Black;
+            this.txtDepartamento.FormattingEnabled = true;
+            this.txtDepartamento.Icon = null;
+            this.txtDepartamento.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.txtDepartamento.IndicatorColor = System.Drawing.Color.Gray;
+            this.txtDepartamento.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.txtDepartamento.IndicatorThickness = 2;
+            this.txtDepartamento.IsDropdownOpened = false;
+            this.txtDepartamento.ItemBackColor = System.Drawing.Color.White;
+            this.txtDepartamento.ItemBorderColor = System.Drawing.Color.White;
+            this.txtDepartamento.ItemForeColor = System.Drawing.Color.Black;
+            this.txtDepartamento.ItemHeight = 26;
+            this.txtDepartamento.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.txtDepartamento.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.txtDepartamento.ItemTopMargin = 3;
+            this.txtDepartamento.Location = new System.Drawing.Point(21, 60);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(217, 32);
+            this.txtDepartamento.TabIndex = 168;
+            this.txtDepartamento.Text = null;
+            this.txtDepartamento.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.txtDepartamento.TextLeftMargin = 5;
             // 
             // Page2
             // 
@@ -1263,123 +1264,6 @@ namespace Umoxi
             this.DataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.DataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 30);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(866, 1);
-            this.bunifuSeparator1.TabIndex = 118;
-            // 
-            // NavigationBar
-            // 
-            this.NavigationBar.AppearanceItem.Disabled.Font = new System.Drawing.Font("Rubik", 12F);
-            this.NavigationBar.AppearanceItem.Disabled.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Hovered.Font = new System.Drawing.Font("Rubik", 12F);
-            this.NavigationBar.AppearanceItem.Hovered.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Normal.Font = new System.Drawing.Font("Rubik", 12F);
-            this.NavigationBar.AppearanceItem.Normal.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Pressed.Font = new System.Drawing.Font("Rubik", 12F);
-            this.NavigationBar.AppearanceItem.Pressed.Options.UseFont = true;
-            this.NavigationBar.AppearanceItem.Selected.Font = new System.Drawing.Font("Rubik", 12F);
-            this.NavigationBar.AppearanceItem.Selected.Options.UseFont = true;
-            this.NavigationBar.AutoSize = false;
-            this.NavigationBar.BackColor = System.Drawing.Color.Transparent;
-            this.NavigationBar.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden;
-            this.NavigationBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavigationBar.Font = new System.Drawing.Font("Rubik", 5.25F);
-            this.NavigationBar.ItemPadding = new System.Windows.Forms.Padding(15, 8, 12, 8);
-            this.NavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
-            this.tabInfo,
-            this.tabList});
-            this.NavigationBar.Location = new System.Drawing.Point(0, 0);
-            this.NavigationBar.LookAndFeel.SkinName = "Office 2019 White";
-            this.NavigationBar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.NavigationBar.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.NavigationBar.Name = "NavigationBar";
-            this.NavigationBar.SelectedItem = this.tabInfo;
-            this.NavigationBar.Size = new System.Drawing.Size(866, 30);
-            this.NavigationBar.TabIndex = 50;
-            this.NavigationBar.Text = "NavigationBar1";
-            this.NavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
-            this.NavigationBar.SelectedItemChanged += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.NavigationBar_SelectedItemChanged);
-            // 
-            // tabInfo
-            // 
-            this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Text = "Allowances";
-            // 
-            // tabList
-            // 
-            this.tabList.Name = "tabList";
-            this.tabList.Text = "List";
-            // 
-            // usDeductionslayoutControl1ConvertedLayout
-            // 
-            this.usDeductionslayoutControl1ConvertedLayout.Controls.Add(this.bunifuPanel1);
-            this.usDeductionslayoutControl1ConvertedLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usDeductionslayoutControl1ConvertedLayout.Location = new System.Drawing.Point(0, 0);
-            this.usDeductionslayoutControl1ConvertedLayout.Name = "usDeductionslayoutControl1ConvertedLayout";
-            this.usDeductionslayoutControl1ConvertedLayout.Root = this.layoutControlGroup1;
-            this.usDeductionslayoutControl1ConvertedLayout.Size = new System.Drawing.Size(896, 573);
-            this.usDeductionslayoutControl1ConvertedLayout.TabIndex = 6;
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.bunifuPanel1item});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(896, 573);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // bunifuPanel1item
-            // 
-            this.bunifuPanel1item.Control = this.bunifuPanel1;
-            this.bunifuPanel1item.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1item.Name = "bunifuPanel1item";
-            this.bunifuPanel1item.Size = new System.Drawing.Size(876, 553);
-            this.bunifuPanel1item.TextSize = new System.Drawing.Size(0, 0);
-            this.bunifuPanel1item.TextVisible = false;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmployeeName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Employee";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Designation_Name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Designation";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Department_Name";
-            this.Column1.HeaderText = "Department";
-            this.Column1.Name = "Column1";
-            // 
             // Column2
             // 
             this.Column2.DataPropertyName = "EMP_LED_ID";
@@ -1446,6 +1330,123 @@ namespace Umoxi
             this.Column10.Text = "trash";
             this.Column10.UseColumnTextForButtonValue = true;
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 30);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(866, 1);
+            this.bunifuSeparator1.TabIndex = 118;
+            // 
+            // NavigationBar
+            // 
+            this.NavigationBar.AppearanceItem.Disabled.Font = new System.Drawing.Font("Rubik", 12F);
+            this.NavigationBar.AppearanceItem.Disabled.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Hovered.Font = new System.Drawing.Font("Rubik", 12F);
+            this.NavigationBar.AppearanceItem.Hovered.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Normal.Font = new System.Drawing.Font("Rubik", 12F);
+            this.NavigationBar.AppearanceItem.Normal.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Pressed.Font = new System.Drawing.Font("Rubik", 12F);
+            this.NavigationBar.AppearanceItem.Pressed.Options.UseFont = true;
+            this.NavigationBar.AppearanceItem.Selected.Font = new System.Drawing.Font("Rubik", 12F);
+            this.NavigationBar.AppearanceItem.Selected.Options.UseFont = true;
+            this.NavigationBar.AutoSize = false;
+            this.NavigationBar.BackColor = System.Drawing.Color.Transparent;
+            this.NavigationBar.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden;
+            this.NavigationBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavigationBar.Font = new System.Drawing.Font("Rubik", 5.25F);
+            this.NavigationBar.ItemPadding = new System.Windows.Forms.Padding(15, 8, 12, 8);
+            this.NavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.tabInfo,
+            this.tabList});
+            this.NavigationBar.Location = new System.Drawing.Point(0, 0);
+            this.NavigationBar.LookAndFeel.SkinName = "Office 2019 White";
+            this.NavigationBar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.NavigationBar.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.NavigationBar.Name = "NavigationBar";
+            this.NavigationBar.SelectedItem = this.tabInfo;
+            this.NavigationBar.Size = new System.Drawing.Size(866, 30);
+            this.NavigationBar.TabIndex = 50;
+            this.NavigationBar.Text = "NavigationBar1";
+            this.NavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
+            this.NavigationBar.SelectedItemChanged += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.NavigationBar_SelectedItemChanged);
+            // 
+            // tabInfo
+            // 
+            this.tabInfo.Name = "tabInfo";
+            this.tabInfo.Text = "Subsídios";
+            // 
+            // tabList
+            // 
+            this.tabList.Name = "tabList";
+            this.tabList.Text = "Listar";
+            // 
+            // usDeductionslayoutControl1ConvertedLayout
+            // 
+            this.usDeductionslayoutControl1ConvertedLayout.Controls.Add(this.bunifuPanel1);
+            this.usDeductionslayoutControl1ConvertedLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usDeductionslayoutControl1ConvertedLayout.Location = new System.Drawing.Point(0, 0);
+            this.usDeductionslayoutControl1ConvertedLayout.Name = "usDeductionslayoutControl1ConvertedLayout";
+            this.usDeductionslayoutControl1ConvertedLayout.Root = this.layoutControlGroup1;
+            this.usDeductionslayoutControl1ConvertedLayout.Size = new System.Drawing.Size(896, 573);
+            this.usDeductionslayoutControl1ConvertedLayout.TabIndex = 6;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.bunifuPanel1item});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(896, 573);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // bunifuPanel1item
+            // 
+            this.bunifuPanel1item.Control = this.bunifuPanel1;
+            this.bunifuPanel1item.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1item.Name = "bunifuPanel1item";
+            this.bunifuPanel1item.Size = new System.Drawing.Size(876, 553);
+            this.bunifuPanel1item.TextSize = new System.Drawing.Size(0, 0);
+            this.bunifuPanel1item.TextVisible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Department_Name";
+            this.Column1.HeaderText = "Departamento";
+            this.Column1.Name = "Column1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Designation_Name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Designação";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmployeeName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Funcionário";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
             // usAllowances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1509,7 +1510,7 @@ namespace Umoxi
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel21;
         internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnFindSearch;
-        internal Bunifu.UI.WinForms.BunifuDropdown cmbSchool;
+        internal Bunifu.UI.WinForms.BunifuDropdown txtDepartamento;
         private DevExpress.XtraTab.XtraTabPage Page2;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
@@ -1526,11 +1527,6 @@ namespace Umoxi
         private DevExpress.XtraLayout.LayoutControlItem bunifuPanel1item;
         private DevExpress.XtraBars.Navigation.NavigationBarItem tabInfo;
         private DevExpress.XtraBars.Navigation.NavigationBarItem tabList;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -1540,5 +1536,10 @@ namespace Umoxi
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewButtonColumn Column10;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

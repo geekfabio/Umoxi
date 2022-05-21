@@ -19,7 +19,7 @@ namespace Umoxi
             InitializeComponent();
             DataGridView1.Columns[6].DefaultCellStyle.Font = new Font("Font Awesome 5 Pro Regular", 12);
             LoadCheckVal();
-            LoadData();
+         
         }
 
         #region instance
@@ -53,10 +53,8 @@ namespace Umoxi
         }
         private void LoadData()
         {
-            ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, " +
-                " Department.Department_Name, Designation.Designation_Name, Employee.JoiningDate, Employee.Gender FROM            Employee INNER JOIN " +
-                " SchoolInformation ON Employee.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN " + (
-                " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID WHERE (Employee.Status = '" + ChekValues + "') "), DataGridView1);
+            ConnectionNode.FillDataGrid("SELECT Employee.EmployeeID, Employee.EmployeeName, departamentos.descricao as Department_Name, Employee.JoiningDate, Employee.Gender FROM Employee  INNER JOIN departamentos ON Employee.DEPARTMENT_ID = departamentos.departamento_id", DataGridView1);
+        
         }
 
         private void toggleSwitch_Toggled(object sender, EventArgs e)
@@ -72,6 +70,7 @@ namespace Umoxi
             }
             else
             {
+                string stringSearch = Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text));
                 switch (cmbSearchBy.Text)
                 {
                     case "ID":
@@ -83,46 +82,33 @@ namespace Umoxi
                         }
                         else
                         {
-                            ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Employee.FathersName, Employee.MothersName, Employee.Gender, Employee.BloodGroup, " +
-                                " Employee.DateOfBirth, Employee.Religion, Employee.Nationality, Employee.Address, Employee.ContactNo, Employee.Email, Employee.JoiningDate, " +
-                                " SchoolInformation.School_Name, Department.Department_Name, Designation.Designation_Name FROM            Employee INNER JOIN " +
-                                " SchoolInformation ON Employee.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN " +
-                                " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " + (
-                                " WHERE        (Employee.EmployeeID = " + UtilitiesFunctions.str_repl(txtSearch.Text) + ") AND (Employee.Status = '" + ChekValues + "') "), DataGridView1);
+                            ConnectionNode.FillDataGrid("SELECT Employee.EmployeeID, Employee.EmployeeName, departamentos.descricao as Department_Name, Employee.JoiningDate, Employee.Gender FROM Employee  INNER JOIN departamentos ON Employee.DEPARTMENT_ID = departamentos.departamento_id  WHERE        (Employee.EmployeeID = " + UtilitiesFunctions.str_repl(txtSearch.Text) + ") AND (Employee.Status = '" + ChekValues + "')", DataGridView1);
                         }
                         #endregion
                         break;
-                    case "Name":
+                    case "Nome":
                         #region Name
                         //search by employee name
-                        ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Employee.FathersName, Employee.MothersName, Employee.Gender, Employee.BloodGroup, " +
-                            " Employee.DateOfBirth, Employee.Religion, Employee.Nationality, Employee.Address, Employee.ContactNo, Employee.Email, Employee.JoiningDate, " +
-                            " SchoolInformation.School_Name, Department.Department_Name, Designation.Designation_Name FROM            Employee INNER JOIN " +
-                            " SchoolInformation ON Employee.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN " +
-                            " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " +
-                            " WHERE  (Employee.EmployeeName LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + ("%')  AND (Employee.Status = '" + ChekValues + "') "), DataGridView1);
+
+                        ConnectionNode.FillDataGrid("SELECT Employee.EmployeeID, Employee.EmployeeName, departamentos.descricao as Department_Name, Employee.JoiningDate, Employee.Gender FROM Employee  INNER JOIN departamentosON Employee.DEPARTMENT_ID = departamentos.departamento_id  WHERE (Employee.EmployeeName LIKE '%" + stringSearch + "%')", DataGridView1);
+
                         #endregion
+
+
                         break;
-                    case "Dad":
+                    case "Pai":
                         #region Father
                         //search by employee's father name
-                        ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Employee.FathersName, Employee.MothersName, Employee.Gender, Employee.BloodGroup, " +
-                            " Employee.DateOfBirth, Employee.Religion, Employee.Nationality, Employee.Address, Employee.ContactNo, Employee.Email, Employee.JoiningDate, " +
-                            " SchoolInformation.School_Name, Department.Department_Name, Designation.Designation_Name FROM            Employee INNER JOIN " +
-                            " SchoolInformation ON Employee.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN " +
-                            " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " +
-                            " WHERE  (Employee.FathersName LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + ("%')  AND (Employee.Status = '" + ChekValues + "') "), DataGridView1);
+                     
+                         ConnectionNode.FillDataGrid("SELECT Employee.EmployeeID, Employee.EmployeeName, departamentos.descricao as Department_Name, Employee.JoiningDate, Employee.Gender FROM Employee  INNER JOIN departamentos ON Employee.DEPARTMENT_ID = departamentos.departamento_id  WHERE (Employee.FathersName LIKE '%" + stringSearch + "%')", DataGridView1);
+
                         #endregion
                         break;
-                    case "Contact":
+                    case "Contacto":
                         #region Contact
                         //search by employee cotact no
-                        ConnectionNode.FillDataGrid(" SELECT        Employee.EmployeeID, Employee.EmployeeName, Employee.FathersName, Employee.MothersName, Employee.Gender, Employee.BloodGroup, " +
-                            " Employee.DateOfBirth, Employee.Religion, Employee.Nationality, Employee.Address, Employee.ContactNo, Employee.Email, Employee.JoiningDate, " +
-                            " SchoolInformation.School_Name, Department.Department_Name, Designation.Designation_Name FROM            Employee INNER JOIN " +
-                            " SchoolInformation ON Employee.SCHOOL_ID = SchoolInformation.SCHOOL_ID INNER JOIN " +
-                            " Department ON Employee.DEPARTMENT_ID = Department.DEPARTMENT_ID INNER JOIN Designation ON Employee.DESIGNATION_ID = Designation.DESIGNATION_ID " +
-                            " WHERE  (Employee.ContactNo LIKE '%" + Convert.ToString(UtilitiesFunctions.str_repl(txtSearch.Text)) + ("%')  AND (Employee.Status = '" + ChekValues + "') "), DataGridView1);
+                        ConnectionNode.FillDataGrid("SELECT Employee.EmployeeID, Employee.EmployeeName, departamentos.descricao as Department_Name, Employee.JoiningDate, Employee.Gender FROM Employee  INNER JOIN departamentos ON Employee.DEPARTMENT_ID = departamentos.departamento_id  WHERE (Employee.ContactNo LIKE '%" + stringSearch + "%')", DataGridView1);
+
                         #endregion
                         break;
                 }

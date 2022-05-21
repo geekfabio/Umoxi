@@ -144,13 +144,13 @@ namespace Umoxi
         //Priencher as comboBox com os dados da db
         public static void FILLComboBox2(string sql, System.Windows.Forms.ComboBox cb)
         {
-            var conn = new SqlConnection(connString);
+            var conn = new MySqlConnection(connString);
             cb.Items.Clear();
             try
             {
                 conn.Open();
-                var cmd = new SqlCommand(sql, conn);
-                var rdr = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                     cb.Items.Add(rdr[0].ToString());
                 rdr.Close();

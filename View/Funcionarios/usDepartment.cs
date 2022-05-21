@@ -12,10 +12,11 @@ namespace Umoxi
 {
     public partial class usDepartment : UserControl
     {
+        string departamentoID = "";
         public usDepartment()
         {
             InitializeComponent();
-            loadData();
+            LoadData();
             DataGridView1.Columns[2].DefaultCellStyle.Font = new Font("Font Awesome 5 Pro Regular", 12);
         }
 
@@ -33,27 +34,19 @@ namespace Umoxi
         }
         #endregion
 
-        private void loadData()
+        private void LoadData()
         {
-            ConnectionNode.FillDataGrid("SELECT DEPARTMENT_ID, Department_Name FROM Department", DataGridView1);
+            ConnectionNode.FillDataGrid("SELECT departamento_id, descricao FROM departamentos", DataGridView1);
         }
 
         private void btnAddDepartment_Click(object sender, EventArgs e)
         {
-            frmAddDepartment department = new frmAddDepartment();
-
-            OverlayFormShow.Instance.ShowFormOverlay(FrmMain.Default);
-
-            using (department)
-            {
-                department.ShowDialog();
-            }
-            loadData();
+          
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            loadData();
+            LoadData();
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,16 +59,45 @@ namespace Umoxi
                         frmAddDepartment department = new frmAddDepartment();
                         department.txtDepID.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value);
                         department.txtDepartmentName.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[2].Value);
-                        department.btnSave.Text = "Update";
+                        department.btnSave.Text = "Atualizar";
 
                         OverlayFormShow.Instance.ShowFormOverlay(FrmMain.Default);
                         using (department)
                         {
                             department.ShowDialog();
                         }
-                        loadData();
+                        LoadData();
                     }
                     break;
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmAddDepartment department = new frmAddDepartment();
+
+            OverlayFormShow.Instance.ShowFormOverlay(FrmMain.Default);
+
+            using (department)
+            {
+                department.ShowDialog();
+            }
+            LoadData();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(departamentoID))
+            {
+                if (MessageBox.Show("Dejesa realmente eliminar o departamento?", "Paciente", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                {
+                    ConnectionNode.ExecuteCommad("DELETE FROM `departamentos` WHERE departamento_id = '" + departamentoID + "'");
+                    LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione o departamento para eliminar", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

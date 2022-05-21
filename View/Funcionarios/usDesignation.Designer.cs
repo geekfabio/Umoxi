@@ -41,14 +41,15 @@ namespace Umoxi
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.DataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Elipsedgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ToolTipGeneral = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.usDesignationlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.bunifuPanel1item = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usDesignationlayoutControl1ConvertedLayout)).BeginInit();
@@ -65,6 +66,7 @@ namespace Umoxi
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 10;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuPanel1.Controls.Add(this.btnUpdate);
             this.bunifuPanel1.Controls.Add(this.btnAddDesignation);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
@@ -100,7 +102,7 @@ namespace Umoxi
             this.btnUpdate.ImageSize = new System.Drawing.Size(21, 25);
             this.btnUpdate.ImageZoomSize = new System.Drawing.Size(26, 30);
             this.btnUpdate.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.InitialImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(229, 32);
+            this.btnUpdate.Location = new System.Drawing.Point(202, 31);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Rotation = 0;
             this.btnUpdate.ShowActiveImage = true;
@@ -133,7 +135,7 @@ namespace Umoxi
             this.btnAddDesignation.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnAddDesignation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddDesignation.BackgroundImage")));
             this.btnAddDesignation.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddDesignation.ButtonText = "Add Designation";
+            this.btnAddDesignation.ButtonText = "Add Designação";
             this.btnAddDesignation.ButtonTextMarginLeft = 0;
             this.btnAddDesignation.ColorContrastOnClick = 45;
             this.btnAddDesignation.ColorContrastOnHover = 45;
@@ -226,9 +228,9 @@ namespace Umoxi
             this.bunifuLabel1.Location = new System.Drawing.Point(23, 52);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(87, 16);
+            this.bunifuLabel1.Size = new System.Drawing.Size(128, 16);
             this.bunifuLabel1.TabIndex = 85;
-            this.bunifuLabel1.Text = "All designation";
+            this.bunifuLabel1.Text = "Todas as designações";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel1, "");
@@ -247,9 +249,9 @@ namespace Umoxi
             this.bunifuLabel3.Location = new System.Drawing.Point(23, 31);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(140, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(151, 20);
             this.bunifuLabel3.TabIndex = 84;
-            this.bunifuLabel3.Text = "List of Designation";
+            this.bunifuLabel3.Text = "Lista de Designação";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.ToolTipGeneral.SetToolTip(this.bunifuLabel3, "");
@@ -330,6 +332,29 @@ namespace Umoxi
             this.ToolTipGeneral.SetToolTipTitle(this.DataGridView1, "");
             this.DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DESIGNATION_ID";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Designation_Name";
+            this.Column2.HeaderText = "Designação";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Text = "edit";
+            this.Column3.UseColumnTextForButtonValue = true;
+            // 
             // Elipsedgv
             // 
             this.Elipsedgv.ElipseRadius = 10;
@@ -402,28 +427,44 @@ namespace Umoxi
             this.bunifuPanel1item.TextSize = new System.Drawing.Size(0, 0);
             this.bunifuPanel1item.TextVisible = false;
             // 
-            // Column1
+            // bunifuImageButton1
             // 
-            this.Column1.DataPropertyName = "DESIGNATION_ID";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Designation_Name";
-            this.Column2.HeaderText = "Designation";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Text = "edit";
-            this.Column3.UseColumnTextForButtonValue = true;
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowBuffering = false;
+            this.bunifuImageButton1.AllowToggling = false;
+            this.bunifuImageButton1.AllowZooming = false;
+            this.bunifuImageButton1.AllowZoomingOnFocus = false;
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = global::Umoxi.Properties.Resources.icons8_trash_24px;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 5;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(21, 26);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(26, 31);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(232, 31);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = false;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(26, 31);
+            this.bunifuImageButton1.TabIndex = 146;
+            this.ToolTipGeneral.SetToolTip(this.bunifuImageButton1, "");
+            this.ToolTipGeneral.SetToolTipIcon(this.bunifuImageButton1, null);
+            this.bunifuImageButton1.ToolTipText = "";
+            this.ToolTipGeneral.SetToolTipTitle(this.bunifuImageButton1, "");
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 5;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // usDesignation
             // 
@@ -464,5 +505,6 @@ namespace Umoxi
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
     }
 }

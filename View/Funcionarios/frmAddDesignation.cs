@@ -47,20 +47,20 @@ namespace Umoxi
             if (string.IsNullOrEmpty(txtDesignationName.Text))
             {
                 TransitionsEffects.ShowTransition(txtDesignationName, lblDesignationName);
-                Snackbar.Show(this, "Required: Designation", BunifuSnackbar.MessageTypes.Error);
+                Snackbar.Show(this, "Necessárop: Designação", BunifuSnackbar.MessageTypes.Error);
             }
             else
             {
                 switch (btnSave.Text)
                 {
-                    case "Save":
+                    case "Salvar":
                         ConnectionNode.ExecuteSQLQuery(" INSERT INTO Designation (Designation_Name) VALUES ('" + UtilitiesFunctions.str_repl(txtDesignationName.Text) + "')  ");
                         UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Add designation # " + txtDesignationName.Text);
 
                         this.Close();
                         Snackbar.Show(FrmMain.Default, MessageDialog.TextMessage("Saved"), BunifuSnackbar.MessageTypes.Success);
                         break;
-                    case "Update":
+                    case "Atualizar":
                         ConnectionNode.ExecuteSQLQuery(" UPDATE Designation SET Designation_Name= '" + UtilitiesFunctions.str_repl(txtDesignationName.Text) + "' WHERE  DESIGNATION_ID=" + txtDegID.Text + "  ");
                         UtilitiesFunctions.Logger(ConnectionNode.userID, DateTime.Now.ToLongTimeString(), "Updated designation # " + txtDesignationName.Text);
 

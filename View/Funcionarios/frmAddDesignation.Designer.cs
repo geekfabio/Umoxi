@@ -164,7 +164,7 @@ namespace Umoxi
             // tabInfo
             // 
             this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Text = "Designation";
+            this.tabInfo.Text = "Designação do Funcionário";
             // 
             // panel1
             // 
@@ -191,7 +191,7 @@ namespace Umoxi
             this.btnSave.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(188)))));
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSave.ButtonText = "Save";
+            this.btnSave.ButtonText = "Salvar";
             this.btnSave.ButtonTextMarginLeft = 0;
             this.btnSave.ColorContrastOnClick = 45;
             this.btnSave.ColorContrastOnHover = 45;
@@ -284,7 +284,7 @@ namespace Umoxi
             this.btnClose.BackColor1 = System.Drawing.Color.White;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnClose.ButtonText = "Close";
+            this.btnClose.ButtonText = "Fechar";
             this.btnClose.ButtonTextMarginLeft = 0;
             this.btnClose.ColorContrastOnClick = 45;
             this.btnClose.ColorContrastOnHover = 45;
@@ -524,9 +524,9 @@ namespace Umoxi
             this.lblDesignationName.Location = new System.Drawing.Point(37, 49);
             this.lblDesignationName.Name = "lblDesignationName";
             this.lblDesignationName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDesignationName.Size = new System.Drawing.Size(75, 15);
+            this.lblDesignationName.Size = new System.Drawing.Size(77, 15);
             this.lblDesignationName.TabIndex = 159;
-            this.lblDesignationName.Text = "Designation *";
+            this.lblDesignationName.Text = "Designação: *";
             this.lblDesignationName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDesignationName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

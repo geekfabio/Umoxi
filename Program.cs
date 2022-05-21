@@ -9,8 +9,6 @@ namespace Umoxi
 {
     static class Program
     {
-        static readonly MemoryManagement memory = new MemoryManagement();
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,7 +17,6 @@ namespace Umoxi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             BonusSkins.Register();
             WindowsFormsSettings.ForceDirectXPaint();
             WindowsFormsSettings.SetDPIAware();
@@ -34,7 +31,7 @@ namespace Umoxi
             {
                 ConnectionNode.ExecuteSQLQuery("SELECT usuario_id FROM usuarios limit 1");
                 if (ConnectionNode.sqlDT.Rows.Count == 1)
-                    Application.Run(new FrmMain());
+                    Application.Run(new frmLogIn());
                 else
                     Application.Run(new FrmFirstOpen());
             }
