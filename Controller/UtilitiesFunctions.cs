@@ -10,11 +10,52 @@ using System.Drawing;
 using System.IO;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Docking2010.Customization;
+using Umoxi.Controller;
 
 namespace Umoxi
 {
     class UtilitiesFunctions
     {
+        public static bool IsNumeric(object Expression)
+        {
+            int retNum;
+
+            bool isNum = int.TryParse(Convert.ToString(Expression), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum);
+            return isNum;
+        }
+        public static void ResetAllTexts(Form form)
+        {
+            int i = 0;
+            foreach (Control control in form.Controls)
+            {
+                i++; Console.WriteLine(i.ToString());
+                if (control is BunifuTextBox)
+                {
+                    Console.WriteLine("*////");
+                    BunifuTextBox textBox = (BunifuTextBox)control;
+                    textBox.Text = string.Empty;
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    if (comboBox.Items.Count > 0)
+                        comboBox.SelectedIndex = 0;
+                }
+
+                if (control is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)control;
+                    checkBox.Checked = false;
+                }
+
+                if (control is ListBox)
+                {
+                    ListBox listBox = (ListBox)control;
+                    listBox.ClearSelected();
+                }
+            }
+        }
 
         private static bool canCloseFunc(DialogResult parameter)
         {
@@ -152,6 +193,8 @@ namespace Umoxi
         #region ExportToExcel
         public static void ExportDataToExcelSheet(DataGridView dgv)
         {
+            //VERIFY Rows
+            if(dgv.RowCount > 0) { 
             dynamic Exp_Xls = default(dynamic);
             int lig_cpt = 0;
             int Col_cpt = 0;
@@ -185,7 +228,7 @@ namespace Umoxi
             {
                 MessageBox.Show("Error : " + ex.Message);
             }
-
+            }
         }
         #endregion
 
@@ -214,20 +257,19 @@ namespace Umoxi
         }
         #endregion
 
-        #region name
-        public static void StudentBanalce(double STUDENT_ID, BunifuTextBox Amount)
+        #region Open Form
+       
+        public static void OpenForm(Control control, Form form)
         {
-            ConnectionNode.ExecuteSQLQuery(" SELECT        Debit, Credit  FROM            StudentLedger  WHERE        (STUDENT_ID = " + System.Convert.ToString(STUDENT_ID) + ") ");
-            if (ConnectionNode.sqlDT.Rows.Count > 0)
+            MemoryManagement memoryManagement = new MemoryManagement();
+            OverlayFormShow.Instance.ShowFormOverlay(control);
+            using (form)
             {
-                ConnectionNode.ExecuteSQLQuery(" SELECT  SUM(Debit - Credit) AS Exp1  FROM   StudentLedger  WHERE        (STUDENT_ID = " + System.Convert.ToString(STUDENT_ID) + ") ");
-                Amount.Text = "balanço: " + ConnectionNode.sqlDT.Rows[0]["Exp1"];
+                form.ShowDialog();
             }
-            else
-            {
-                Amount.Text = "balanço: 0";
-            }
-        }
+            OverlayFormShow.Instance.CloseProgressPanel();
+            memoryManagement.FlushMemory();
+        } 
         #endregion
 
     }

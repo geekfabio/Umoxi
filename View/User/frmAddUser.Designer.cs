@@ -79,9 +79,8 @@ namespace Umoxi
             this.NavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.tabPhoto = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.Page1 = new DevExpress.XtraTab.XtraTabPage();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtUserID = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.chkActive = new Bunifu.UI.WinForms.BunifuCheckBox();
-            this.lbl_chkActive = new Bunifu.UI.WinForms.BunifuLabel();
             this.TabContent = new DevExpress.XtraTab.XtraTabControl();
             this.Page2 = new DevExpress.XtraTab.XtraTabPage();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -89,6 +88,8 @@ namespace Umoxi
             this.PictureBox1 = new DevExpress.XtraEditors.PictureEdit();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Page3 = new DevExpress.XtraTab.XtraTabPage();
+            this.chkActive = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.lbl_chkActive = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblRePassword = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPassword = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtRePassword = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -100,6 +101,7 @@ namespace Umoxi
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.ElipsePassword = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.OpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtFuncao = new Bunifu.UI.WinForms.BunifuDropdown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NavigationBar)).BeginInit();
             this.Page1.SuspendLayout();
@@ -485,7 +487,7 @@ namespace Umoxi
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 359);
+            this.panel1.Location = new System.Drawing.Point(0, 420);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 57);
             this.panel1.TabIndex = 114;
@@ -746,9 +748,9 @@ namespace Umoxi
             // 
             this.Page1.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.Page1.Appearance.PageClient.Options.UseBackColor = true;
+            this.Page1.Controls.Add(this.txtFuncao);
+            this.Page1.Controls.Add(this.bunifuLabel2);
             this.Page1.Controls.Add(this.txtUserID);
-            this.Page1.Controls.Add(this.chkActive);
-            this.Page1.Controls.Add(this.lbl_chkActive);
             this.Page1.Controls.Add(this.lblEmail);
             this.Page1.Controls.Add(this.txtEmail);
             this.Page1.Controls.Add(this.lblContactNo);
@@ -758,8 +760,25 @@ namespace Umoxi
             this.Page1.Controls.Add(this.txtUserName);
             this.Page1.Controls.Add(this.lblUserName);
             this.Page1.Name = "Page1";
-            this.Page1.Size = new System.Drawing.Size(374, 328);
+            this.Page1.Size = new System.Drawing.Size(374, 389);
             this.Page1.Text = "Page1";
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Rubik", 9F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(32, 297);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(42, 15);
+            this.bunifuLabel2.TabIndex = 126;
+            this.bunifuLabel2.Text = "Função";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtUserID
             // 
@@ -837,79 +856,6 @@ namespace Umoxi
             this.txtUserID.Visible = false;
             this.txtUserID.WordWrap = true;
             // 
-            // chkActive
-            // 
-            this.chkActive.AllowBindingControlAnimation = true;
-            this.chkActive.AllowBindingControlColorChanges = false;
-            this.chkActive.AllowBindingControlLocation = true;
-            this.chkActive.AllowCheckBoxAnimation = false;
-            this.chkActive.AllowCheckmarkAnimation = true;
-            this.chkActive.AllowOnHoverStates = true;
-            this.chkActive.AutoCheck = true;
-            this.chkActive.BackColor = System.Drawing.Color.Transparent;
-            this.chkActive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkActive.BackgroundImage")));
-            this.chkActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chkActive.BindingControl = this.lbl_chkActive;
-            this.chkActive.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.chkActive.BorderRadius = 5;
-            this.chkActive.Checked = true;
-            this.chkActive.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
-            this.chkActive.Cursor = System.Windows.Forms.Cursors.Default;
-            this.chkActive.CustomCheckmarkImage = null;
-            this.chkActive.Location = new System.Drawing.Point(26, 298);
-            this.chkActive.MinimumSize = new System.Drawing.Size(17, 17);
-            this.chkActive.Name = "chkActive";
-            this.chkActive.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.chkActive.OnCheck.BorderRadius = 5;
-            this.chkActive.OnCheck.BorderThickness = 2;
-            this.chkActive.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.chkActive.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.chkActive.OnCheck.CheckmarkThickness = 2;
-            this.chkActive.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.chkActive.OnDisable.BorderRadius = 5;
-            this.chkActive.OnDisable.BorderThickness = 2;
-            this.chkActive.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkActive.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.chkActive.OnDisable.CheckmarkThickness = 2;
-            this.chkActive.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(159)))), ((int)(((byte)(123)))));
-            this.chkActive.OnHoverChecked.BorderRadius = 5;
-            this.chkActive.OnHoverChecked.BorderThickness = 2;
-            this.chkActive.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(159)))), ((int)(((byte)(123)))));
-            this.chkActive.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.chkActive.OnHoverChecked.CheckmarkThickness = 2;
-            this.chkActive.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(183)))), ((int)(((byte)(156)))));
-            this.chkActive.OnHoverUnchecked.BorderRadius = 5;
-            this.chkActive.OnHoverUnchecked.BorderThickness = 1;
-            this.chkActive.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkActive.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.chkActive.OnUncheck.BorderRadius = 5;
-            this.chkActive.OnUncheck.BorderThickness = 1;
-            this.chkActive.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkActive.Size = new System.Drawing.Size(18, 18);
-            this.chkActive.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.chkActive.TabIndex = 122;
-            this.chkActive.ThreeState = false;
-            this.chkActive.ToolTipText = null;
-            this.chkActive.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.chkActive_CheckedChanged);
-            // 
-            // lbl_chkActive
-            // 
-            this.lbl_chkActive.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.lbl_chkActive.AllowParentOverrides = false;
-            this.lbl_chkActive.AutoEllipsis = false;
-            this.lbl_chkActive.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbl_chkActive.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_chkActive.Font = new System.Drawing.Font("Rubik", 9F);
-            this.lbl_chkActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.lbl_chkActive.Location = new System.Drawing.Point(47, 301);
-            this.lbl_chkActive.Name = "lbl_chkActive";
-            this.lbl_chkActive.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_chkActive.Size = new System.Drawing.Size(75, 15);
-            this.lbl_chkActive.TabIndex = 121;
-            this.lbl_chkActive.Text = "Usúario ativo";
-            this.lbl_chkActive.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_chkActive.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // TabContent
             // 
             this.TabContent.Appearance.BackColor = System.Drawing.Color.White;
@@ -927,7 +873,7 @@ namespace Umoxi
             this.TabContent.PaintStyleName = "Standard";
             this.TabContent.SelectedTabPage = this.Page1;
             this.TabContent.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.TabContent.Size = new System.Drawing.Size(374, 328);
+            this.TabContent.Size = new System.Drawing.Size(374, 389);
             this.TabContent.TabIndex = 50;
             this.TabContent.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Page1,
@@ -941,7 +887,7 @@ namespace Umoxi
             this.Page2.Appearance.PageClient.Options.UseBackColor = true;
             this.Page2.Controls.Add(this.bunifuShadowPanel1);
             this.Page2.Name = "Page2";
-            this.Page2.Size = new System.Drawing.Size(374, 328);
+            this.Page2.Size = new System.Drawing.Size(374, 389);
             this.Page2.Text = "Page2";
             // 
             // bunifuShadowPanel1
@@ -1095,6 +1041,8 @@ namespace Umoxi
             // 
             this.Page3.Appearance.PageClient.BackColor = System.Drawing.Color.White;
             this.Page3.Appearance.PageClient.Options.UseBackColor = true;
+            this.Page3.Controls.Add(this.chkActive);
+            this.Page3.Controls.Add(this.lbl_chkActive);
             this.Page3.Controls.Add(this.lblRePassword);
             this.Page3.Controls.Add(this.lblPassword);
             this.Page3.Controls.Add(this.txtRePassword);
@@ -1102,8 +1050,80 @@ namespace Umoxi
             this.Page3.Controls.Add(this.passwordStrengthControl1);
             this.Page3.Controls.Add(this.bunifuLabel1);
             this.Page3.Name = "Page3";
-            this.Page3.Size = new System.Drawing.Size(374, 328);
+            this.Page3.Size = new System.Drawing.Size(374, 389);
             this.Page3.Text = "Page3";
+            // 
+            // chkActive
+            // 
+            this.chkActive.AllowBindingControlAnimation = true;
+            this.chkActive.AllowBindingControlColorChanges = false;
+            this.chkActive.AllowBindingControlLocation = true;
+            this.chkActive.AllowCheckBoxAnimation = false;
+            this.chkActive.AllowCheckmarkAnimation = true;
+            this.chkActive.AllowOnHoverStates = true;
+            this.chkActive.AutoCheck = true;
+            this.chkActive.BackColor = System.Drawing.Color.Transparent;
+            this.chkActive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkActive.BackgroundImage")));
+            this.chkActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkActive.BindingControl = this.lbl_chkActive;
+            this.chkActive.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.chkActive.BorderRadius = 5;
+            this.chkActive.Checked = true;
+            this.chkActive.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.chkActive.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkActive.CustomCheckmarkImage = null;
+            this.chkActive.Location = new System.Drawing.Point(244, 146);
+            this.chkActive.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.chkActive.OnCheck.BorderRadius = 5;
+            this.chkActive.OnCheck.BorderThickness = 2;
+            this.chkActive.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.chkActive.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.chkActive.OnCheck.CheckmarkThickness = 2;
+            this.chkActive.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.chkActive.OnDisable.BorderRadius = 5;
+            this.chkActive.OnDisable.BorderThickness = 2;
+            this.chkActive.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkActive.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.chkActive.OnDisable.CheckmarkThickness = 2;
+            this.chkActive.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(159)))), ((int)(((byte)(123)))));
+            this.chkActive.OnHoverChecked.BorderRadius = 5;
+            this.chkActive.OnHoverChecked.BorderThickness = 2;
+            this.chkActive.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(159)))), ((int)(((byte)(123)))));
+            this.chkActive.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.chkActive.OnHoverChecked.CheckmarkThickness = 2;
+            this.chkActive.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(183)))), ((int)(((byte)(156)))));
+            this.chkActive.OnHoverUnchecked.BorderRadius = 5;
+            this.chkActive.OnHoverUnchecked.BorderThickness = 1;
+            this.chkActive.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkActive.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.chkActive.OnUncheck.BorderRadius = 5;
+            this.chkActive.OnUncheck.BorderThickness = 1;
+            this.chkActive.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkActive.Size = new System.Drawing.Size(18, 18);
+            this.chkActive.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.chkActive.TabIndex = 124;
+            this.chkActive.ThreeState = false;
+            this.chkActive.ToolTipText = null;
+            // 
+            // lbl_chkActive
+            // 
+            this.lbl_chkActive.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.lbl_chkActive.AllowParentOverrides = false;
+            this.lbl_chkActive.AutoEllipsis = false;
+            this.lbl_chkActive.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_chkActive.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_chkActive.Font = new System.Drawing.Font("Rubik", 9F);
+            this.lbl_chkActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.lbl_chkActive.Location = new System.Drawing.Point(265, 149);
+            this.lbl_chkActive.Name = "lbl_chkActive";
+            this.lbl_chkActive.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_chkActive.Size = new System.Drawing.Size(75, 15);
+            this.lbl_chkActive.TabIndex = 123;
+            this.lbl_chkActive.Text = "Usúario ativo";
+            this.lbl_chkActive.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_chkActive.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lblRePassword
             // 
@@ -1416,7 +1436,7 @@ namespace Umoxi
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 358);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 419);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator2.Size = new System.Drawing.Size(374, 1);
@@ -1431,12 +1451,66 @@ namespace Umoxi
             // 
             this.OpenFileDialog1.FileName = "Foto";
             // 
+            // txtFuncao
+            // 
+            this.txtFuncao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtFuncao.BackColor = System.Drawing.Color.Transparent;
+            this.txtFuncao.BackgroundColor = System.Drawing.Color.White;
+            this.txtFuncao.BorderColor = System.Drawing.Color.Silver;
+            this.txtFuncao.BorderRadius = 5;
+            this.txtFuncao.Color = System.Drawing.Color.Silver;
+            this.txtFuncao.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.txtFuncao.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtFuncao.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtFuncao.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtFuncao.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFuncao.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.txtFuncao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtFuncao.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.txtFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtFuncao.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.txtFuncao.FillDropDown = true;
+            this.txtFuncao.FillIndicator = false;
+            this.txtFuncao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtFuncao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFuncao.ForeColor = System.Drawing.Color.Black;
+            this.txtFuncao.FormattingEnabled = true;
+            this.txtFuncao.Icon = null;
+            this.txtFuncao.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.txtFuncao.IndicatorColor = System.Drawing.Color.Gray;
+            this.txtFuncao.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.txtFuncao.IndicatorThickness = 2;
+            this.txtFuncao.IsDropdownOpened = false;
+            this.txtFuncao.ItemBackColor = System.Drawing.Color.White;
+            this.txtFuncao.ItemBorderColor = System.Drawing.Color.White;
+            this.txtFuncao.ItemForeColor = System.Drawing.Color.Black;
+            this.txtFuncao.ItemHeight = 26;
+            this.txtFuncao.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.txtFuncao.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.txtFuncao.Items.AddRange(new object[] {
+            "Administrador",
+            "Contabilista",
+            "Doutor",
+            "Enfermeiro",
+            "Farmaceutico",
+            "Patologista",
+            "Radiologista",
+            "Recepecionista"});
+            this.txtFuncao.ItemTopMargin = 3;
+            this.txtFuncao.Location = new System.Drawing.Point(27, 318);
+            this.txtFuncao.Name = "txtFuncao";
+            this.txtFuncao.Size = new System.Drawing.Size(312, 32);
+            this.txtFuncao.TabIndex = 160;
+            this.txtFuncao.Text = "Recepecionista";
+            this.txtFuncao.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.txtFuncao.TextLeftMargin = 5;
+            // 
             // frmAddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(374, 416);
+            this.ClientSize = new System.Drawing.Size(374, 477);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.TabContent);
             this.Controls.Add(this.bunifuSeparator1);
@@ -1492,7 +1566,6 @@ namespace Umoxi
         private PasswordStrengthControlLib.PasswordStrengthControl passwordStrengthControl1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.Framework.UI.BunifuElipse ElipsePassword;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_chkActive;
         private DevExpress.XtraBars.Navigation.NavigationBarItem tabPhoto;
         private DevExpress.XtraTab.XtraTabPage Page2;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
@@ -1504,8 +1577,11 @@ namespace Umoxi
         internal Bunifu.UI.WinForms.BunifuTextBox txtuserFullName;
         internal Bunifu.UI.WinForms.BunifuTextBox txtUserName;
         internal DevExpress.XtraEditors.PictureEdit PictureBox1;
-        internal Bunifu.UI.WinForms.BunifuCheckBox chkActive;
         internal Bunifu.UI.WinForms.BunifuTextBox txtUserID;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSave;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        internal Bunifu.UI.WinForms.BunifuCheckBox chkActive;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_chkActive;
+        internal Bunifu.UI.WinForms.BunifuDropdown txtFuncao;
     }
 }

@@ -50,8 +50,8 @@ namespace Umoxi
             this.UseWaitCursor = true;
            
             #region Dashboard
-            //    contentControl.Controls.Add(usDashboard.Instance);
-           // contentControl.Controls[0].Dock = DockStyle.Fill;
+            contentControl.Controls.Add(new usDashboard());
+            contentControl.Controls[0].Dock = DockStyle.Fill;
             #endregion
             accordionControlElementAddNewEvent.Expanded=true;
             dateNavigator1.SchedulerControl=usScheduler.Instance.schedulerControl1;
@@ -105,7 +105,7 @@ namespace Umoxi
             filterAllElement = sender as AccordionControlElement;
             if (sender == btnPacienteNovo)
             {
-                StudentInformationToolStripMenuItem.PerformClick();
+                cadastrarPaciente.PerformClick();
             }
             else if (sender == this.btnPacienteAtendimentoDiario)
             {
@@ -113,7 +113,7 @@ namespace Umoxi
             }
             else if (sender == this.btnPacienteConsulta)
             {
-                IdentityCardToolStripMenuItem.PerformClick();
+                ConsultarPacienteInfo.PerformClick();
             }
       
         }
@@ -394,7 +394,9 @@ namespace Umoxi
 
         private void AboutToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
+            OverlayFormShow.Instance.ShowFormOverlay(this);
             AboutProgram.Instance.ShowDialog();
+            OverlayFormShow.Instance.CloseProgressPanel();
         }
 
         private void LogOffToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
@@ -488,9 +490,9 @@ namespace Umoxi
 
         #region Student
 
-        private void StudentInformationToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
+        private void consultarPaciente(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usStudent.Instance);
+            OpenTab(usPaciente.Instance);
         }
 
         private void IdentityCardToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
@@ -505,7 +507,7 @@ namespace Umoxi
 
         private void WaiverToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usWaiver.Instance);
+            //OpenTab(usWaiver.Instance);
         }
 
         private void DocumentsToolStripMenuItem_ItemClick(object sender, ItemClickEventArgs e)
@@ -525,7 +527,7 @@ namespace Umoxi
 
         private void PromotionImprovementToolStripMenuItem_Click(object sender, ItemClickEventArgs e)
         {
-            OpenTab(usPromotion.Instance);
+            OpenTab(usPaciente.Instance);
         }
         #endregion
 
@@ -651,7 +653,7 @@ namespace Umoxi
         }
         private void ToolStripButtonStudent_Click(object sender, EventArgs e)
         {
-            StudentInformationToolStripMenuItem.PerformClick();
+            ConsultarPacienteInfo.PerformClick();
         }
 
         #endregion
@@ -858,6 +860,26 @@ namespace Umoxi
         {
             //colect all unecessary resources and clean
             memory.FlushMemory();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UtilitiesFunctions.OpenForm(this, new frmAddPaciente());
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+            contentControl.Controls.Add(new usDashboard());
+        }
+
+        private void accordionControlElement61_Click(object sender, EventArgs e)
+        {
+            OpenTab(usDepartment.Instance);
+        }
+
+        private void accordionControlElement62_Click(object sender, EventArgs e)
+        {
+            OpenTab(usDesignation.Instance);
         }
     }
 }

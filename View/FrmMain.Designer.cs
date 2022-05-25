@@ -88,7 +88,6 @@ namespace Umoxi
             this.BookCategoryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookClassificationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem9 = new DevExpress.XtraBars.BarHeaderItem();
-            this.BookIssueToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookReturnToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem10 = new DevExpress.XtraBars.BarHeaderItem();
             this.BarcodePrintToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
@@ -151,17 +150,19 @@ namespace Umoxi
             this.NationalityToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.HolidayDeclarationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.StudentToolStripMenuItem = new DevExpress.XtraBars.BarLinkContainerItem();
-            this.StudentInformationToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             this.IdentityCardToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.DocumentsToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem6 = new DevExpress.XtraBars.BarHeaderItem();
+            this.ConsultarPacienteInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.cadastrarPaciente = new DevExpress.XtraBars.BarButtonItem();
             this.DailyAttendanceToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.MarksEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.StudentListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem5 = new DevExpress.XtraBars.BarHeaderItem();
             this.PromotionImprovementToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.BookListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
+            this.BookIssueToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.EmployeeListToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.VoucherEntryToolStripMenuItem = new DevExpress.XtraBars.BarButtonItem();
             this.barHeaderItem18 = new DevExpress.XtraBars.BarHeaderItem();
@@ -189,6 +190,8 @@ namespace Umoxi
             this.llAttendance = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llDeductions = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llAllowances = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement61 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement62 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement41 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserRegistration = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.llUserLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -239,7 +242,7 @@ namespace Umoxi
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -300,6 +303,7 @@ namespace Umoxi
             this.accordionControlElement50 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement52 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.timerToMemoryClean = new System.Windows.Forms.Timer(this.components);
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainerUser)).BeginInit();
@@ -420,7 +424,7 @@ namespace Umoxi
             this.NationalityToolStripMenuItem,
             this.HolidayDeclarationToolStripMenuItem,
             this.StudentToolStripMenuItem,
-            this.StudentInformationToolStripMenuItem,
+            this.ConsultarPacienteInfo,
             this.StudentListToolStripMenuItem,
             this.barHeaderItem4,
             this.IdentityCardToolStripMenuItem,
@@ -508,8 +512,9 @@ namespace Umoxi
             this.WaiverToolStripMenuItem,
             this.DashboardToolStripMenuItem,
             this.barButtonItem1,
-            this.barButtonItem2});
-            this.toolbarFormManager.MaxItemId = 154;
+            this.barButtonItem2,
+            this.cadastrarPaciente});
+            this.toolbarFormManager.MaxItemId = 155;
             this.toolbarFormManager.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchControl1,
             this.repositoryItemImageEdit1,
@@ -994,7 +999,6 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.BookCategoryToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.BookClassificationToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.BookIssueToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.BookReturnToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem10),
             new DevExpress.XtraBars.LinkPersistInfo(this.BarcodePrintToolStripMenuItem)});
@@ -1002,7 +1006,7 @@ namespace Umoxi
             // 
             // SupplierInformationToolStripMenuItem
             // 
-            this.SupplierInformationToolStripMenuItem.Caption = "Supplier Information";
+            this.SupplierInformationToolStripMenuItem.Caption = "Ponto de Serviço";
             this.SupplierInformationToolStripMenuItem.Id = 63;
             this.SupplierInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_supplier;
             this.SupplierInformationToolStripMenuItem.Name = "SupplierInformationToolStripMenuItem";
@@ -1010,13 +1014,13 @@ namespace Umoxi
             // 
             // barHeaderItem8
             // 
-            this.barHeaderItem8.Caption = "Livro";
+            this.barHeaderItem8.Caption = "Produtos e Medicamentos";
             this.barHeaderItem8.Id = 64;
             this.barHeaderItem8.Name = "barHeaderItem8";
             // 
             // BookInformationToolStripMenuItem
             // 
-            this.BookInformationToolStripMenuItem.Caption = "Book Information";
+            this.BookInformationToolStripMenuItem.Caption = "Produtos e Medicamentos";
             this.BookInformationToolStripMenuItem.Id = 65;
             this.BookInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_book;
             this.BookInformationToolStripMenuItem.Name = "BookInformationToolStripMenuItem";
@@ -1024,7 +1028,7 @@ namespace Umoxi
             // 
             // BookCategoryToolStripMenuItem
             // 
-            this.BookCategoryToolStripMenuItem.Caption = "Category";
+            this.BookCategoryToolStripMenuItem.Caption = "Categoria de Produtos";
             this.BookCategoryToolStripMenuItem.Id = 141;
             this.BookCategoryToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_bookmark;
             this.BookCategoryToolStripMenuItem.Name = "BookCategoryToolStripMenuItem";
@@ -1032,7 +1036,7 @@ namespace Umoxi
             // 
             // BookClassificationToolStripMenuItem
             // 
-            this.BookClassificationToolStripMenuItem.Caption = "Classification";
+            this.BookClassificationToolStripMenuItem.Caption = "Cadastrar Produto";
             this.BookClassificationToolStripMenuItem.Id = 144;
             this.BookClassificationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_course;
             this.BookClassificationToolStripMenuItem.Name = "BookClassificationToolStripMenuItem";
@@ -1040,21 +1044,13 @@ namespace Umoxi
             // 
             // barHeaderItem9
             // 
-            this.barHeaderItem9.Caption = "Questão";
+            this.barHeaderItem9.Caption = "Medicamento";
             this.barHeaderItem9.Id = 67;
             this.barHeaderItem9.Name = "barHeaderItem9";
             // 
-            // BookIssueToolStripMenuItem
-            // 
-            this.BookIssueToolStripMenuItem.Caption = "Book Issue";
-            this.BookIssueToolStripMenuItem.Id = 68;
-            this.BookIssueToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_ask_question;
-            this.BookIssueToolStripMenuItem.Name = "BookIssueToolStripMenuItem";
-            this.BookIssueToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BookIssueToolStripMenuItem_Click);
-            // 
             // BookReturnToolStripMenuItem
             // 
-            this.BookReturnToolStripMenuItem.Caption = "Book Return";
+            this.BookReturnToolStripMenuItem.Caption = "Retornar Medicamento";
             this.BookReturnToolStripMenuItem.Id = 69;
             this.BookReturnToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_return;
             this.BookReturnToolStripMenuItem.Name = "BookReturnToolStripMenuItem";
@@ -1142,7 +1138,7 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.DraftsToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.NewSMSToolStripMenuItem)});
             this.SMSToolStripMenuItem.Name = "SMSToolStripMenuItem";
-            this.SMSToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.SMSToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInCustomizing;
             // 
             // SettingsToolStripMenuItem
             // 
@@ -1183,7 +1179,7 @@ namespace Umoxi
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem17),
             new DevExpress.XtraBars.LinkPersistInfo(this.EmailSentToolStripMenuItem)});
             this.EmailToolStripMenuItem.Name = "EmailToolStripMenuItem";
-            this.EmailToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.EmailToolStripMenuItem.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInCustomizing;
             // 
             // SettingsToolStripMenuItem1
             // 
@@ -1535,32 +1531,25 @@ namespace Umoxi
             this.StudentToolStripMenuItem.Caption = "Pacientes";
             this.StudentToolStripMenuItem.Id = 48;
             this.StudentToolStripMenuItem.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.StudentInformationToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.IdentityCardToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.DocumentsToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.barHeaderItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ConsultarPacienteInfo),
+            new DevExpress.XtraBars.LinkPersistInfo(this.cadastrarPaciente),
             new DevExpress.XtraBars.LinkPersistInfo(this.DailyAttendanceToolStripMenuItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.MarksEntryToolStripMenuItem)});
             this.StudentToolStripMenuItem.Name = "StudentToolStripMenuItem";
             // 
-            // StudentInformationToolStripMenuItem
-            // 
-            this.StudentInformationToolStripMenuItem.Caption = "Informações de pacientes";
-            this.StudentInformationToolStripMenuItem.Id = 49;
-            this.StudentInformationToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_supplier;
-            this.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem";
-            this.StudentInformationToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.StudentInformationToolStripMenuItem_Click);
-            // 
             // barHeaderItem4
             // 
-            this.barHeaderItem4.Caption = "Cartão de Identificação";
+            this.barHeaderItem4.Caption = "Ações";
             this.barHeaderItem4.Id = 52;
             this.barHeaderItem4.Name = "barHeaderItem4";
             // 
             // IdentityCardToolStripMenuItem
             // 
-            this.IdentityCardToolStripMenuItem.Caption = "Cartão de Identificação";
+            this.IdentityCardToolStripMenuItem.Caption = "Marcar consulta";
             this.IdentityCardToolStripMenuItem.Id = 53;
             this.IdentityCardToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_identification_documents;
             this.IdentityCardToolStripMenuItem.Name = "IdentityCardToolStripMenuItem";
@@ -1568,7 +1557,7 @@ namespace Umoxi
             // 
             // DocumentsToolStripMenuItem
             // 
-            this.DocumentsToolStripMenuItem.Caption = "Documentos";
+            this.DocumentsToolStripMenuItem.Caption = "Internar Paciente";
             this.DocumentsToolStripMenuItem.Id = 138;
             this.DocumentsToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_document;
             this.DocumentsToolStripMenuItem.Name = "DocumentsToolStripMenuItem";
@@ -1576,9 +1565,25 @@ namespace Umoxi
             // 
             // barHeaderItem6
             // 
-            this.barHeaderItem6.Caption = "Alunos";
+            this.barHeaderItem6.Caption = "Pacientes";
             this.barHeaderItem6.Id = 56;
             this.barHeaderItem6.Name = "barHeaderItem6";
+            // 
+            // ConsultarPacienteInfo
+            // 
+            this.ConsultarPacienteInfo.Caption = "Informações de pacientes";
+            this.ConsultarPacienteInfo.Id = 49;
+            this.ConsultarPacienteInfo.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_supplier;
+            this.ConsultarPacienteInfo.Name = "ConsultarPacienteInfo";
+            this.ConsultarPacienteInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.consultarPaciente);
+            // 
+            // cadastrarPaciente
+            // 
+            this.cadastrarPaciente.Caption = "Cadastro de Paciente";
+            this.cadastrarPaciente.Id = 154;
+            this.cadastrarPaciente.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_add;
+            this.cadastrarPaciente.Name = "cadastrarPaciente";
+            this.cadastrarPaciente.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // DailyAttendanceToolStripMenuItem
             // 
@@ -1621,6 +1626,14 @@ namespace Umoxi
             this.BookListToolStripMenuItem.Caption = "Lista dos Livros";
             this.BookListToolStripMenuItem.Id = 66;
             this.BookListToolStripMenuItem.Name = "BookListToolStripMenuItem";
+            // 
+            // BookIssueToolStripMenuItem
+            // 
+            this.BookIssueToolStripMenuItem.Caption = "Book Issue";
+            this.BookIssueToolStripMenuItem.Id = 68;
+            this.BookIssueToolStripMenuItem.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_ask_question;
+            this.BookIssueToolStripMenuItem.Name = "BookIssueToolStripMenuItem";
+            this.BookIssueToolStripMenuItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BookIssueToolStripMenuItem_Click);
             // 
             // EmployeeListToolStripMenuItem
             // 
@@ -1833,6 +1846,7 @@ namespace Umoxi
             this.accordionControlElement1.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = " Dashboard";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
             // 
             // accordionControlElement6
             // 
@@ -1851,7 +1865,7 @@ namespace Umoxi
             this.btnPacienteAtendimentoDiario.Height = 30;
             this.btnPacienteAtendimentoDiario.Name = "btnPacienteAtendimentoDiario";
             this.btnPacienteAtendimentoDiario.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnPacienteAtendimentoDiario.Text = "          Atendimento Diário";
+            this.btnPacienteAtendimentoDiario.Text = "          Atendimento";
             this.btnPacienteAtendimentoDiario.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnPacienteConsulta
@@ -1878,11 +1892,14 @@ namespace Umoxi
             this.llSalaryPay,
             this.llAttendance,
             this.llDeductions,
-            this.llAllowances});
+            this.llAllowances,
+            this.accordionControlElement61,
+            this.accordionControlElement62});
+            this.accordionControlElement20.Expanded = true;
             this.accordionControlElement20.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_member;
             this.accordionControlElement20.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement20.Name = "accordionControlElement20";
-            this.accordionControlElement20.Text = "Funcionários";
+            this.accordionControlElement20.Text = "Recursos Humanos";
             // 
             // llEmployeeInformation
             // 
@@ -1932,12 +1949,25 @@ namespace Umoxi
             this.llAllowances.Text = "          Presenças";
             this.llAllowances.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
+            // accordionControlElement61
+            // 
+            this.accordionControlElement61.Name = "accordionControlElement61";
+            this.accordionControlElement61.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement61.Text = "          Departamentos";
+            this.accordionControlElement61.Click += new System.EventHandler(this.accordionControlElement61_Click);
+            // 
+            // accordionControlElement62
+            // 
+            this.accordionControlElement62.Name = "accordionControlElement62";
+            this.accordionControlElement62.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement62.Text = "          Designação";
+            this.accordionControlElement62.Click += new System.EventHandler(this.accordionControlElement62_Click);
+            // 
             // accordionControlElement41
             // 
             this.accordionControlElement41.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.llUserRegistration,
             this.llUserLog});
-            this.accordionControlElement41.Expanded = true;
             this.accordionControlElement41.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_name_tag;
             this.accordionControlElement41.ImageOptions.SvgImageSize = new System.Drawing.Size(22, 22);
             this.accordionControlElement41.Name = "accordionControlElement41";
@@ -2369,7 +2399,7 @@ namespace Umoxi
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Honeydew;
-            this.panel6.Controls.Add(this.bunifuLabel1);
+            this.panel6.Controls.Add(this.lblTitle);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 59);
             this.panel6.Name = "panel6";
@@ -2379,25 +2409,25 @@ namespace Umoxi
             this.ToolTipMenu.SetToolTipIcon(this.panel6, null);
             this.ToolTipMenu.SetToolTipTitle(this.panel6, "");
             // 
-            // bunifuLabel1
+            // lblTitle
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Rubik", 12F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.Green;
-            this.bunifuLabel1.Location = new System.Drawing.Point(17, 5);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(92, 20);
-            this.bunifuLabel1.TabIndex = 111;
-            this.bunifuLabel1.Text = "Selecionado";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ToolTipMenu.SetToolTip(this.bunifuLabel1, "");
-            this.ToolTipMenu.SetToolTipIcon(this.bunifuLabel1, null);
-            this.ToolTipMenu.SetToolTipTitle(this.bunifuLabel1, "");
+            this.lblTitle.AllowParentOverrides = false;
+            this.lblTitle.AutoEllipsis = false;
+            this.lblTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblTitle.Font = new System.Drawing.Font("Rubik", 12F);
+            this.lblTitle.ForeColor = System.Drawing.Color.Green;
+            this.lblTitle.Location = new System.Drawing.Point(17, 5);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTitle.Size = new System.Drawing.Size(82, 20);
+            this.lblTitle.TabIndex = 111;
+            this.lblTitle.Text = "Dashboard";
+            this.lblTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ToolTipMenu.SetToolTip(this.lblTitle, "");
+            this.ToolTipMenu.SetToolTipIcon(this.lblTitle, null);
+            this.ToolTipMenu.SetToolTipTitle(this.lblTitle, "");
             // 
             // bunifuPanel1
             // 
@@ -3063,6 +3093,13 @@ namespace Umoxi
             this.timerToMemoryClean.Interval = 60000;
             this.timerToMemoryClean.Tick += new System.EventHandler(this.timerToMemoryClean_Tick);
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Consultas agendadas";
+            this.barButtonItem4.Id = 58;
+            this.barButtonItem4.ImageOptions.SvgImage = global::Umoxi.Properties.Resources.icons8_pass_fail;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // FrmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
@@ -3203,7 +3240,7 @@ namespace Umoxi
         internal DevExpress.XtraBars.BarButtonItem NationalityToolStripMenuItem;
         internal DevExpress.XtraBars.BarButtonItem HolidayDeclarationToolStripMenuItem;
         internal DevExpress.XtraBars.BarLinkContainerItem StudentToolStripMenuItem;
-        internal DevExpress.XtraBars.BarButtonItem StudentInformationToolStripMenuItem;
+        internal DevExpress.XtraBars.BarButtonItem ConsultarPacienteInfo;
         internal DevExpress.XtraBars.BarButtonItem StudentListToolStripMenuItem;
         internal DevExpress.XtraBars.BarButtonItem IdentityCardToolStripMenuItem;
         internal DevExpress.XtraBars.BarButtonItem barButtonItem23;
@@ -3269,7 +3306,7 @@ namespace Umoxi
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel lblTitle;
         private DevExpress.XtraTab.XtraTabControl TabContent;
         private DevExpress.XtraTab.XtraTabPage contentControl;
         private DevExpress.Utils.FlyoutPanel flyoutPanel1;
@@ -3398,5 +3435,9 @@ namespace Umoxi
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement58;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement60;
         private System.Windows.Forms.Timer timerToMemoryClean;
+        private DevExpress.XtraBars.BarButtonItem cadastrarPaciente;
+        internal DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement61;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement62;
     }
 }

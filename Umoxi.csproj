@@ -415,18 +415,30 @@
     <Compile Include="Controller\Transition.cs" />
     <Compile Include="Controller\TransitionBase.cs" />
     <Compile Include="Controller\UtilitiesFunctions.cs" />
-    <Compile Include="frmTermos.cs">
+    <Compile Include="usDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usDashboard.Designer.cs">
+      <DependentUpon>usDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sistema\frmTermos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTermos.Designer.cs">
+    <Compile Include="View\Sistema\frmTermos.Designer.cs">
       <DependentUpon>frmTermos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sistema\frmViewPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sistema\frmViewPhoto.Designer.cs">
+      <DependentUpon>frmViewPhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AboutProgram.cs">
+    <Compile Include="View\Sistema\AboutProgram.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AboutProgram.Designer.cs">
+    <Compile Include="View\Sistema\AboutProgram.Designer.cs">
       <DependentUpon>AboutProgram.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Accounts\chartOfAccount..cs">
@@ -471,85 +483,85 @@
     <Compile Include="View\Accounts\usVoucherList.Designer.cs">
       <DependentUpon>usVoucherList.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Controls and Components\ChangeUser.cs">
+    <Compile Include="View\Components\ChangeUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Controls and Components\ChangeUser.Designer.cs">
+    <Compile Include="View\Components\ChangeUser.Designer.cs">
       <DependentUpon>ChangeUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Controls and Components\PasswordStrengthControl.cs">
+    <Compile Include="View\Components\PasswordStrengthControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Employee\frmAddDepartment.cs">
+    <Compile Include="View\Funcionarios\frmAddDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Employee\frmAddDepartment.Designer.cs">
+    <Compile Include="View\Funcionarios\frmAddDepartment.Designer.cs">
       <DependentUpon>frmAddDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\frmAddDesignation.cs">
+    <Compile Include="View\Funcionarios\frmAddDesignation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Employee\frmAddDesignation.Designer.cs">
+    <Compile Include="View\Funcionarios\frmAddDesignation.Designer.cs">
       <DependentUpon>frmAddDesignation.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\frmAddEmployee.cs">
+    <Compile Include="View\Funcionarios\frmAddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Employee\frmAddEmployee.designer.cs">
+    <Compile Include="View\Funcionarios\frmAddEmployee.designer.cs">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usAllowances.cs">
+    <Compile Include="View\Funcionarios\usAllowances.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usAllowances.Designer.cs">
+    <Compile Include="View\Funcionarios\usAllowances.Designer.cs">
       <DependentUpon>usAllowances.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usDeductions.cs">
+    <Compile Include="View\Funcionarios\usDeductions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usDeductions.Designer.cs">
+    <Compile Include="View\Funcionarios\usDeductions.Designer.cs">
       <DependentUpon>usDeductions.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usDepartment.cs">
+    <Compile Include="View\Funcionarios\usDepartment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usDepartment.Designer.cs">
+    <Compile Include="View\Funcionarios\usDepartment.Designer.cs">
       <DependentUpon>usDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usDesignation.cs">
+    <Compile Include="View\Funcionarios\usDesignation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usDesignation.Designer.cs">
+    <Compile Include="View\Funcionarios\usDesignation.Designer.cs">
       <DependentUpon>usDesignation.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usEmployee.cs">
+    <Compile Include="View\Funcionarios\usEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usEmployee.Designer.cs">
+    <Compile Include="View\Funcionarios\usEmployee.Designer.cs">
       <DependentUpon>usEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usEmployeeAttendance.cs">
+    <Compile Include="View\Funcionarios\usEmployeeAttendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usEmployeeAttendance.Designer.cs">
+    <Compile Include="View\Funcionarios\usEmployeeAttendance.Designer.cs">
       <DependentUpon>usEmployeeAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usSalary.cs">
+    <Compile Include="View\Funcionarios\usSalary.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usSalary.Designer.cs">
+    <Compile Include="View\Funcionarios\usSalary.Designer.cs">
       <DependentUpon>usSalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\usSalaryPay.cs">
+    <Compile Include="View\Funcionarios\usSalaryPay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Employee\usSalaryPay.Designer.cs">
+    <Compile Include="View\Funcionarios\usSalaryPay.Designer.cs">
       <DependentUpon>usSalaryPay.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmFirstOpen.cs">
+    <Compile Include="View\Sistema\FrmFirstOpen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmFirstOpen.Designer.cs">
+    <Compile Include="View\Sistema\FrmFirstOpen.Designer.cs">
       <DependentUpon>FrmFirstOpen.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmMain.cs">
@@ -558,323 +570,311 @@
     <Compile Include="View\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBookCategory.cs">
+    <Compile Include="View\Farmacia\frmAddBookCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBookCategory.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBookCategory.Designer.cs">
       <DependentUpon>frmAddBookCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBookClassification.cs">
+    <Compile Include="View\Farmacia\frmAddBookClassification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBookClassification.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBookClassification.Designer.cs">
       <DependentUpon>frmAddBookClassification.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBookIssue.cs">
+    <Compile Include="View\Farmacia\frmAddBookIssue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBookIssue.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBookIssue.Designer.cs">
       <DependentUpon>frmAddBookIssue.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBookReturn.cs">
+    <Compile Include="View\Farmacia\frmAddBookReturn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBookReturn.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBookReturn.Designer.cs">
       <DependentUpon>frmAddBookReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBooks.cs">
+    <Compile Include="View\Farmacia\frmAddBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBooks.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBooks.Designer.cs">
       <DependentUpon>frmAddBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\frmAddBookSupplier.cs">
+    <Compile Include="View\Farmacia\frmAddBookSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Library\frmAddBookSupplier.Designer.cs">
+    <Compile Include="View\Farmacia\frmAddBookSupplier.Designer.cs">
       <DependentUpon>frmAddBookSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBookCategory.cs">
+    <Compile Include="View\Farmacia\usBookCategory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBookCategory.Designer.cs">
+    <Compile Include="View\Farmacia\usBookCategory.Designer.cs">
       <DependentUpon>usBookCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBookClassification.cs">
+    <Compile Include="View\Farmacia\usBookClassification.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBookClassification.Designer.cs">
+    <Compile Include="View\Farmacia\usBookClassification.Designer.cs">
       <DependentUpon>usBookClassification.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBookIssue.cs">
+    <Compile Include="View\Farmacia\usBookIssue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBookIssue.Designer.cs">
+    <Compile Include="View\Farmacia\usBookIssue.Designer.cs">
       <DependentUpon>usBookIssue.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBookIssueReturn.cs">
+    <Compile Include="View\Farmacia\usBookIssueReturn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBookIssueReturn.Designer.cs">
+    <Compile Include="View\Farmacia\usBookIssueReturn.Designer.cs">
       <DependentUpon>usBookIssueReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBooks.cs">
+    <Compile Include="View\Farmacia\usBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBooks.Designer.cs">
+    <Compile Include="View\Farmacia\usBooks.Designer.cs">
       <DependentUpon>usBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Library\usBookSupplier.cs">
+    <Compile Include="View\Farmacia\usBookSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Library\usBookSupplier.Designer.cs">
+    <Compile Include="View\Farmacia\usBookSupplier.Designer.cs">
       <DependentUpon>usBookSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoadingForm.cs">
+    <Compile Include="View\Sistema\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoadingForm.Designer.cs">
+    <Compile Include="View\Sistema\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoadingScreen.cs">
+    <Compile Include="View\Sistema\LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoadingScreen.Designer.cs">
+    <Compile Include="View\Sistema\LoadingScreen.Designer.cs">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Scheduler\usScheduler.cs">
+    <Compile Include="View\Agenda\usScheduler.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Scheduler\usScheduler.Designer.cs">
+    <Compile Include="View\Agenda\usScheduler.Designer.cs">
       <DependentUpon>usScheduler.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddBus.cs">
+    <Compile Include="View\Hospital\frmAddBus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddBus.Designer.cs">
+    <Compile Include="View\Hospital\frmAddBus.Designer.cs">
       <DependentUpon>frmAddBus.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddCicle.cs">
+    <Compile Include="View\Hospital\frmAddCicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddCicle.Designer.cs">
+    <Compile Include="View\Hospital\frmAddCicle.Designer.cs">
       <DependentUpon>frmAddCicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddClass.cs">
+    <Compile Include="View\Hospital\frmAddClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddClass.Designer.cs">
+    <Compile Include="View\Hospital\frmAddClass.Designer.cs">
       <DependentUpon>frmAddClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddExamination.cs">
+    <Compile Include="View\Hospital\frmAddExamination.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddExamination.Designer.cs">
+    <Compile Include="View\Hospital\frmAddExamination.Designer.cs">
       <DependentUpon>frmAddExamination.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddFees.cs">
+    <Compile Include="View\Hospital\frmAddFees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddFees.Designer.cs">
+    <Compile Include="View\Hospital\frmAddFees.Designer.cs">
       <DependentUpon>frmAddFees.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddGrading.cs">
+    <Compile Include="View\Hospital\frmAddGrading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddGrading.Designer.cs">
+    <Compile Include="View\Hospital\frmAddGrading.Designer.cs">
       <DependentUpon>frmAddGrading.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddHoliday.cs">
+    <Compile Include="View\Hospital\frmAddHoliday.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddHoliday.Designer.cs">
+    <Compile Include="View\Hospital\frmAddHoliday.Designer.cs">
       <DependentUpon>frmAddHoliday.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddNationality.cs">
+    <Compile Include="View\Hospital\frmAddNationality.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddNationality.Designer.cs">
+    <Compile Include="View\Hospital\frmAddNationality.Designer.cs">
       <DependentUpon>frmAddNationality.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddSchool.cs">
+    <Compile Include="View\Hospital\frmAddSchool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddSchool.Designer.cs">
+    <Compile Include="View\Hospital\frmAddSchool.Designer.cs">
       <DependentUpon>frmAddSchool.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddSession.cs">
+    <Compile Include="View\Hospital\frmAddSession.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddSession.Designer.cs">
+    <Compile Include="View\Hospital\frmAddSession.Designer.cs">
       <DependentUpon>frmAddSession.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\frmAddSubject.cs">
+    <Compile Include="View\Hospital\frmAddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\School\frmAddSubject.Designer.cs">
+    <Compile Include="View\Hospital\frmAddSubject.Designer.cs">
       <DependentUpon>frmAddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usBus.cs">
+    <Compile Include="View\Hospital\usBus.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usBus.Designer.cs">
+    <Compile Include="View\Hospital\usBus.Designer.cs">
       <DependentUpon>usBus.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usCicle.cs">
+    <Compile Include="View\Hospital\usCicle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usCicle.Designer.cs">
+    <Compile Include="View\Hospital\usCicle.Designer.cs">
       <DependentUpon>usCicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usClass.cs">
+    <Compile Include="View\Hospital\usClass.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usClass.Designer.cs">
+    <Compile Include="View\Hospital\usClass.Designer.cs">
       <DependentUpon>usClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usExamination.cs">
+    <Compile Include="View\Hospital\usExamination.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usExamination.Designer.cs">
+    <Compile Include="View\Hospital\usExamination.Designer.cs">
       <DependentUpon>usExamination.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usFees.cs">
+    <Compile Include="View\Hospital\usFees.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usFees.Designer.cs">
+    <Compile Include="View\Hospital\usFees.Designer.cs">
       <DependentUpon>usFees.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usGrading.cs">
+    <Compile Include="View\Hospital\usGrading.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usGrading.Designer.cs">
+    <Compile Include="View\Hospital\usGrading.Designer.cs">
       <DependentUpon>usGrading.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usHoliday.cs">
+    <Compile Include="View\Hospital\usHoliday.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usHoliday.Designer.cs">
+    <Compile Include="View\Hospital\usHoliday.Designer.cs">
       <DependentUpon>usHoliday.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usNationality.cs">
+    <Compile Include="View\Hospital\usNationality.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usNationality.Designer.cs">
+    <Compile Include="View\Hospital\usNationality.Designer.cs">
       <DependentUpon>usNationality.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usSchool.cs">
+    <Compile Include="View\Hospital\usSchool.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usSchool.Designer.cs">
+    <Compile Include="View\Hospital\usSchool.Designer.cs">
       <DependentUpon>usSchool.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usSession.cs">
+    <Compile Include="View\Hospital\usSession.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usSession.Designer.cs">
+    <Compile Include="View\Hospital\usSession.Designer.cs">
       <DependentUpon>usSession.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\School\usSubject.cs">
+    <Compile Include="View\Hospital\usSubject.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\School\usSubject.Designer.cs">
+    <Compile Include="View\Hospital\usSubject.Designer.cs">
       <DependentUpon>usSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ServerSetting\FrmServerSetting.cs">
+    <Compile Include="View\Servidor\FrmServerSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ServerSetting\FrmServerSetting.Designer.cs">
+    <Compile Include="View\Servidor\FrmServerSetting.Designer.cs">
       <DependentUpon>FrmServerSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ServerSetting\WaitForm2.cs">
+    <Compile Include="View\Servidor\WaitForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ServerSetting\WaitForm2.Designer.cs">
+    <Compile Include="View\Servidor\WaitForm2.Designer.cs">
       <DependentUpon>WaitForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddDailyAttendance.cs">
+    <Compile Include="View\Pacientes\frmAddDailyAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddDailyAttendance.Designer.cs">
+    <Compile Include="View\Pacientes\frmAddDailyAttendance.Designer.cs">
       <DependentUpon>frmAddDailyAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddDocuments.cs">
+    <Compile Include="View\Pacientes\frmAddDocuments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddDocuments.Designer.cs">
+    <Compile Include="View\Pacientes\frmAddDocuments.Designer.cs">
       <DependentUpon>frmAddDocuments.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddFeesCollection.cs">
+    <Compile Include="View\Pacientes\frmAddFeesCollection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddFeesCollection.Designer.cs">
+    <Compile Include="View\Pacientes\frmAddFeesCollection.Designer.cs">
       <DependentUpon>frmAddFeesCollection.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddPromotion.cs">
+    <Compile Include="View\Pacientes\frmAddPromotion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddPromotion.Designer.cs">
+    <Compile Include="View\Pacientes\frmAddPromotion.Designer.cs">
       <DependentUpon>frmAddPromotion.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddStudent.cs">
+    <Compile Include="View\Pacientes\frmAddPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddStudent.Designer.cs">
-      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    <Compile Include="View\Pacientes\frmAddPacientes.Designer.cs">
+      <DependentUpon>frmAddPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\frmAddWaiver.cs">
+    <Compile Include="View\Pacientes\frmAddWaiver.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Student\frmAddWaiver.Designer.cs">
+    <Compile Include="View\Pacientes\frmAddWaiver.Designer.cs">
       <DependentUpon>frmAddWaiver.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usDailyAttendance.cs">
+    <Compile Include="View\Pacientes\usDailyAttendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usDailyAttendance.Designer.cs">
+    <Compile Include="View\Pacientes\usDailyAttendance.Designer.cs">
       <DependentUpon>usDailyAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usDocuments.cs">
+    <Compile Include="View\Pacientes\usDocuments.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usDocuments.Designer.cs">
+    <Compile Include="View\Pacientes\usDocuments.Designer.cs">
       <DependentUpon>usDocuments.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usFeesCollection.cs">
+    <Compile Include="View\Pacientes\usFeesCollection.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usFeesCollection.Designer.cs">
+    <Compile Include="View\Pacientes\usFeesCollection.Designer.cs">
       <DependentUpon>usFeesCollection.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usIdentityCard.cs">
+    <Compile Include="View\Pacientes\usIdentityCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usIdentityCard.Designer.cs">
+    <Compile Include="View\Pacientes\usIdentityCard.Designer.cs">
       <DependentUpon>usIdentityCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usMarks.cs">
+    <Compile Include="View\Pacientes\usMarks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usMarks.Designer.cs">
+    <Compile Include="View\Pacientes\usMarks.Designer.cs">
       <DependentUpon>usMarks.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\usPromotion.cs">
+    <Compile Include="View\Pacientes\usPaciente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Student\usPromotion.Designer.cs">
-      <DependentUpon>usPromotion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Student\usPaciente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Student\usPaciente.Designer.cs">
+    <Compile Include="View\Pacientes\usPaciente.Designer.cs">
       <DependentUpon>usPaciente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Student\usWaiver.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Student\usWaiver.Designer.cs">
-      <DependentUpon>usWaiver.cs</DependentUpon>
     </Compile>
     <Compile Include="View\User\frmAddPermission.cs">
       <SubType>Form</SubType>
@@ -916,8 +916,14 @@
     <Compile Include="View\User\usUserLog.Designer.cs">
       <DependentUpon>usUserLog.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmTermos.resx">
+    <EmbeddedResource Include="usDashboard.resx">
+      <DependentUpon>usDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sistema\frmTermos.resx">
       <DependentUpon>frmTermos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sistema\frmViewPhoto.resx">
+      <DependentUpon>frmViewPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -930,7 +936,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\AboutProgram.resx">
+    <EmbeddedResource Include="View\Sistema\AboutProgram.resx">
       <DependentUpon>AboutProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Accounts\chartOfAccount..resx">
@@ -954,213 +960,207 @@
     <EmbeddedResource Include="View\Accounts\usVoucherList.resx">
       <DependentUpon>usVoucherList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Controls and Components\ChangeUser.resx">
+    <EmbeddedResource Include="View\Components\ChangeUser.resx">
       <DependentUpon>ChangeUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\frmAddDepartment.resx">
+    <EmbeddedResource Include="View\Funcionarios\frmAddDepartment.resx">
       <DependentUpon>frmAddDepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\frmAddDesignation.resx">
+    <EmbeddedResource Include="View\Funcionarios\frmAddDesignation.resx">
       <DependentUpon>frmAddDesignation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\frmAddEmployee.resx">
+    <EmbeddedResource Include="View\Funcionarios\frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usAllowances.resx">
+    <EmbeddedResource Include="View\Funcionarios\usAllowances.resx">
       <DependentUpon>usAllowances.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usDeductions.resx">
+    <EmbeddedResource Include="View\Funcionarios\usDeductions.resx">
       <DependentUpon>usDeductions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usDepartment.resx">
+    <EmbeddedResource Include="View\Funcionarios\usDepartment.resx">
       <DependentUpon>usDepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usDesignation.resx">
+    <EmbeddedResource Include="View\Funcionarios\usDesignation.resx">
       <DependentUpon>usDesignation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usEmployee.resx">
+    <EmbeddedResource Include="View\Funcionarios\usEmployee.resx">
       <DependentUpon>usEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usEmployeeAttendance.resx">
+    <EmbeddedResource Include="View\Funcionarios\usEmployeeAttendance.resx">
       <DependentUpon>usEmployeeAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usSalary.resx">
+    <EmbeddedResource Include="View\Funcionarios\usSalary.resx">
       <DependentUpon>usSalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\usSalaryPay.resx">
+    <EmbeddedResource Include="View\Funcionarios\usSalaryPay.resx">
       <DependentUpon>usSalaryPay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmFirstOpen.resx">
+    <EmbeddedResource Include="View\Sistema\FrmFirstOpen.resx">
       <DependentUpon>FrmFirstOpen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBookCategory.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBookCategory.resx">
       <DependentUpon>frmAddBookCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBookClassification.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBookClassification.resx">
       <DependentUpon>frmAddBookClassification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBookIssue.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBookIssue.resx">
       <DependentUpon>frmAddBookIssue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBookReturn.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBookReturn.resx">
       <DependentUpon>frmAddBookReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBooks.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBooks.resx">
       <DependentUpon>frmAddBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\frmAddBookSupplier.resx">
+    <EmbeddedResource Include="View\Farmacia\frmAddBookSupplier.resx">
       <DependentUpon>frmAddBookSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBookCategory.resx">
+    <EmbeddedResource Include="View\Farmacia\usBookCategory.resx">
       <DependentUpon>usBookCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBookClassification.resx">
+    <EmbeddedResource Include="View\Farmacia\usBookClassification.resx">
       <DependentUpon>usBookClassification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBookIssue.resx">
+    <EmbeddedResource Include="View\Farmacia\usBookIssue.resx">
       <DependentUpon>usBookIssue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBookIssueReturn.resx">
+    <EmbeddedResource Include="View\Farmacia\usBookIssueReturn.resx">
       <DependentUpon>usBookIssueReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBooks.resx">
+    <EmbeddedResource Include="View\Farmacia\usBooks.resx">
       <DependentUpon>usBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Library\usBookSupplier.resx">
+    <EmbeddedResource Include="View\Farmacia\usBookSupplier.resx">
       <DependentUpon>usBookSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoadingForm.resx">
+    <EmbeddedResource Include="View\Sistema\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoadingScreen.resx">
+    <EmbeddedResource Include="View\Sistema\LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Scheduler\usScheduler.ja-JP.resx">
+    <EmbeddedResource Include="View\Agenda\usScheduler.ja-JP.resx">
       <DependentUpon>usScheduler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Scheduler\usScheduler.pt-PT.resx">
+    <EmbeddedResource Include="View\Agenda\usScheduler.pt-PT.resx">
       <DependentUpon>usScheduler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Scheduler\usScheduler.resx">
+    <EmbeddedResource Include="View\Agenda\usScheduler.resx">
       <DependentUpon>usScheduler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddBus.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddBus.resx">
       <DependentUpon>frmAddBus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddCicle.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddCicle.resx">
       <DependentUpon>frmAddCicle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddClass.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddClass.resx">
       <DependentUpon>frmAddClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddExamination.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddExamination.resx">
       <DependentUpon>frmAddExamination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddFees.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddFees.resx">
       <DependentUpon>frmAddFees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddGrading.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddGrading.resx">
       <DependentUpon>frmAddGrading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddHoliday.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddHoliday.resx">
       <DependentUpon>frmAddHoliday.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddNationality.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddNationality.resx">
       <DependentUpon>frmAddNationality.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddSchool.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddSchool.resx">
       <DependentUpon>frmAddSchool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddSession.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddSession.resx">
       <DependentUpon>frmAddSession.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\frmAddSubject.resx">
+    <EmbeddedResource Include="View\Hospital\frmAddSubject.resx">
       <DependentUpon>frmAddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usBus.resx">
+    <EmbeddedResource Include="View\Hospital\usBus.resx">
       <DependentUpon>usBus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usCicle.resx">
+    <EmbeddedResource Include="View\Hospital\usCicle.resx">
       <DependentUpon>usCicle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usClass.resx">
+    <EmbeddedResource Include="View\Hospital\usClass.resx">
       <DependentUpon>usClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usExamination.resx">
+    <EmbeddedResource Include="View\Hospital\usExamination.resx">
       <DependentUpon>usExamination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usFees.resx">
+    <EmbeddedResource Include="View\Hospital\usFees.resx">
       <DependentUpon>usFees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usGrading.resx">
+    <EmbeddedResource Include="View\Hospital\usGrading.resx">
       <DependentUpon>usGrading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usHoliday.resx">
+    <EmbeddedResource Include="View\Hospital\usHoliday.resx">
       <DependentUpon>usHoliday.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usNationality.resx">
+    <EmbeddedResource Include="View\Hospital\usNationality.resx">
       <DependentUpon>usNationality.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usSchool.resx">
+    <EmbeddedResource Include="View\Hospital\usSchool.resx">
       <DependentUpon>usSchool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usSession.resx">
+    <EmbeddedResource Include="View\Hospital\usSession.resx">
       <DependentUpon>usSession.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\School\usSubject.resx">
+    <EmbeddedResource Include="View\Hospital\usSubject.resx">
       <DependentUpon>usSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ServerSetting\FrmServerSetting.resx">
+    <EmbeddedResource Include="View\Servidor\FrmServerSetting.resx">
       <DependentUpon>FrmServerSetting.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ServerSetting\WaitForm2.resx">
+    <EmbeddedResource Include="View\Servidor\WaitForm2.resx">
       <DependentUpon>WaitForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddDailyAttendance.resx">
+    <EmbeddedResource Include="View\Pacientes\frmAddDailyAttendance.resx">
       <DependentUpon>frmAddDailyAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddDocuments.resx">
+    <EmbeddedResource Include="View\Pacientes\frmAddDocuments.resx">
       <DependentUpon>frmAddDocuments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddFeesCollection.resx">
+    <EmbeddedResource Include="View\Pacientes\frmAddFeesCollection.resx">
       <DependentUpon>frmAddFeesCollection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddPromotion.resx">
+    <EmbeddedResource Include="View\Pacientes\frmAddPromotion.resx">
       <DependentUpon>frmAddPromotion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddStudent.resx">
-      <DependentUpon>frmAddStudent.cs</DependentUpon>
+    <EmbeddedResource Include="View\Pacientes\frmAddPacientes.resx">
+      <DependentUpon>frmAddPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\frmAddWaiver.resx">
+    <EmbeddedResource Include="View\Pacientes\frmAddWaiver.resx">
       <DependentUpon>frmAddWaiver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usDailyAttendance.resx">
+    <EmbeddedResource Include="View\Pacientes\usDailyAttendance.resx">
       <DependentUpon>usDailyAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usDocuments.resx">
+    <EmbeddedResource Include="View\Pacientes\usDocuments.resx">
       <DependentUpon>usDocuments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usFeesCollection.resx">
+    <EmbeddedResource Include="View\Pacientes\usFeesCollection.resx">
       <DependentUpon>usFeesCollection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usIdentityCard.resx">
+    <EmbeddedResource Include="View\Pacientes\usIdentityCard.resx">
       <DependentUpon>usIdentityCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usMarks.resx">
+    <EmbeddedResource Include="View\Pacientes\usMarks.resx">
       <DependentUpon>usMarks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usPromotion.resx">
-      <DependentUpon>usPromotion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usPaciente.resx">
+    <EmbeddedResource Include="View\Pacientes\usPaciente.resx">
       <DependentUpon>usPaciente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Student\usWaiver.resx">
-      <DependentUpon>usWaiver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User\frmAddPermission.resx">
       <DependentUpon>frmAddPermission.cs</DependentUpon>
@@ -2218,11 +2218,21 @@
     <None Include="Resources\pacientes_22px.png" />
     <None Include="Resources\laboratorio.png" />
     <None Include="Resources\laboratorio_22.png" />
+    <None Include="Resources\dollar.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\medical-history.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\healthcare.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\arrows.png" />
+    <None Include="Resources\stethoscope.png" />
+    <None Include="Resources\medical-symbol.png" />
+    <None Include="Resources\doctor.png" />
     <Content Include="Sources files\Connection string.txt" />
     <Content Include="Sources files\dbUmojaSchool.sql" />
     <Content Include="Sources files\db_hospital.sql" />
     <Content Include="uschool.ico" />
-    <Content Include="View\ServerSetting\ConnectionString.xml" />
+    <Content Include="View\Servidor\ConnectionString.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -2238,7 +2248,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="View\Atendimento\" />
     <Folder Include="View\Dashboard\" />
+    <Folder Include="View\Internamento\" />
+    <Folder Include="View\Sangue\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
